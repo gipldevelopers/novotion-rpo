@@ -12,7 +12,7 @@ const metrics = [
 
 export function MetricsSection() {
   return (
-    <section className="relative -mt-24 z-10 pb-8">
+    <section className="relative mt-8 lg:-mt-24 z-10 pb-8">
       <div className="container-premium">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
