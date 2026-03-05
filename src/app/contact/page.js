@@ -1,12 +1,13 @@
 "use client";
 
 import { Layout } from "@/components/layout/Layout";
-import { Section } from "@/components/ui/section";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { CTASectionV2 } from "@/components/home-v2/CTASectionV2";
+import { ContactHero } from "@/components/contact/ContactHero";
 import {
   Select,
   SelectContent,
@@ -14,9 +15,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Mail, Phone, MapPin, Clock, ArrowRight, Calendar } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, ArrowRight, Calendar, Sparkles } from "lucide-react";
 import { useState } from "react";
-import Link from "next/link"; // Not used in link form but might be needed if links added
+import Link from "next/link";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -39,266 +40,251 @@ export default function Contact() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="hero-section pt-32 pb-20 lg:pt-40 lg:pb-28">
-        <div className="container-premium">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-3xl"
-          >
-            <span className="inline-block px-4 py-1.5 text-xs font-semibold tracking-wider uppercase bg-secondary/20 text-secondary rounded-full mb-6">
-              Get in Touch
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
-              Let's Transform Your{" "}
-              <span className="text-secondary">Talent Acquisition</span>
-            </h1>
-            <p className="text-xl text-primary-foreground/70 leading-relaxed">
-              Schedule a free consultation with our RPO experts. We'll discuss your 
-              hiring challenges and explore how we can help you build a world-class team.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <main className="bg-white">
+        {/* 1. Specialized Contact Banner */}
+        <ContactHero />
 
-      {/* Contact Form Section */}
-      <Section className="py-16 lg:py-24">
-        <div className="grid lg:grid-cols-3 gap-12 lg:gap-20">
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="lg:col-span-1"
-          >
-            <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-            
-            <div className="space-y-6 mb-10">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
-                  <MapPin className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="font-semibold mb-1">USA Office</p>
-                  <p className="text-muted-foreground">Orlando, FL, USA</p>
-                </div>
-              </div>
+        {/* 2. Core Engagement Section */}
+        <section className="py-24 md:py-40 bg-white relative overflow-hidden">
+          {/* Subtle decorative background */}
+          <div className="absolute top-1/2 left-0 w-[800px] h-[800px] bg-secondary/5 rounded-full blur-[150px] pointer-events-none opacity-50 -translate-x-1/2 -translate-y-1/2" />
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
-                  <MapPin className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="font-semibold mb-1">India Office</p>
-                  <p className="text-muted-foreground">Ahmedabad, Gujarat, India</p>
-                </div>
-              </div>
+          <div className="container-premium px-6 md:px-12 relative z-10">
+            <div className="grid lg:grid-cols-12 gap-16 lg:gap-24">
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
-                  <Mail className="h-6 w-6" />
-                </div>
+              {/* Left Column: Intelligence Nodes (Contact Info) */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="lg:col-span-4 space-y-12"
+              >
                 <div>
-                  <p className="font-semibold mb-1">Email</p>
-                  <a href="mailto:info@novotionrpo.com" className="text-secondary hover:underline">
-                    info@novotionrpo.com
-                  </a>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-6">
+                    <MapPin className="h-4 w-4" />
+                    Operational Nodes
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tighter leading-tight mb-8">
+                    Global Support <br /> Architecture.
+                  </h2>
                 </div>
-              </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
-                  <Phone className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="font-semibold mb-1">Phone</p>
-                  <a href="tel:+1234567890" className="text-secondary hover:underline">
-                    +1 (234) 567-890
-                  </a>
-                </div>
-              </div>
+                <div className="space-y-8">
+                  {/* US Node */}
+                  <div className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-secondary/20 transition-all duration-500 shadow-sm hover:shadow-xl">
+                    <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-slate-300 group-hover:text-secondary group-hover:bg-secondary/10 transition-all shadow-sm mb-6">
+                      <MapPin className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2 tracking-tight">USA Headquarters</h3>
+                    <p className="text-slate-500 font-light leading-relaxed mb-4">Orlando, FL, USA</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2 py-1 rounded border border-slate-200 bg-white">Strategic Strategy</span>
+                    </div>
+                  </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
-                  <Clock className="h-6 w-6" />
+                  {/* India Node */}
+                  <div className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-secondary/20 transition-all duration-500 shadow-sm hover:shadow-xl">
+                    <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-slate-300 group-hover:text-secondary group-hover:bg-secondary/10 transition-all shadow-sm mb-6">
+                      <MapPin className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2 tracking-tight">India Operations</h3>
+                    <p className="text-slate-500 font-light leading-relaxed mb-4">Ahmedabad, Gujarat, India</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2 py-1 rounded border border-slate-200 bg-white">Global Delivery</span>
+                    </div>
+                  </div>
+
+                  {/* Direct Lines */}
+                  <div className="space-y-6 pt-6 border-t border-slate-100">
+                    <div className="flex items-center gap-4 group">
+                      <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 group-hover:text-secondary transition-colors">
+                        <Mail className="h-4 w-4" />
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Direct Intel</p>
+                        <a href="mailto:info@novotionrpo.com" className="text-slate-700 font-medium hover:text-secondary transition-colors">
+                          info@novotionrpo.com
+                        </a>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4 group">
+                      <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 group-hover:text-secondary transition-colors">
+                        <Phone className="h-4 w-4" />
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Voice Protocol</p>
+                        <a href="tel:+1234567890" className="text-slate-700 font-medium hover:text-secondary transition-colors">
+                          +1 (234) 567-890
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-semibold mb-1">Business Hours</p>
-                  <p className="text-muted-foreground">24/7 Global Support</p>
+              </motion.div>
+
+              {/* Right Column: Strategic Enquiry Form */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="lg:col-span-8"
+              >
+                <div className="bg-white border border-slate-100 p-8 md:p-14 rounded-[3rem] shadow-2xl shadow-slate-200/50">
+                  <div className="mb-12 border-b border-slate-100 pb-8 relative">
+                    <div className="absolute right-0 top-0 w-24 h-24 bg-secondary/5 rounded-full blur-2xl" />
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 tracking-tight">Initiate Operational Scan</h3>
+                    <p className="text-slate-500 font-light leading-relaxed max-w-xl">
+                      Provide your enterprise requirements below. A lead architect will review your parameters
+                      and respond with a custom deployment strategy within 24 hours.
+                    </p>
+                  </div>
+
+                  <form onSubmit={handleSubmit} className="space-y-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="space-y-3">
+                        <Label htmlFor="firstName" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">First Name *</Label>
+                        <Input
+                          id="firstName"
+                          className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                          placeholder="John"
+                          value={formData.firstName}
+                          onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                          required
+                        />
+                      </div>
+                      <div className="space-y-3">
+                        <Label htmlFor="lastName" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Last Name *</Label>
+                        <Input
+                          id="lastName"
+                          className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                          placeholder="Doe"
+                          value={formData.lastName}
+                          onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="space-y-3">
+                        <Label htmlFor="email" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Work Email *</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                          placeholder="john.doe@enterprise.com"
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          required
+                        />
+                      </div>
+                      <div className="space-y-3">
+                        <Label htmlFor="phone" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Direct Line</Label>
+                        <Input
+                          id="phone"
+                          type="tel"
+                          className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                          placeholder="+1 (555) 000-0000"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="space-y-3">
+                        <Label htmlFor="company" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Corporate Entity *</Label>
+                        <Input
+                          id="company"
+                          className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                          placeholder="Global Corp Inc."
+                          value={formData.company}
+                          onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                          required
+                        />
+                      </div>
+                      <div className="space-y-3">
+                        <Label htmlFor="jobTitle" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Official Title</Label>
+                        <Input
+                          id="jobTitle"
+                          className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                          placeholder="VP of Talent Acquisition"
+                          value={formData.jobTitle}
+                          onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="space-y-3">
+                        <Label htmlFor="service" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Deployment Type</Label>
+                        <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
+                          <SelectTrigger className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 focus:ring-secondary/20">
+                            <SelectValue placeholder="Select architectural need" />
+                          </SelectTrigger>
+                          <SelectContent className="rounded-2xl border-slate-100 shadow-xl">
+                            <SelectItem value="full-rpo">Full Ecosystem RPO</SelectItem>
+                            <SelectItem value="project-rpo">Surgical Project RPO</SelectItem>
+                            <SelectItem value="offshore">Global Offshore Support</SelectItem>
+                            <SelectItem value="executive">Elite Executive Search</SelectItem>
+                            <SelectItem value="screening">Volume Candidate Screening</SelectItem>
+                            <SelectItem value="consulting">Strategic Consulting</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      <div className="space-y-3">
+                        <Label htmlFor="hiringVolume" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Target Volume (Annual)</Label>
+                        <Select value={formData.hiringVolume} onValueChange={(value) => setFormData({ ...formData, hiringVolume: value })}>
+                          <SelectTrigger className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 focus:ring-secondary/20">
+                            <SelectValue placeholder="Select projected scale" />
+                          </SelectTrigger>
+                          <SelectContent className="rounded-2xl border-slate-100 shadow-xl">
+                            <SelectItem value="1-10">Micro (1-10 hires)</SelectItem>
+                            <SelectItem value="11-50">Standard (11-50 hires)</SelectItem>
+                            <SelectItem value="51-100">Scale (51-100 hires)</SelectItem>
+                            <SelectItem value="100+">Enterprise (100+ hires)</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3">
+                      <Label htmlFor="message" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Strategic Objectives *</Label>
+                      <Textarea
+                        id="message"
+                        className="bg-slate-50 border-slate-100 rounded-2xl p-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300 min-h-[160px]"
+                        placeholder="Detail your current bottlenecks and target state..."
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        required
+                      />
+                    </div>
+
+                    <div className="pt-6">
+                      <Button
+                        type="submit"
+                        className="w-full bg-slate-900 hover:bg-secondary text-white h-16 rounded-2xl shadow-xl shadow-slate-200/50 transition-all duration-500 font-bold text-xs tracking-widest uppercase border-none"
+                      >
+                        EXECUTE ENGAGEMENT
+                        <ArrowRight className="ml-3 h-5 w-5" />
+                      </Button>
+                    </div>
+
+                    <p className="text-[10px] text-slate-400 text-center font-bold tracking-widest uppercase mt-6 pt-6 border-t border-slate-50">
+                      Secure 256-bit Encrypted Transmission
+                    </p>
+                  </form>
                 </div>
-              </div>
+              </motion.div>
             </div>
+          </div>
+        </section>
 
-            <div className="bg-primary rounded-2xl p-6 text-primary-foreground">
-              <Calendar className="h-8 w-8 text-secondary mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Prefer a Scheduled Call?</h3>
-              <p className="text-primary-foreground/70 text-sm mb-4">
-                Book a free 30-minute consultation with one of our RPO experts.
-              </p>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                Schedule a Call
-              </Button>
-            </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="lg:col-span-2"
-          >
-            <div className="card-premium p-8 lg:p-12">
-              <h2 className="text-2xl font-bold mb-2">Request a Consultation</h2>
-              <p className="text-muted-foreground mb-8">
-                Fill out the form below and we'll get back to you within 24 hours.
-              </p>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name *</Label>
-                    <Input
-                      id="firstName"
-                      placeholder="John"
-                      value={formData.firstName}
-                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name *</Label>
-                    <Input
-                      id="lastName"
-                      placeholder="Doe"
-                      value={formData.lastName}
-                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Work Email *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="john@company.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      placeholder="+1 (234) 567-890"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Company Name *</Label>
-                    <Input
-                      id="company"
-                      placeholder="Company Inc."
-                      value={formData.company}
-                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="jobTitle">Job Title</Label>
-                    <Input
-                      id="jobTitle"
-                      placeholder="VP of HR"
-                      value={formData.jobTitle}
-                      onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="service">Service Interested In</Label>
-                    <Select
-                      value={formData.service}
-                      onValueChange={(value) => setFormData({ ...formData, service: value })}
-                    >
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select a service" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="full-rpo">Full RPO Partnership</SelectItem>
-                        <SelectItem value="project-rpo">Project RPO</SelectItem>
-                        <SelectItem value="offshore">Offshore Support</SelectItem>
-                        <SelectItem value="executive">Executive Search</SelectItem>
-                        <SelectItem value="screening">Candidate Screening</SelectItem>
-                        <SelectItem value="not-sure">Not Sure Yet</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="hiringVolume">Annual Hiring Volume</Label>
-                    <Select
-                      value={formData.hiringVolume}
-                      onValueChange={(value) => setFormData({ ...formData, hiringVolume: value })}
-                    >
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select volume" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="1-10">1-10 hires</SelectItem>
-                        <SelectItem value="11-50">11-50 hires</SelectItem>
-                        <SelectItem value="51-100">51-100 hires</SelectItem>
-                        <SelectItem value="100+">100+ hires</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="message">How can we help? *</Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Tell us about your hiring challenges and goals..."
-                    rows={5}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
-                >
-                  Submit Request
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-
-                <p className="text-sm text-muted-foreground text-center">
-                  By submitting this form, you agree to our{" "}
-                  <a href="/privacy" className="text-secondary hover:underline">Privacy Policy</a>
-                  {" "}and{" "}
-                  <a href="/terms" className="text-secondary hover:underline">Terms of Service</a>.
-                </p>
-              </form>
-            </div>
-          </motion.div>
-        </div>
-      </Section>
+        {/* 3. Global V2 CTA Extension */}
+        <CTASectionV2 />
+      </main>
     </Layout>
   );
 }
