@@ -53,12 +53,12 @@ export function HeroSectionV8() {
     }, []);
 
     useEffect(() => {
-        const timer = setInterval(nextSlide, 8000);
+        const timer = setInterval(nextSlide, 10000);
         return () => clearInterval(timer);
     }, [nextSlide]);
 
     return (
-        <section id="hero" className="relative min-h-[100dvh] bg-white flex flex-col pt-32 md:pt-40 lg:pt-48 pb-20 overflow-hidden scroll-mt-32">
+        <section id="hero" className="relative h-[100dvh] bg-white flex flex-col justify-center pt-24 md:pt-32 lg:pt-40 pb-20 overflow-hidden scroll-mt-32">
             {/* Background with Increased Visibility */}
             <div className="absolute inset-0 z-0">
                 <AnimatePresence>
@@ -105,12 +105,12 @@ export function HeroSectionV8() {
                             <span className="text-[10px] font-bold text-slate-600 tracking-[0.4em] uppercase">{services[activeIndex].subtitle}</span>
                         </motion.div>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.15] mb-8 tracking-tighter drop-shadow-sm">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold text-slate-900 leading-[1.1] mb-6 md:mb-8 tracking-tighter drop-shadow-sm">
                             A Global Engine for <br />
                             <span className="text-secondary">{services[activeIndex].title}</span>
                         </h1>
 
-                        <p className="text-base md:text-xl text-slate-700 max-w-2xl mx-auto mb-12 leading-relaxed font-normal">
+                        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-700 max-w-2xl lg:max-w-3xl mx-auto mb-10 md:mb-12 leading-relaxed font-normal">
                             {services[activeIndex].description}
                         </p>
 
@@ -127,37 +127,23 @@ export function HeroSectionV8() {
             </div>
 
             {/* Pagination Controls */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:bottom-12 md:right-12 z-20 flex items-center gap-2 md:gap-4 bg-white/90 backdrop-blur-xl p-3 px-4 md:p-4 md:px-6 rounded-xl border border-slate-200 shadow-xl">
-                <div className="flex gap-1.5 md:gap-2">
-                    {services.map((_, index) => {
-                        const isActive = activeIndex === index;
-                        return (
-                            <button
-                                key={index}
-                                onClick={() => setActiveIndex(index)}
-                                className="group pt-1 md:pt-2"
-                            >
-                                <div className="flex flex-col gap-1 md:gap-1.5 w-8 md:w-10">
-                                    <div className="flex justify-between items-center px-0.5">
-                                        <span className={`text-[9px] font-bold tracking-tighter transition-colors ${isActive ? 'text-secondary' : 'text-slate-400'}`}>
-                                            0{index + 1}
-                                        </span>
-                                    </div>
-                                    <div className="relative h-[2px] w-full bg-slate-100 rounded-full overflow-hidden">
-                                        {isActive && (
-                                            <motion.div
-                                                initial={{ width: "0%" }}
-                                                animate={{ width: "100%" }}
-                                                transition={{ duration: 8, ease: "linear" }}
-                                                className="absolute inset-0 bg-secondary shadow-[0_0_10px_#cf603d]"
-                                            />
-                                        )}
-                                    </div>
-                                </div>
-                            </button>
-                        );
-                    })}
-                </div>
+            <div className="absolute bottom-8 lg:bottom-12 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+                {services.map((_, index) => {
+                    const isActive = activeIndex === index;
+                    return (
+                        <button
+                            key={index}
+                            onClick={() => setActiveIndex(index)}
+                            className="relative py-2 px-1 group"
+                            aria-label={`Go to slide ${index + 1}`}
+                        >
+                            <div
+                                className={`h-2.5 rounded-full transition-all duration-500 ease-in-out ${isActive ? 'w-10 bg-secondary' : 'w-2.5 bg-slate-300 group-hover:bg-slate-400'
+                                    }`}
+                            />
+                        </button>
+                    );
+                })}
             </div>
 
         </section>

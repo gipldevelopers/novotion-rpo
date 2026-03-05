@@ -68,9 +68,27 @@ const metrics = [
 
 export function MetricsSection() {
     return (
-        <section id="metrics" className="relative py-20 md:py-32 bg-white overflow-hidden scroll-mt-32">
-            <div className="container-premium relative z-10">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+        <section id="metrics" className="relative flex flex-col justify-center py-12 md:py-12 bg-white overflow-hidden scroll-mt-20">
+            <div className="container-premium relative z-10 w-full">
+
+                {/* Title & Subtitle */}
+                <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tighter leading-[1.1]">
+                            Proven <span className="text-secondary">Impact</span> at Scale
+                        </h2>
+                        <p className="text-xs md:text-sm lg:text-base text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed italic border-x-2 border-slate-100 px-6">
+                            Delivering quantifiable results and scaling operations for elite enterprises across the globe through strategic precision and technical excellence.
+                        </p>
+                    </motion.div>
+                </div>
+
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                     {metrics.map((metric, index) => (
                         <motion.div
                             key={metric.label}
@@ -78,24 +96,24 @@ export function MetricsSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="group p-6 md:p-10 rounded-xl bg-slate-50 border border-slate-100 hover:border-secondary/20 hover:bg-white transition-all duration-500 flex flex-col items-center text-center h-full shadow-sm hover:shadow-xl hover:shadow-slate-200/50"
+                            className="group p-6 md:p-8 rounded-[2.5rem] bg-slate-50/30 border border-slate-200 hover:border-secondary/30 hover:bg-white transition-all duration-500 flex flex-col items-center text-center h-full shadow-sm hover:shadow-2xl hover:shadow-slate-200/50 overflow-hidden relative"
                         >
                             {/* Icon with Glow */}
-                            <div className="mb-4 md:mb-8 relative">
-                                <div className={`absolute inset-0 bg-gradient-to-br ${metric.color} blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
-                                <div className="relative w-10 h-10 md:w-14 md:h-14 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-secondary transition-all duration-300 shadow-sm">
-                                    <metric.icon className="h-5 w-5 md:h-6 md:h-6" />
+                            <div className="mb-4 md:mb-6 relative">
+                                <div className={`absolute inset-0 bg-gradient-to-br ${metric.color} blur-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                                <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-secondary group-hover:shadow-xl group-hover:shadow-secondary/10 transition-all duration-500">
+                                    <metric.icon className="h-5 w-5 md:h-6 md:w-6" strokeWidth={1.5} />
                                 </div>
                             </div>
 
                             {/* Animated Value */}
-                            <div className="text-2xl md:text-5xl font-bold text-slate-900 mb-1 md:mb-2 tracking-tighter">
+                            <div className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-1 tracking-tighter">
                                 <AnimatedNumber value={metric.targetValue} suffix={metric.suffix} />
                             </div>
 
                             {/* Labels */}
-                            <div className="text-[9px] md:text-[11px] font-bold text-secondary uppercase tracking-[0.2em] md:tracking-[0.3em] mb-1 md:mb-2">{metric.label}</div>
-                            <div className="text-slate-400 text-[10px] md:text-xs font-light max-w-[120px] md:max-w-[160px]">{metric.description}</div>
+                            <div className="text-[9px] md:text-[10px] font-bold text-secondary uppercase tracking-[0.3em] mb-1.5">{metric.label}</div>
+                            <div className="text-slate-400 text-[10px] md:text-xs font-light max-w-[120px] md:max-w-[160px] leading-relaxed group-hover:text-slate-500 transition-colors">{metric.description}</div>
                         </motion.div>
                     ))}
                 </div>

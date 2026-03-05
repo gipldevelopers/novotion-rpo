@@ -109,7 +109,7 @@ export function Header() {
               initial={{ opacity: 0, scale: 0.95, y: -10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: -10 }}
-              className="lg:hidden absolute top-full left-4 right-4 mt-2 p-6 bg-white/95 backdrop-blur-2xl border border-slate-200 rounded-2xl shadow-2xl z-50 overflow-hidden"
+              className="lg:hidden absolute top-full left-4 right-4 mt-2 p-6 bg-white/95 backdrop-blur-2xl border border-slate-200 rounded-[2rem] shadow-2xl z-50 overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent" />
 
@@ -124,7 +124,7 @@ export function Header() {
                     <Link
                       href={item.href}
                       className={cn(
-                        "block px-4 py-3 text-sm font-bold rounded-xl uppercase tracking-widest transition-all",
+                        "block px-4 py-3 text-sm font-bold rounded-[1.5rem] uppercase tracking-widest transition-all",
                         pathname === item.href ? "text-secondary bg-secondary/5 border border-secondary/10" : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
                       )}
                     >

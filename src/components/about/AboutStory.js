@@ -36,7 +36,7 @@ export function AboutStory() {
                                 needs of growing enterprises, we deliver recruitment solutions that are scalable,
                                 cost-effective, and results-driven.
                             </p>
-                            <p className="p-6 bg-slate-50 rounded-2xl border-l-4 border-secondary text-slate-700 font-medium italic">
+                            <p className="p-6 bg-slate-50 rounded-[2rem] border-l-4 border-secondary text-slate-700 font-medium italic">
                                 "Our unique hybrid model combines strategic expertise from the USA & UK with operative excellence from India, ensuring 24/7 global momentum."
                             </p>
                         </div>
@@ -49,7 +49,7 @@ export function AboutStory() {
                         transition={{ duration: 0.8 }}
                         className="relative"
                     >
-                        <div className="relative aspect-square md:aspect-video lg:aspect-square rounded-3xl overflow-hidden shadow-2xl shadow-slate-200/50">
+                        <div className="relative aspect-square md:aspect-video lg:aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-200/50">
                             <div className="absolute inset-0 bg-slate-900/10 z-10" />
                             <img
                                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000"
@@ -58,7 +58,7 @@ export function AboutStory() {
                             />
 
                             {/* Floating Card */}
-                            <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/90 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl z-20">
+                            <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/90 backdrop-blur-xl rounded-[2.5rem] border border-white/20 shadow-2xl z-20">
                                 <div className="flex items-center justify-between mb-4">
                                     <div className="flex -space-x-3">
                                         {[1, 2, 3, 4].map(i => (

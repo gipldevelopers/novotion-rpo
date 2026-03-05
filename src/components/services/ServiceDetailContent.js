@@ -37,7 +37,7 @@ export function ServiceDetailContent({ service }) {
                                 </h3>
                                 <div className="grid md:grid-cols-2 gap-6">
                                     {service.whatYouGet.map((item, i) => (
-                                        <div key={i} className="flex gap-4 p-6 rounded-2xl bg-slate-50 border border-slate-100 group hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300">
+                                        <div key={i} className="flex gap-4 p-6 rounded-[2.5rem] bg-slate-50 border border-slate-200 group hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-300">
                                             <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-secondary shadow-sm">
                                                 <CheckCircle className="h-5 w-5" />
                                             </div>
@@ -48,7 +48,7 @@ export function ServiceDetailContent({ service }) {
                             </div>
 
                             {/* Best For Section */}
-                            <div className="p-8 md:p-12 rounded-3xl bg-slate-900 text-white relative overflow-hidden group shadow-2xl">
+                            <div className="p-8 md:p-12 rounded-[2.5rem] bg-slate-900 text-white relative overflow-hidden group shadow-2xl">
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2" />
                                 <div className="relative z-10">
                                     <h3 className="text-2xl font-bold mb-6 tracking-tight flex items-center gap-3">
@@ -69,7 +69,7 @@ export function ServiceDetailContent({ service }) {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.2 }}
-                            className="p-8 md:p-10 rounded-3xl bg-white border border-slate-100 shadow-2xl shadow-slate-200/50"
+                            className="p-8 md:p-10 rounded-[2.5rem] bg-white border border-slate-200 shadow-2xl shadow-slate-200/50"
                         >
                             <h3 className="text-xl font-bold text-slate-900 mb-8 tracking-tight">Business Outcomes</h3>
                             <div className="space-y-6 mb-10">

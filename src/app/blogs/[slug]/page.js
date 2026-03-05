@@ -66,7 +66,7 @@ export default function BlogDetailPage({ params }) {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-secondary/10 text-secondary text-[10px] font-bold tracking-[0.3em] uppercase mb-8">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary text-[10px] font-bold tracking-[0.3em] uppercase mb-8">
                                 {blog.category}
                             </div>
 
@@ -95,7 +95,7 @@ export default function BlogDetailPage({ params }) {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="max-w-5xl mx-auto mb-20 md:mb-32 relative h-[40vh] md:h-[60vh] rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200/50"
+                        className="max-w-5xl mx-auto mb-20 md:mb-32 relative h-[40vh] md:h-[60vh] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-200/50"
                     >
                         <Image
                             src={blog.image}
@@ -111,7 +111,7 @@ export default function BlogDetailPage({ params }) {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        className="max-w-3xl mx-auto prose prose-lg prose-slate prose-headings:font-bold prose-headings:tracking-tight prose-a:text-secondary hover:prose-a:text-orange-600 focus:prose-a:text-orange-600 prose-img:rounded-3xl prose-p:font-light prose-p:leading-loose text-slate-600"
+                        className="max-w-3xl mx-auto prose prose-lg prose-slate prose-headings:font-bold prose-headings:tracking-tight prose-a:text-secondary hover:prose-a:text-orange-600 focus:prose-a:text-orange-600 prose-img:rounded-[2.5rem] prose-p:font-light prose-p:leading-loose text-slate-600"
                     >
                         <p className="text-xl md:text-2xl text-slate-800 font-medium leading-relaxed mb-12">
                             {blog.excerpt}

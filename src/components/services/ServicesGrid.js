@@ -60,7 +60,7 @@ export function ServicesGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="group relative p-8 md:p-10 rounded-2xl bg-white border border-slate-100 hover:border-secondary/20 transition-all duration-500 shadow-sm hover:shadow-xl hover:shadow-slate-200/50"
+                            className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white border border-slate-200 hover:border-secondary/20 transition-all duration-500 shadow-sm hover:shadow-2xl hover:shadow-slate-200/50"
                         >
                             <Link href={`/services/${service.slug}`} className="block">
                                 <div className="relative z-10">
@@ -94,7 +94,7 @@ export function ServicesGrid() {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        className="p-8 md:p-10 rounded-2xl bg-slate-900 text-white border border-slate-800 flex flex-col justify-center items-start relative overflow-hidden group shadow-2xl"
+                        className="p-8 md:p-10 rounded-[2.5rem] bg-slate-900 text-white border border-slate-800 flex flex-col justify-center items-start relative overflow-hidden group shadow-2xl"
                     >
                         <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/20 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2 group-hover:bg-secondary/40 transition-colors" />
                         <h3 className="text-2xl font-bold mb-4 tracking-tighter">Custom RPO <br />Framework?</h3>

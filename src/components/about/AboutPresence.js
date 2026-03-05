@@ -89,7 +89,7 @@ export function AboutPresence() {
                         className="relative hidden lg:block"
                     >
                         {/* Abstract Map or Network Graphic */}
-                        <div className="relative h-[600px] w-full bg-slate-50 rounded-3xl border border-slate-100 overflow-hidden shadow-inner">
+                        <div className="relative h-[600px] w-full bg-slate-50 rounded-[2.5rem] border border-slate-200 overflow-hidden shadow-inner">
                             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-secondary)_0%,_transparent_1px)] bg-[size:40px_40px] opacity-[0.05]" />
 
                             {/* Animated Pulse Dots */}

@@ -22,7 +22,7 @@
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
   --ring: 14 60% 53%;
-  --radius: 12px;
+  --radius: 32px;
 }
 
 @theme inline {
@@ -45,7 +45,7 @@
   --color-ring: hsl(var(--ring));
   --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
   --font-display: "Outfit", system-ui, sans-serif;
-  --radius-lg: 12px;
+  --radius-lg: 32px;
 }
 
 html {

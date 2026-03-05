@@ -73,7 +73,7 @@ export function CareersGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="p-8 md:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:border-secondary/20 transition-all duration-500 group shadow-sm"
+                            className="p-8 md:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-200 hover:border-secondary/20 transition-all duration-500 group shadow-sm hover:shadow-2xl hover:shadow-slate-200/50"
                         >
                             <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-secondary mb-8 shadow-sm group-hover:bg-secondary group-hover:text-white transition-all duration-500">
                                 <benefit.icon className="h-6 w-6" />
@@ -109,7 +109,7 @@ export function CareersGrid() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                                className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white border border-slate-100 hover:border-secondary/30 transition-all duration-500 shadow-xl shadow-slate-200/50 hover:shadow-2xl flex flex-col justify-between"
+                                className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white border border-slate-200 hover:border-secondary/30 transition-all duration-500 shadow-xl shadow-slate-200/50 hover:shadow-2xl flex flex-col justify-between"
                             >
                                 <div className="space-y-6">
                                     <div className="flex flex-wrap items-center gap-3">

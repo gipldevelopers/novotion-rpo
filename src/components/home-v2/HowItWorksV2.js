@@ -6,90 +6,118 @@ import { Search, UserCheck, ShieldCheck, Rocket, Sparkles } from "lucide-react";
 const steps = [
     {
         title: "Strategic Discovery",
-        description: "We audit your current tech stack and culture to map precisely where the talent friction exists.",
+        description: "We audit your current talent architecture and culture to map precisely where the friction exists.",
         icon: Search,
-        tag: "Step 01"
+        tag: "Phase 01"
     },
     {
         title: "Pipeline Architecture",
-        description: "Engaging high-intent candidates through targeted vertical sourcing and custom marketing automation.",
+        description: "Engaging high-intent candidates through targeted vertical sourcing and custom automation.",
         icon: UserCheck,
-        tag: "Step 02"
+        tag: "Phase 02"
     },
     {
         title: "Quality Verification",
         description: "Rigorous technical and behavioral screening ensure only top 1% of talent reaches your desk.",
         icon: ShieldCheck,
-        tag: "Step 03"
+        tag: "Phase 03"
     },
     {
         title: "Seamless Integration",
-        description: "Support through offer negotiation and onboarding to ensure long-term retention and early ROI.",
+        description: "End-to-end support through offer negation and onboarding to ensure long-term ROI.",
         icon: Rocket,
-        tag: "Step 04"
+        tag: "Phase 04"
     },
 ];
 
 export function HowItWorksV2() {
     return (
-        <section id="process" className="py-20 md:py-32 bg-slate-50 relative overflow-hidden scroll-mt-32">
-            <div className="container-premium relative z-10">
+        <section id="process" className="py-12 md:py-16 bg-slate-50 relative overflow-hidden scroll-mt-20">
+            <div className="container-premium relative z-10 w-full">
+
                 {/* Section Header */}
-                <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
+                <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-8 shadow-sm"
+                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-4 shadow-sm"
                     >
                         <Sparkles className="h-4 w-4" />
                         Our Process
                     </motion.div>
-                    -
-                    <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tighter">
-                        Four Steps to <br />
-                        <span className="text-secondary">Talent Sovereignty</span>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tighter leading-[1.15]">
+                        The Strategic <br />
+                        <span className="text-secondary">Execution Lifecycle</span>
                     </h2>
-
-                    <p className="text-slate-500 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
-                        A systematic framework that eliminates guesswork and delivers repeatable hiring success.
+                    <p className="text-slate-500 text-xs md:text-sm font-normal leading-relaxed max-w-lg mx-auto">
+                        A systematic, data-driven framework designed to eliminate hiring friction and accelerate enterprise growth through elite talent acquisition.
                     </p>
                 </div>
 
-                <div className="relative">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+                {/* Progressive Logic Path UI */}
+                <div className="relative max-w-5xl mx-auto px-4">
+
+                    {/* Background Progress Line */}
+                    <div className="absolute top-[32px] left-[40px] right-[40px] h-[2px] bg-slate-200 hidden lg:block">
+                        <motion.div
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1.5, ease: "easeInOut" }}
+                            className="absolute inset-0 bg-secondary origin-left shadow-[0_0_10px_rgba(207,96,61,0.3)]"
+                        />
+                    </div>
+
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-4 relative z-10">
                         {steps.map((step, index) => (
                             <motion.div
                                 key={step.title}
-                                initial={{ opacity: 0, y: 30 }}
+                                initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                                className="group relative p-8 rounded-xl bg-white border border-slate-100 hover:border-secondary/20 transition-all duration-500 shadow-sm hover:shadow-xl hover:shadow-slate-200/50"
+                                className="group relative"
                             >
-                                <div className="flex justify-between items-start mb-10">
-                                    <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-secondary group-hover:bg-white transition-all shadow-sm">
-                                        <step.icon className="h-5 w-5" />
+                                {/* The Interactive Node */}
+                                <div className="flex flex-col items-center lg:items-start text-center lg:text-left h-full">
+
+                                    {/* Phase Bubble */}
+                                    <div className="relative mb-6">
+                                        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border-2 border-slate-200 flex items-center justify-center transition-all duration-500 group-hover:border-secondary shadow-lg shadow-slate-200/50 group-hover:shadow-secondary/20 relative z-20 overflow-hidden">
+                                            <div className="absolute inset-0 bg-gradient-to-tr from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                            <step.icon className="h-6 w-6 md:h-8 md:w-8 text-slate-400 group-hover:text-secondary group-hover:scale-110 transition-all duration-500 relative z-10" strokeWidth={1.5} />
+                                        </div>
+
+                                        {/* Step Indicator Pin */}
+                                        <div className="absolute -top-1 -right-1 w-6 h-6 md:w-7 md:h-7 rounded-full bg-slate-900 text-white text-[9px] md:text-[10px] font-bold flex items-center justify-center border-2 border-white shadow-md z-30 group-hover:bg-secondary transition-colors">
+                                            0{index + 1}
+                                        </div>
                                     </div>
-                                    <span className="text-[9px] font-bold text-slate-300 uppercase tracking-[0.2em]">{step.tag}</span>
-                                </div>
 
-                                <h3 className="text-lg font-bold text-slate-900 mb-4 tracking-tight group-hover:text-secondary transition-colors">
-                                    {step.title}
-                                </h3>
+                                    {/* Content Card */}
+                                    <div className="bg-transparent group-hover:bg-white lg:p-4 rounded-[2rem] transition-all duration-500 lg:group-hover:shadow-xl lg:group-hover:shadow-slate-200/40 relative z-10 lg:group-hover:-translate-y-2 w-full border border-transparent lg:group-hover:border-slate-200">
+                                        <div className="inline-flex items-center gap-2 mb-2">
+                                            <span className="text-[10px] font-bold text-secondary uppercase tracking-[0.2em] opacity-0 lg:group-hover:opacity-100 transition-opacity">
+                                                Phase 0{index + 1}
+                                            </span>
+                                        </div>
+                                        <h3 className="text-base md:text-lg lg:text-xl font-bold text-slate-900 mb-2 tracking-tight group-hover:text-secondary transition-colors leading-tight">
+                                            {step.title}
+                                        </h3>
+                                        <p className="text-slate-500 text-[11px] md:text-sm font-light leading-relaxed max-w-full lg:max-w-[240px] opacity-100 lg:group-hover:text-slate-600 transition-colors px-2 lg:px-0">
+                                            {step.description}
+                                        </p>
 
-                                <p className="text-slate-500 text-[13px] font-light leading-relaxed">
-                                    {step.description}
-                                </p>
-
-                                {/* Step Indicator */}
-                                <div className="absolute -bottom-2 -left-2 w-8 h-8 rounded-lg bg-white border border-slate-100 flex items-center justify-center text-[10px] font-bold text-slate-200 shadow-sm">
-                                    0{index + 1}
+                                        {/* Interactive Decoration */}
+                                        <div className="mt-4 md:mt-6 h-1 w-0 bg-secondary group-hover:w-full transition-all duration-700 ease-out hidden lg:block" />
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}
                     </div>
                 </div>
+
             </div>
         </section>
     );
