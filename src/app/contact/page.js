@@ -72,7 +72,7 @@ export default function Contact() {
 
                 <div className="space-y-8">
                   {/* US Node */}
-                  <div className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-secondary/20 transition-all duration-500 shadow-sm hover:shadow-xl">
+                  <div className="group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-200 hover:border-secondary/20 transition-all duration-500 shadow-sm hover:shadow-xl">
                     <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-slate-300 group-hover:text-secondary group-hover:bg-secondary/10 transition-all shadow-sm mb-6">
                       <MapPin className="h-6 w-6" />
                     </div>
@@ -84,7 +84,7 @@ export default function Contact() {
                   </div>
 
                   {/* India Node */}
-                  <div className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-secondary/20 transition-all duration-500 shadow-sm hover:shadow-xl">
+                  <div className="group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-200 hover:border-secondary/20 transition-all duration-500 shadow-sm hover:shadow-xl">
                     <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-slate-300 group-hover:text-secondary group-hover:bg-secondary/10 transition-all shadow-sm mb-6">
                       <MapPin className="h-6 w-6" />
                     </div>
@@ -131,8 +131,8 @@ export default function Contact() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="lg:col-span-8"
               >
-                <div className="bg-white border border-slate-100 p-8 md:p-14 rounded-[3rem] shadow-2xl shadow-slate-200/50">
-                  <div className="mb-12 border-b border-slate-100 pb-8 relative">
+                <div className="bg-white border border-slate-200 p-8 md:p-14 rounded-[2.5rem] shadow-2xl shadow-slate-200/50">
+                  <div className="mb-12 border-b border-slate-200 pb-8 relative">
                     <div className="absolute right-0 top-0 w-24 h-24 bg-secondary/5 rounded-full blur-2xl" />
                     <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 tracking-tight">Initiate Operational Scan</h3>
                     <p className="text-slate-500 font-light leading-relaxed max-w-xl">
@@ -147,7 +147,7 @@ export default function Contact() {
                         <Label htmlFor="firstName" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">First Name *</Label>
                         <Input
                           id="firstName"
-                          className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                          className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
                           placeholder="John"
                           value={formData.firstName}
                           onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
@@ -158,7 +158,7 @@ export default function Contact() {
                         <Label htmlFor="lastName" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Last Name *</Label>
                         <Input
                           id="lastName"
-                          className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                          className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
                           placeholder="Doe"
                           value={formData.lastName}
                           onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
@@ -173,7 +173,7 @@ export default function Contact() {
                         <Input
                           id="email"
                           type="email"
-                          className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                          className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
                           placeholder="john.doe@enterprise.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -185,7 +185,7 @@ export default function Contact() {
                         <Input
                           id="phone"
                           type="tel"
-                          className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                          className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
                           placeholder="+1 (555) 000-0000"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -198,7 +198,7 @@ export default function Contact() {
                         <Label htmlFor="company" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Corporate Entity *</Label>
                         <Input
                           id="company"
-                          className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                          className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
                           placeholder="Global Corp Inc."
                           value={formData.company}
                           onChange={(e) => setFormData({ ...formData, company: e.target.value })}
@@ -209,7 +209,7 @@ export default function Contact() {
                         <Label htmlFor="jobTitle" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Official Title</Label>
                         <Input
                           id="jobTitle"
-                          className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                          className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
                           placeholder="VP of Talent Acquisition"
                           value={formData.jobTitle}
                           onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}
@@ -221,7 +221,7 @@ export default function Contact() {
                       <div className="space-y-3">
                         <Label htmlFor="service" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Deployment Type</Label>
                         <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
-                          <SelectTrigger className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 focus:ring-secondary/20">
+                          <SelectTrigger className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 focus:ring-secondary/20">
                             <SelectValue placeholder="Select architectural need" />
                           </SelectTrigger>
                           <SelectContent className="rounded-2xl border-slate-100 shadow-xl">
@@ -237,7 +237,7 @@ export default function Contact() {
                       <div className="space-y-3">
                         <Label htmlFor="hiringVolume" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Target Volume (Annual)</Label>
                         <Select value={formData.hiringVolume} onValueChange={(value) => setFormData({ ...formData, hiringVolume: value })}>
-                          <SelectTrigger className="bg-slate-50 border-slate-100 h-14 rounded-2xl px-5 text-slate-700 focus:ring-secondary/20">
+                          <SelectTrigger className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 focus:ring-secondary/20">
                             <SelectValue placeholder="Select projected scale" />
                           </SelectTrigger>
                           <SelectContent className="rounded-2xl border-slate-100 shadow-xl">
@@ -254,7 +254,7 @@ export default function Contact() {
                       <Label htmlFor="message" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Strategic Objectives *</Label>
                       <Textarea
                         id="message"
-                        className="bg-slate-50 border-slate-100 rounded-2xl p-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300 min-h-[160px]"
+                        className="bg-slate-50 border-slate-200 rounded-2xl p-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300 min-h-[160px]"
                         placeholder="Detail your current bottlenecks and target state..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}

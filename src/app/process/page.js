@@ -182,7 +182,7 @@ export default function Process() {
                         {phase.description}
                       </p>
 
-                      <div className={`p-8 md:p-10 rounded-3xl bg-slate-900 text-white relative overflow-hidden group shadow-2xl ${index % 2 === 0 ? "md:ml-auto" : ""} max-w-md`}>
+                      <div className={`p-8 md:p-12 rounded-[2rem] bg-slate-900 text-white relative overflow-hidden group shadow-2xl ${index % 2 === 0 ? "md:ml-auto" : ""} max-w-md border border-white/5`}>
                         <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 blur-[80px] rounded-full translate-x-1/2 -translate-y-1/2" />
                         <h4 className="text-[10px] font-bold text-secondary uppercase tracking-[0.4em] mb-6 flex items-center gap-2">
                           STRATEGIC YIELD
@@ -200,7 +200,7 @@ export default function Process() {
 
                     {/* Right Column - Activities Card */}
                     <div className={`${index % 2 === 1 ? "md:order-1" : ""}`}>
-                      <div className="p-8 md:p-12 rounded-[2.5rem] bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:border-secondary/20 transition-all duration-500 group relative">
+                      <div className="p-8 md:p-12 rounded-[2.5rem] bg-white border border-slate-200 shadow-xl shadow-slate-200/50 hover:border-secondary/20 transition-all duration-500 group relative">
                         <h3 className="text-xl font-bold text-slate-900 mb-10 tracking-tight flex items-center gap-2">
                           <Sparkles className="h-5 w-5 text-secondary" />
                           PHASE EXECUTION ACTIVITIES
