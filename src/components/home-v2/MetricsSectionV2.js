@@ -36,24 +36,24 @@ const metrics = [
         icon: Building2,
         targetValue: 14,
         suffix: "+",
-        label: "Enterprise Clients",
-        description: "Global organizations served",
+        label: "Active Client Accounts",
+        description: "Global businesses served across UK, US, Canada & APAC",
         color: "from-[#cf603d] to-[#ebd69b]"
     },
     {
         icon: Target,
         targetValue: 85,
         suffix: "%+",
-        label: "Placement Rate",
-        description: "Industry leading accuracy",
+        label: "Client Retention Rate",
+        description: "Businesses that stay, scale, and grow with us",
         color: "from-[#cf603d] to-[#cf603d]/40"
     },
     {
         icon: Zap,
         targetValue: 60,
         suffix: "%",
-        label: "ROI Efficiency",
-        description: "Average cost reduction",
+        label: "Average Cost Savings",
+        description: "Vs. in-house hiring and traditional agency models",
         color: "from-[#ebd69b] to-[#cf603d]"
     },
     {
@@ -61,7 +61,7 @@ const metrics = [
         targetValue: 24,
         suffix: "/7",
         label: "Global Support",
-        description: "Multi-timezone delivery",
+        description: "Continuous operations across every service line",
         color: "from-[#cf603d] to-[#ffffff]"
     },
 ];
@@ -83,7 +83,7 @@ export function MetricsSection() {
                             Proven <span className="text-secondary">Impact</span> at Scale
                         </h2>
                         <p className="text-xs md:text-sm lg:text-base text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed italic border-x-2 border-slate-100 px-6">
-                            Delivering quantifiable results and scaling operations for elite enterprises across the globe through strategic precision and technical excellence.
+                            Quantifiable results across five key service lines from recruitment and marketing to AI automation, business growth, and financial management.
                         </p>
                     </motion.div>
                 </div>

@@ -43,7 +43,7 @@ export default function CareerDetailPage({ params }) {
                                     <span className="text-[10px] font-bold text-slate-600 tracking-[0.4em] uppercase">Core Requirement</span>
                                 </div>
                                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tighter leading-tight">
-                                    {title}
+                                    Career Detail
                                 </h1>
                                 <div className="flex flex-wrap gap-6 text-slate-500 font-bold text-[10px] uppercase tracking-widest">
                                     <div className="flex items-center gap-2">
@@ -52,11 +52,7 @@ export default function CareerDetailPage({ params }) {
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <Briefcase className="h-4 w-4 text-secondary" />
-                                        Full-Time Execution
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <Clock className="h-4 w-4 text-secondary" />
-                                        Immediate Deployment
+                                        Full-Time / Immediate Start
                                     </div>
                                 </div>
                             </div>
@@ -65,9 +61,9 @@ export default function CareerDetailPage({ params }) {
                                 <section>
                                     <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight">Executive Summary</h2>
                                     <p className="text-slate-500 text-lg leading-relaxed font-light">
-                                        We are looking for a visionary {title} to join our elite strategic engine.
-                                        You will be responsible for architecting high-impact recruitment ecosystems
-                                        and driving surgical ROI for our global enterprise partners.
+                                        We're looking for someone who takes ownership, thinks strategically, and delivers — 
+                                        not someone who waits to be told what to do. This role sits at the heart of Noltven's 
+                                        delivery engine, contributing directly to client results across one or more of our five service lines.
                                     </p>
                                 </section>
 
@@ -75,10 +71,10 @@ export default function CareerDetailPage({ params }) {
                                     <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight">Key Directives</h2>
                                     <ul className="space-y-4">
                                         {[
-                                            "Design and execute end-to-end recruitment architectures.",
-                                            "Manage high-fidelity stakeholder relationships at the enterprise level.",
-                                            "Optimize talent delivery workflows through AI and automation.",
-                                            "Lead technical sourcing sprints for high-scale global markets."
+                                            "Deliver consistent, measurable output across your service line.",
+                                            "Own client communication with clarity, speed, and professionalism.",
+                                            "Use systems, automation, and data to work smarter not harder.",
+                                            "Flag problems early. Bring solutions, not just issues."
                                         ].map((item, i) => (
                                             <li key={i} className="flex items-start gap-4 text-slate-500">
                                                 <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />

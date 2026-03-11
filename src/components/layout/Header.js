@@ -10,11 +10,11 @@ import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
-  { name: "Full RPO Partnership", href: "/services/full-rpo-partnership" },
-  { name: "Recruitment On-Demand", href: "/services/recruitment-on-demand" },
-  { name: "Offshore Support", href: "/services/offshore-recruitment-support" },
-  { name: "Executive Search", href: "/services/executive-search-headhunting" },
-  { name: "Candidate Pre-Screening", href: "/services/candidate-pre-screening" },
+  { name: "Recruitment Services", href: "/services/recruitment-services" },
+  { name: "Marketing Support", href: "/services/marketing-support" },
+  { name: "AI & Automation", href: "/services/ai-automation" },
+  { name: "Business Development", href: "/services/business-development" },
+  { name: "Accounting & Finance", href: "/services/accounting-finance" },
 ];
 
 const navigation = [

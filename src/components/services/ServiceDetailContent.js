@@ -47,13 +47,13 @@ export function ServiceDetailContent({ service }) {
                                 </div>
                             </div>
 
-                            {/* Best For Section */}
+                            {/* Who This Is For Section */}
                             <div className="p-8 md:p-12 rounded-[2.5rem] bg-slate-900 text-white relative overflow-hidden group shadow-2xl">
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2" />
                                 <div className="relative z-10">
                                     <h3 className="text-2xl font-bold mb-6 tracking-tight flex items-center gap-3">
                                         <Target className="h-6 w-6 text-secondary" />
-                                        Ideal Scenario
+                                        Who This Is For
                                     </h3>
                                     <p className="text-slate-300 text-lg md:text-xl font-light leading-relaxed">
                                         {service.bestFor}

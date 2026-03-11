@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import Image from "next/image";
 
-export function ServicesHero() {
+export function ServicesHero({ 
+    tag = "Our Solutions", 
+    title = "Stop Paying Five Agencies for One Job", 
+    description = "Recruitment. Marketing. AI. Business Development. Finance. All live under one roof - no gaps, no conflicting priorities, no wasted budget." 
+}) {
     return (
         <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-white">
             {/* Background Image with Overlay */}
@@ -29,7 +33,7 @@ export function ServicesHero() {
                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-8"
                     >
                         <Sparkles className="h-4 w-4" />
-                        Our Solutions
+                        {tag}
                     </motion.div>
 
                     <motion.h1
@@ -38,8 +42,7 @@ export function ServicesHero() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="text-4xl md:text-7xl font-bold text-slate-900 mb-8 tracking-tighter leading-[1.1]"
                     >
-                        Strategic Talent <br />
-                        <span className="text-secondary">Delivery Models</span>
+                        {title}
                     </motion.h1>
 
                     <motion.p
@@ -48,8 +51,7 @@ export function ServicesHero() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-lg md:text-xl text-slate-600 font-light leading-relaxed max-w-2xl"
                     >
-                        Precision-engineered recruitment frameworks designed to solve your
-                        most complex hiring bottlenecks and accelerate growth.
+                        {description}
                     </motion.p>
                 </div>
             </div>

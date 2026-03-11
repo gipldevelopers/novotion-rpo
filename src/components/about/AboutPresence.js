@@ -7,23 +7,23 @@ const locations = [
     {
         title: "USA & UK",
         subtitle: "Strategic HQ & Market Leadership",
-        description: "Primary markets focusing on executive alignment, strategy, and local compliance.",
+        description: "Strategic HQ client relationships, account leadership, and local market intelligence.",
         icon: ShieldCheck,
-        tags: ["Strategy", "Leadership", "Compliance"]
+        tags: ["Strategy", "Leadership", "Global Flow"]
     },
     {
         title: "India (Ahmedabad)",
-        subtitle: "Operational Excellence Hub",
-        description: "Advanced sourcing, screening, and administrative delivery engine powered by local expertise.",
+        subtitle: "High-Output Delivery",
+        description: "High-output delivery engine running recruitment, marketing, automation, finance, and admin daily.",
         icon: Globe,
-        tags: ["Scalability", "Sourcing", "Quality Control"]
+        tags: ["Scalability", "Execution", "Efficiency"]
     },
     {
         title: "24/7 Connectivity",
         subtitle: "Round-the-Clock Momentum",
-        description: "Synchronized global operations ensuring hiring pipelines never stop moving.",
+        description: "Synchronized operations across all five service lines—always active, always delivering.",
         icon: Clock,
-        tags: ["Speed", "Efficiency", "Continuous Coverage"]
+        tags: ["Speed", "Agility", "Always-On"]
     }
 ];
 
@@ -46,8 +46,8 @@ export function AboutPresence() {
                         </motion.div>
 
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 tracking-tighter">
-                            A Borderless Talent <br />
-                            <span className="text-secondary">Delivery Framework</span>
+                            Built to Operate Anywhere. <br />
+                            <span className="text-secondary">Built to Deliver Everywhere.</span>
                         </h2>
 
                         <div className="space-y-8">
@@ -96,19 +96,19 @@ export function AboutPresence() {
                             <div className="absolute top-1/4 left-1/4">
                                 <span className="absolute inset-0 rounded-full bg-secondary animate-ping opacity-20" />
                                 <div className="relative w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-xl shadow-secondary/20" />
-                                <span className="absolute top-6 left-0 whitespace-nowrap text-[10px] font-bold text-slate-900 tracking-widest uppercase bg-white px-2 py-1 rounded-md shadow-sm border border-slate-100">Orlando, FL</span>
+                                <span className="absolute top-6 left-0 whitespace-nowrap text-[10px] font-bold text-slate-900 tracking-widest uppercase bg-white px-2 py-1 rounded-md shadow-sm border border-slate-100">USA HQ</span>
                             </div>
 
                             <div className="absolute top-1/3 left-1/2">
                                 <span className="absolute inset-0 rounded-full bg-secondary animate-ping opacity-20" />
                                 <div className="relative w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-xl shadow-secondary/20" />
-                                <span className="absolute top-6 left-0 whitespace-nowrap text-[10px] font-bold text-slate-900 tracking-widest uppercase bg-white px-2 py-1 rounded-md shadow-sm border border-slate-100">London, UK</span>
+                                <span className="absolute top-6 left-0 whitespace-nowrap text-[10px] font-bold text-slate-900 tracking-widest uppercase bg-white px-2 py-1 rounded-md shadow-sm border border-slate-100">UK OFFICE</span>
                             </div>
 
                             <div className="absolute bottom-1/3 right-1/4">
                                 <span className="absolute inset-0 rounded-full bg-secondary animate-ping opacity-20" />
                                 <div className="relative w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-xl shadow-secondary/20" />
-                                <span className="absolute top-6 left-0 whitespace-nowrap text-[10px] font-bold text-slate-900 tracking-widest uppercase bg-white px-2 py-1 rounded-md shadow-sm border border-slate-100">Ahmedabad, IN</span>
+                                <span className="absolute top-6 left-0 whitespace-nowrap text-[10px] font-bold text-secondary tracking-widest uppercase bg-white px-2 py-1 rounded-md shadow-sm border border-secondary/20">Ahmedabad, IN (DELIVERY)</span>
                             </div>
 
                             {/* Connection Lines */}

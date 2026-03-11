@@ -22,22 +22,19 @@ export function AboutStory() {
                         </motion.div>
 
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 tracking-tighter">
-                            A Disruptive Path to <br />
-                            <span className="text-secondary">Enterprise Excellence</span>
+                            One Partner That Does <br />
+                            <span className="text-secondary">What Five Agencies Can't</span>
                         </h2>
 
                         <div className="space-y-6 text-slate-500 text-base md:text-lg font-light leading-relaxed">
                             <p>
-                                At Novotion RPO, we're on a mission to transform how enterprises approach talent acquisition.
-                                We believe that recruitment should be a strategic advantage, not a bottleneck.
+                                We built Noltven on one belief: growing businesses shouldn't have to choose between getting expert support and keeping costs under control. You shouldn't have to pick two out of five.
                             </p>
                             <p>
-                                Founded to bridge the gap between traditional staffing agencies and the sophisticated
-                                needs of growing enterprises, we deliver recruitment solutions that are scalable,
-                                cost-effective, and results-driven.
+                                So we put recruitment, marketing, AI automation, business development, and finance under one roof—all aligned to the same goals, held to the same standards, reporting to you in a single place.
                             </p>
                             <p className="p-6 bg-slate-50 rounded-[2rem] border-l-4 border-secondary text-slate-700 font-medium italic">
-                                "Our unique hybrid model combines strategic expertise from the USA & UK with operative excellence from India, ensuring 24/7 global momentum."
+                                "UK and US strategy. India-based delivery. The result: enterprise output at a fraction of the cost for businesses ready to scale."
                             </p>
                         </div>
                     </motion.div>
@@ -52,8 +49,8 @@ export function AboutStory() {
                         <div className="relative aspect-square md:aspect-video lg:aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-200/50">
                             <div className="absolute inset-0 bg-slate-900/10 z-10" />
                             <img
-                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000"
-                                alt="Teamwork"
+                                src="/assets/about_mission.png"
+                                alt="Global Strategic Partnership"
                                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                             />
 
@@ -69,7 +66,7 @@ export function AboutStory() {
                                     </div>
                                     <span className="text-[10px] font-bold text-secondary uppercase tracking-widest">Global Team</span>
                                 </div>
-                                <p className="text-slate-900 font-bold text-sm">Empowering 500+ successful placements across 3 continents.</p>
+                                <p className="text-slate-900 font-bold text-sm">One unified partner. Five expert services. Infinite growth potential.</p>
                             </div>
                         </div>
 

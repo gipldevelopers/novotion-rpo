@@ -66,7 +66,7 @@ export default function Contact() {
                     Operational Nodes
                   </div>
                   <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tighter leading-tight mb-8">
-                    Global Support <br /> Architecture.
+                    Two Locations. <br /> One Unified Team.
                   </h2>
                 </div>
 
@@ -78,9 +78,6 @@ export default function Contact() {
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2 tracking-tight">USA Headquarters</h3>
                     <p className="text-slate-500 font-light leading-relaxed mb-4">Orlando, FL, USA</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2 py-1 rounded border border-slate-200 bg-white">Strategic Strategy</span>
-                    </div>
                   </div>
 
                   {/* India Node */}
@@ -90,9 +87,6 @@ export default function Contact() {
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2 tracking-tight">India Operations</h3>
                     <p className="text-slate-500 font-light leading-relaxed mb-4">Ahmedabad, Gujarat, India</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest px-2 py-1 rounded border border-slate-200 bg-white">Global Delivery</span>
-                    </div>
                   </div>
 
                   {/* Direct Lines */}
@@ -102,9 +96,9 @@ export default function Contact() {
                         <Mail className="h-4 w-4" />
                       </div>
                       <div>
-                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Direct Intel</p>
-                        <a href="mailto:info@novotionrpo.com" className="text-slate-700 font-medium hover:text-secondary transition-colors">
-                          info@novotionrpo.com
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Email</p>
+                        <a href="mailto:info@noltven.com" className="text-slate-700 font-medium hover:text-secondary transition-colors">
+                          info@noltven.com
                         </a>
                       </div>
                     </div>
@@ -113,7 +107,7 @@ export default function Contact() {
                         <Phone className="h-4 w-4" />
                       </div>
                       <div>
-                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Voice Protocol</p>
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Phone</p>
                         <a href="tel:+1234567890" className="text-slate-700 font-medium hover:text-secondary transition-colors">
                           +1 (234) 567-890
                         </a>
@@ -134,10 +128,10 @@ export default function Contact() {
                 <div className="bg-white border border-slate-200 p-8 md:p-14 rounded-[2.5rem] shadow-2xl shadow-slate-200/50">
                   <div className="mb-12 border-b border-slate-200 pb-8 relative">
                     <div className="absolute right-0 top-0 w-24 h-24 bg-secondary/5 rounded-full blur-2xl" />
-                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 tracking-tight">Initiate Operational Scan</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 tracking-tight">Tell Us What You Need</h3>
                     <p className="text-slate-500 font-light leading-relaxed max-w-xl">
-                      Provide your enterprise requirements below. A lead architect will review your parameters
-                      and respond with a custom deployment strategy within 24 hours.
+                      Give us the basics below. One of our team will respond within 24 hours with a 
+                      clear outline of how we can help - no obligation, no hard sell.
                     </p>
                   </div>
 
@@ -148,7 +142,7 @@ export default function Contact() {
                         <Input
                           id="firstName"
                           className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
-                          placeholder="John"
+                          placeholder="First Name *"
                           value={formData.firstName}
                           onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                           required
@@ -159,7 +153,7 @@ export default function Contact() {
                         <Input
                           id="lastName"
                           className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
-                          placeholder="Doe"
+                          placeholder="Last Name *"
                           value={formData.lastName}
                           onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                           required
@@ -174,7 +168,7 @@ export default function Contact() {
                           id="email"
                           type="email"
                           className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
-                          placeholder="john.doe@enterprise.com"
+                          placeholder="Work Email *"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           required
@@ -186,7 +180,7 @@ export default function Contact() {
                           id="phone"
                           type="tel"
                           className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
-                          placeholder="+1 (555) 000-0000"
+                          placeholder="Direct Line"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         />
@@ -195,22 +189,22 @@ export default function Contact() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-3">
-                        <Label htmlFor="company" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Corporate Entity *</Label>
+                        <Label htmlFor="company" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Company Name *</Label>
                         <Input
                           id="company"
                           className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
-                          placeholder="Global Corp Inc."
+                          placeholder="Company Name *"
                           value={formData.company}
                           onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                           required
                         />
                       </div>
                       <div className="space-y-3">
-                        <Label htmlFor="jobTitle" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Official Title</Label>
+                        <Label htmlFor="jobTitle" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Your Role / Title</Label>
                         <Input
                           id="jobTitle"
                           className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
-                          placeholder="VP of Talent Acquisition"
+                          placeholder="Your Role / Title"
                           value={formData.jobTitle}
                           onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}
                         />
@@ -219,18 +213,18 @@ export default function Contact() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="space-y-3">
-                        <Label htmlFor="service" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Deployment Type</Label>
+                        <Label htmlFor="service" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">SERVICE OF INTEREST</Label>
                         <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
                           <SelectTrigger className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 focus:ring-secondary/20">
-                            <SelectValue placeholder="Select architectural need" />
+                            <SelectValue placeholder="SERVICE OF INTEREST" />
                           </SelectTrigger>
-                          <SelectContent className="rounded-2xl border-slate-100 shadow-xl">
-                            <SelectItem value="full-rpo">Full Ecosystem RPO</SelectItem>
-                            <SelectItem value="project-rpo">Surgical Project RPO</SelectItem>
-                            <SelectItem value="offshore">Global Offshore Support</SelectItem>
-                            <SelectItem value="executive">Elite Executive Search</SelectItem>
-                            <SelectItem value="screening">Volume Candidate Screening</SelectItem>
-                            <SelectItem value="consulting">Strategic Consulting</SelectItem>
+                          <SelectContent className="rounded-2xl border-slate-100 shadow-xl bg-white">
+                            <SelectItem value="recruitment">Recruitment Services</SelectItem>
+                            <SelectItem value="marketing">Marketing Support</SelectItem>
+                            <SelectItem value="ai-automation">AI & Automation</SelectItem>
+                            <SelectItem value="business-dev">Business Development</SelectItem>
+                            <SelectItem value="accounting">Accounting & Finance</SelectItem>
+                            <SelectItem value="full-partnership">Full Multi-Service Partnership</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -238,9 +232,9 @@ export default function Contact() {
                         <Label htmlFor="hiringVolume" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Target Volume (Annual)</Label>
                         <Select value={formData.hiringVolume} onValueChange={(value) => setFormData({ ...formData, hiringVolume: value })}>
                           <SelectTrigger className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 focus:ring-secondary/20">
-                            <SelectValue placeholder="Select projected scale" />
+                            <SelectValue placeholder="Target Volume (Annual)" />
                           </SelectTrigger>
-                          <SelectContent className="rounded-2xl border-slate-100 shadow-xl">
+                          <SelectContent className="rounded-2xl border-slate-100 shadow-xl bg-white">
                             <SelectItem value="1-10">Micro (1-10 hires)</SelectItem>
                             <SelectItem value="11-50">Standard (11-50 hires)</SelectItem>
                             <SelectItem value="51-100">Scale (51-100 hires)</SelectItem>
@@ -251,7 +245,7 @@ export default function Contact() {
                     </div>
 
                     <div className="space-y-3">
-                      <Label htmlFor="message" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Strategic Objectives *</Label>
+                      <Label htmlFor="message" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">WHAT ARE YOU TRYING TO ACHIEVE? *</Label>
                       <Textarea
                         id="message"
                         className="bg-slate-50 border-slate-200 rounded-2xl p-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300 min-h-[160px]"

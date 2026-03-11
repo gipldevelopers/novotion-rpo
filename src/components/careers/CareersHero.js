@@ -38,8 +38,8 @@ export function CareersHero() {
                         transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                         className="text-4xl md:text-7xl font-bold text-slate-900 mb-8 tracking-tighter leading-[1.1]"
                     >
-                        Engineer Your <br />
-                        <span className="text-secondary italic">Career Future.</span>
+                        Build Your Future <br />
+                        <span className="text-secondary italic">With Purpose.</span>
                     </motion.h1>
 
                     <motion.p
@@ -48,8 +48,8 @@ export function CareersHero() {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                         className="text-base md:text-xl text-slate-700 max-w-2xl font-normal leading-relaxed"
                     >
-                        Join a global team of strategic architects and talent engineers.
-                        We don't just fill roles; we build the future of recruitment through innovation.
+                        Not a seat filler. Not a number. A real role, with real impact, at a company that's
+                        growing fast and doing work that actually matters.
                     </motion.p>
                 </div>
             </div>

@@ -29,7 +29,7 @@ export function BlogsHero() {
                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-8"
                     >
                         <BookOpen className="h-4 w-4" />
-                        Intelligence Insights
+                        Industry Insights
                     </motion.div>
 
                     <motion.h1
@@ -38,8 +38,8 @@ export function BlogsHero() {
                         transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                         className="text-4xl md:text-7xl font-bold text-slate-900 mb-8 tracking-tighter leading-[1.1]"
                     >
-                        Strategic <br />
-                        <span className="text-secondary italic">Thought Leadership.</span>
+                        Strategy, <br />
+                        <span className="text-secondary italic">Growth & Market Intel</span>
                     </motion.h1>
 
                     <motion.p
@@ -48,8 +48,8 @@ export function BlogsHero() {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                         className="text-lg md:text-xl text-slate-700 max-w-2xl font-normal leading-relaxed"
                     >
-                        Explore deep-dive analyses, talent market intelligence, and architectural
-                        perspectives from our lead RPO engineers. Navigating the future of global hiring.
+                        Practical insights and expert perspectives across recruitment, marketing, AI,
+                        business development, and  inance from the people doing the work every day.
                     </motion.p>
                 </div>
             </div>

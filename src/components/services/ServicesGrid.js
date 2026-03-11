@@ -1,50 +1,50 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Users, Building, Search, UserCheck, ArrowRight, ChevronRight, Check } from "lucide-react";
+import { Briefcase, Users, Layout, Cog, Target, ArrowRight, ChevronRight, Check } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const services = [
     {
-        id: "full-rpo",
-        slug: "full-rpo-partnership",
-        icon: Briefcase,
-        title: "Full RPO Partnership",
-        description: "Complete end-to-end recruitment process outsourcing where we become your dedicated talent acquisition team.",
-        tag: "Enterprise"
-    },
-    {
-        id: "project-rpo",
-        slug: "recruitment-on-demand",
+        id: "recruitment",
+        slug: "recruitment-services",
         icon: Users,
-        title: "Recruitment On-Demand",
-        description: "Flexible, project-based recruitment support for specific hiring campaigns, expansions, or seasonal peaks.",
-        tag: "Agile"
-    },
-    {
-        id: "offshore",
-        slug: "offshore-recruitment-support",
-        icon: Building,
-        title: "Offshore Support",
-        description: "Cost-effective recruitment operations leveraging our skilled India-based team for maximum efficiency.",
+        title: "Recruitment Services",
+        description: "End-to-end hiring that cuts your time-to-fill by 60% and cost-per-hire by half with zero wrong-fit candidates reaching your desk.",
         tag: "Efficiency"
     },
     {
-        id: "executive",
-        slug: "executive-search-headhunting",
-        icon: Search,
-        title: "Executive Search",
-        description: "Specialized search services for senior leadership, C-suite, and hard-to-find specialist positions.",
-        tag: "Elite"
+        id: "marketing",
+        slug: "marketing-support",
+        icon: Layout,
+        title: "Marketing Support",
+        description: "SEO, social media, paid ads, email, and branding every channel covered, every campaign tied to a conversion goal.",
+        tag: "Growth"
     },
     {
-        id: "screening",
-        slug: "candidate-pre-screening",
-        icon: UserCheck,
-        title: "Candidate Pre-Screening",
-        description: "Comprehensive evaluation and preparation services to ensure only the best reach your hiring managers.",
-        tag: "Quality"
+        id: "ai-automation",
+        slug: "ai-automation",
+        icon: Cog,
+        title: "AI & Automation",
+        description: "Stop your team doing manually what a system can do automatically. We build the workflows, chatbots, and integrations that free up your time.",
+        tag: "Intelligence"
+    },
+    {
+        id: "biz-dev",
+        slug: "business-development",
+        icon: Briefcase,
+        title: "Business Development",
+        description: "Consistent leads, a structured pipeline, and partnerships that convert built by a team that works outbound every single day.",
+        tag: "Proactive"
+    },
+    {
+        id: "finance",
+        slug: "accounting-finance",
+        icon: Target,
+        title: "Accounting & Finance",
+        description: "Professional bookkeeping, payroll, tax, and financial reporting delivered at a fraction of the cost of a full-time hire.",
+        tag: "Precise"
     },
 ];
 
@@ -97,12 +97,12 @@ export function ServicesGrid() {
                         className="p-8 md:p-10 rounded-[2.5rem] bg-slate-900 text-white border border-slate-800 flex flex-col justify-center items-start relative overflow-hidden group shadow-2xl"
                     >
                         <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/20 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2 group-hover:bg-secondary/40 transition-colors" />
-                        <h3 className="text-2xl font-bold mb-4 tracking-tighter">Custom RPO <br />Framework?</h3>
+                        <h3 className="text-2xl font-bold mb-4 tracking-tighter">Not Sure Where to Start?</h3>
                         <p className="text-slate-400 text-sm font-light mb-8 leading-relaxed">
-                            Need a hybrid solution? We can architect a custom delivery model tailored to your unique requirements.
+                            Tell us what's holding your business back. We'll figure out which services move the needle and build something that fits.
                         </p>
-                        <Button asChild className="bg-secondary hover:bg-secondary/90 text-white rounded-xl h-12 px-6 border-none shadow-lg shadow-secondary/20">
-                            <Link href="/contact" className="text-[12px] font-bold">DISCUSS CUSTOM BUILD</Link>
+                        <Button asChild className="bg-secondary hover:bg-secondary/90 text-white rounded-xl h-12 px-8 border-none shadow-lg shadow-secondary/20">
+                            <Link href="/contact" className="text-[12px] font-bold">LET'S TALK</Link>
                         </Button>
                     </motion.div>
                 </div>

@@ -19,25 +19,46 @@ import Link from "next/link";
 
 const openRoles = [
     {
-        title: "Senior Recruitment Architect",
-        department: "Strategy & Intelligence",
-        location: "USA / Remote",
+        title: "Client Delivery Lead",
+        department: "Operations",
+        location: "UK / Remote",
         type: "Full-Time",
-        description: "Designing end-to-end recruitment ecosystems for global enterprise clients with a focus on strategic scaling."
+        description: "Leading multi-discipline teams to deliver consistent, high-impact results across our recruitment and marketing service lines."
     },
     {
-        title: "Lead Talent Engineer",
-        department: "Operations",
+        title: "Growth Strategy Senior",
+        department: "Business Development",
+        location: "USA / Global",
+        type: "Full-Time",
+        description: "Architecting outbound pipelines and building predictable revenue models for our enterprise client base."
+    },
+    {
+        title: "AI Automation Engineer",
+        department: "Tech & Systems",
         location: "Ahmedabad, India",
         type: "Full-Time",
-        description: "Spearheading our elite sourcing engines and managing high-volume tech recruitment for US/UK markets."
+        description: "Mapping business processes and building the intelligent systems that eliminate manual bottlenecks for our global partners."
     },
     {
-        title: "Growth Partnership Lead",
-        department: "Client Services",
+        title: "Senior Finance Analyst",
+        department: "Finance",
+        location: "Ahmedabad, India",
+        type: "Full-Time",
+        description: "Managing accounts and financial reporting for high-scale retail and technology partners in the UK and US."
+    },
+    {
+        title: "Content Marketing Architect",
+        department: "Marketing",
+        location: "Remote / Global",
+        type: "Full-Time",
+        description: "Designing end-to-end content strategies that drive conversions and build brand authority across global markets."
+    },
+    {
+        title: "Technical Recruitment Specialist",
+        department: "Recruitment",
         location: "UK / Hybrid",
         type: "Full-Time",
-        description: "Architecting long-term RPO partnerships and driving surgical recruitment ROI for our premium client base."
+        description: "Sourcing and placing elite talent for some of the world's fastest-growing technology and SaaS companies."
     }
 ];
 
@@ -45,17 +66,17 @@ const benefits = [
     {
         icon: Globe,
         title: "Global Exposure",
-        text: "Directly influence recruitment engines for world-class US and UK clients."
+        text: "Work directly with clients across the UK, US, Canada, and APAC — from day one, not year three."
     },
     {
         icon: Target,
-        title: "Tech-First Culture",
-        text: "Access to cutting-edge AI automation and advanced recruitment stacks."
+        title: "Five Disciplines, One Career",
+        text: "Grow across five different service areas. Build rare skills. Stay sharp across every function."
     },
     {
         icon: TrendingUp,
-        title: "Growth Acceleration",
-        text: "Strategic career maps designed for rapid horizontal and vertical scale."
+        title: "Results, Not Face Time",
+        text: "We care about outcomes. If you deliver, you grow. It's that straightforward."
     }
 ];
 
@@ -63,6 +84,17 @@ export function CareersGrid() {
     return (
         <section className="py-24 md:py-40 bg-white relative overflow-hidden">
             <div className="container-premium relative z-10 px-6 md:px-12">
+                <div className="text-center mb-16 md:mb-24">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 mb-6"
+                    >
+                        <Sparkles className="h-4 w-4 text-secondary" />
+                        <span className="text-[10px] font-bold text-secondary tracking-[0.4em] uppercase">Why Noltven</span>
+                    </motion.div>
+                </div>
 
                 {/* Benefits Section */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32 md:mb-48">
@@ -97,7 +129,7 @@ export function CareersGrid() {
                             <span className="text-[10px] font-bold text-slate-600 tracking-[0.4em] uppercase">Execution Logic</span>
                         </motion.div>
                         <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tighter leading-tight">
-                            Available <span className="text-secondary italic">Deployment.</span>
+                            Available <span className="text-secondary italic">Deployments.</span>
                         </h2>
                     </div>
 

@@ -1,34 +1,50 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, ArrowRight, Cog, Layout, Users, Globe, Sparkles, ChevronRight } from "lucide-react";
+import { Check, ArrowRight, Cog, Layout, Users, Briefcase, Target, Sparkles, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
 const services = [
     {
-        title: "End-to-End RPO",
-        description: "A complete overhaul of your talent acquisition engine. From employer branding and sourcing strategy to final onboarding and retention analytics.",
-        features: ["Strategy & Tech Audit", "Custom Pipeline Build", "Sub-surface Culture Filter", "Scalable Growth Framework"],
-        icon: Cog,
-        tag: "Integrated",
-        color: "bg-[#cf603d]"
+        title: "Recruitment",
+        subHeadline: "Recruitment Support",
+        description: "Complete offshore recruitment sourcing, screening, onboarding, and compliance that cuts time-to-hire by 60% and reduces hiring costs by up to 50%.",
+        features: ["End-to-End Hiring Management", "Active & Passive Talent Sourcing", "Market Mapping & Salary Benchmarking", "Right-to-Work & Compliance Checks"],
+        icon: Users,
+        tag: "Targeted",
     },
     {
-        title: "On-Demand Scaling",
-        description: "Need to hire 10 engineers in 30 days? Our project-based RPO plugs directly into your peak cycles without adding permanent headcount burden.",
-        features: ["Burst Talent Capacity", "Extreme Speed-to-Fill", "Full Risk Transfer", "On-Demand Recruiting Hub"],
+        title: "Marketing Support",
+        subHeadline: "Marketing Support",
+        description: "Full-service marketing covering social media, SEO, email campaigns, and paid ads built to grow your brand and turn the right audience into paying customers.",
+        features: ["Social Media Management & Content", "SEO, Blog Writing & Website Copy", "Google & Meta Paid Ad Campaigns", "Email Marketing & Automated Sequences"],
         icon: Layout,
-        tag: "Flexible",
-        color: "bg-[#ebd69b]"
+        tag: "Scalable",
     },
     {
-        title: "Offshore Hubs",
-        description: "Architecting elite specialized functional hubs in emerging markets. We handle the complexity so you get global quality at high cost-efficiency.",
-        features: ["Global Market Analysis", "Local Compliance Setup", "Hybrid Management Model", "Remote Culture Integration"],
-        icon: Globe,
-        tag: "Global",
-        color: "bg-[#070A11]"
+        title: "AI & Automation",
+        subHeadline: "AI & Automation",
+        description: "Workflow automation, AI chatbots, and system integrations that cut manual tasks, reduce errors by up to 90%, and scale your operations without extra headcount.",
+        features: ["End-to-End Workflow Automation", "Custom AI Chatbots & Virtual Assistants", "CRM, Email & Platform Integrations", "AI Reporting, Dashboards & Forecasting"],
+        icon: Cog,
+        tag: "Intelligent",
+    },
+    {
+        title: "Business Development",
+        subHeadline: "Business Development",
+        description: "Structured outbound prospecting, CRM management, and partnership development that fills your pipeline and converts opportunities into consistent revenue.",
+        features: ["Growth Strategy & Market Expansion", "Cold Email & LinkedIn Outreach", "Proposal Writing & Pitch Support", "CRM Setup & Pipeline Management"],
+        icon: Briefcase,
+        tag: "Proactive",
+    },
+    {
+        title: "Accounting & Finance",
+        subHeadline: "Accounting & Finance",
+        description: "Professional bookkeeping, payroll processing, tax compliance, and financial reporting without the overhead of a full-time in-house finance function.",
+        features: ["Bookkeeping & Bank Reconciliation", "Payroll Processing & Tax Compliance", "Accounts Payable & Receivable", "Financial Reporting & Budgeting"],
+        icon: Target,
+        tag: "Precise",
     },
 ];
 
@@ -50,11 +66,11 @@ export function ServicesPreview() {
                         Our Solutions
                     </motion.div>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3 md:mb-4 tracking-tighter leading-[1.12]">
-                        Strategic Talent <br />
-                        <span className="text-secondary">Delivery Systems</span>
+                        All Five Services. <br />
+                        <span className="text-secondary">One Trusted Partner.</span>
                     </h2>
                     <p className="text-slate-500 text-sm md:text-base font-normal leading-relaxed max-w-2xl mx-auto">
-                        Precision-engineered models designed to solve your most complex hiring bottlenecks.
+                        Every service is built around one goal giving your business the competitive edge it needs to grow.
                     </p>
                 </div>
 
@@ -112,11 +128,11 @@ export function ServicesPreview() {
                             >
                                 <div className="flex items-center gap-3 mb-6 md:mb-8">
                                     <div className="h-px w-6 bg-secondary" />
-                                    <span className="text-[9px] font-bold text-secondary uppercase tracking-[0.3em]">Technical Specification</span>
+                                    <span className="text-[9px] font-bold text-secondary uppercase tracking-[0.3em]">SERVICE BLUEPRINT</span>
                                 </div>
 
                                 <h4 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tighter leading-none">
-                                    {services[activeTab].title}
+                                    {services[activeTab].subHeadline}
                                 </h4>
 
                                 <p className="text-slate-500 text-sm md:text-base font-light leading-relaxed mb-10 max-w-xl italic border-l-2 border-slate-200 pl-6">

@@ -9,39 +9,39 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
     {
-        id: "clients",
-        title: "Global Clients",
+        id: "recruitment",
+        title: "Recruitment",
         subtitle: "Elite Partnerships",
-        description: "Empowering world-class enterprises with elite talent and innovative marketing strategies that drive global impact.",
-        image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=2000",
+        description: "Offshore recruitment specialists who cut time-to-hire by 60%, reduce costs by half, and place right-fit talent across UK, US, Canada, and APAC.",
+        image: "/assets/hero/recruitment.png",
     },
     {
         id: "marketing",
         title: "Marketing Support",
-        subtitle: "Growth Oriented",
-        description: "Full-spectrum marketing operations designed to amplify your brand voice and accelerate market penetration.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000",
+        subtitle: "Elite Partnerships",
+        description: "Full-service marketing covering SEO, social media, paid ads, and email all built to grow your brand and convert the right audience into revenue.",
+        image: "/assets/hero/marketing.png",
     },
     {
-        id: "ai",
-        title: "AI Automation",
-        subtitle: "Future Ready",
-        description: "Next-gen automation workflows that optimize your recruitment and marketing pipelines with surgical precision.",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000",
+        id: "clients",
+        title: "Global Clients",
+        subtitle: "Elite Partnerships",
+        description: "Helping businesses across the UK, US, Canada, and APAC hire better, market smarter, and operate with full financial clarity with one partner.",
+        image: "/assets/hero/global_clients.png",
     },
     {
         id: "bizdev",
         title: "Business Development",
-        subtitle: "Strategic Logic",
-        description: "Bridging the gap between potential and profit through data-driven business expansion and marketing logic.",
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2000",
+        subtitle: "Elite Partnerships",
+        description: "Structured outreach, smart partnerships, and a consistent sales pipeline that turns reactive businesses into proactive growth engines.",
+        image: "/assets/hero/bizdev.png",
     },
     {
         id: "finance",
         title: "Accounting & Finance",
-        subtitle: "Fiscal Integrity",
-        description: "Precision financial management and accounting services tailored for high-growth digital agencies.",
-        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2000",
+        subtitle: "Elite Partnerships",
+        description: "Professional bookkeeping, payroll, and tax compliance real-time financial clarity without the cost of an in-house finance team.",
+        image: "/assets/hero/finance.png",
     }
 ];
 
@@ -65,7 +65,7 @@ export function HeroSectionV8() {
                     <motion.div
                         key={services[activeIndex].id}
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 0.4 }}
+                        animate={{ opacity: 0.65 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="absolute inset-0"

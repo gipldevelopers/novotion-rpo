@@ -69,8 +69,8 @@ export function BlogGrid() {
                             Latest Intelligence
                         </motion.div>
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tighter leading-tight">
-                            Explore our latest <br />
-                            <span className="text-secondary">Strategic Dispatches</span>
+                            Fresh Thinking on <br />
+                            <span className="text-secondary">What's Actually Working Right Now </span>
                         </h2>
                     </div>
                 </div>
@@ -101,13 +101,16 @@ export function BlogGrid() {
                                     className="flex-shrink-0 w-[280px] md:w-[450px] lg:w-[500px] flex flex-col bg-slate-50 border border-slate-200 rounded-[2.5rem] overflow-hidden hover:border-secondary/20 hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 shadow-sm"
                                 >
                                     {/* Image Container */}
-                                    <div className="relative h-56 md:h-72 w-full block overflow-hidden bg-white pointer-events-none">
+                                    <Link 
+                                        href={`/blogs/${blog.slug}`}
+                                        className="relative h-56 md:h-72 w-full block overflow-hidden bg-white group/img"
+                                    >
                                         <Image
                                             src={blog.image}
                                             alt={blog.title}
                                             fill
                                             sizes="(max-width: 768px) 100vw, 50vw"
-                                            className="object-cover transition-transform duration-700 opacity-90"
+                                            className="object-cover transition-transform duration-700 opacity-90 group-hover/img:scale-105"
                                             draggable={false}
                                         />
                                         <div className="absolute top-6 left-6 z-10">
@@ -115,7 +118,7 @@ export function BlogGrid() {
                                                 {blog.category}
                                             </span>
                                         </div>
-                                    </div>
+                                    </Link>
 
                                     {/* Content Body */}
                                     <div className="p-8 md:p-10 flex flex-col flex-grow">
@@ -125,8 +128,10 @@ export function BlogGrid() {
                                             <div className="flex items-center gap-1.5">{blog.date}</div>
                                         </div>
 
-                                        <h3 className="text-xl md:text-3xl font-bold text-slate-900 mb-4 tracking-tight leading-snug hover:text-secondary transition-colors line-clamp-2">
-                                            {blog.title}
+                                        <h3 className="text-xl md:text-3xl font-bold text-slate-900 mb-4 tracking-tight leading-snug line-clamp-2">
+                                            <Link href={`/blogs/${blog.slug}`} className="hover:text-secondary transition-colors">
+                                                {blog.title}
+                                            </Link>
                                         </h3>
 
                                         <p className="text-slate-500 text-sm md:text-base font-light leading-relaxed mb-8 flex-grow line-clamp-3">

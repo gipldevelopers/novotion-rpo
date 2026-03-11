@@ -6,21 +6,21 @@ import { Search, Users, Zap, Briefcase, Globe, Sparkles } from "lucide-react";
 const advantages = [
     {
         title: "Precision Sourcing",
-        description: "Moving beyond keywords to identify the sub-surface technical and cultural markers that define elite talent.",
+        description: "We go beyond job boards using Boolean search, executive headhunting, and passive sourcing to find the candidates your competitors can't reach",
         icon: Search,
-        tag: "Accuracy"
+        tag: "Outcome: Accuracy"
     },
     {
         title: "Agile Scalability",
-        description: "Our on-demand recruitment framework grows with your project needs, eliminating fixed overhead risks.",
+        description: "Whether you need one hire or a full operational overhaul, our flexible model scales to your needs without adding permanent overhead.",
         icon: Zap,
-        tag: "Speed"
+        tag: "Outcome: Speed"
     },
     {
         title: "Strategic Advisory",
-        description: "We don't just fill roles; we build your talent roadmap, advising on market rates and competitive strategy.",
+        description: "We don't just execute we advise on market rates, hiring strategy, marketing direction, and growth planning to keep you ahead of the competition.",
         icon: Briefcase,
-        tag: "Strategy"
+        tag: "Outcome: Strategy"
     },
 ];
 
@@ -45,7 +45,7 @@ export function AdvantageSection() {
                     </h2>
 
                     <p className="text-slate-500 text-sm md:text-base font-light leading-relaxed max-w-xl mx-auto">
-                        Precision, speed, and strategic alignment are the cornerstones of our high-impact RPO methodology.
+                        Every service we deliver is built on three principles: precision, speed, and strategy with clear outcomes at every stage.
                     </p>
                 </div>
 

@@ -47,12 +47,13 @@ export function CTASectionV2() {
                                 </motion.div>
 
                                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tighter leading-none">
-                                    Architect Your <br />
-                                    <span className="text-secondary underline decoration-secondary/30 underline-offset-8">Winning Engine</span>
+                                    Build Your Winning  <br />
+                                    <span className="text-secondary underline decoration-secondary/30 underline-offset-8">Strategy Now </span>
                                 </h2>
 
                                 <p className="text-slate-400 text-sm md:text-base font-light max-w-xl leading-relaxed italic border-l-2 border-secondary/30 pl-6">
-                                    "Join the elite 1% of enterprises who have replaced traditional hiring friction with a high-velocity, strategic execution lifecycle."
+                                    "Join the businesses already working smarter faster hiring, stronger marketing,
+                                    cleaner finances, and growth systems that deliver real results every month."
                                 </p>
                             </div>
 

@@ -29,7 +29,7 @@ export function AboutHero() {
                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-8"
                     >
                         <Sparkles className="h-4 w-4" />
-                        Our Identity
+                        Who We Are
                     </motion.div>
 
                     <motion.h1
@@ -38,8 +38,8 @@ export function AboutHero() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="text-4xl md:text-7xl font-bold text-slate-900 mb-8 tracking-tighter leading-[1.1]"
                     >
-                        Architecting the <br />
-                        <span className="text-secondary">Future of Talent</span>
+                        Five Services. One Partner. <br />
+                        <span className="text-secondary">Zero Overhead.</span>
                     </motion.h1>
 
                     <motion.p
@@ -48,8 +48,8 @@ export function AboutHero() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-lg md:text-xl text-slate-600 font-light leading-relaxed max-w-2xl"
                     >
-                        We bridge the gap between human potential and enterprise ambition through
-                        precision-engineered RPO solutions and global strategic delivery.
+                        Most businesses run on five different agencies, five different invoices, and zero 
+                        alignment between them. Noltven exists to fix that.
                     </motion.p>
                 </div>
             </div>

@@ -1,43 +1,43 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Target, Heart, Users, Award, Globe, Handshake } from "lucide-react";
+import { Sparkles, Target, Users, ShieldCheck, Zap, Globe, Clock } from "lucide-react";
 
 const values = [
     {
         icon: Target,
-        title: "Strategic Focus",
-        description: "Every decision is aligned with your long-term objectives, not short-term gains.",
+        title: "Outcome Obsessed",
+        description: "We're not here to look busy. Every action ties directly to a result you can actually measure.",
         color: "from-orange-500/20 to-orange-500/0"
     },
     {
-        icon: Heart,
-        title: "Candidate Care",
-        description: "We treat every candidate with respect, reflecting your premium employer brand.",
+        icon: Users,
+        title: "One Team Always",
+        description: "We don't hand you off to junior staff. The people who pitch are the people who deliver.",
         color: "from-secondary/20 to-secondary/0"
     },
     {
-        icon: Users,
-        title: "Partnership First",
-        description: "We become an extension of your team, fully integrated with your culture.",
+        icon: ShieldCheck,
+        title: "No Hidden Agendas",
+        description: "Flat rates, honest timelines, clear reporting. No surprises ever.",
         color: "from-accent/20 to-accent/0"
     },
     {
-        icon: Award,
-        title: "Excellence",
-        description: "We hold ourselves to the highest standards in every placement and interaction.",
+        icon: Zap,
+        title: "Built to Scale",
+        description: "Built to scale with you. Every process, every hire, every campaign grows as you do.",
         color: "from-slate-500/20 to-slate-500/0"
     },
     {
         icon: Globe,
-        title: "Global Perspective",
-        description: "International footprint enables access to diverse talent and 24/7 support.",
+        title: "Cross-Service Edge",
+        description: "Five services. One shared strategy. No silos, no gaps, no dropped handoffs.",
         color: "from-secondary/20 to-secondary/0"
     },
     {
-        icon: Handshake,
-        title: "Transparency",
-        description: "Open communication builds the trust that powers lasting client partnerships.",
+        icon: Clock,
+        title: "Speed Matters",
+        description: "Fast decisions. Immediate starts. Results from week one not quarter one.",
         color: "from-orange-500/20 to-orange-500/0"
     },
 ];
@@ -59,12 +59,12 @@ export function AboutValues() {
                     </motion.div>
 
                     <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tighter">
-                        The Principles That <br />
-                        <span className="text-secondary">Drive Our Success</span>
+                        The Standards We <br />
+                        <span className="text-secondary">Hold Ourselves To</span>
                     </h2>
 
                     <p className="text-slate-500 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
-                        We operate with a commitment to integrity, innovation, and unwavering quality in everything we do.
+                        Not principles on a wall. These are the standards every person at Noltven is held to every day, on every project.
                     </p>
                 </div>
 

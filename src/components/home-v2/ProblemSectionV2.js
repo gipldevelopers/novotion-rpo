@@ -5,19 +5,19 @@ import { Sparkles } from "lucide-react";
 
 const problems = [
     {
-        title: "High Time-To-Hire",
-        description: "Standard recruitment models take 60+ days to fill critical roles, causing operational friction. We replace waiting with targeted, rapid execution.",
+        title: "Slow Time-To-Hire",
+        description: "Waiting 60+ days to fill a critical role means lost momentum and missed revenue. Our offshore recruitment model cuts time-to-hire by up to 60% with zero drop in candidate quality.",
         tag: "Time Loss"
     },
     {
-        title: "Quality Mismatch",
-        description: "Traditional filters miss sub-surface cultural and technical fits, leading to high turnover. Our precision-first approach ensures perfect alignment from day one.",
-        tag: "Cultural Risk"
+        title: "Wasted Marketing Spend",
+        description: "Scattered posts, random ads, and emails nobody opens that's what unfocused marketing looks like. We build data-driven campaigns with a clear strategy, a defined audience, and measurable ROI at every stage.",
+        tag: "Brand Waste"
     },
     {
         title: "Inefficient Cost Structure",
-        description: "Unoptimized agency fees and hidden processing costs bleed your operational budget. We eradicate overhead for a radically lean and scalable expansion.",
-        tag: "Cost Bloat"
+        description: "Bloated agency fees, in-house overhead, and manual processes drain your budget without delivering results. We replace it all with professional-grade outsourced expertise at a fraction of the cost.",
+        tag: "Capital Drain"
     },
 ];
 
@@ -45,7 +45,7 @@ export function ProblemSection() {
                                     <span className="text-secondary">Models Are Broken</span>
                                 </h2>
                                 <p className="text-slate-600 text-sm md:text-base lg:text-lg font-normal leading-relaxed max-w-lg">
-                                    Standard growth tactics are fundamentally flawed. We expose the hidden inefficiencies of old-school agency logic—eliminating wasted time, poor culture fits, and bloated costs to pave a direct road to market dominance.
+                                    Businesses lose thousands every year to slow hiring, wasted ad spend, manual workflows, and zero financial visibility. We cut through the outdated models that kill growth and replace them with efficient, results-driven systems built for scale.
                                 </p>
                             </motion.div>
                         </div>

@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 import { Send, Sparkles } from "lucide-react";
 import Image from "next/image";
 
-export function ContactHero() {
+export function ContactHero({
+  tag = "Start the Conversation",
+  title = "Let's Build Your Growth Strategy Together.",
+  description = "Not a sales pitch. A real conversation about where your business is, where you want it to go, and exactly how Noltven can help you get there faster."
+}) {
     return (
         <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-white">
             {/* Background Image with Overlay - Optimized for Professional Clarity */}
@@ -28,8 +32,8 @@ export function ContactHero() {
                         transition={{ duration: 0.8 }}
                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-8"
                     >
-                        <Send className="h-4 w-4" />
-                        Initiate Connection
+                        <Sparkles className="h-4 w-4" />
+                        {tag}
                     </motion.div>
 
                     <motion.h1
@@ -38,8 +42,7 @@ export function ContactHero() {
                         transition={{ duration: 0.8, delay: 0.1 }}
                         className="text-4xl md:text-7xl font-bold text-slate-900 mb-8 tracking-tighter leading-[1.1]"
                     >
-                        Let's Architect <br />
-                        <span className="text-secondary italic">Your Talent Future.</span>
+                        {title}
                     </motion.h1>
 
                     <motion.p
@@ -48,8 +51,7 @@ export function ContactHero() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-lg md:text-xl text-slate-600 font-light leading-relaxed max-w-2xl"
                     >
-                        Ready to revolutionize your hiring engine? Connect with our Lead Architects
-                        to discuss your custom RPO deployment and strategic scalability needs.
+                        {description}
                     </motion.p>
                 </div>
             </div>

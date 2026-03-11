@@ -5,117 +5,127 @@ import { Layout } from "@/components/layout/Layout";
 import { ServicesHero } from "@/components/services/ServicesHero";
 import { ServiceDetailContent } from "@/components/services/ServiceDetailContent";
 import { CTASectionV2 } from "@/components/home-v2/CTASectionV2";
-import { Briefcase, Users, Building, Search, UserCheck } from "lucide-react";
+import { Briefcase, Users, Layout as LayoutIcon, Cog, Target } from "lucide-react";
 
 const servicesData = [
     {
-        id: "full-rpo",
-        slug: "full-rpo-partnership",
-        icon: Briefcase,
-        title: "Full RPO Partnership",
-        overview: "Complete end-to-end recruitment process outsourcing where we become your dedicated talent acquisition team, managing everything from requisition to onboarding.",
-        whatYouGet: [
-            "Dedicated recruitment team embedded in your organization",
-            "Full lifecycle management from requisition to onboarding",
-            "Employer branding and candidate experience optimization",
-            "ATS implementation and management",
-            "Comprehensive analytics and reporting",
-            "Continuous process improvement initiatives",
-        ],
-        bestFor: "Enterprises with ongoing, high-volume hiring needs seeking to transform their entire recruitment function through strategic long-term partnership.",
-        outcomes: [
-            "50%+ reduction in cost-per-hire",
-            "40% faster time-to-fill",
-            "Improved quality of hire metrics",
-            "Enhanced employer brand",
-        ],
-    },
-    {
-        id: "project-rpo",
-        slug: "recruitment-on-demand",
+        id: "recruitment",
+        slug: "recruitment-services",
         icon: Users,
-        title: "Recruitment On-Demand",
-        overview: "Flexible, project-based recruitment support for specific hiring campaigns, expansions, or seasonal peaks without the long-term commitment.",
+        tag: "Hire Smarter",
+        title: "The Right Person. To The Right Role.",
+        description: "Stop losing to slow hiring. We source, screen, and place right-fit candidates cutting time-to-fill by 60%.",
+        overview: "From writing the job brief to welcoming your new hire—we own the entire recruitment process. Sourcing, screening, compliance, offer management, and onboarding, all handled without you lifting a finger.",
         whatYouGet: [
-            "Dedicated project team for defined scope",
-            "Rapid ramp-up and ramp-down capability",
-            "Project-specific KPIs and milestones",
-            "Integration with existing processes",
-            "Knowledge transfer upon completion",
-            "Flexible contract terms",
+            "End-to-End Recruitment Management",
+            "Active & Passive Candidate Sourcing",
+            "Boolean Search & Headhunting",
+            "Skills, Culture & Competency Assessment",
+            "Right-to-Work, DBS & Compliance Checks",
+            "Onboarding Coordination & Contractor Admin"
         ],
-        bestFor: "Companies with specific hiring projects, new market entries, or sudden seasonal hiring spikes that require immediate expert capacity.",
+        bestFor: "You're spending 60+ days filling roles that should take two weeks. You've had wrong-fit hires that cost you more than the agency fee. You want the process handled properly, this time.",
         outcomes: [
-            "Rapid capacity scaling",
-            "Controlled project costs",
-            "Specialist expertise on demand",
-            "No long-term commitment required",
+            "Up to 60% faster time-to-fill",
+            "50% reduction in cost-per-hire",
+            "Higher offer acceptance rates",
+            "Full compliance from day one"
         ],
     },
     {
-        id: "offshore",
-        slug: "offshore-recruitment-support",
-        icon: Building,
-        title: "Offshore Support",
-        overview: "Cost-effective recruitment operations leveraging our skilled India-based team for maximum efficiency and round-the-clock delivery productivity.",
+        id: "marketing",
+        slug: "marketing-support",
+        icon: LayoutIcon,
+        tag: "Grow Louder",
+        title: "Marketing That Actually Earns Its Budget Back",
+        description: "From SEO and social to paid ads and email—every channel managed, every pound tied to leads and real revenue growth.",
+        overview: "Full-spectrum marketing management—social media, SEO, Google and Meta ads, email campaigns, and brand design. Every channel working in sync, every campaign built around driving actual revenue.",
         whatYouGet: [
-            "Dedicated offshore recruitment specialists",
-            "Sourcing and initial screening",
-            "Candidate database management",
-            "Interview coordination",
-            "Administrative support",
-            "24/7 operational coverage",
+            "Social Media Strategy, Content & Scheduling",
+            "SEO Audits, Blog Writing & Website Copy",
+            "Google Search, Display & Shopping Ads",
+            "Meta (Facebook & Instagram) Ad Campaigns",
+            "Email Marketing, Sequences & A/B Testing",
+            "Brand Identity, Design & Marketing Collateral"
         ],
-        bestFor: "Organizations looking to extend their internal team's capacity while significantly reducing operational costs and overhead.",
+        bestFor: "Your marketing is scattered—inconsistent posts, emails that go unopened, and ad spend with nothing to show for it. You know you need to be more visible. You just need someone who actually knows how.",
         outcomes: [
-            "60-70% cost reduction vs. onshore",
-            "Extended working hours coverage",
-            "Scalable support capacity",
-            "Focus internal team on strategic work",
+            "More qualified inbound leads, lower cost",
+            "Organic traffic that builds month after month",
+            "Higher conversion on paid ad spend",
+            "Consistent brand presence across every channel"
         ],
     },
     {
-        id: "executive",
-        slug: "executive-search-headhunting",
-        icon: Search,
-        title: "Executive Search",
-        overview: "Specialized search services for senior leadership, C-suite, and hard-to-find specialist positions where discretion and depth matter most.",
+        id: "ai-automation",
+        slug: "ai-automation",
+        icon: Cog,
+        tag: "Work Smarter",
+        title: "Let Your Systems Do the Heavy Lifting",
+        description: "Your team shouldn't do manually what a workflow handles in seconds. We build the automations that give your time back.",
+        overview: "We map your current workflows, identify every manual bottleneck, and replace them with intelligent systems—chatbots, automated pipelines, connected platforms—that run your operations without human input.",
         whatYouGet: [
-            "Dedicated executive search consultant",
-            "Comprehensive market mapping",
-            "Discreet candidate approach",
-            "Thorough assessment and referencing",
-            "Offer negotiation support",
-            "Onboarding guidance",
+            "Business Process Mapping & Automation Audit",
+            "Custom AI Chatbot Design, Build & Training",
+            "CRM, Email, Calendar & Platform Integrations",
+            "Zapier, Make, n8n & Custom API Builds",
+            "Automated Lead Capture & Follow-Up Sequences",
+            "AI Reporting Dashboards & KPI Tracking"
         ],
-        bestFor: "Critical leadership hires where experience, wide industry network, and absolute discretion are paramount to success.",
+        bestFor: "Your team is drowning in manual tasks. Leads are falling through the cracks. Tools don't talk to each other. You're doing the same repetitive work every day and you know a system should be doing it.",
         outcomes: [
-            "Access to passive talent pools",
-            "Reduced senior level hiring risk",
-            "Faster executive placement",
-            "Long-term leadership retention focus",
+            "Save 20+ hours of manual work per week",
+            "Up to 90% fewer process errors",
+            "24/7 automated lead capture and follow-up",
+            "Scale operations without growing headcount"
         ],
     },
     {
-        id: "screening",
-        slug: "candidate-pre-screening",
-        icon: UserCheck,
-        title: "Candidate Pre-Screening",
-        overview: "Comprehensive candidate evaluation and preparation services to ensure only the highest caliber candidates reach your hiring managers.",
+        id: "biz-dev",
+        slug: "business-development",
+        icon: Briefcase,
+        tag: "Grow on Purpose",
+        title: "Build Revenue You Can Actually Predict",
+        description: "Referrals aren't a growth strategy. We build the outbound systems and pipelines that bring the right clients to you.",
+        overview: "Outbound prospecting, CRM management, growth strategy, proposal writing, and partnership development—all designed to fill your pipeline with qualified opportunities and turn them into revenue.",
         whatYouGet: [
-            "Skills and competency assessments",
-            "Cultural fit evaluation",
-            "Background and reference checking",
-            "Interview preparation coaching",
-            "Salary benchmarking",
-            "Detailed candidate reports",
+            "Growth Strategy, Market Mapping & Revenue Planning",
+            "Ideal Client Profile Building & Prospect Lists",
+            "Cold Email & LinkedIn Outreach Campaigns",
+            "CRM Setup, Pipelines & Automated Follow-Ups",
+            "Proposal Writing, Pitch Decks & Tender Responses",
+            "Partnership Outreach & Referral Network Building"
         ],
-        bestFor: "Companies wanting to improve candidate quality, reduce time-wasted in interviews, and improve the interview-to-hire ratio.",
+        bestFor: "Your pipeline is built on referrals and luck. You don't have an outbound system, a proper CRM, or the bandwidth to chase new clients consistently. Revenue is reactive. Growth is unpredictable.",
         outcomes: [
-            "Higher interview-to-offer ratio",
-            "Reduced hiring manager time waste",
-            "Better prepared candidates",
-            "More informed hiring decisions",
+            "Predictable monthly lead flow - not referral reliance",
+            "Shorter, more structured sales cycles",
+            "Higher win rates on proposals and pitches",
+            "New markets entered and monetized faster"
+        ],
+    },
+    {
+        id: "finance",
+        slug: "accounting-finance",
+        icon: Target,
+        tag: "Know Your Numbers",
+        title: "Financial Clarity Without the Overhead",
+        description: "Clean books, accurate payroll, zero missed deadlines—and a clear view of your finances without the cost of a full-time hire.",
+        overview: "Complete financial management—bookkeeping, payroll, accounts payable and receivable, VAT and tax filing, budgeting, and reporting without the salary, benefits, and overhead of hiring in-house.",
+        whatYouGet: [
+            "Daily Bookkeeping & Bank Reconciliation",
+            "Payroll Processing, Payslips & Compliance",
+            "Accounts Payable, Receivable & Credit Control",
+            "VAT Returns, Corporation Tax & HMRC Filing",
+            "Monthly P&L, Cash Flow & Financial Reports",
+            "Annual Budgets, Forecasting & Scenario Planning"
+        ],
+        bestFor: "You're running your finances from a spreadsheet at 10pm. You've missed deadlines, had cash flow surprises, or can't tell if your business is actually profitable. You need a finance team without hiring one.",
+        outcomes: [
+            "Save up to 60% vs full-time in-house accountant",
+            "Never miss a tax deadline or payroll run",
+            "Real-time view of your financial position",
+            "Decisions backed by data, not guesswork"
         ],
     },
 ];
@@ -139,7 +149,11 @@ export default function ServiceDetail({ params }) {
     return (
         <Layout>
             <main className="bg-white">
-                <ServicesHero />
+                <ServicesHero 
+                    tag={service.tag}
+                    title={service.title}
+                    description={service.description}
+                />
                 <ServiceDetailContent service={service} />
                 <CTASectionV2 />
             </main>

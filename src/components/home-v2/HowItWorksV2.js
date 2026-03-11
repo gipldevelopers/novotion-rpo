@@ -6,25 +6,25 @@ import { Search, UserCheck, ShieldCheck, Rocket, Sparkles } from "lucide-react";
 const steps = [
     {
         title: "Strategic Discovery",
-        description: "We audit your current talent architecture and culture to map precisely where the friction exists.",
+        description: "We audit your current operations recruitment, marketing, automation, finances, and growth to map exactly where the biggest gaps and opportunities exist.",
         icon: Search,
         tag: "Phase 01"
     },
     {
-        title: "Pipeline Architecture",
-        description: "Engaging high-intent candidates through targeted vertical sourcing and custom automation.",
+        title: "Solution Architecture",
+        description: "We design a tailored action plan across every relevant service line, aligned to your exact goals, your market, and the results you need to hit.",
         icon: UserCheck,
         tag: "Phase 02"
     },
     {
-        title: "Quality Verification",
-        description: "Rigorous technical and behavioral screening ensure only top 1% of talent reaches your desk.",
+        title: "Precision Execution",
+        description: "Specialist teams across recruitment, marketing, AI, business development, and finance execute with speed, accuracy, and full accountability - no delays.",
         icon: ShieldCheck,
         tag: "Phase 03"
     },
     {
-        title: "Seamless Integration",
-        description: "End-to-end support through offer negation and onboarding to ensure long-term ROI.",
+        title: "Performance & Growth",
+        description: "We track every result, refine what isn't working, and scale what is so your business keeps moving forward month after month.",
         icon: Rocket,
         tag: "Phase 04"
     },
@@ -50,8 +50,8 @@ export function HowItWorksV2() {
                         The Strategic <br />
                         <span className="text-secondary">Execution Lifecycle</span>
                     </h2>
-                    <p className="text-slate-500 text-xs md:text-sm font-normal leading-relaxed max-w-lg mx-auto">
-                        A systematic, data-driven framework designed to eliminate hiring friction and accelerate enterprise growth through elite talent acquisition.
+                    <p className="text-slate-500 text-xs md:text-sm font-normal leading-relaxed max-w-2xl mx-auto">
+                        A structured, four-phase delivery model designed to eliminate friction, drive consistency, and ensure every service we provide delivers measurable results.
                     </p>
                 </div>
 

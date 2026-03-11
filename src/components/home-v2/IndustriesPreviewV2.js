@@ -8,43 +8,43 @@ const industries = [
     {
         icon: Monitor,
         name: "Technology & IT",
-        subtitle: "Software, SaaS, Engineering",
+        subtitle: "Software, SaaS, Engineering, DevOps",
         tag: "Tech"
     },
     {
         icon: Stethoscope,
         name: "Healthcare",
-        subtitle: "Clinical, Administrative, MedTech",
+        subtitle: "Clinical, Administrative, MedTech, NHS Compliance",
         tag: "Health"
     },
     {
         icon: Landmark,
         name: "Financial Services",
-        subtitle: "Banking, FinTech, Insurance",
+        subtitle: "Banking, FinTech, Insurance, Compliance",
         tag: "Finance"
     },
     {
         icon: Factory,
         name: "Manufacturing",
-        subtitle: "Operations, Supply Chain",
+        subtitle: "Operations, Supply Chain, Logistics",
         tag: "Industry"
     },
     {
         icon: ShoppingBag,
-        name: "Retail & Commerce",
-        subtitle: "E-Commerce, Logistics",
+        name: "Retail & E-Commerce",
+        subtitle: "Online Retail, Logistics, Consumer Brands",
         tag: "E-Com"
     },
     {
         icon: Briefcase,
         name: "Professional Services",
-        subtitle: "Legal, Consulting",
+        subtitle: "Legal, Consulting, Accounting Firms",
         tag: "Corporate"
     },
     {
         icon: Palette,
         name: "Creative & Marketing",
-        subtitle: "Agency, Media, Design",
+        subtitle: "Agencies, Media, Design, Content",
         tag: "Creative"
     },
 ];
@@ -73,7 +73,7 @@ export function IndustriesPreview() {
                     </div>
                     <div className="max-w-md">
                         <p className="text-slate-500 text-xs md:text-sm font-normal leading-relaxed border-l-2 border-slate-100 pl-4">
-                            We don't just recruit; we architect specialized talent engines tailored to the unique technical and cultural benchmarks of your sector.
+                            We bring specialist knowledge to every sector we serve ensuring our recruitment, marketing, and business strategies match your industry's exact demands.
                         </p>
                     </div>
                 </div>

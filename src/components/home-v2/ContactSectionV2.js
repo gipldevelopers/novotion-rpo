@@ -44,11 +44,12 @@ export function ContactSection() {
 
                                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tighter leading-none">
                                     Initiate Your <br />
-                                    <span className="text-secondary">Talent Audit</span>
+                                    <span className="text-secondary">Growth Audit</span>
                                 </h2>
 
                                 <p className="text-slate-400 text-sm md:text-base font-light leading-relaxed max-w-sm italic border-l border-secondary/30 pl-6">
-                                    "Ready to replace standard hiring friction with a high-velocity execution lifecycle?"
+                                    "Ready to cut the overhead, fill your pipeline, and build systems that actually work?
+                                    Let's talk. "
                                 </p>
                             </div>
 
