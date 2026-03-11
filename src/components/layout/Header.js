@@ -56,8 +56,8 @@ export function Header() {
         <div className={cn(
           "relative flex items-center justify-between px-6 transition-all duration-500 rounded-xl",
           isScrolled
-            ? "bg-white/95 backdrop-blur-2xl shadow-lg shadow-slate-200/20 h-16"
-            : "bg-white/40 md:bg-transparent h-20"
+            ? "bg-white/98 backdrop-blur-xl shadow-[0_40px_80px_-15px_rgba(0,0,0,0.12)] h-16"
+            : "bg-white/30 backdrop-blur-xl h-20"
         )}>
 
           <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-90 relative z-10">
@@ -90,7 +90,7 @@ export function Header() {
                         "relative px-5 py-2 text-[13px] font-bold transition-all duration-300 rounded-lg uppercase tracking-wider flex items-center gap-1",
                         isActive
                           ? "text-secondary"
-                          : "text-slate-700 hover:text-slate-900 hover:bg-slate-900/5"
+                          : "text-slate-900 hover:text-secondary hover:bg-slate-900/5"
                       )}
                     >
                       {item.name}
@@ -139,7 +139,7 @@ export function Header() {
                     "relative px-5 py-2 text-[13px] font-bold transition-all duration-300 rounded-lg uppercase tracking-wider",
                     isActive
                       ? "text-secondary"
-                      : "text-slate-700 hover:text-slate-900 hover:bg-slate-900/5"
+                      : "text-slate-900 hover:text-secondary hover:bg-slate-900/5"
                   )}
                 >
                   {item.name}
