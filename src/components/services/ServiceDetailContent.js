@@ -185,11 +185,11 @@ export function ServiceDetailContent({ service }) {
 
                             {/* Footer */}
                             <div className="p-8 bg-slate-50 border-t border-slate-100 flex justify-end">
-                                <Button 
-                                    onClick={() => setSelectedPoint(null)}
-                                    className="bg-slate-900 hover:bg-slate-800 text-white rounded-xl px-8 h-12 font-bold"
-                                >
-                                    Close Details
+                                <Button asChild className="bg-secondary hover:bg-secondary/90 text-white rounded-xl px-8 h-12 font-bold border-none transition-all shadow-lg shadow-secondary/10">
+                                    <Link href="/contact" className="flex items-center gap-2 tracking-widest uppercase text-[12px]">
+                                        ENQUIRE NOW
+                                        <ArrowRight className="h-4 w-4" />
+                                    </Link>
                                 </Button>
                             </div>
                         </motion.div>

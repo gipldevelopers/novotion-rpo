@@ -207,7 +207,7 @@ const servicesData = [
     },
     {
         id: "marketing",
-        slug: "marketing-support",
+        slug: "digital-marketing",
         icon: LayoutIcon,
         tag: "Grow Louder",
         title: "Marketing That Delivers Real Impact",

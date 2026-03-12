@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, ArrowRight, Cog, Layout, Users, Briefcase, Target, Sparkles, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const services = [
@@ -12,13 +13,15 @@ const services = [
         description: "Complete offshore recruitment sourcing, screening, onboarding, and compliance that cuts time-to-hire by 60% and reduces hiring costs by up to 50%.",
         features: ["END-TO-END RECRUITMENT", "TALENT SOURCING", "ADMIN SUPPORT", "MARKET MAPPING", "ONBOARDING & COMPLIANCE"],
         icon: Users,
+        image: "/assets/hero/recruitment.png",
     },
     {
-        title: "Marketing Support",
-        subHeadline: "Marketing Support",
+        title: "Digital Marketing",
+        subHeadline: "Digital Marketing",
         description: "Full-service marketing covering social media, SEO, email campaigns, and paid ads built to grow your brand and turn the right audience into paying customers.",
         features: ["SOCIAL MEDIA MANAGEMENT", "SEO & CONTENT MARKETING", "EMAIL MARKETING", "PAID ADS (GOOGLE & META)", "BRANDING & DESIGN"],
         icon: Layout,
+        image: "/assets/hero/marketing.png",
     },
     {
         title: "AI & Automation",
@@ -26,6 +29,7 @@ const services = [
         description: "Workflow automation, AI chatbots, and system integrations that cut manual tasks, reduce errors by up to 90%, and scale your operations without extra headcount.",
         features: ["WORKFLOW AUTOMATION", "AI CHATBOTS & VIRTUAL ASSISTANTS", "AI REPORTING & ANALYTICS", "SYSTEMS INTEGRATION", "AI CONTENT ASSISTANCE"],
         icon: Cog,
+        image: "/assets/hero/global_clients.png",
     },
     {
         title: "Business Development",
@@ -33,6 +37,7 @@ const services = [
         description: "Structured outbound prospecting, CRM management, and partnership development that fills your pipeline and converts opportunities into consistent revenue.",
         features: ["GROWTH STRATEGY", "PARTNERSHIP BUILDING", "OUTBOUND SALES & PROSPECTING", "PROPOSAL & PITCH SUPPORT", "MARKET EXPANSION", "CRM & PIPELINE MANAGEMENT"],
         icon: Briefcase,
+        image: "/assets/hero/bizdev.png",
     },
     {
         title: "Accounting & Finance",
@@ -40,6 +45,7 @@ const services = [
         description: "Professional bookkeeping, payroll processing, tax compliance, and financial reporting without the overhead of a full-time in-house finance function.",
         features: ["BOOKKEEPING", "ACCOUNTS PAYABLE & RECEIVABLE", "PAYROLL", "FINANCIAL REPORTING", "BUDGETING & PLANNING", "TAX & COMPLIANCE"],
         icon: Target,
+        image: "/assets/hero/finance.png",
     },
 ];
 
@@ -112,66 +118,93 @@ export function ServicesPreview() {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -10 }}
                                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                                className="p-6 md:p-10 lg:p-14 xl:p-16 relative z-10"
+                                className="p-8 md:p-12 lg:p-16 relative z-10"
                             >
-                                <div className="max-w-4xl">
-                                    {/* Service Identity */}
-                                    <div className="flex items-center gap-4 md:gap-5 mb-5 md:mb-8">
-                                        <div className="w-11 h-11 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-secondary shadow-lg shadow-slate-900/10">
-                                            {(() => {
-                                                const Icon = services[activeTab].icon;
-                                                return <Icon className="h-5 w-5 md:h-6 md:w-6" strokeWidth={1.5} />;
-                                            })()}
-                                        </div>
-                                        <div className="flex flex-col">
-                                            <span className="text-[8px] md:text-[9px] font-bold text-secondary uppercase tracking-[0.4em] mb-0.5 opacity-70">
-                                                Technical Strategy
-                                            </span>
-                                            <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-[2.25rem] font-bold text-slate-900 tracking-tight leading-none font-display">
-                                                {services[activeTab].title}
-                                            </h3>
-                                        </div>
-                                    </div>
-
-                                    {/* Description */}
-                                    <p className="text-slate-500 text-sm md:text-base font-normal leading-relaxed mb-6 md:mb-8 lg:mb-10 max-w-2xl border-l-[3px] border-secondary/10 pl-5 md:pl-6 lg:pl-8">
-                                        {services[activeTab].description}
-                                    </p>
-
-                                    {/* Features Grid */}
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-8 md:gap-x-12 mb-8 md:mb-10 lg:mb-12">
-                                        {services[activeTab].features.map((feature, i) => (
-                                            <motion.div 
-                                                key={feature}
-                                                initial={{ opacity: 0, y: 5 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                transition={{ delay: 0.1 + (i * 0.05) }}
-                                                className="flex items-center gap-3 group/feat"
-                                            >
-                                                <div className="w-5 h-5 flex-shrink-0 rounded-full bg-secondary/10 flex items-center justify-center text-secondary transition-all group-hover/feat:bg-secondary group-hover/feat:text-white">
-                                                    <Check className="h-3 w-3" />
-                                                </div>
-                                                <span className="text-[12px] md:text-[13px] font-medium text-slate-600 transition-colors group-hover/feat:text-slate-900">
-                                                    {feature}
+                                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                                    
+                                    {/* Left Content Column */}
+                                    <div className="lg:col-span-7">
+                                        {/* Service Identity */}
+                                        <div className="flex items-center gap-4 md:gap-5 mb-5 md:mb-8 text-left">
+                                            <div className="w-11 h-11 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-secondary shadow-lg shadow-slate-900/10">
+                                                {(() => {
+                                                    const Icon = services[activeTab].icon;
+                                                    return <Icon className="h-5 w-5 md:h-6 md:w-6" strokeWidth={1.5} />;
+                                                })()}
+                                            </div>
+                                            <div className="flex flex-col">
+                                                <span className="text-[8px] md:text-[9px] font-bold text-secondary uppercase tracking-[0.4em] mb-0.5 opacity-70">
+                                                    Technical Strategy
                                                 </span>
-                                            </motion.div>
-                                        ))}
+                                                <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-[2.25rem] font-bold text-slate-900 tracking-tight leading-none font-display">
+                                                    {services[activeTab].title}
+                                                </h3>
+                                            </div>
+                                        </div>
+
+                                        {/* Description */}
+                                        <p className="text-slate-500 text-sm md:text-base font-normal leading-relaxed mb-6 md:mb-8 lg:mb-10 max-w-2xl border-l-[3px] border-secondary/10 pl-5 md:pl-6 lg:pl-8 text-left">
+                                            {services[activeTab].description}
+                                        </p>
+
+                                        {/* Features Grid */}
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-8 md:gap-x-12 mb-8 md:mb-10 lg:mb-12 text-left">
+                                            {services[activeTab].features.map((feature, i) => (
+                                                <motion.div 
+                                                    key={feature}
+                                                    initial={{ opacity: 0, y: 5 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    transition={{ delay: 0.1 + (i * 0.05) }}
+                                                    className="flex items-center gap-3 group/feat"
+                                                >
+                                                    <div className="w-5 h-5 flex-shrink-0 rounded-full bg-secondary/10 flex items-center justify-center text-secondary transition-all group-hover/feat:bg-secondary group-hover/feat:text-white">
+                                                        <Check className="h-3 w-3" />
+                                                    </div>
+                                                    <span className="text-[12px] md:text-[13px] font-medium text-slate-600 transition-colors group-hover/feat:text-slate-900">
+                                                        {feature}
+                                                    </span>
+                                                </motion.div>
+                                            ))}
+                                        </div>
+
+                                        {/* Action Buttons */}
+                                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
+                                            <Link
+                                                href="/services"
+                                                className="inline-flex items-center justify-center gap-3 px-8 md:px-10 py-4 md:py-5 rounded-xl md:rounded-2xl bg-slate-900 text-white text-[10px] md:text-[11px] font-bold uppercase tracking-widest hover:bg-secondary transition-all shadow-xl shadow-slate-900/10 group active:scale-95"
+                                            >
+                                                Detailed Strategy
+                                                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                                            </Link>
+                                            <Link href="/contact" className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-secondary transition-colors inline-flex items-center gap-2 group/link">
+                                                Strategic Consult
+                                                <ChevronRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
+                                            </Link>
+                                        </div>
                                     </div>
 
-                                    {/* Action Buttons */}
-                                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
-                                        <Link
-                                            href="/services"
-                                            className="inline-flex items-center justify-center gap-3 px-8 md:px-10 py-4 md:py-5 rounded-xl md:rounded-2xl bg-slate-900 text-white text-[10px] md:text-[11px] font-bold uppercase tracking-widest hover:bg-secondary transition-all shadow-xl shadow-slate-900/10 group active:scale-95"
+                                    {/* Right Image Column */}
+                                    <div className="lg:col-span-5 w-full mt-8 lg:mt-0">
+                                        <motion.div
+                                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                                            transition={{ duration: 0.6, ease: "easeOut" }}
+                                            className="relative aspect-[4/3] rounded-[2rem] overflow-hidden group/img"
                                         >
-                                            Detailed Strategy
-                                            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                                        </Link>
-                                        <Link href="/contact" className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-secondary transition-colors inline-flex items-center gap-2 group/link">
-                                            Strategic Consult
-                                            <ChevronRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
-                                        </Link>
+                                            <div className="absolute inset-0 bg-secondary/5 z-10 group-hover/img:bg-secondary/0 transition-colors duration-500" />
+                                            <Image 
+                                                src={services[activeTab].image}
+                                                alt={services[activeTab].title}
+                                                fill
+                                                className="object-cover transition-transform duration-700 group-hover/img:scale-110"
+                                            />
+                                            
+                                            {/* Decorative Elements */}
+                                            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/10 blur-3xl rounded-full" />
+                                            <div className="absolute -top-6 -left-6 w-32 h-32 bg-slate-900/5 blur-3xl rounded-full" />
+                                        </motion.div>
                                     </div>
+
                                 </div>
                             </motion.div>
                         </AnimatePresence>

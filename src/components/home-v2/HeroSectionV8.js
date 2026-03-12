@@ -12,14 +12,14 @@ const services = [
         id: "global-clients",
         title: "Global Clients",
         subtitle: "Elite Partnerships",
-        description: "We partner with ambitious businesses across the UK, UAE, EU, and APAC to build high-performing offshore teams that deliver measurable results across recruitment, marketing, sales, automation, and finance.",
+        description: "We partner with ambitious businesses across the UK, EU ,UAE, APAC and USA to build high-performing offshore teams that deliver measurable results across recruitment, marketing, sales, automation, and finance.",
         image: "/assets/hero/recruitment.png",
     },
     {
         id: "recruitment",
         title: "Recruitment Services",
         subtitle: "Elite Partnerships",
-        description: "Offshore recruitment specialists who cut time-to-hire by 60%, reduce costs by half, and place right-fit talent across UK, UAE, EU, and APAC.",
+        description: "Offshore recruitment specialists who cut time-to-hire by 60%, reduce costs by half, and place right-fit talent across UK, EU, UAE, APAC and USA.",
         image: "/assets/hero/recruitment.png",
     },
     {
@@ -31,7 +31,7 @@ const services = [
     },
     {
         id: "marketing",
-        title: "Marketing Support",
+        title: "Digital Marketing",
         subtitle: "Elite Partnerships",
         description: "Full-service marketing covering SEO, social media, paid ads, and email all built to grow your brand and convert the right audience into revenue.",
         image: "/assets/hero/marketing.png",

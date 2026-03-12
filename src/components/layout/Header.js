@@ -12,7 +12,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const services = [
   { name: "Recruitment Services", href: "/services/recruitment-services" },
   { name: "Business Development", href: "/services/business-development" },
-  { name: "Marketing Support", href: "/services/marketing-support" },
+  { name: "Digital Marketing", href: "/services/digital-marketing" },
   { name: "AI & Automation", href: "/services/ai-automation" },
   { name: "Accounting & Finance", href: "/services/accounting-finance" },
 ];

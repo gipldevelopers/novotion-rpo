@@ -7,7 +7,7 @@ import Image from "next/image";
 export function ServicesHero({ 
     tag = "Our Solutions", 
     title = "Stop Paying Five Agencies for One Job", 
-    description = "Recruitment Services. Business Development. Marketing Support. AI & Automation. Accounting & Finance. All live under one roof - no gaps, no conflicting priorities, no wasted budget." 
+    description = "Recruitment Services. Business Development. Digital Marketing. AI & Automation. Accounting & Finance. All live under one roof - no gaps, no conflicting priorities, no wasted budget." 
 }) {
     return (
         <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-white">

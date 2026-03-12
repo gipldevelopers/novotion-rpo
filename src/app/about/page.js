@@ -19,9 +19,6 @@ export default function About() {
         {/* 2. Our Mission & Story */}
         <AboutStory />
 
-        {/* 3. Global Presence Map & Locations */}
-        <AboutPresence />
-
         {/* 4. Team Hierarchy */}
         <AboutTeam />
 
@@ -30,6 +27,10 @@ export default function About() {
 
         {/* 6. Core Values Grid */}
         <AboutValues />
+
+        {/* 3. Global Presence Map & Locations */}
+        <AboutPresence />
+
 
         {/* 7. CTA Section */}
         <CTASectionV2 />

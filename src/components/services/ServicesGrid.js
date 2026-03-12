@@ -24,9 +24,9 @@ const services = [
     },
     {
         id: "marketing",
-        slug: "marketing-support",
+        slug: "digital-marketing",
         icon: Layout,
-        title: "Marketing Support",
+        title: "Digital Marketing",
         description: "SEO, social media, paid ads, email, and branding every channel covered, every campaign tied to a conversion goal.",
         tag: "Growth"
     },

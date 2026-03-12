@@ -66,7 +66,7 @@ const benefits = [
     {
         icon: Globe,
         title: "Global Exposure",
-        text: "Work directly with clients across the UK, US, Canada, and APAC — from day one, not year three."
+        text: "Work directly with clients across the UK, EU, UAE, APAC and USA — from day one, not year three."
     },
     {
         icon: Target,
