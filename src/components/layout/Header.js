@@ -155,7 +155,7 @@ export function Header() {
 
           <div className="hidden lg:flex items-center gap-4 relative z-10">
             <Button asChild className="bg-secondary hover:bg-secondary/90 text-white text-[13px] font-bold px-6 h-10 rounded-xl transition-all shadow-lg shadow-secondary/20 border-none">
-              <Link href="/contact">CONSULTATION <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link href="/contact">CONTACT US <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
 
