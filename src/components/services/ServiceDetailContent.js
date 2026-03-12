@@ -1,11 +1,26 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { CheckCircle, ArrowRight, Sparkles, Target, Zap, Shield, BarChart } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { CheckCircle, ArrowRight, Sparkles, Target, X, Zap, Shield, BarChart, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export function ServiceDetailContent({ service }) {
+    const [selectedPoint, setSelectedPoint] = useState(null);
+
+    // Prevent scroll when modal is open
+    useEffect(() => {
+        if (selectedPoint) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "unset";
+        }
+        return () => {
+            document.body.style.overflow = "unset";
+        };
+    }, [selectedPoint]);
+
     if (!service) return null;
 
     return (
@@ -37,12 +52,24 @@ export function ServiceDetailContent({ service }) {
                                 </h3>
                                 <div className="grid md:grid-cols-2 gap-6">
                                     {service.whatYouGet.map((item, i) => (
-                                        <div key={i} className="flex gap-4 p-6 rounded-[2.5rem] bg-slate-50 border border-slate-200 group hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-300">
-                                            <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-secondary shadow-sm">
+                                        <motion.div 
+                                            key={i} 
+                                            whileHover={{ y: -5 }}
+                                            onClick={() => setSelectedPoint(item)}
+                                            className="flex gap-4 p-6 rounded-[2.5rem] bg-slate-50 border border-slate-200 group hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-300 cursor-pointer text-left"
+                                        >
+                                            <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-secondary shadow-sm group-hover:bg-secondary group-hover:text-white transition-colors">
                                                 <CheckCircle className="h-5 w-5" />
                                             </div>
-                                            <span className="text-slate-600 text-[15px] font-medium leading-normal">{item}</span>
-                                        </div>
+                                            <div className="flex flex-col gap-1">
+                                                <span className="text-slate-900 text-[16px] font-bold leading-tight group-hover:text-secondary transition-colors">
+                                                    {typeof item === 'string' ? item : item.title}
+                                                </span>
+                                                <span className="text-slate-500 text-[13px] font-medium flex items-center gap-1 group-hover:text-slate-700">
+                                                    View Details <ArrowRight className="h-3 w-3" />
+                                                </span>
+                                            </div>
+                                        </motion.div>
                                     ))}
                                 </div>
                             </div>
@@ -93,6 +120,99 @@ export function ServiceDetailContent({ service }) {
                     </div>
                 </div>
             </div>
+
+            {/* Popup Modal */}
+            <AnimatePresence>
+                {selectedPoint && (
+                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+                        {/* Backdrop */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setSelectedPoint(null)}
+                            className="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"
+                        />
+
+                        {/* Modal Content */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            className="relative w-full max-w-2xl bg-white rounded-[3rem] shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
+                        >
+                            {/* Header */}
+                            <div className="p-8 md:p-12 pb-4 flex justify-between items-start">
+                                <div className="space-y-2">
+                                    <span className="text-secondary font-bold text-sm tracking-widest uppercase">Service Detail</span>
+                                    <h3 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                                        {selectedPoint.title}
+                                    </h3>
+                                </div>
+                                <button 
+                                    onClick={() => setSelectedPoint(null)}
+                                    className="p-3 rounded-full bg-slate-100 text-slate-500 hover:bg-secondary hover:text-white transition-all shadow-sm"
+                                >
+                                    <X className="h-6 w-6" />
+                                </button>
+                            </div>
+
+                            {/* Content Scrollable Area */}
+                            <div className="flex-1 overflow-y-auto p-8 md:p-12 pt-4 space-y-8 custom-scrollbar">
+                                <div className="space-y-4">
+                                    <h4 className="text-xl font-bold text-slate-900">{selectedPoint.head}</h4>
+                                    <p className="text-slate-600 leading-relaxed text-lg">
+                                        {selectedPoint.description}
+                                    </p>
+                                </div>
+
+                                <div className="space-y-6">
+                                    <h5 className="text-sm font-bold text-slate-400 uppercase tracking-widest">Services Include</h5>
+                                    <div className="grid md:grid-cols-1 gap-4">
+                                        {selectedPoint.items.map((item, idx) => (
+                                            <div key={idx} className="flex gap-4 items-start p-4 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-secondary/20 hover:bg-secondary/5 transition-all">
+                                                <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-white border border-slate-200 flex items-center justify-center text-secondary shadow-sm group-hover:bg-secondary group-hover:text-white group-hover:border-secondary transition-all">
+                                                    <Check className="h-3.5 w-3.5" />
+                                                </div>
+                                                <span className="text-slate-700 font-medium group-hover:text-slate-900 transition-colors">
+                                                    {item}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Footer */}
+                            <div className="p-8 bg-slate-50 border-t border-slate-100 flex justify-end">
+                                <Button 
+                                    onClick={() => setSelectedPoint(null)}
+                                    className="bg-slate-900 hover:bg-slate-800 text-white rounded-xl px-8 h-12 font-bold"
+                                >
+                                    Close Details
+                                </Button>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
+
+            <style jsx global>{`
+                .custom-scrollbar::-webkit-scrollbar {
+                    width: 6px;
+                }
+                .custom-scrollbar::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+                .custom-scrollbar::-webkit-scrollbar-thumb {
+                    background: #e2e8f0;
+                    border-radius: 10px;
+                }
+                .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                    background: #cbd5e1;
+                }
+            `}</style>
         </section>
     );
 }
+

@@ -220,9 +220,9 @@ export default function Contact() {
                           </SelectTrigger>
                           <SelectContent className="rounded-2xl border-slate-100 shadow-xl bg-white">
                             <SelectItem value="recruitment">Recruitment Services</SelectItem>
+                            <SelectItem value="business-dev">Business Development</SelectItem>
                             <SelectItem value="marketing">Marketing Support</SelectItem>
                             <SelectItem value="ai-automation">AI & Automation</SelectItem>
-                            <SelectItem value="business-dev">Business Development</SelectItem>
                             <SelectItem value="accounting">Accounting & Finance</SelectItem>
                             <SelectItem value="full-partnership">Full Multi-Service Partnership</SelectItem>
                           </SelectContent>

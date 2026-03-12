@@ -68,7 +68,7 @@ const metrics = [
 
 export function MetricsSection() {
     return (
-        <section id="metrics" className="relative flex flex-col justify-center py-12 md:py-12 bg-white overflow-hidden scroll-mt-20">
+        <section id="metrics" className="relative flex flex-col justify-center py-12 md:py-12 bg-white scroll-mt-20">
             <div className="container-premium relative z-10 w-full">
 
                 {/* Title & Subtitle */}

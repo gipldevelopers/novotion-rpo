@@ -58,13 +58,12 @@ export function AboutValues() {
                         Our Core Values
                     </motion.div>
 
-                    <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tighter">
-                        The Standards We <br />
-                        <span className="text-secondary">Hold Ourselves To</span>
+                    <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tighter font-display">
+                        Our Core <span className="text-secondary">Values.</span>
                     </h2>
 
                     <p className="text-slate-500 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
-                        Not principles on a wall. These are the standards every person at Noltven is held to every day, on every project.
+                        Not principles on a wall. These are the standards every person at Novotion is held to every day, on every project.
                     </p>
                 </div>
 
@@ -86,7 +85,7 @@ export function AboutValues() {
                                     </div>
                                 </div>
 
-                                <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-secondary transition-colors">
+                                <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-secondary transition-colors font-display">
                                     {value.title}
                                 </h3>
 

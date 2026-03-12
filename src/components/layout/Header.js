@@ -11,9 +11,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
   { name: "Recruitment Services", href: "/services/recruitment-services" },
+  { name: "Business Development", href: "/services/business-development" },
   { name: "Marketing Support", href: "/services/marketing-support" },
   { name: "AI & Automation", href: "/services/ai-automation" },
-  { name: "Business Development", href: "/services/business-development" },
   { name: "Accounting & Finance", href: "/services/accounting-finance" },
 ];
 
@@ -21,9 +21,8 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Process", href: "/process" },
   { name: "Careers", href: "/careers" },
-  { name: "Blogs", href: "/blogs" },
+  { name: "Case Studies", href: "/case-studies" },
 ];
 
 export function Header() {
@@ -136,7 +135,7 @@ export function Header() {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    "relative px-5 py-2 text-[13px] font-bold transition-all duration-300 rounded-lg uppercase tracking-wider",
+                    "relative px-5 py-2 text-[13px] font-bold transition-all duration-300 rounded-lg uppercase tracking-wider whitespace-nowrap",
                     isActive
                       ? "text-secondary"
                       : "text-slate-900 hover:text-secondary hover:bg-slate-900/5"

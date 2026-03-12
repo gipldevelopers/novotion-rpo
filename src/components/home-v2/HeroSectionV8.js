@@ -9,25 +9,18 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
     {
-        id: "recruitment",
-        title: "Recruitment",
+        id: "global-clients",
+        title: "Global Clients",
         subtitle: "Elite Partnerships",
-        description: "Offshore recruitment specialists who cut time-to-hire by 60%, reduce costs by half, and place right-fit talent across UK, US, Canada, and APAC.",
+        description: "We partner with ambitious businesses across the UK, UAE, EU, and APAC to build high-performing offshore teams that deliver measurable results across recruitment, marketing, sales, automation, and finance.",
         image: "/assets/hero/recruitment.png",
     },
     {
-        id: "marketing",
-        title: "Marketing Support",
+        id: "recruitment",
+        title: "Recruitment Services",
         subtitle: "Elite Partnerships",
-        description: "Full-service marketing covering SEO, social media, paid ads, and email all built to grow your brand and convert the right audience into revenue.",
-        image: "/assets/hero/marketing.png",
-    },
-    {
-        id: "clients",
-        title: "Global Clients",
-        subtitle: "Elite Partnerships",
-        description: "Helping businesses across the UK, US, Canada, and APAC hire better, market smarter, and operate with full financial clarity with one partner.",
-        image: "/assets/hero/global_clients.png",
+        description: "Offshore recruitment specialists who cut time-to-hire by 60%, reduce costs by half, and place right-fit talent across UK, UAE, EU, and APAC.",
+        image: "/assets/hero/recruitment.png",
     },
     {
         id: "bizdev",
@@ -37,10 +30,24 @@ const services = [
         image: "/assets/hero/bizdev.png",
     },
     {
+        id: "marketing",
+        title: "Marketing Support",
+        subtitle: "Elite Partnerships",
+        description: "Full-service marketing covering SEO, social media, paid ads, and email all built to grow your brand and convert the right audience into revenue.",
+        image: "/assets/hero/marketing.png",
+    },
+    {
+        id: "ai-automation",
+        title: "AI & Automation",
+        subtitle: "Elite Partnerships",
+        description: "From intelligent workflows to process automation, we help businesses eliminate repetitive tasks, reduce human error, and scale operations faster.",
+        image: "/assets/services_inner_banner_bg.png",
+    },
+    {
         id: "finance",
         title: "Accounting & Finance",
         subtitle: "Elite Partnerships",
-        description: "Professional bookkeeping, payroll, and tax compliance real-time financial clarity without the cost of an in-house finance team.",
+        description: "Professional bookkeeping, payroll, and tax compliance — real-time financial clarity without the cost of an in-house finance team.",
         image: "/assets/hero/finance.png",
     }
 ];

@@ -15,6 +15,14 @@ const services = [
         tag: "Efficiency"
     },
     {
+        id: "biz-dev",
+        slug: "business-development",
+        icon: Briefcase,
+        title: "Business Development",
+        description: "Consistent leads, a structured pipeline, and partnerships that convert built by a team that works outbound every single day.",
+        tag: "Proactive"
+    },
+    {
         id: "marketing",
         slug: "marketing-support",
         icon: Layout,
@@ -29,14 +37,6 @@ const services = [
         title: "AI & Automation",
         description: "Stop your team doing manually what a system can do automatically. We build the workflows, chatbots, and integrations that free up your time.",
         tag: "Intelligence"
-    },
-    {
-        id: "biz-dev",
-        slug: "business-development",
-        icon: Briefcase,
-        title: "Business Development",
-        description: "Consistent leads, a structured pipeline, and partnerships that convert built by a team that works outbound every single day.",
-        tag: "Proactive"
     },
     {
         id: "finance",

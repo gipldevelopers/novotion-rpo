@@ -5,22 +5,22 @@ import { Search, Users, Zap, Briefcase, Globe, Sparkles } from "lucide-react";
 
 const advantages = [
     {
-        title: "Precision Sourcing",
-        description: "We go beyond job boards using Boolean search, executive headhunting, and passive sourcing to find the candidates your competitors can't reach",
+        title: "Understanding What Really Needs Fixing",
+        description: "Before anything starts, we look at the bigger picture. Hiring gaps, marketing direction, pipeline health, operational inefficiencies, and financial visibility. Once the real problem is clear, the solution becomes much simpler.",
         icon: Search,
-        tag: "Outcome: Accuracy"
+        tag: "Step 1"
     },
     {
-        title: "Agile Scalability",
-        description: "Whether you need one hire or a full operational overhaul, our flexible model scales to your needs without adding permanent overhead.",
+        title: "Smarter Systems, Less Friction",
+        description: "Growth slows down when teams spend too much time fixing small problems. We streamline recruitment, marketing execution, sales outreach, automation, and financial processes so your operations run smoother every day.",
         icon: Zap,
-        tag: "Outcome: Speed"
+        tag: "Step 2"
     },
     {
-        title: "Strategic Advisory",
-        description: "We don't just execute we advise on market rates, hiring strategy, marketing direction, and growth planning to keep you ahead of the competition.",
+        title: "Building Systems That Last",
+        description: "Our goal isn't short-term wins. It's building systems that keep working for you stronger hiring pipelines, better marketing performance, structured business development, efficient automation, and clear financial oversight.",
         icon: Briefcase,
-        tag: "Outcome: Strategy"
+        tag: "Step 3"
     },
 ];
 
@@ -40,12 +40,12 @@ export function AdvantageSection() {
                         Our Logic
                     </motion.div>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tighter leading-[1.12]">
-                        Architecting Your <br />
-                        <span className="text-secondary">Competitive Advantage</span>
+                        The Way We Solve <br />
+                        <span className="text-secondary">Real Business Problems</span>
                     </h2>
 
-                    <p className="text-slate-500 text-sm md:text-base font-light leading-relaxed max-w-xl mx-auto">
-                        Every service we deliver is built on three principles: precision, speed, and strategy with clear outcomes at every stage.
+                    <p className="text-slate-500 text-sm md:text-base font-light leading-relaxed max-w-3xl mx-auto">
+                        Every business faces similar roadblocks slow hiring, marketing that doesn't convert, inconsistent sales, manual operations, and numbers that never feel fully clear. Our approach is built to remove those barriers and create systems that actually support growth.
                     </p>
                 </div>
 

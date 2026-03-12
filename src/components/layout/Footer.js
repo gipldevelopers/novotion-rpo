@@ -4,11 +4,11 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from "luc
 import { cn } from "@/lib/utils";
 
 const services = [
-  { name: "Full RPO Partnership", href: "/services/full-rpo-partnership" },
-  { name: "Recruitment On-Demand", href: "/services/recruitment-on-demand" },
-  { name: "Offshore Support", href: "/services/offshore-recruitment-support" },
-  { name: "Executive Search", href: "/services/executive-search-headhunting" },
-  { name: "Candidate Pre-Screening", href: "/services/candidate-pre-screening" },
+  { name: "Recruitment Services", href: "/services/recruitment-services" },
+  { name: "Business Development", href: "/services/business-development" },
+  { name: "Marketing Support", href: "/services/marketing-support" },
+  { name: "AI & Automation", href: "/services/ai-automation" },
+  { name: "Accounting & Finance", href: "/services/accounting-finance" },
 ];
 
 const company = [
@@ -62,7 +62,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[17px] md:text-[17px] font-bold text-slate-400 uppercase tracking-[0.4em] mb-8 md:mb-10">Service Models</h4>
+            <h4 className="text-[17px] md:text-[17px] font-bold text-slate-400 uppercase tracking-[0.4em] mb-8 md:mb-10">Our Services</h4>
             <ul className="space-y-4 md:space-y-5">
               {services.map((item) => (
                 <li key={item.name}>
