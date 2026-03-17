@@ -21,7 +21,7 @@ const locations = [
     {
         title: "24/7 Connectivity",
         subtitle: "Round-the-Clock Momentum",
-        description: "Synchronized operations across all five service lines—always active, always delivering.",
+        description: "Synchronized operations across all five service lines always active, always delivering.",
         icon: Clock,
         tags: ["Speed", "Agility", "Always-On"]
     }

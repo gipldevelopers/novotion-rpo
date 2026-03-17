@@ -28,7 +28,7 @@ export const caseStudiesData = [
     {
         slug: "mastering-global-offshore-talent-integration",
         title: "Structuring a 24/7 Follow-the-Sun Recruitment Engine",
-        excerpt: "The 'Follow-the-Sun' model is no longer about cost-saving—it's about momentum. Learn the structural requirements for seamless cultural and technological integration across borders.",
+        excerpt: "The 'Follow-the-Sun' model is no longer about cost-saving it's about momentum. Learn the structural requirements for seamless cultural and technological integration across borders.",
         category: "Global Strategy",
         metric: "24/7 Ops",
         date: "February 15, 2026",
@@ -95,7 +95,7 @@ export function CaseStudiesGrid() {
                             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-secondary text-[10px] font-bold tracking-[0.4em] uppercase mb-6 shadow-sm"
                         >
                             <Sparkles className="h-4 w-4" />
-                            Client Success 
+                            Client Success
                         </motion.div>
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tighter leading-tight font-display">
                             Insights Derived from <br />
@@ -189,7 +189,7 @@ export function CaseStudiesGrid() {
                             onClick={handleCloseModal}
                             className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
                         />
-                        
+
                         {/* Modal Body */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -205,7 +205,7 @@ export function CaseStudiesGrid() {
                                 >
                                     <X className="w-5 h-5" />
                                 </button>
-                                
+
                                 <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary mb-4">
                                     <Download className="w-6 h-6" />
                                 </div>

@@ -18,7 +18,7 @@ const servicesData = [
         tag: "Hire Smarter",
         title: "Recruitment That Actually Delivers Results",
         description: "Stop losing to slow hiring. We source, screen, and place right-fit candidates cutting time-to-fill by 60%.",
-        overview: "Many businesses lose time and money on hiring that goes nowhere—random job posts, unsuitable applicants, and no structured process. Our approach is built around one objective: placing the right talent in the right role as efficiently as possible. No unnecessary complexity. No guesswork. Just reliable outcomes.",
+        overview: "Many businesses lose time and money on hiring that goes nowhere random job posts, unsuitable applicants, and no structured process. Our approach is built around one objective: placing the right talent in the right role as efficiently as possible. No unnecessary complexity. No guesswork. Just reliable outcomes.",
         whatYouGet: [
             {
                 title: "End-to-End Recruitment",
@@ -37,7 +37,7 @@ const servicesData = [
             {
                 title: "Talent Sourcing",
                 head: "Access Talent Before the Competition Does",
-                description: "Exceptional candidates are rarely found by simply posting job ads. Our sourcing specialists identify professionals through targeted research, industry networks, and specialised communities—often connecting with candidates who aren’t actively job hunting but are open to the right opportunity.",
+                description: "Exceptional candidates are rarely found by simply posting job ads. Our sourcing specialists identify professionals through targeted research, industry networks, and specialised communities often connecting with candidates who aren’t actively job hunting but are open to the right opportunity.",
                 items: [
                     "Active & Passive Talent Identification",
                     "Advanced Boolean Search Techniques",
@@ -74,7 +74,7 @@ const servicesData = [
             {
                 title: "Onboarding & Compliance",
                 head: "Every Hire Ready and Compliant from Day One",
-                description: "We ensure every candidate meets the necessary legal, professional, and industry requirements before they begin work—reducing risk and ensuring a smooth onboarding experience.",
+                description: "We ensure every candidate meets the necessary legal, professional, and industry requirements before they begin work reducing risk and ensuring a smooth onboarding experience.",
                 items: [
                     "Right-to-Work & Background Checks",
                     "Credential & Licence Verification",
@@ -211,8 +211,8 @@ const servicesData = [
         icon: LayoutIcon,
         tag: "Grow Louder",
         title: "Marketing That Delivers Real Impact",
-        description: "From SEO and social to paid ads and email—every channel managed, every pound tied to leads and real revenue growth.",
-        overview: "Many businesses invest in marketing but see very little return. Random social posts, email campaigns no one opens, and ads without a clear strategy waste both time and budget. Our approach is simple—reach the right audience with the right message at the right moment. Everything we do is built around performance, consistency, and measurable results.",
+        description: "From SEO and social to paid ads and email every channel managed, every pound tied to leads and real revenue growth.",
+        overview: "Many businesses invest in marketing but see very little return. Random social posts, email campaigns no one opens, and ads without a clear strategy waste both time and budget. Our approach is simple reach the right audience with the right message at the right moment. Everything we do is built around performance, consistency, and measurable results.",
         whatYouGet: [
             {
                 title: "Social Media Management",
@@ -280,7 +280,7 @@ const servicesData = [
                 ]
             }
         ],
-        bestFor: "Your marketing is scattered—inconsistent posts, emails that go unopened, and ad spend with nothing to show for it. You know you need to be more visible. You just need someone who actually knows how.",
+        bestFor: "Your marketing is scattered inconsistent posts, emails that go unopened, and ad spend with nothing to show for it. You know you need to be more visible. You just need someone who actually knows how.",
         outcomes: [
             "More qualified inbound leads, lower cost",
             "Organic traffic that builds month after month",
@@ -305,7 +305,7 @@ const servicesData = [
         tag: "Work Smarter",
         title: "Build Systems That Work Even When You’re Not",
         description: "Your team shouldn't do manually what a workflow handles in seconds. We build the automations that give your time back.",
-        overview: "Every business has processes that consume hours of valuable time—data entry, manual follow-ups, repetitive admin tasks, and disconnected tools. We help you transform those processes into intelligent systems that run automatically, allowing your business to operate more efficiently every day.",
+        overview: "Every business has processes that consume hours of valuable time data entry, manual follow-ups, repetitive admin tasks, and disconnected tools. We help you transform those processes into intelligent systems that run automatically, allowing your business to operate more efficiently every day.",
         whatYouGet: [
             {
                 title: "Workflow Automation",
@@ -406,7 +406,7 @@ const servicesData = [
         icon: Target,
         tag: "Know Your Numbers",
         title: "Strong Businesses Are Built on Financial Clarity",
-        description: "Clean books, accurate payroll, zero missed deadlines—and a clear view of your finances without the cost of a full-time hire.",
+        description: "Clean books, accurate payroll, zero missed deadlines and a clear view of your finances without the cost of a full-time hire.",
         overview: "Managing finances can quickly become overwhelming when you’re also responsible for running the business. From tracking expenses to preparing for taxes, financial management requires accuracy and consistency. Our accounting support provides you with a professional financial function without the cost of maintaining a full-time finance team.",
         whatYouGet: [
             {

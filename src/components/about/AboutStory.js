@@ -31,7 +31,7 @@ export function AboutStory() {
                                 We built Noltven on one belief: growing businesses shouldn't have to choose between getting expert support and keeping costs under control. You shouldn't have to pick two out of five.
                             </p>
                             <p>
-                                So we put recruitment, marketing, AI automation, business development, and finance under one roof—all aligned to the same goals, held to the same standards, reporting to you in a single place.
+                                So we put recruitment, marketing, AI automation, business development, and finance under one roof all aligned to the same goals, held to the same standards, reporting to you in a single place.
                             </p>
                             <p className="p-6 bg-slate-50 rounded-[2rem] border-l-4 border-secondary text-slate-700 font-medium italic">
                                 "UK and US strategy. India-based delivery. The result: enterprise output at a fraction of the cost for businesses ready to scale."

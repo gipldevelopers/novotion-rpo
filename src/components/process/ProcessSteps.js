@@ -36,7 +36,7 @@ const phases = [
     title: "Blueprint",
     subtitle: "Here's Exactly What We'll Build",
     duration: "PHASE II",
-    description: "No vague proposals. We come back with a precise execution plan—tools, workflows, team structure, timelines, and success metrics mapped to your exact requirements.",
+    description: "No vague proposals. We come back with a precise execution plan tools, workflows, team structure, timelines, and success metrics mapped to your exact requirements.",
     activities: [
       "Specialist team briefed and onboarded",
       "Platform and CRM integrations built",
@@ -124,18 +124,18 @@ export function ProcessSteps() {
     <section className="py-24 md:py-40 bg-white relative overflow-hidden border-t border-slate-100">
       <div className="container-premium px-6 md:px-12 relative">
         <div className="text-center max-w-3xl mx-auto mb-20 md:mb-32">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-6"
-            >
-                <Sparkles className="h-4 w-4" />
-                Our Methodology
-            </motion.div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tighter leading-tight font-display">
-                How We Make It <span className="text-secondary italic">Happen</span>
-            </h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-6"
+          >
+            <Sparkles className="h-4 w-4" />
+            Our Methodology
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tighter leading-tight font-display">
+            How We Make It <span className="text-secondary italic">Happen</span>
+          </h2>
         </div>
 
         {/* Timeline Wrapper with Scroll Progress */}

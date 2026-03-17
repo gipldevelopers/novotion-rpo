@@ -39,7 +39,7 @@ const phases = [
     title: "Blueprint",
     subtitle: "Here's Exactly What We'll Build",
     duration: "PHASE II",
-    description: "No vague proposals. We come back with a precise execution plan—tools, workflows, team structure, timelines, and success metrics mapped to your exact requirements.",
+    description: "No vague proposals. We come back with a precise execution plan tools, workflows, team structure, timelines, and success metrics mapped to your exact requirements.",
     activities: [
       "Specialist team briefed and onboarded",
       "Platform and CRM integrations built",
@@ -127,10 +127,10 @@ export default function Process() {
     <Layout>
       <main className="bg-white">
         {/* 1. Cinematic Hero matching the new UI */}
-        <ProcessHero 
+        <ProcessHero
           tag="Engagement Workflow"
           title={<>Precision <br /><span className="text-secondary">Execution Framework</span></>}
-          description="Four phases. No grey areas. From the moment we start to the moment your business outgrows what it was—this is how we get you there."
+          description="Four phases. No grey areas. From the moment we start to the moment your business outgrows what it was this is how we get you there."
         />
 
         {/* 2. Process Section with Premium Styling */}

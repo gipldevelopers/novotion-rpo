@@ -30,7 +30,7 @@ export const blogsData = [
     {
         slug: "global-offshore-integration",
         title: "Mastering Global Offshore Talent Integration",
-        excerpt: "The 'Follow-the-Sun' model is no longer about cost-saving—it's about 24/7 momentum. Learn the structural requirements for seamless cultural and technological integration across borders.",
+        excerpt: "The 'Follow-the-Sun' model is no longer about cost-saving it's about 24/7 momentum. Learn the structural requirements for seamless cultural and technological integration across borders.",
         category: "Global Strategy",
         author: "VP of Delivery",
         readTime: "12 min read",
@@ -101,7 +101,7 @@ export function BlogGrid() {
                                     className="flex-shrink-0 w-[280px] md:w-[450px] lg:w-[500px] flex flex-col bg-slate-50 border border-slate-200 rounded-[2.5rem] overflow-hidden hover:border-secondary/20 hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 shadow-sm"
                                 >
                                     {/* Image Container */}
-                                    <Link 
+                                    <Link
                                         href={`/blogs/${blog.slug}`}
                                         className="relative h-56 md:h-72 w-full block overflow-hidden bg-white group/img"
                                     >

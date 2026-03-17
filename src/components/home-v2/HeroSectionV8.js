@@ -47,7 +47,7 @@ const services = [
         id: "finance",
         title: "Accounting & Finance",
         subtitle: "Elite Partnerships",
-        description: "Professional bookkeeping, payroll, and tax compliance — real-time financial clarity without the cost of an in-house finance team.",
+        description: "Professional bookkeeping, payroll, and tax compliance   real-time financial clarity without the cost of an in-house finance team.",
         image: "/assets/hero/finance.png",
     }
 ];

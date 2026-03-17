@@ -134,7 +134,7 @@ export default function CaseStudyDetail() {
                                 We immediately deployed a squad of dedicated offshore acquisition specialists, integrating seamlessly into their Slack channels and internal ATS. By applying our proprietary boolean search frameworks and automated outreach sequences, we identified entirely new passive talent pools that their competitors hadn't touched.
                             </p>
                             <p className="text-slate-500 leading-relaxed max-w-3xl mb-12">
-                                Within 60 days, the architecture was fully stabilized. The {study.metric} KPI was not just a vanity metric—it represented a fundamental shift in how the organization capitalized its human resourcing going forward.
+                                Within 60 days, the architecture was fully stabilized. The {study.metric} KPI was not just a vanity metric it represented a fundamental shift in how the organization capitalized its human resourcing going forward.
                             </p>
                         </div>
                     </div>

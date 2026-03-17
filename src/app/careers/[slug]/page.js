@@ -61,8 +61,8 @@ export default function CareerDetailPage({ params }) {
                                 <section>
                                     <h2 className="text-2xl font-bold text-slate-900 mb-6 tracking-tight">Executive Summary</h2>
                                     <p className="text-slate-500 text-lg leading-relaxed font-light">
-                                        We're looking for someone who takes ownership, thinks strategically, and delivers — 
-                                        not someone who waits to be told what to do. This role sits at the heart of Noltven's 
+                                        We're looking for someone who takes ownership, thinks strategically, and delivers
+                                        not someone who waits to be told what to do. This role sits at the heart of Noltven's
                                         delivery engine, contributing directly to client results across one or more of our five service lines.
                                     </p>
                                 </section>

@@ -127,7 +127,7 @@ export default function BlogDetailPage({ params }) {
                         <h2 className="text-3xl mt-16 mb-8 text-slate-900 tracking-tight">The Structural Deficit of Traditional Hiring.</h2>
                         <p>
                             To understand the trajectory of global hiring, we first must audit the inefficiencies of standard
-                            talent acquisition. Most internal teams operate on reactive models—initiating sourcing protocols
+                            talent acquisition. Most internal teams operate on reactive models initiating sourcing protocols
                             only after a position becomes vacant. This results in "Time-to-Fill" delays that cost enterprise businesses
                             millions in lost productivity.
                         </p>

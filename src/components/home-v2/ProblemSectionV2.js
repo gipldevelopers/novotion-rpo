@@ -6,7 +6,7 @@ import { Sparkles } from "lucide-react";
 const problems = [
     {
         title: "The Hiring Trap",
-        description: "Bad hires and slow processes don't just hurt your budget — they slow everything down. By the time you've filled the role, you've already lost weeks of momentum and paid way more than you should have.",
+        description: "Bad hires and slow processes don't just hurt your budget   they slow everything down. By the time you've filled the role, you've already lost weeks of momentum and paid way more than you should have.",
     },
     {
         title: "Marketing That Goes Nowhere",
@@ -14,15 +14,15 @@ const problems = [
     },
     {
         title: "A Pipeline That Keeps Running Dry",
-        description: "Waiting on referrals isn't a growth strategy — it's a gamble. Without a proper outreach system in place, you're always one slow month away from a revenue problem.",
+        description: "Waiting on referrals isn't a growth strategy   it's a gamble. Without a proper outreach system in place, you're always one slow month away from a revenue problem.",
     },
     {
         title: "Drowning in Work That Shouldn't Exist",
-        description: "If your team is spending half their day on repetitive tasks, you're not building a business — you're just keeping the lights on. That time could be going somewhere that actually matters.",
+        description: "If your team is spending half their day on repetitive tasks, you're not building a business   you're just keeping the lights on. That time could be going somewhere that actually matters.",
     },
     {
         title: "Flying Blind on Finances",
-        description: "Not knowing your numbers is one of the most expensive things a business can do. No visibility means no control — and no control means decisions that cost you without you even knowing it.",
+        description: "Not knowing your numbers is one of the most expensive things a business can do. No visibility means no control   and no control means decisions that cost you without you even knowing it.",
     },
 ];
 
