@@ -36,15 +36,10 @@ export function CTASectionV2() {
 
                             {/* Left: Strategic Headline */}
                             <div className="lg:col-span-7 text-left">
-                                <motion.div
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-6"
-                                >
+                                <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
                                     <Sparkles className="h-4 w-4" />
                                     Growth Conduit
-                                </motion.div>
+                                </div>
 
                                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tighter leading-none">
                                     Build Your Winning  <br />

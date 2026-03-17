@@ -65,7 +65,7 @@ export function HeroSectionV8() {
     }, [nextSlide]);
 
     return (
-        <section id="hero" className="relative h-[100dvh] bg-white flex flex-col justify-center pt-24 md:pt-32 lg:pt-40 pb-20 overflow-hidden scroll-mt-32">
+        <section id="hero" className="relative min-h-[100dvh] bg-white flex flex-col justify-center pt-32 md:pt-36 lg:pt-44 pb-16 overflow-hidden scroll-mt-32">
             {/* Background with Increased Visibility */}
             <div className="absolute inset-0 z-0">
                 <AnimatePresence>
@@ -102,16 +102,6 @@ export function HeroSectionV8() {
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         className="max-w-4xl mx-auto"
                     >
-                        <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/5 border border-slate-900/10 mb-8 backdrop-blur-md"
-                        >
-                            <Sparkles className="h-4 w-4 text-secondary" />
-                            <span className="text-[10px] font-bold text-slate-600 tracking-[0.4em] uppercase">{services[activeIndex].subtitle}</span>
-                        </motion.div>
-
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold text-slate-900 leading-[1.1] mb-6 md:mb-8 tracking-tighter drop-shadow-sm">
                             A Global Engine for <br />
                             <span className="text-secondary">{services[activeIndex].title}</span>
@@ -121,37 +111,39 @@ export function HeroSectionV8() {
                             {services[activeIndex].description}
                         </p>
 
-                        <div className="flex items-center justify-center gap-6">
+                        <div className="flex flex-col items-center justify-center gap-8">
                             <Button asChild size="lg" className="rounded-xl bg-secondary hover:bg-secondary/90 text-white font-bold h-14 px-8 shadow-xl shadow-secondary/20 transition-all border-none">
                                 <Link href="/contact" className="flex items-center gap-2 text-[15px] tracking-wide">
                                     GET STARTED NOW
                                     <ArrowRight className="h-5 w-5" />
                                 </Link>
                             </Button>
+
+                            {/* Pagination Controls - Now placed after CTA button */}
+                            <div className="flex items-center gap-2">
+                                {services.map((_, index) => {
+                                    const isActive = activeIndex === index;
+                                    return (
+                                        <button
+                                            key={index}
+                                            onClick={() => setActiveIndex(index)}
+                                            className="relative py-2 px-1 group focus:outline-none"
+                                            aria-label={`Go to slide ${index + 1}`}
+                                        >
+                                            <div
+                                                className={`h-2.5 rounded-full transition-all duration-500 ease-in-out ${isActive ? 'w-10 bg-secondary' : 'w-2.5 bg-slate-300 group-hover:bg-slate-400'
+                                                    }`}
+                                            />
+                                        </button>
+                                    );
+                                })}
+                            </div>
                         </div>
                     </motion.div>
                 </AnimatePresence>
             </div>
 
-            {/* Pagination Controls */}
-            <div className="absolute bottom-8 lg:bottom-12 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
-                {services.map((_, index) => {
-                    const isActive = activeIndex === index;
-                    return (
-                        <button
-                            key={index}
-                            onClick={() => setActiveIndex(index)}
-                            className="relative py-2 px-1 group"
-                            aria-label={`Go to slide ${index + 1}`}
-                        >
-                            <div
-                                className={`h-2.5 rounded-full transition-all duration-500 ease-in-out ${isActive ? 'w-10 bg-secondary' : 'w-2.5 bg-slate-300 group-hover:bg-slate-400'
-                                    }`}
-                            />
-                        </button>
-                    );
-                })}
-            </div>
+
 
         </section>
     );

@@ -40,7 +40,7 @@ export function ProblemSection() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
                             >
-                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-6 md:mb-8">
+                                <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 md:mb-10 shadow-xl shadow-secondary/20">
                                     <Sparkles className="h-4 w-4" />
                                     The Challenge
                                 </div>

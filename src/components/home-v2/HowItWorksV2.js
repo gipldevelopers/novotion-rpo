@@ -37,15 +37,10 @@ export function HowItWorksV2() {
 
                 {/* Section Header */}
                 <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-4 shadow-sm"
-                    >
+                    <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
                         <Sparkles className="h-4 w-4" />
                         Our Process
-                    </motion.div>
+                    </div>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tighter leading-[1.15]">
                         The Strategic <br />
                         <span className="text-secondary">Execution Lifecycle</span>

@@ -16,6 +16,14 @@ const services = [
         image: "/assets/hero/recruitment.png",
     },
     {
+        title: "Business Development",
+        subHeadline: "Business Development",
+        description: "Structured outbound prospecting, CRM management, and partnership development that fills your pipeline and converts opportunities into consistent revenue.",
+        features: ["GROWTH STRATEGY", "PARTNERSHIP BUILDING", "OUTBOUND SALES & PROSPECTING", "PROPOSAL & PITCH SUPPORT", "MARKET EXPANSION", "CRM & PIPELINE MANAGEMENT"],
+        icon: Briefcase,
+        image: "/assets/hero/bizdev.png",
+    },
+    {
         title: "Digital Marketing",
         subHeadline: "Digital Marketing",
         description: "Full-service marketing covering social media, SEO, email campaigns, and paid ads built to grow your brand and turn the right audience into paying customers.",
@@ -30,14 +38,6 @@ const services = [
         features: ["WORKFLOW AUTOMATION", "AI CHATBOTS & VIRTUAL ASSISTANTS", "AI REPORTING & ANALYTICS", "SYSTEMS INTEGRATION", "AI CONTENT ASSISTANCE"],
         icon: Cog,
         image: "/assets/hero/global_clients.png",
-    },
-    {
-        title: "Business Development",
-        subHeadline: "Business Development",
-        description: "Structured outbound prospecting, CRM management, and partnership development that fills your pipeline and converts opportunities into consistent revenue.",
-        features: ["GROWTH STRATEGY", "PARTNERSHIP BUILDING", "OUTBOUND SALES & PROSPECTING", "PROPOSAL & PITCH SUPPORT", "MARKET EXPANSION", "CRM & PIPELINE MANAGEMENT"],
-        icon: Briefcase,
-        image: "/assets/hero/bizdev.png",
     },
     {
         title: "Accounting & Finance",
@@ -58,15 +58,10 @@ export function ServicesPreview() {
                 
                 {/* Section Header - Centered */}
                 <div className="mb-8 md:mb-10 lg:mb-12 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-secondary text-[9px] font-extrabold uppercase tracking-[0.4em] mb-4"
-                    >
-                        <Sparkles className="h-3 w-3" />
+                    <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
+                        <Sparkles className="h-4 w-4" />
                         Our Solutions
-                    </motion.div>
+                    </div>
                     <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-slate-900 tracking-tighter leading-[1] font-display">
                         All Five Services. <br />
                         <span className="text-secondary">One Trusted Partner.</span>

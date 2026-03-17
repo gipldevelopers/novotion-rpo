@@ -32,15 +32,10 @@ export function ContactSection() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-[100px] pointer-events-none" />
 
                             <div className="relative z-10">
-                                <motion.div
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-8"
-                                >
+                                <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
                                     <Sparkles className="h-4 w-4" />
                                     The Conduit
-                                </motion.div>
+                                </div>
 
                                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tighter leading-none">
                                     Initiate Your <br />

@@ -1,200 +1,173 @@
 "use client";
 
-import { motion, useAnimationFrame, useMotionValue } from "framer-motion";
-import { Monitor, Stethoscope, Landmark, Factory, HardHat, Cog, Zap, Sparkles, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { Monitor, Stethoscope, Landmark, Sparkles, ArrowRight, Factory, Building2, DraftingCompass, Zap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState, useEffect } from "react";
+import { useState } from "react";
 
 const industries = [
     {
         id: "tech",
-        name: "Technology & IT",
-        subtitle: "Software, SaaS, Cloud & Digital Transformation",
+        name: "Technology",
+        subtitle: "Software, SaaS & Digital Transformation",
         icon: Monitor,
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
-        tag: "Digital"
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+        label: "Innovation Hub"
     },
     {
         id: "healthcare",
         name: "Healthcare",
-        subtitle: "Clinical, Administrative & MedTech Solutions",
+        subtitle: "MedTech & Clinical Solutions",
         icon: Stethoscope,
-        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800",
-        tag: "Health"
+        image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=1200",
+        label: "Care Precision"
     },
     {
         id: "construction",
         name: "Construction",
-        subtitle: "Modern Infrastructure, Civil & Residential Projects",
-        icon: HardHat,
-        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800",
-        tag: "Build"
+        subtitle: "Infrastructure & Urban Development",
+        icon: Building2,
+        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200", // High-fidelity construction site
+        label: "Legacy Build"
     },
     {
         id: "engineering",
         name: "Engineering",
-        subtitle: "Mechanical, Electrical & Precision Engineering",
-        icon: Cog,
-        image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800",
-        tag: "Engine"
+        subtitle: "Precision Systems & R&D Excellence",
+        icon: DraftingCompass,
+        image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1200",
+        label: "Design Core"
     },
     {
         id: "manufacturing",
         name: "Manufacturing",
-        subtitle: "Smart Factory, Logistics & Supply Chain",
+        subtitle: "Industrial Automation & Smart Production",
         icon: Factory,
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800",
-        tag: "Industry"
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200",
+        label: "Industry 4.0"
     },
     {
         id: "energy",
         name: "Energy",
-        subtitle: "Renewables, Solar, Wind & Smart Power Grids",
+        subtitle: "Renewables & Power Grid Management",
         icon: Zap,
-        image: "https://images.unsplash.com/photo-1466611653911-954ffec13f18?auto=format&fit=crop&q=80&w=800",
-        tag: "Power"
+        image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1200",
+        label: "Global Power"
     },
     {
         id: "finance",
         name: "Financial Services",
-        subtitle: "Banking, FinTech, Insurance & Wealth Management",
+        subtitle: "Banking, FinTech & Wealth Management",
         icon: Landmark,
-        image: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?auto=format&fit=crop&q=80&w=800",
-        tag: "Finance"
+        image: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?auto=format&fit=crop&q=80&w=1200",
+        label: "Capital Flow"
     }
 ];
 
-const infiniteIndustries = [...industries, ...industries, ...industries];
-
 export function IndustriesPreview() {
-    const x = useMotionValue(0);
-    const containerRef = useRef(null);
-    const scrollRef = useRef(null);
-    const [isHovered, setIsHovered] = useState(false);
-    const [isDragging, setIsDragging] = useState(false);
-
-    useAnimationFrame((t, delta) => {
-        if (!isHovered && !isDragging) {
-            let moveBy = -0.4 * (delta / 16);
-            let nextX = x.get() + moveBy;
-
-            if (scrollRef.current) {
-                const totalWidth = scrollRef.current.scrollWidth;
-                const setWidth = totalWidth / 3;
-                if (nextX <= -setWidth * 2) {
-                    nextX += setWidth;
-                }
-            }
-            x.set(nextX);
-        }
-    });
-
-    useEffect(() => {
-        const unsubscribe = x.on("change", (latest) => {
-            if (isDragging && scrollRef.current) {
-                const totalWidth = scrollRef.current.scrollWidth;
-                const setWidth = totalWidth / 3;
-
-                if (latest <= -setWidth * 2) {
-                    x.set(latest + setWidth);
-                } else if (latest >= -setWidth) {
-                    x.set(latest - setWidth);
-                }
-            }
-        });
-        return () => unsubscribe();
-    }, [isDragging, x]);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <section id="industries" className="py-12 md:py-12 bg-white relative overflow-hidden scroll-mt-20">
-            <div className="relative z-10 w-full">
-                {/* Section Header */}
-                <div className="container-premium text-center max-w-3xl mx-auto mb-8 md:mb-12 px-4">
+        <section id="industries" className="min-h-screen md:h-screen bg-white relative overflow-hidden scroll-mt-20 flex flex-col justify-center py-8 md:py-6 lg:py-10">
+            
+            <div className="container-premium relative z-10 w-full px-4 max-w-[98%] lg:max-w-7xl mx-auto flex flex-col h-full lg:max-h-[88vh]">
+                
+                {/* Header Section */}
+                <div className="text-center max-w-4xl mx-auto mb-6 md:mb-8 shrink-0">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-6 shadow-sm"
+                        transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                        className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary text-white text-[8px] md:text-[9px] font-bold uppercase tracking-[0.3em] mb-3 shadow-lg shadow-secondary/20"
                     >
-                        <Sparkles className="h-4 w-4" />
+                        <Sparkles className="h-3 md:h-3.5 w-3 md:w-3.5" />
                         Global Segments
                     </motion.div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 tracking-tighter leading-[1.05] font-display">
-                        Deep Domain <br />
-                        <span className="text-secondary italic">Expertise</span>
+                    
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tighter leading-tight font-display">
+                        Deep <span className="text-secondary italic">Sector</span> Verticals
                     </h2>
                 </div>
 
-                {/* Draggable Marquee */}
-                <div
-                    ref={containerRef}
-                    className="relative cursor-grab active:cursor-grabbing overflow-visible select-none"
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                >
-                    {/* Shadow Overlays */}
-                    <div className="absolute inset-y-0 left-0 w-24 md:w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-20 pointer-events-none" />
-                    <div className="absolute inset-y-0 right-0 w-24 md:w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-20 pointer-events-none" />
-
-                    <motion.div
-                        ref={scrollRef}
-                        drag="x"
-                        dragConstraints={{ left: -10000, right: 10000 }}
-                        dragElastic={0.1}
-                        style={{ x }}
-                        onDragStart={() => setIsDragging(true)}
-                        onDragEnd={() => setIsDragging(false)}
-                        className="flex gap-6 md:gap-8 py-6 w-max"
-                    >
-                        {infiniteIndustries.map((industry, index) => (
-                            <div
-                                key={index}
-                                className="flex-shrink-0 w-[280px] sm:w-[340px] md:w-[420px] rounded-[2.5rem] bg-slate-50 border border-slate-200 hover:border-secondary/30 transition-all duration-500 relative group shadow-sm hover:shadow-2xl hover:shadow-slate-200/50 pointer-events-auto overflow-hidden flex flex-col"
+                {/* Adaptive Layout: 2-Column Grid on Mobile, Cinematic Pillars on Desktop */}
+                <div className="grid grid-cols-2 md:flex md:flex-row h-auto md:h-[380px] lg:h-[420px] gap-2.5 w-full flex-grow md:flex-grow-0">
+                    {industries.map((item, index) => {
+                        const isActive = activeIndex === index;
+                        
+                        return (
+                            <motion.div
+                                key={item.id}
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: index * 0.04 }}
+                                onClick={() => setActiveIndex(index)}
+                                onMouseEnter={() => window.innerWidth > 768 && setActiveIndex(index)}
+                                className={`group relative rounded-[1.2rem] md:rounded-[1.5rem] overflow-hidden transition-all duration-500 ease-[0.23, 1, 0.32, 1] cursor-pointer shadow-sm 
+                                    ${index === 0 ? "col-span-2 h-[160px] md:h-full" : "h-[140px] md:h-full"}
+                                    ${isActive 
+                                        ? "md:flex-[5] shadow-2xl shadow-slate-200" 
+                                        : "md:flex-1 md:opacity-70 md:hover:opacity-100"
+                                    }`}
                             >
-                                {/* Image Area */}
-                                <div className="relative h-40 sm:h-48 md:h-52 overflow-hidden">
-                                    <Image
-                                        src={industry.image}
-                                        alt={industry.name}
-                                        fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[0.3] group-hover:grayscale-0"
-                                        draggable={false}
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                                    
-                                    {/* Overlay Content */}
-                                    <div className="absolute bottom-4 left-6 right-6 flex justify-between items-end">
-                                        <div className="p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white">
-                                            <industry.icon className="h-5 w-5" strokeWidth={1.5} />
-                                        </div>
-                                        <span className="px-2.5 py-0.5 rounded-full bg-secondary text-white text-[8px] font-bold uppercase tracking-widest shadow-lg shadow-secondary/20">
-                                            {industry.tag}
-                                        </span>
+                                {/* Visual Engine */}
+                                <Image
+                                    src={item.image}
+                                    alt={item.name}
+                                    fill
+                                    className={`object-cover transition-transform duration-700 ease-out ${isActive ? "scale-105" : "scale-100"}`}
+                                />
+                                
+                                {/* Cinematic Overlays */}
+                                <div className={`absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/10 to-transparent transition-opacity duration-300 ${isActive ? "opacity-70" : "opacity-80"}`} />
+                                <div className={`absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-secondary/40 to-transparent transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0"}`} />
+
+                                {/* Mobile/Collapsed Icon Pod */}
+                                <div className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-500 ${isActive ? "opacity-0 scale-90 pointer-events-none" : "opacity-100 scale-100"}`}>
+                                    <div className="p-2 rounded-xl bg-white/20 backdrop-blur-xl border border-white/30 text-white">
+                                        <item.icon className="h-4 w-4 md:h-5 md:w-5" strokeWidth={1.5} />
                                     </div>
+                                    <p className="mt-2 text-[8px] font-bold text-white uppercase tracking-wider md:hidden text-center px-2">
+                                        {item.name}
+                                    </p>
+                                    <p className="mt-3 text-[10px] font-bold text-white uppercase tracking-[0.2em] hidden md:block [writing-mode:vertical-lr] rotate-180">
+                                        {item.name}
+                                    </p>
                                 </div>
 
-                                {/* Content Area */}
-                                <div className="p-6 md:p-8 flex flex-col flex-grow bg-white">
-                                    <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2 tracking-tight font-display">
-                                        {industry.name}
-                                    </h3>
-                                    <p className="text-slate-500 text-[13px] md:text-sm font-light leading-relaxed mb-6 flex-grow">
-                                        {industry.subtitle}
-                                    </p>
-                                    
+                                {/* Expanded State / Content Detail (Touch aware reveal) */}
+                                <div className={`absolute inset-0 z-10 p-4 md:p-6 flex flex-col justify-end transition-all duration-500 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 md:pointer-events-none md:hidden"} text-white`}>
+                                    <div className="mb-2 md:mb-3">
+                                        <h3 className="text-sm md:text-xl lg:text-2xl font-black mb-0.5 md:mb-1 tracking-tighter uppercase leading-none">
+                                            {item.name}
+                                        </h3>
+                                        <p className="hidden md:block text-slate-100 text-[10px] md:text-[11px] lg:text-[12px] font-light leading-tight max-w-xs mb-4 border-l-2 border-secondary/50 pl-2 italic">
+                                            {item.subtitle}
+                                        </p>
+                                    </div>
+
                                     <Link 
                                         href="/contact"
-                                        className="inline-flex items-center gap-2 text-secondary font-bold uppercase tracking-widest text-[10px] hover:gap-4 transition-all"
+                                        className="inline-flex items-center gap-1.5 bg-white text-slate-900 px-3 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold uppercase tracking-widest text-[7px] md:text-[8px] transition-all hover:bg-secondary hover:text-white shadow-2xl w-fit"
                                     >
-                                        Inquire Specifically
-                                        <ArrowRight className="h-3 w-3" />
+                                        Inquire
+                                        <ArrowRight className="h-2.5 w-2.5 md:h-3 md:w-3" />
                                     </Link>
                                 </div>
-                            </div>
-                        ))}
-                    </motion.div>
+
+                                {/* Desktop Floating Counter */}
+                                <div className={`absolute top-4 right-4 transition-opacity duration-300 hidden lg:block ${isActive ? "opacity-0" : "opacity-20"}`}>
+                                    <span className="text-white text-xl font-black tracking-tighter select-none">
+                                        0{index + 1}
+                                    </span>
+                                </div>
+                            </motion.div>
+                        );
+                    })}
                 </div>
+
             </div>
         </section>
     );

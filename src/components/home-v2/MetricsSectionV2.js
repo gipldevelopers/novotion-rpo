@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useSpring, useTransform, useInView } from "framer-motion";
-import { Building2, Target, Zap, Globe } from "lucide-react";
+import { Building2, Target, Zap, Globe, Sparkles } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 function AnimatedNumber({ value, suffix = "" }) {
@@ -37,7 +37,7 @@ const metrics = [
         targetValue: 14,
         suffix: "+",
         label: "Active Client Accounts",
-        description: "Global businesses served across UK, US, Canada & APAC",
+        description: "Global businesses served across UK, EU ,UAE, APAC and USA",
         color: "from-[#cf603d] to-[#ebd69b]"
     },
     {
@@ -73,19 +73,17 @@ export function MetricsSection() {
 
                 {/* Title & Subtitle */}
                 <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tighter leading-[1.1]">
-                            Proven <span className="text-secondary">Impact</span> at Scale
-                        </h2>
-                        <p className="text-xs md:text-sm lg:text-base text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed italic border-x-2 border-slate-100 px-6">
-                            Quantifiable results across five key service lines from recruitment and marketing to AI automation, business growth, and financial management.
-                        </p>
-                    </motion.div>
+                    <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
+                        <Sparkles className="h-4 w-4" />
+                        Proven Impact
+                    </div>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tighter leading-[1.1]">
+                        Proven <span className="text-secondary">Impact</span> at Scale
+                    </h2>
+                    <p className="text-xs md:text-sm lg:text-base text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed italic border-x-2 border-slate-100 px-6">
+                        Quantifiable results across five key service lines from recruitment and marketing to AI automation, business growth, and financial management.
+                    </p>
+
                 </div>
 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
