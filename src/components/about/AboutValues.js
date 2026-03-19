@@ -1,43 +1,37 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Target, Users, ShieldCheck, Zap, Globe, Clock } from "lucide-react";
+import { Zap, ShieldCheck, Users, Target, Sparkles } from "lucide-react";
 
 const values = [
     {
-        icon: Target,
-        title: "Outcome Obsessed",
-        description: "We're not here to look busy. Every action ties directly to a result you can actually measure.",
+        icon: Zap,
+        title: "Adaptability",
+        description: "Change is not a challenge it's our advantage. We pivot in real time, realign without friction, and keep execution moving no matter what shifts.",
         color: "from-orange-500/20 to-orange-500/0"
     },
     {
-        icon: Users,
-        title: "One Team Always",
-        description: "We don't hand you off to junior staff. The people who pitch are the people who deliver.",
+        icon: ShieldCheck,
+        title: "Adherence",
+        description: "Every delivery is measured against a defined standard no shortcuts, no exceptions. Consistency isn't occasional for us; it's the foundation everything is built on.",
         color: "from-secondary/20 to-secondary/0"
     },
     {
-        icon: ShieldCheck,
-        title: "No Hidden Agendas",
-        description: "Flat rates, honest timelines, clear reporting. No surprises ever.",
-        color: "from-accent/20 to-accent/0"
-    },
-    {
-        icon: Zap,
-        title: "Built to Scale",
-        description: "Built to scale with you. Every process, every hire, every campaign grows as you do.",
+        icon: Users,
+        title: "Accountability",
+        description: "We own every outcome from start to finish no delays, no excuses, no passing the buck. If it carries our name, it carries our full responsibility.",
         color: "from-slate-500/20 to-slate-500/0"
     },
     {
-        icon: Globe,
-        title: "Cross-Service Edge",
-        description: "Five services. One shared strategy. No silos, no gaps, no dropped handoffs.",
+        icon: Target,
+        title: "Accuracy",
+        description: "We don't guess we verify, we validate, and we deliver with precision. Because getting it right the first time isn't a goal, it's a standard.",
         color: "from-secondary/20 to-secondary/0"
     },
     {
-        icon: Clock,
-        title: "Speed Matters",
-        description: "Fast decisions. Immediate starts. Results from week one not quarter one.",
+        icon: Sparkles,
+        title: "Acknowledgement",
+        description: "Great results are built by valued people, and we never let effort go unseen. We celebrate every contribution because recognition is what turns performance into culture.",
         color: "from-orange-500/20 to-orange-500/0"
     },
 ];
@@ -55,15 +49,15 @@ export function AboutValues() {
                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-8 shadow-sm"
                     >
                         <Sparkles className="h-4 w-4" />
-                        Our Core Values
+                        The Five A Standards
                     </motion.div>
 
                     <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tighter font-display">
-                        Our Core <span className="text-secondary">Values.</span>
+                        Our <span className="text-secondary italic underline underline-offset-8 decoration-secondary/30">5A</span> Core Values.
                     </h2>
 
                     <p className="text-slate-500 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
-                        Not principles on a wall. These are the standards every person at Novotion is held to every day, on every project.
+                        Not principles on a wall. These are the operational standards we live by ensuring absolute precision and excellence in every project.
                     </p>
                 </div>
 
@@ -103,3 +97,4 @@ export function AboutValues() {
         </section>
     );
 }
+

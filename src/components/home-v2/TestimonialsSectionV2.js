@@ -1,49 +1,10 @@
 "use client";
 
 import { motion, useAnimationFrame, useMotionValue } from "framer-motion";
-import { Quote, Star, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import { Sparkles, ArrowRight, Target, Briefcase, MapPin } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
-
-const testimonials = [
-    {
-        quote: "Novotion transformed our hiring process completely. We reduced time-to-hire by 45% and improved quality.",
-        author: "Sarah Mitchell",
-        title: "VP of HR",
-        img: "11",
-        tag: "Digital Growth"
-    },
-    {
-        quote: "Their strategic approach helped us scale from 50 to 200 employees in record time without quality loss.",
-        author: "James Thompson",
-        title: "CEO",
-        img: "12",
-        tag: "Scalability"
-    },
-    {
-        quote: "The cost savings alone justified the partnership. Their global network is unmatched in the industry.",
-        author: "Michael Chen",
-        title: "Talent Director",
-        img: "13",
-        tag: "Efficiency"
-    },
-    {
-        quote: "Precision matching at its best. Every candidate presented was a culture-first fit for our engineering team.",
-        author: "Elena Rodriguez",
-        title: "CTO",
-        img: "14",
-        tag: "Culture Fit"
-    },
-    {
-        quote: "A rare partner that actually delivers on its promises. Highly recommended for offshore scaling.",
-        author: "David Wilson",
-        title: "Operations Head",
-        img: "15",
-        tag: "Partnership"
-    },
-];
-
-const infiniteTestimonials = [...testimonials, ...testimonials, ...testimonials];
+import { GatedCaseStudyModal } from "../case-studies/GatedCaseStudyModal";
 
 export function TestimonialsSection() {
     const x = useMotionValue(0);
@@ -52,8 +13,39 @@ export function TestimonialsSection() {
     const [isHovered, setIsHovered] = useState(false);
     const [isDragging, setIsDragging] = useState(false);
 
+    // Dynamic Data State
+    const [caseStudies, setCaseStudies] = useState([]);
+    const [selectedStudy, setSelectedStudy] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    useEffect(() => {
+        const fetchStudies = async () => {
+            try {
+                const res = await fetch("/api/case-studies");
+                if (res.ok) setCaseStudies(await res.json());
+            } catch (err) {
+                console.error("Carousel fetch error:", err);
+            }
+        };
+        fetchStudies();
+    }, []);
+
+    const handleOpenModal = (study) => {
+        const unlocked = localStorage.getItem(`cs-access-${study.slug}`);
+        if (unlocked) {
+            window.location.href = `/case-studies/${study.slug}`;
+            return;
+        }
+        setSelectedStudy(study);
+        setIsModalOpen(true);
+    };
+
+    const infiniteItems = caseStudies.length > 0 
+        ? [...caseStudies, ...caseStudies, ...caseStudies]
+        : [];
+
     useAnimationFrame((t, delta) => {
-        if (!isHovered && !isDragging) {
+        if (!isHovered && !isDragging && infiniteItems.length > 0) {
             let moveBy = -0.5 * (delta / 16);
             let nextX = x.get() + moveBy;
 
@@ -70,7 +62,7 @@ export function TestimonialsSection() {
 
     useEffect(() => {
         const unsubscribe = x.on("change", (latest) => {
-            if (isDragging && scrollRef.current) {
+            if (isDragging && scrollRef.current && infiniteItems.length > 0) {
                 const totalWidth = scrollRef.current.scrollWidth;
                 const setWidth = totalWidth / 3;
 
@@ -82,24 +74,26 @@ export function TestimonialsSection() {
             }
         });
         return () => unsubscribe();
-    }, [isDragging, x]);
+    }, [isDragging, x, infiniteItems.length]);
+
+    if (caseStudies.length === 0) return null;
 
     return (
-        <section id="testimonials" className="py-12 md:py-12 bg-slate-50 relative overflow-hidden scroll-mt-20">
+        <section id="case-studies" className="py-24 bg-slate-50 relative overflow-hidden scroll-mt-20">
             <div className="relative z-10 w-full">
                 {/* Section Header */}
-                <div className="container-premium text-center max-w-3xl mx-auto mb-8 md:mb-12 px-4">
+                <div className="container-premium text-center max-w-3xl mx-auto mb-12 px-4">
                     <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
-                        <Sparkles className="h-4 w-4" />
-                        Client Success
+                        <Target className="h-4 w-4" />
+                        Executive Case Studies
                     </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tighter leading-[1.12]">
-                        Partnering for <br />
-                        <span className="text-secondary">Success</span>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-6 tracking-tighter leading-[1.12]">
+                        Proving Performance <br />
+                        <span className="text-secondary italic">Step by Step</span>
                     </h2>
 
                     <p className="text-slate-500 text-sm md:text-base font-light leading-relaxed max-w-xl mx-auto">
-                        Join the ranks of market leaders who have revolutionized their talent acquisition with our strategic RPO framework.
+                        Deep-dive into how our strategic framework transforms recruitment operations for market leaders globally.
                     </p>
                 </div>
 
@@ -110,9 +104,8 @@ export function TestimonialsSection() {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
-                    {/* Shadow Overlays */}
-                    <div className="absolute inset-y-0 left-0 w-24 md:w-32 bg-gradient-to-r from-slate-50 via-slate-50/80 to-transparent z-20 pointer-events-none" />
-                    <div className="absolute inset-y-0 right-0 w-24 md:w-32 bg-gradient-to-l from-slate-50 via-slate-50/80 to-transparent z-20 pointer-events-none" />
+                    <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-slate-50 via-slate-50/80 to-transparent z-20 pointer-events-none" />
+                    <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-50 via-slate-50/80 to-transparent z-20 pointer-events-none" />
 
                     <motion.div
                         ref={scrollRef}
@@ -122,55 +115,64 @@ export function TestimonialsSection() {
                         style={{ x }}
                         onDragStart={() => setIsDragging(true)}
                         onDragEnd={() => setIsDragging(false)}
-                        className="flex gap-4 md:gap-6 py-6 w-max"
+                        className="flex gap-6 md:gap-8 py-6 w-max"
                     >
-                        {infiniteTestimonials.map((testimonial, index) => (
+                        {infiniteItems.map((study, index) => (
                             <div
-                                key={index}
-                                className="flex-shrink-0 w-[260px] sm:w-[320px] md:w-[400px] p-6 md:p-8 rounded-[2.5rem] bg-white border border-slate-200 hover:border-secondary/20 transition-all duration-500 relative group shadow-sm hover:shadow-2xl hover:shadow-slate-200/50 pointer-events-auto overflow-hidden"
+                                key={`${study.id}-${index}`}
+                                className="flex-shrink-0 w-[320px] sm:w-[450px] md:w-[500px] p-8 md:p-10 rounded-[3rem] bg-white border border-slate-200 hover:border-secondary/20 transition-all duration-500 relative group shadow-sm hover:shadow-2xl hover:shadow-slate-200/50 pointer-events-auto overflow-hidden text-left"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-b from-secondary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
                                 <div className="relative z-10 flex flex-col h-full items-start whitespace-normal pointer-events-none">
-                                    <div className="flex justify-between items-start w-full mb-6 md:mb-8">
-                                        <div className="flex gap-0.5 md:gap-1">
-                                            {[...Array(5)].map((_, i) => (
-                                                <Star key={i} className="h-3 w-3 fill-secondary text-secondary" />
-                                            ))}
+                                    <div className="flex justify-between items-center w-full mb-8">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-secondary border border-slate-100 group-hover:bg-white transition-colors">
+                                                <Briefcase className="w-5 h-5" />
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 leading-none mb-1">{study.industry}</p>
+                                                <div className="flex items-center gap-1 text-[10px] font-bold text-slate-300">
+                                                    <MapPin className="w-3 h-3" />
+                                                    {study.location}
+                                                </div>
+                                            </div>
                                         </div>
-                                        <span className="text-[8px] font-bold text-slate-300 uppercase tracking-[0.2em] group-hover:text-secondary transition-colors">{testimonial.tag}</span>
+                                        <span className="text-[9px] font-black text-secondary uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Active Metric</span>
                                     </div>
 
-                                    <Quote className="absolute top-6 right-8 h-8 w-8 text-slate-200 group-hover:text-secondary opacity-20 transition-colors" strokeWidth={1} />
+                                    <h3 className="text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-[1.2] mb-6 min-h-[3em]">
+                                        {study.title}
+                                    </h3>
 
-                                    <p className="text-slate-600 text-xs md:text-base font-light leading-relaxed mb-6 md:mb-10 flex-grow italic">
-                                        "{testimonial.quote}"
+                                    <p className="text-slate-500 text-sm md:text-base font-light leading-relaxed mb-10 opacity-80 line-clamp-3">
+                                        {study.excerpt}
                                     </p>
 
-                                    <div className="flex items-center gap-3 md:gap-4 border-t border-slate-100 pt-6 md:pt-8 w-full mt-auto">
-                                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border border-slate-100 relative grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700">
-                                            <Image
-                                                src={`https://i.pravatar.cc/100?img=${testimonial.img}`}
-                                                alt={testimonial.author}
-                                                fill
-                                                className="object-cover"
-                                                draggable={false}
-                                            />
-                                        </div>
-                                        <div className="text-left">
-                                            <p className="font-bold text-slate-800 text-sm md:text-base mb-0.5">{testimonial.author}</p>
-                                            <p className="text-slate-400 text-[10px] md:text-[12px] font-light">
-                                                {testimonial.title}
-                                            </p>
-                                        </div>
+                                    <div className="mt-auto w-full pt-8 border-t border-slate-100">
+                                        <button 
+                                            onClick={() => handleOpenModal(study)}
+                                            className="inline-flex items-center gap-4 px-8 py-4 bg-slate-900 text-white rounded-2xl text-[12px] font-black uppercase tracking-widest group-hover:bg-secondary transition-all hover:scale-105 pointer-events-auto active:scale-95"
+                                        >
+                                            View Full Report
+                                            <ArrowRight className="w-4 h-4" />
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </motion.div>
                 </div>
-
             </div>
+
+            {selectedStudy && (
+                <GatedCaseStudyModal 
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                    studySlug={selectedStudy.slug}
+                    studyTitle={selectedStudy.title}
+                />
+            )}
         </section>
     );
 }

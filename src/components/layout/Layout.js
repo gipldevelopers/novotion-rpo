@@ -1,12 +1,12 @@
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-export function Layout({ children }) {
+export function Layout({ children, showHeader = true, showFooter = true }) {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      {showHeader && <Header />}
       <main className="flex-1">{children}</main>
-      <Footer />
+      {showFooter && <Footer />}
     </div>
   );
 }

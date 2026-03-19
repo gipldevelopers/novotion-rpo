@@ -9,10 +9,12 @@ import { HowItWorksV2 } from "@/components/home-v2/HowItWorksV2";
 import { TestimonialsSection } from "@/components/home-v2/TestimonialsSectionV2";
 import { ContactSection } from "@/components/home-v2/ContactSectionV2";
 import { CTASectionV2 } from "@/components/home-v2/CTASectionV2";
+import { SocialSidebar } from "@/components/layout/SocialSidebar";
 
 export default function Home() {
   return (
     <Layout>
+      <SocialSidebar />
       <div className="bg-[#070A11]">
         <HeroSectionV8 />
         <MetricsSection />

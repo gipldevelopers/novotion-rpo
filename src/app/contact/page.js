@@ -15,8 +15,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Mail, Phone, MapPin, Clock, ArrowRight, Calendar, Sparkles } from "lucide-react";
-import { useState } from "react";
+import { Mail, Phone, MapPin, Clock, ArrowRight, Calendar, Sparkles, CheckCircle2 } from "lucide-react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Contact() {
@@ -32,10 +32,46 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState("");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form submission logic would go here
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        // Construct composite message for the DB
+        body: JSON.stringify({
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          subject: `${formData.service} Service Inquiry`,
+          message: `Service: ${formData.service}\nVolume: ${formData.hiringVolume}\nCompany: ${formData.company}\nJob: ${formData.jobTitle}\n\nMessage: ${formData.message}`
+        }),
+      });
+
+      if (res.ok) {
+        setIsSuccess(true);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const errorData = await res.json();
+        setError(errorData.error || "Submission failure. Please verify your data.");
+      }
+    } catch (err) {
+      setError("Network infrastructure unavailable. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -117,7 +153,6 @@ export default function Contact() {
                 </div>
               </motion.div>
 
-              {/* Right Column: Strategic Enquiry Form */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -125,152 +160,191 @@ export default function Contact() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="lg:col-span-8"
               >
-                <div className="bg-white border border-slate-200 p-8 md:p-14 rounded-[2.5rem] shadow-2xl shadow-slate-200/50">
-                  <div className="mb-12 border-b border-slate-200 pb-8 relative">
-                    <div className="absolute right-0 top-0 w-24 h-24 bg-secondary/5 rounded-full blur-2xl" />
-                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 tracking-tight">Tell Us What You Need</h3>
-                    <p className="text-slate-500 font-light leading-relaxed max-w-xl">
-                      Give us the basics below. One of our team will respond within 24 hours with a 
-                      clear outline of how we can help - no obligation, no hard sell.
-                    </p>
+                {!mounted ? (
+                  <div className="bg-white border border-slate-200 p-8 md:p-14 rounded-[2.5rem] animate-pulse h-[800px]">
+                    <div className="h-full bg-slate-50/50 rounded-2xl" />
                   </div>
+                ) : isSuccess ? (
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="h-full flex flex-col items-center justify-center p-12 md:p-24 bg-slate-900 rounded-[3rem] text-white text-center shadow-2xl space-y-8"
+                  >
+                    <div className="w-20 h-20 rounded-3xl bg-secondary flex items-center justify-center shadow-xl shadow-secondary/20">
+                      <CheckCircle2 className="w-10 h-10" />
+                    </div>
+                    <div className="space-y-4">
+                      <h3 className="text-3xl md:text-4xl font-black tracking-tight">Transmission Received</h3>
+                      <p className="text-white/40 text-sm font-light leading-relaxed max-w-sm mx-auto uppercase tracking-widest">
+                        Your strategic inquiry has been securely logged and successfully routed to our senior team.
+                      </p>
+                    </div>
+                    <div className="pt-8 w-full border-t border-white/5">
+                      <p className="text-[10px] font-black uppercase tracking-[0.4em] text-secondary">Expected Response: &lt; 24 Hours</p>
+                    </div>
+                    <button 
+                      onClick={() => setIsSuccess(false)}
+                      className="text-xs font-bold text-white/20 hover:text-white transition-colors"
+                    >
+                      Send another message
+                    </button>
+                  </motion.div>
+                ) : (
+                  <div className="bg-white border border-slate-200 p-8 md:p-14 rounded-[2.5rem] shadow-2xl shadow-slate-200/50">
+                    <div className="mb-12 border-b border-slate-200 pb-8 relative">
+                      <div className="absolute right-0 top-0 w-24 h-24 bg-secondary/5 rounded-full blur-2xl" />
+                      <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 tracking-tight">Tell Us What You Need</h3>
+                      <p className="text-slate-500 font-light leading-relaxed max-w-xl">
+                        Give us the basics below. One of our team will respond within 24 hours with a 
+                        clear outline of how we can help - no obligation, no hard sell.
+                      </p>
+                    </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <form onSubmit={handleSubmit} className="space-y-8">
+                      {/* ... grid fields ... */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="space-y-3">
+                          <Label htmlFor="firstName" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">First Name *</Label>
+                          <Input
+                            id="firstName"
+                            className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                            placeholder="First Name *"
+                            value={formData.firstName}
+                            onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                            required
+                          />
+                        </div>
+                        <div className="space-y-3">
+                          <Label htmlFor="lastName" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Last Name *</Label>
+                          <Input
+                            id="lastName"
+                            className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                            placeholder="Last Name *"
+                            value={formData.lastName}
+                            onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="space-y-3">
+                          <Label htmlFor="email" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Work Email *</Label>
+                          <Input
+                            id="email"
+                            type="email"
+                            className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                            placeholder="Work Email *"
+                            value={formData.email}
+                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                            required
+                          />
+                        </div>
+                        <div className="space-y-3">
+                          <Label htmlFor="phone" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Direct Line</Label>
+                          <Input
+                            id="phone"
+                            type="tel"
+                            className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                            placeholder="Direct Line"
+                            value={formData.phone}
+                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          />
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="space-y-3">
+                          <Label htmlFor="company" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Company Name *</Label>
+                          <Input
+                            id="company"
+                            className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                            placeholder="Company Name *"
+                            value={formData.company}
+                            onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                            required
+                          />
+                        </div>
+                        <div className="space-y-3">
+                          <Label htmlFor="jobTitle" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Your Role / Title</Label>
+                          <Input
+                            id="jobTitle"
+                            className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
+                            placeholder="Your Role / Title"
+                            value={formData.jobTitle}
+                            onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}
+                          />
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="space-y-3">
+                          <Label htmlFor="service" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">SERVICE OF INTEREST</Label>
+                          <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
+                            <SelectTrigger className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 focus:ring-secondary/20">
+                              <SelectValue placeholder="SERVICE OF INTEREST" />
+                            </SelectTrigger>
+                            <SelectContent className="rounded-2xl border-slate-100 shadow-xl bg-white">
+                              <SelectItem value="recruitment">Recruitment Services</SelectItem>
+                              <SelectItem value="business-dev">Business Development</SelectItem>
+                              <SelectItem value="marketing">Digital Marketing</SelectItem>
+                              <SelectItem value="ai-automation">AI & Automation</SelectItem>
+                              <SelectItem value="accounting">Accounting & Finance</SelectItem>
+                              <SelectItem value="full-partnership">Full Multi-Service Partnership</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+                        <div className="space-y-3">
+                          <Label htmlFor="hiringVolume" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Target Volume (Annual)</Label>
+                          <Select value={formData.hiringVolume} onValueChange={(value) => setFormData({ ...formData, hiringVolume: value })}>
+                            <SelectTrigger className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 focus:ring-secondary/20">
+                              <SelectValue placeholder="Target Volume (Annual)" />
+                            </SelectTrigger>
+                            <SelectContent className="rounded-2xl border-slate-100 shadow-xl bg-white">
+                              <SelectItem value="1-10">Micro (1-10 hires)</SelectItem>
+                              <SelectItem value="11-50">Standard (11-50 hires)</SelectItem>
+                              <SelectItem value="51-100">Scale (51-100 hires)</SelectItem>
+                              <SelectItem value="100+">Enterprise (100+ hires)</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+                      </div>
+
                       <div className="space-y-3">
-                        <Label htmlFor="firstName" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">First Name *</Label>
-                        <Input
-                          id="firstName"
-                          className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
-                          placeholder="First Name *"
-                          value={formData.firstName}
-                          onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                        <Label htmlFor="message" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">WHAT ARE YOU TRYING TO ACHIEVE? *</Label>
+                        <Textarea
+                          id="message"
+                          className="bg-slate-50 border-slate-200 rounded-2xl p-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300 min-h-[160px]"
+                          placeholder="Detail your current bottlenecks and target state..."
+                          value={formData.message}
+                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                           required
                         />
                       </div>
-                      <div className="space-y-3">
-                        <Label htmlFor="lastName" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Last Name *</Label>
-                        <Input
-                          id="lastName"
-                          className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
-                          placeholder="Last Name *"
-                          value={formData.lastName}
-                          onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                          required
-                        />
-                      </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="space-y-3">
-                        <Label htmlFor="email" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Work Email *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
-                          placeholder="Work Email *"
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          required
-                        />
-                      </div>
-                      <div className="space-y-3">
-                        <Label htmlFor="phone" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Direct Line</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
-                          placeholder="Direct Line"
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        />
-                      </div>
-                    </div>
+                      {error && (
+                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="p-4 bg-red-50 border border-red-100 rounded-xl text-red-500 text-[11px] font-bold uppercase tracking-widest text-center">
+                          {error}
+                        </motion.div>
+                      )}
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="space-y-3">
-                        <Label htmlFor="company" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Company Name *</Label>
-                        <Input
-                          id="company"
-                          className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
-                          placeholder="Company Name *"
-                          value={formData.company}
-                          onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                          required
-                        />
+                      <div className="pt-6">
+                        <Button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className="w-full bg-slate-900 hover:bg-secondary text-white h-16 rounded-2xl shadow-xl shadow-slate-200/50 transition-all duration-500 font-bold text-xs tracking-widest uppercase border-none disabled:opacity-50"
+                        >
+                          {isSubmitting ? "Synthesizing Engagement..." : "EXECUTE ENGAGEMENT"}
+                          {!isSubmitting && <ArrowRight className="ml-3 h-5 w-5" />}
+                        </Button>
                       </div>
-                      <div className="space-y-3">
-                        <Label htmlFor="jobTitle" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Your Role / Title</Label>
-                        <Input
-                          id="jobTitle"
-                          className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300"
-                          placeholder="Your Role / Title"
-                          value={formData.jobTitle}
-                          onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}
-                        />
-                      </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div className="space-y-3">
-                        <Label htmlFor="service" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">SERVICE OF INTEREST</Label>
-                        <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
-                          <SelectTrigger className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 focus:ring-secondary/20">
-                            <SelectValue placeholder="SERVICE OF INTEREST" />
-                          </SelectTrigger>
-                          <SelectContent className="rounded-2xl border-slate-100 shadow-xl bg-white">
-                            <SelectItem value="recruitment">Recruitment Services</SelectItem>
-                            <SelectItem value="business-dev">Business Development</SelectItem>
-                            <SelectItem value="marketing">Digital Marketing</SelectItem>
-                            <SelectItem value="ai-automation">AI & Automation</SelectItem>
-                            <SelectItem value="accounting">Accounting & Finance</SelectItem>
-                            <SelectItem value="full-partnership">Full Multi-Service Partnership</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="space-y-3">
-                        <Label htmlFor="hiringVolume" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Target Volume (Annual)</Label>
-                        <Select value={formData.hiringVolume} onValueChange={(value) => setFormData({ ...formData, hiringVolume: value })}>
-                          <SelectTrigger className="bg-slate-50 border-slate-200 h-14 rounded-2xl px-5 text-slate-700 focus:ring-secondary/20">
-                            <SelectValue placeholder="Target Volume (Annual)" />
-                          </SelectTrigger>
-                          <SelectContent className="rounded-2xl border-slate-100 shadow-xl bg-white">
-                            <SelectItem value="1-10">Micro (1-10 hires)</SelectItem>
-                            <SelectItem value="11-50">Standard (11-50 hires)</SelectItem>
-                            <SelectItem value="51-100">Scale (51-100 hires)</SelectItem>
-                            <SelectItem value="100+">Enterprise (100+ hires)</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </div>
-
-                    <div className="space-y-3">
-                      <Label htmlFor="message" className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">WHAT ARE YOU TRYING TO ACHIEVE? *</Label>
-                      <Textarea
-                        id="message"
-                        className="bg-slate-50 border-slate-200 rounded-2xl p-5 text-slate-700 placeholder:text-slate-300 focus:bg-white focus:border-secondary/30 focus:ring-secondary/20 transition-all duration-300 min-h-[160px]"
-                        placeholder="Detail your current bottlenecks and target state..."
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        required
-                      />
-                    </div>
-
-                    <div className="pt-6">
-                      <Button
-                        type="submit"
-                        className="w-full bg-slate-900 hover:bg-secondary text-white h-16 rounded-2xl shadow-xl shadow-slate-200/50 transition-all duration-500 font-bold text-xs tracking-widest uppercase border-none"
-                      >
-                        EXECUTE ENGAGEMENT
-                        <ArrowRight className="ml-3 h-5 w-5" />
-                      </Button>
-                    </div>
-
-                    <p className="text-[10px] text-slate-400 text-center font-bold tracking-widest uppercase mt-6 pt-6 border-t border-slate-50">
-                      Secure 256-bit Encrypted Transmission
-                    </p>
-                  </form>
-                </div>
+                      <p className="text-[10px] text-slate-400 text-center font-bold tracking-widest uppercase mt-6 pt-6 border-t border-slate-50">
+                        Secure 256-bit Encrypted Transmission
+                      </p>
+                    </form>
+                  </div>
+                )}
               </motion.div>
             </div>
           </div>

@@ -72,17 +72,17 @@ export function ContactSection() {
                                 <div className="grid md:grid-cols-2 gap-5">
                                     <div className="space-y-2">
                                         <label className="text-secondary/80 text-[9px] uppercase font-bold tracking-[0.3em] ml-1">First Name</label>
-                                        <input className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="John" />
+                                        <input suppressHydrationWarning className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="John" />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-secondary/80 text-[9px] uppercase font-bold tracking-[0.3em] ml-1">Last Name</label>
-                                        <input className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="Doe" />
+                                        <input suppressHydrationWarning className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="Doe" />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
                                     <label className="text-secondary/80 text-[9px] uppercase font-bold tracking-[0.3em] ml-1">Work Email Address</label>
-                                    <input type="email" className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="john@company.com" />
+                                    <input suppressHydrationWarning type="email" className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="john@company.com" />
                                 </div>
 
                                 <div className="space-y-2">

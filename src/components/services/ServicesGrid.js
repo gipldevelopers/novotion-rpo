@@ -1,78 +1,61 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Briefcase, Users, Layout, Cog, Target, ArrowRight, ChevronRight, Check } from "lucide-react";
+import { Briefcase, Users, Layout as LayoutIcon, Cog, Target, ArrowRight, ChevronRight, Check, Settings2 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { servicesData } from "@/data/servicesData";
 
-const services = [
-    {
-        id: "recruitment",
-        slug: "recruitment-services",
-        icon: Users,
-        title: "Recruitment Services",
-        description: "End-to-end hiring that cuts your time-to-fill by 60% and cost-per-hire by half with zero wrong-fit candidates reaching your desk.",
-        tag: "Efficiency"
-    },
-    {
-        id: "biz-dev",
-        slug: "business-development",
-        icon: Briefcase,
-        title: "Business Development",
-        description: "Consistent leads, a structured pipeline, and partnerships that convert built by a team that works outbound every single day.",
-        tag: "Proactive"
-    },
-    {
-        id: "marketing",
-        slug: "digital-marketing",
-        icon: Layout,
-        title: "Digital Marketing",
-        description: "SEO, social media, paid ads, email, and branding every channel covered, every campaign tied to a conversion goal.",
-        tag: "Growth"
-    },
-    {
-        id: "ai-automation",
-        slug: "ai-automation",
-        icon: Cog,
-        title: "AI & Automation",
-        description: "Stop your team doing manually what a system can do automatically. We build the workflows, chatbots, and integrations that free up your time.",
-        tag: "Intelligence"
-    },
-    {
-        id: "finance",
-        slug: "accounting-finance",
-        icon: Target,
-        title: "Accounting & Finance",
-        description: "Professional bookkeeping, payroll, tax, and financial reporting delivered at a fraction of the cost of a full-time hire.",
-        tag: "Precise"
-    },
-];
+const iconMap = {
+    recruitment: Users,
+    'biz-dev': Briefcase,
+    'business-development': Briefcase,
+    marketing: LayoutIcon,
+    'digital-marketing': LayoutIcon,
+    'ai-automation': Cog,
+    finance: Target,
+    'accounting-finance': Target,
+};
 
 export function ServicesGrid() {
+    const services = servicesData;
+    const loading = false;
+
+    if (loading) {
+        return (
+            <div className="py-20 text-center">
+                <Settings2 className="w-10 h-10 text-slate-200 animate-spin mx-auto mb-4" />
+                <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Loading Deployment Matrix...</p>
+            </div>
+        );
+    }
     return (
         <section className="py-20 md:py-32 bg-slate-50 relative overflow-hidden">
             <div className="container-premium relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {services.map((service, index) => (
-                        <motion.div
-                            key={service.id}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white border border-slate-200 hover:border-secondary/20 transition-all duration-500 shadow-sm hover:shadow-2xl hover:shadow-slate-200/50"
-                        >
-                            <Link href={`/services/${service.slug}`} className="block">
-                                <div className="relative z-10">
-                                    <div className="flex justify-between items-start mb-10">
-                                        <div className="w-14 h-14 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-secondary group-hover:bg-white transition-all shadow-sm">
-                                            <service.icon className="h-6 w-6" />
-                                        </div>
-                                        <span className="text-[9px] font-bold text-slate-300 uppercase tracking-[0.2em]">{service.tag}</span>
-                                    </div>
+                        {services.map((service, index) => {
+                            const IconComponent = iconMap[service.id] || Briefcase;
+                            return (
+                                <motion.div
+                                    key={service.id}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                                    className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white border border-slate-200 hover:border-secondary/20 transition-all duration-500 shadow-sm hover:shadow-2xl hover:shadow-slate-200/50"
+                                >
+                                    <Link href={`/services/${service.slug}`} className="block">
+                                        <div className="relative z-10">
+                                            <div className="flex justify-between items-start mb-10">
+                                                <div className="w-14 h-14 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-secondary group-hover:bg-white transition-all shadow-sm">
+                                                    <IconComponent className="h-6 w-6" />
+                                                </div>
+                                                <span className="text-[9px] font-bold text-slate-300 uppercase tracking-[0.2em]">{service.bestFor?.substring(0, 15) || "Service"}</span>
+                                            </div>
 
                                     <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-secondary transition-colors">
-                                        {service.title}
+                                        {service.shortTitle || service.title}
                                     </h3>
 
                                     <p className="text-slate-500 text-[14px] font-light leading-relaxed mb-8">
@@ -88,7 +71,8 @@ export function ServicesGrid() {
                             {/* Accent Dot */}
                             <div className="absolute top-8 right-8 w-1.5 h-1.5 rounded-full bg-slate-100 group-hover:bg-secondary transition-colors" />
                         </motion.div>
-                    ))}
+                            );
+                        })}
 
                     {/* Specialized Card */}
                     <motion.div

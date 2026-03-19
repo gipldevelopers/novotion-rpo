@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Monitor, Stethoscope, Landmark, Sparkles, ArrowRight, Factory, Building2, DraftingCompass, Zap } from "lucide-react";
+import { Monitor, Stethoscope, Landmark, Sparkles, ArrowRight, Factory, Building2, DraftingCompass, Zap, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -9,7 +9,7 @@ import { useState } from "react";
 const industries = [
     {
         id: "tech",
-        name: "Technology",
+        name: "IT",
         subtitle: "Software, SaaS & Digital Transformation",
         icon: Monitor,
         image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
@@ -57,11 +57,19 @@ const industries = [
     },
     {
         id: "finance",
-        name: "Financial Services",
+        name: "Accounting & Finance",
         subtitle: "Banking, FinTech & Wealth Management",
         icon: Landmark,
         image: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?auto=format&fit=crop&q=80&w=1200",
         label: "Capital Flow"
+    },
+    {
+        id: "retail",
+        name: "E-commerce",
+        subtitle: "Digital Retail & Global Marketplaces",
+        icon: ShoppingCart,
+        image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1200",
+        label: "Digital Trade"
     }
 ];
 
@@ -70,9 +78,9 @@ export function IndustriesPreview() {
 
     return (
         <section id="industries" className="min-h-screen md:h-screen bg-white relative overflow-hidden scroll-mt-20 flex flex-col justify-center py-8 md:py-6 lg:py-10">
-            
+
             <div className="container-premium relative z-10 w-full px-4 max-w-[98%] lg:max-w-7xl mx-auto flex flex-col h-full lg:max-h-[88vh]">
-                
+
                 {/* Header Section */}
                 <div className="text-center max-w-4xl mx-auto mb-6 md:mb-8 shrink-0">
                     <motion.div
@@ -85,9 +93,9 @@ export function IndustriesPreview() {
                         <Sparkles className="h-3 md:h-3.5 w-3 md:w-3.5" />
                         Global Segments
                     </motion.div>
-                    
+
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tighter leading-tight font-display">
-                        Deep <span className="text-secondary italic">Sector</span> Verticals
+                        Industries We <span className="text-secondary italic">Serve</span>
                     </h2>
                 </div>
 
@@ -95,7 +103,7 @@ export function IndustriesPreview() {
                 <div className="grid grid-cols-2 md:flex md:flex-row h-auto md:h-[380px] lg:h-[420px] gap-2.5 w-full flex-grow md:flex-grow-0">
                     {industries.map((item, index) => {
                         const isActive = activeIndex === index;
-                        
+
                         return (
                             <motion.div
                                 key={item.id}
@@ -105,10 +113,9 @@ export function IndustriesPreview() {
                                 transition={{ duration: 0.4, delay: index * 0.04 }}
                                 onClick={() => setActiveIndex(index)}
                                 onMouseEnter={() => window.innerWidth > 768 && setActiveIndex(index)}
-                                className={`group relative rounded-[1.2rem] md:rounded-[1.5rem] overflow-hidden transition-all duration-500 ease-[0.23, 1, 0.32, 1] cursor-pointer shadow-sm 
-                                    ${index === 0 ? "col-span-2 h-[160px] md:h-full" : "h-[140px] md:h-full"}
-                                    ${isActive 
-                                        ? "md:flex-[5] shadow-2xl shadow-slate-200" 
+                                    className={`group relative rounded-[1.2rem] md:rounded-[1.5rem] overflow-hidden transition-all duration-500 ease-[0.23, 1, 0.32, 1] cursor-pointer shadow-sm h-[140px] md:h-full
+                                    ${isActive
+                                        ? "md:flex-[5] shadow-2xl shadow-slate-200"
                                         : "md:flex-1 md:opacity-70 md:hover:opacity-100"
                                     }`}
                             >
@@ -119,7 +126,7 @@ export function IndustriesPreview() {
                                     fill
                                     className={`object-cover transition-transform duration-700 ease-out ${isActive ? "scale-105" : "scale-100"}`}
                                 />
-                                
+
                                 {/* Cinematic Overlays */}
                                 <div className={`absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/10 to-transparent transition-opacity duration-300 ${isActive ? "opacity-70" : "opacity-80"}`} />
                                 <div className={`absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-secondary/40 to-transparent transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0"}`} />
@@ -139,16 +146,13 @@ export function IndustriesPreview() {
 
                                 {/* Expanded State / Content Detail (Touch aware reveal) */}
                                 <div className={`absolute inset-0 z-10 p-4 md:p-6 flex flex-col justify-end transition-all duration-500 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 md:pointer-events-none md:hidden"} text-white`}>
-                                    <div className="mb-2 md:mb-3">
+                                    <div className="mb-2 md:mb-4">
                                         <h3 className="text-sm md:text-xl lg:text-2xl font-black mb-0.5 md:mb-1 tracking-tighter uppercase leading-none">
                                             {item.name}
                                         </h3>
-                                        <p className="hidden md:block text-slate-100 text-[10px] md:text-[11px] lg:text-[12px] font-light leading-tight max-w-xs mb-4 border-l-2 border-secondary/50 pl-2 italic">
-                                            {item.subtitle}
-                                        </p>
                                     </div>
 
-                                    <Link 
+                                    <Link
                                         href="/contact"
                                         className="inline-flex items-center gap-1.5 bg-white text-slate-900 px-3 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold uppercase tracking-widest text-[7px] md:text-[8px] transition-all hover:bg-secondary hover:text-white shadow-2xl w-fit"
                                     >

@@ -26,13 +26,6 @@ const team = [
         image: "/assets/team/member3.png",
         linkedin: "#",
     },
-    {
-        name: "Elena R.",
-        role: "Client Success Lead",
-        description: "Dedicated to building long-term partnerships through transparent and high-impact delivery.",
-        image: "/assets/team/member4.png",
-        linkedin: "#",
-    },
 ];
 
 export function AboutTeam() {
@@ -64,7 +57,7 @@ export function AboutTeam() {
                 </div>
 
                 {/* Team Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl">
                     {team.map((member, index) => (
                         <motion.div
                             key={member.name}
@@ -122,25 +115,6 @@ export function AboutTeam() {
                             </div>
                         </motion.div>
                     ))}
-                </div>
-
-                {/* Bottom Accents */}
-                <div className="mt-20 pt-10 border-t border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-6">
-                    <div className="flex items-center gap-6">
-                        <div className="flex -space-x-3">
-                            {[1, 2, 3, 4].map((i) => (
-                                <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-100 overflow-hidden relative">
-                                     <Image src={`/assets/team/member${i}.png`} alt="Team" fill className="object-cover" />
-                                </div>
-                            ))}
-                            <div className="w-10 h-10 rounded-full border-2 border-white bg-secondary flex items-center justify-center text-[10px] font-bold text-white relative">
-                                +12
-                            </div>
-                        </div>
-                        <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">
-                            Expanding Our Global Strategic Operations
-                        </p>
-                    </div>
                 </div>
             </div>
         </section>
