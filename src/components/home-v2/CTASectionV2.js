@@ -68,7 +68,7 @@ export function CTASectionV2() {
                                         </Link>
                                     </Button>
                                     <Button asChild variant="outline" className="h-11 md:h-14 rounded-2xl bg-white/5 border-white/10 text-white hover:bg-white hover:text-slate-900 hover:border-white transition-all duration-500 group">
-                                        <Link href="/cases" className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest flex items-center gap-2">
+                                        <Link href="/case-studies" className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest flex items-center gap-2">
                                             Case Studies <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all" />
                                         </Link>
                                     </Button>

@@ -38,8 +38,8 @@ export function AboutHero() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="text-4xl md:text-7xl font-bold text-slate-900 mb-8 tracking-tighter leading-[1.1]"
                     >
-                        Five Services. One Partner. <br />
-                        <span className="text-secondary">Zero Overhead.</span>
+                        The Idea Behind <br />
+                        <span className="text-secondary text-4xl sm:text-5xl md:text-8xl">Noltven.</span>
                     </motion.h1>
 
                     <motion.p
@@ -48,8 +48,7 @@ export function AboutHero() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-lg md:text-xl text-slate-600 font-light leading-relaxed max-w-2xl"
                     >
-                        Most businesses run on five different agencies, five different invoices, and zero 
-                        alignment between them. Noltven exists to fix that.
+                        Noltven was built on a simple but powerful observation: In today’s global market, hiring more people is not the solution.
                     </motion.p>
                 </div>
             </div>

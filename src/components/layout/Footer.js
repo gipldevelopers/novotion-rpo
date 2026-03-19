@@ -24,6 +24,16 @@ const legal = [
   { name: "Terms of Service", href: "/terms" },
 ];
 
+const XIcon = ({ className }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    className={className}
+  >
+    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z"/>
+  </svg>
+);
+
 export function Footer() {
   return (
     <footer className="bg-slate-50 border-t border-slate-200 py-10 md:py-10 relative overflow-hidden">
@@ -49,13 +59,19 @@ export function Footer() {
             </p>
 
             <div className="flex items-center gap-4">
-              {[Linkedin, Instagram, Twitter].map((Icon, idx) => (
+              {[
+                { icon: Linkedin, href: "https://www.linkedin.com/company/novotion-rpo/" },
+                { icon: Instagram, href: "https://www.instagram.com/novotionrpo/" },
+                { icon: XIcon, href: "https://x.com" }
+              ].map((item, idx) => (
                 <a
                   key={idx}
-                  href="#"
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="h-11 w-11 rounded-[1.25rem] bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:bg-secondary hover:text-white hover:border-secondary transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-secondary/10"
                 >
-                  <Icon className="h-4.5 w-4.5" />
+                  <item.icon className="h-4.5 w-4.5" />
                 </a>
               ))}
             </div>
@@ -93,8 +109,8 @@ export function Footer() {
               <div className="flex gap-5">
                 <MapPin className="h-5 w-5 text-secondary shrink-0" />
                 <div>
-                  <p className="text-[14px] font-bold text-slate-900 mb-1 tracking-tight">USA & India</p>
-                  <p className="text-slate-500 text-[13px] font-light leading-relaxed">Orlando, Florida • Ahmedabad, Gujarat</p>
+                  <p className="text-[14px] font-bold text-slate-900 mb-1 tracking-tight">London, UK</p>
+                  <p className="text-slate-500 text-[13px] font-light leading-relaxed">First Floor Office, 3 Hornton Place, W8 4LZ</p>
                 </div>
               </div>
               <div className="flex gap-5">
@@ -103,7 +119,7 @@ export function Footer() {
               </div>
               <div className="flex gap-5">
                 <Phone className="h-5 w-5 text-secondary shrink-0" />
-                <a href="tel:+1234567890" className="text-[14px] font-bold text-slate-900 hover:text-secondary transition-colors tracking-tight">+1 (234) 567-890</a>
+                <a href="tel:+442039967029" className="text-[14px] font-bold text-slate-900 hover:text-secondary transition-colors tracking-tight">+44 20 3996 7029</a>
               </div>
             </div>
           </div>

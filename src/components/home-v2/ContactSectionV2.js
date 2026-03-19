@@ -6,10 +6,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
+const XIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z"/>
+  </svg>
+);
+
 const socialLinks = [
     { icon: Linkedin, href: "#", label: "LinkedIn" },
     { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: XIcon, href: "#", label: "X" },
     { icon: Github, href: "#", label: "GitHub" },
 ];
 
@@ -103,8 +109,8 @@ export function ContactSection() {
                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                             {[
                                 { icon: Mail, label: "Email", value: "info@novotionrpo.com" },
-                                { icon: Phone, label: "Phone", value: "+1 (234) 567-890" },
-                                { icon: MapPin, label: "Location", value: "Orlando • Ahmedabad" },
+                                { icon: Phone, label: "Phone", value: "+44 20 3996 7029" },
+                                { icon: MapPin, label: "UK Office", value: "3 Hornton Pl, London" },
                                 { icon: Clock, label: "Availability", value: "24/7 Deployment" }
                             ].map((item, idx) => (
                                 <div key={idx} className="flex items-center gap-4 group">

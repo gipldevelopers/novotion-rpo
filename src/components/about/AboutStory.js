@@ -22,19 +22,19 @@ export function AboutStory() {
                         </motion.div>
 
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 tracking-tighter">
-                            One Partner That Does <br />
-                            <span className="text-secondary">What Five Agencies Can't</span>
+                            A Growth Engine for <br />
+                            <span className="text-secondary">Modern Businesses.</span>
                         </h2>
 
                         <div className="space-y-6 text-slate-500 text-base md:text-lg font-light leading-relaxed">
                             <p>
-                                We built Noltven on one belief: growing businesses shouldn't have to choose between getting expert support and keeping costs under control. You shouldn't have to pick two out of five.
+                                What companies truly need is a growth engine—one that combines talent, processes, technology, and strategy into a single, aligned system. That’s where Noltven comes in.
                             </p>
                             <p>
-                                So we put recruitment, marketing, AI automation, business development, and finance under one roof all aligned to the same goals, held to the same standards, reporting to you in a single place.
+                                We are not just a service provider. We act as an operational backbone for modern businesses—helping them move from chaos to clarity, from effort to efficiency, and from inconsistent growth to predictable scale.
                             </p>
                             <p className="p-6 bg-slate-50 rounded-[2rem] border-l-4 border-secondary text-slate-700 font-medium italic">
-                                "UK and US strategy. India-based delivery. The result: enterprise output at a fraction of the cost for businesses ready to scale."
+                                "Instead of managing multiple vendors, tools, and teams, we give businesses a single growth partner."
                             </p>
                         </div>
                     </motion.div>

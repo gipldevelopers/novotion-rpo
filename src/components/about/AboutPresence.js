@@ -102,7 +102,7 @@ export function AboutPresence() {
                             <div className="absolute top-1/3 left-1/2">
                                 <span className="absolute inset-0 rounded-full bg-secondary animate-ping opacity-20" />
                                 <div className="relative w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-xl shadow-secondary/20" />
-                                <span className="absolute top-6 left-0 whitespace-nowrap text-[10px] font-bold text-slate-900 tracking-widest uppercase bg-white px-2 py-1 rounded-md shadow-sm border border-slate-100">UK OFFICE</span>
+                                <span className="absolute top-6 left-0 whitespace-nowrap text-[10px] font-bold text-slate-900 tracking-widest uppercase bg-white px-2 py-1 rounded-md shadow-sm border border-slate-100">UK HQ (LONDON)</span>
                             </div>
 
                             <div className="absolute bottom-1/3 right-1/4">

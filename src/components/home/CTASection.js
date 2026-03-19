@@ -57,7 +57,7 @@ export function CTASection() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-primary-foreground/20 bg-primary-foreground/5 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground/30 text-base h-14 px-10 backdrop-blur-sm">
-              <a href="tel:+1234567890">
+              <a href="tel:+442039967029">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Us Now
               </a>

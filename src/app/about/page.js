@@ -3,6 +3,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { AboutHero } from "@/components/about/AboutHero";
 import { AboutStory } from "@/components/about/AboutStory";
+import { AboutPhilosophy } from "@/components/about/AboutPhilosophy";
 import { AboutTeam } from "@/components/about/AboutTeam";
 import { AboutRecognitions } from "@/components/about/AboutRecognitions";
 import { AboutValues } from "@/components/about/AboutValues";
@@ -18,6 +19,8 @@ export default function About() {
 
         {/* 2. Our Mission & Story */}
         <AboutStory />
+
+        <AboutPhilosophy />
 
         {/* 4. Team Hierarchy */}
         <AboutTeam />

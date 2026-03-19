@@ -107,13 +107,15 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-8">
-                  {/* US Node */}
+                  {/* UK Node */}
                   <div className="group p-8 rounded-[2.5rem] bg-slate-50 border border-slate-200 hover:border-secondary/20 transition-all duration-500 shadow-sm hover:shadow-xl">
                     <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-slate-300 group-hover:text-secondary group-hover:bg-secondary/10 transition-all shadow-sm mb-6">
                       <MapPin className="h-6 w-6" />
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2 tracking-tight">USA Headquarters</h3>
-                    <p className="text-slate-500 font-light leading-relaxed mb-4">Orlando, FL, USA</p>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2 tracking-tight">UK Headquarters</h3>
+                    <p className="text-slate-500 font-light leading-relaxed mb-4 text-sm">
+                      First Floor Office, 3 Hornton Place, London, W8 4LZ, United Kingdom
+                    </p>
                   </div>
 
                   {/* India Node */}
@@ -144,8 +146,8 @@ export default function Contact() {
                       </div>
                       <div>
                         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">Phone</p>
-                        <a href="tel:+1234567890" className="text-slate-700 font-medium hover:text-secondary transition-colors">
-                          +1 (234) 567-890
+                        <a href="tel:+442039967029" className="text-slate-700 font-medium hover:text-secondary transition-colors">
+                          +44 20 3996 7029
                         </a>
                       </div>
                     </div>
