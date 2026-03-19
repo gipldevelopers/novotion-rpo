@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { 
     Save, 
@@ -17,7 +17,7 @@ import {
     BarChart3
 } from "lucide-react";
 
-export default function EditCaseStudy() {
+function EditCaseStudyContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const id = searchParams.get('id');
@@ -407,5 +407,13 @@ export default function EditCaseStudy() {
                 </div>
             </form>
         </div>
+    );
+}
+
+export default function EditCaseStudy() {
+    return (
+        <Suspense fallback={<div className="p-20 text-center font-black uppercase tracking-widest text-slate-400">Loading editor...</div>}>
+            <EditCaseStudyContent />
+        </Suspense>
     );
 }
