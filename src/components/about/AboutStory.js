@@ -34,7 +34,7 @@ export function AboutStory() {
                                 We are not just a service provider. We act as an operational backbone for modern businesses helping them move from chaos to clarity, from effort to efficiency, and from inconsistent growth to predictable scale.
                             </p>
                             <p className="p-6 bg-slate-50 rounded-[2rem] border-l-4 border-secondary text-slate-700 font-medium italic">
-                                "Instead of managing multiple vendors, tools, and teams, we give businesses a single growth agency."
+                                "Growth becomes predictable when talent, strategy, and execution finally work as one."
                             </p>
                         </div>
                     </motion.div>
