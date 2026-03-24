@@ -1,6 +1,6 @@
 "use client";
 
-import { Linkedin, Twitter, Facebook, Instagram, MessageCircle, Send } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 
 const XIcon = ({ className }) => (

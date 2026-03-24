@@ -45,7 +45,7 @@ export function AboutPhilosophy() {
                     </h2>
 
                     <p className="text-slate-500 text-base md:text-lg font-light leading-relaxed">
-                        Sustainable growth isn't about more people or harder work—it's about better systems.
+                        Sustainable growth isn't about more people or harder work it's about better systems.
                     </p>
                 </div>
 
@@ -81,8 +81,8 @@ export function AboutPhilosophy() {
 
                         <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4 mb-12">
                             {["Recruitment", "Business Development", "Marketing", "AI Automation", "Finance"].map((service, idx) => (
-                                <div 
-                                    key={service} 
+                                <div
+                                    key={service}
                                     className={`p-4 rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 font-bold text-[10px] md:text-xs uppercase tracking-widest flex items-center justify-center text-center min-h-[5rem] shadow-sm ${idx === 4 ? 'col-span-2 md:col-span-1' : ''}`}
                                 >
                                     {service}
@@ -91,7 +91,7 @@ export function AboutPhilosophy() {
                         </div>
 
                         <p className="text-slate-500 text-base md:text-xl font-light leading-relaxed">
-                            Instead of managing multiple vendors, tools, and teams, we give businesses a single growth partner—combining core functions into a single, high-output engine.
+                            Instead of managing multiple vendors, tools, and teams, we give businesses a single growth partner combining core functions into a single, high-output engine.
                         </p>
                     </div>
                 </div>

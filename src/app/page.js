@@ -10,6 +10,7 @@ import { TestimonialsSection } from "@/components/home-v2/TestimonialsSectionV2"
 import { ContactSection } from "@/components/home-v2/ContactSectionV2";
 import { CTASectionV2 } from "@/components/home-v2/CTASectionV2";
 import { SocialSidebar } from "@/components/layout/SocialSidebar";
+import { caseStudies } from "@/data/caseStudiesData";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
         <ServicesPreview />
         <HowItWorksV2 />
         <IndustriesPreview />
-        <TestimonialsSection />
+        <TestimonialsSection initialData={caseStudies} />
         <ContactSection />
         <CTASectionV2 />
       </div>

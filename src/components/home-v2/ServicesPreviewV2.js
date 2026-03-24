@@ -1,7 +1,17 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, ArrowRight, Cog, Layout, Users, Briefcase, Target, Sparkles, ChevronRight } from "lucide-react";
+import { 
+    Check, 
+    ArrowRight, 
+    Cog, 
+    Layout, 
+    Users, 
+    Briefcase, 
+    Target, 
+    Sparkles, 
+    ChevronRight 
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -14,14 +24,16 @@ const services = [
         features: ["END-TO-END RECRUITMENT", "TALENT SOURCING", "ADMIN SUPPORT", "MARKET MAPPING", "ONBOARDING & COMPLIANCE"],
         icon: Users,
         image: "/assets/hero/recruitment.png",
+        slug: "recruitment-services",
     },
     {
         title: "Business Development",
         subHeadline: "Business Development",
         description: "Structured outbound prospecting, CRM management, and partnership development that fills your pipeline and converts opportunities into consistent revenue.",
-        features: ["GROWTH STRATEGY", "PARTNERSHIP BUILDING", "OUTBOUND SALES & PROSPECTING", "PROPOSAL & PITCH SUPPORT", "MARKET EXPANSION", "CRM & PIPELINE MANAGEMENT"],
+        features: ["MARKET RESEARCH & ACCOUNT MAPPING", "LEAD LIST BUILDING & DATA MANAGEMENT", "OUTREACH EXECUTION SUPPORT", "CRM & PIPELINE COORDINATION"],
         icon: Briefcase,
         image: "/assets/hero/bizdev.png",
+        slug: "business-development",
     },
     {
         title: "Digital Marketing",
@@ -30,22 +42,25 @@ const services = [
         features: ["SOCIAL MEDIA MANAGEMENT", "SEO & CONTENT MARKETING", "EMAIL MARKETING", "PAID ADS (GOOGLE & META)", "BRANDING & DESIGN"],
         icon: Layout,
         image: "/assets/hero/marketing.png",
+        slug: "digital-marketing",
     },
     {
         title: "AI & Automation",
         subHeadline: "AI & Automation",
-        description: "Workflow automation, AI chatbots, and system integrations that cut manual tasks, reduce errors by up to 90%, and scale your operations without extra headcount.",
-        features: ["WORKFLOW AUTOMATION", "AI CHATBOTS & VIRTUAL ASSISTANTS", "AI REPORTING & ANALYTICS", "SYSTEMS INTEGRATION", "AI CONTENT ASSISTANCE"],
+        description: "BUSINESS PROCESS AUTOMATION, AI chatbots, and system integrations that cut manual tasks, reduce errors by up to 90%, and scale your operations without extra headcount.",
+        features: ["BUSINESS PROCESS AUTOMATION", "AI CHATBOTS & VIRTUAL ASSISTANTS", "AI REPORTING & ANALYTICS", "MARKETING & SALES AUTOMATION", "SYSTEMS INTEGRATION", "AI CONTENT ASSISTANCE"],
         icon: Cog,
         image: "/assets/hero/global_clients.png",
+        slug: "ai-automation",
     },
     {
         title: "Accounting & Finance",
         subHeadline: "Accounting & Finance",
         description: "Professional bookkeeping, payroll processing, tax compliance, and financial reporting without the overhead of a full-time in-house finance function.",
-        features: ["BOOKKEEPING", "ACCOUNTS PAYABLE & RECEIVABLE", "PAYROLL", "FINANCIAL REPORTING", "BUDGETING & PLANNING", "TAX & COMPLIANCE"],
+        features: ["BOOKKEEPING", "ACCOUNTS PAYABLE & RECEIVABLE", "PAYROLL", "FINANCIAL REPORTING", "BUDGETING & PLANNING"],
         icon: Target,
         image: "/assets/hero/finance.png",
+        slug: "accounting-finance",
     },
 ];
 
@@ -165,7 +180,7 @@ export function ServicesPreview() {
                                         {/* Action Buttons */}
                                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
                                             <Link
-                                                href="/services"
+                                                href={`/services/${services[activeTab].slug}`}
                                                 className="inline-flex items-center justify-center gap-3 px-8 md:px-10 py-4 md:py-5 rounded-xl md:rounded-2xl bg-slate-900 text-white text-[10px] md:text-[11px] font-bold uppercase tracking-widest hover:bg-secondary transition-all shadow-xl shadow-slate-900/10 group active:scale-95"
                                             >
                                                 Detailed Strategy

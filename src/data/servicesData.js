@@ -427,30 +427,6 @@ export const servicesData = [
         description: "We build and manage your full marketing presence so your brand earns trust before the first conversation even starts. Our strategy-led, 2026-ready marketing approach covers every channel to drive real commercial results and ensure your business is prepared for growth.",
         cta: "Launch Your Marketing Engine",
         head: "Marketing That Gets You Chosen, Not Just Seen.",
-        intro: {
-            title: "Modern Marketing vs. Market Presence",
-            overview: "In 2026, visibility alone isn't enough. Your audience is more sophisticated, and your competitors are more numerous. We don't just 'post' or 'run ads' we build a cohesive digital presence that does the heavy lifting for your sales team. By the time a prospect reaches out, they should already believe in your expertise.",
-            points: [
-                {
-                    title: "Strategy First",
-                    text: "Every channel and campaign starts with a defined commercial objective. We don't trade in 'likes'; we trade in pipeline."
-                },
-                {
-                    title: "2026-Ready Methods",
-                    text: "We use up-to-date SEO built for E-E-A-T and AI-powered search, not outdated volume-chasing tactics."
-                },
-                {
-                    title: "Brand as an Asset",
-                    text: "We treat your brand as a live commercial asset, doing the persuasion work even before your team steps in."
-                }
-            ],
-            highlights: [
-                "Defined commercial objectives for every campaign",
-                "2026-ready SEO built for E-E-A-T and AI search",
-                "Cohesive brand experience that builds trust early",
-                "Active management across every key digital touchpoint"
-            ]
-        },
         whatYouGet: [
             {
                 title: "Social Media Management",
@@ -464,27 +440,7 @@ export const servicesData = [
                     "Community Management & Engagement: We manage comments, conversations, and sector discussions on your behalf. Active community management turns passive followers into genuine advocates over time.",
                     "Monthly Performance Reporting: We provide clear reporting on what is growing, what is converting, and what needs to change. Decisions are based on evidence rather than instinct.",
                     "Competitor Monitoring & Trend Analysis: We continuously track competitor activity and emerging trends so your content strategy leads the market rather than simply reacting to it."
-                ],
-                benefits: [
-                    "Establish daily authority and brand recognition across key platforms",
-                    "Maintain a consistent, high-quality stream of content without internal effort",
-                    "Build a community of engaged advocates who trust your expertise",
-                    "Capture and nurture leads before they even visit your website",
-                    "Algorithm-proof your presence through high-engagement, native content",
-                    "Data-driven content refinement based on real performance trends"
-                ],
-                servicesInclude: {
-                    "Social Management": [
-                        "Platform Strategy & Profile Optimisation",
-                        "Content Creation (Graphics, Captions & Reels)",
-                        "Consistent Posting & Scheduling",
-                        "Community Management & Engagement",
-                        "Monthly Performance Reporting",
-                        "Competitor Monitoring & Trend Analysis"
-                    ]
-                },
-                boundary: "Consistency turns passive followers into genuine advocates over time.",
-                bottomLine: "Every post serves a clear brand or commercial purpose."
+                ]
             },
             {
                 title: "SEO & Content Marketing",
@@ -499,28 +455,7 @@ export const servicesData = [
                     "Local SEO for Businesses: We optimise your Google Business Profile, manage local citations, and use geo-targeted keyword strategy to capture local leads, whether you compete in the UK, UAE, US, EU, or APAC.",
                     "Backlink Building & Domain Authority Growth: We ethically build authority through original research, digital PR, and guest publications. This increases your share of search visibility and earns search engine trust because it reflects real credibility.",
                     "Monthly SEO Reporting & Insights: We deliver results-connected reports on rankings, organic traffic trends, and content performance. This data-driven view keeps strategy refinement clear and focused on your next priorities."
-                ],
-                benefits: [
-                    "Earning sustainable, long-term traffic that reduces dependence on paid ads",
-                    "Establishing undisputed authority on topics your customers care about most",
-                    "Higher conversion rates from intent-mapped, value-driven website copy",
-                    "Capture local demand across global markets with geo-targeted strategies",
-                    "Reduced bounce rates and improved site performance through technical excellence",
-                    "A scalable content engine that builds domain authority over time"
-                ],
-                servicesInclude: {
-                    "Search & Authority": [
-                        "On-Page & Technical SEO Audits",
-                        "Keyword Research & Strategy",
-                        "Blog Writing & Content Creation",
-                        "Website Copy Optimisation",
-                        "Local SEO for Businesses",
-                        "Backlink Building & Domain Authority Growth",
-                        "Monthly SEO Reporting & Insights"
-                    ]
-                },
-                boundary: "Content earns rankings and reader trust simultaneously.",
-                bottomLine: "We fix the foundation, not just report on it, so your site is solid from the ground up."
+                ]
             },
             {
                 title: "Email Marketing",
@@ -534,27 +469,7 @@ export const servicesData = [
                     "Automated Email Sequences & Drip Campaigns: These behaviour-triggered sequences deliver the right follow-up based on what a subscriber does (or doesn't do). We ensure engagement and conversions never slip through the cracks.",
                     "A/B Testing & Performance Optimisation: We run structured tests on subject lines, timing, and calls-to-action to improve conversion, open, and click-through rates over time.",
                     "Deliverability Monitoring & Reporting: We manage sender reputation, bounce handling, and inbox placement so your emails consistently reach the inbox instead of getting stuck in spam."
-                ],
-                benefits: [
-                    "Highest ROI channel for lead nurturing and customer retention",
-                    "Consistent, automated touchpoints that keep your brand top-of-mind",
-                    "Deeper customer understanding through behavioral data and click-tracking",
-                    "Reduced sales cycle length through automated educational workflows",
-                    "Scalable outreach that maintains a personal, high-touch feel",
-                    "Improved conversion rates by matching messaging to current intent"
-                ],
-                servicesInclude: {
-                    "Lifecycle Marketing": [
-                        "Email Strategy & Campaign Planning",
-                        "Template Design & Copywriting",
-                        "List Segmentation & Audience Management",
-                        "Automated Email Sequences & Drip Campaigns",
-                        "A/B Testing & Performance Optimisation",
-                        "Deliverability Monitoring & Reporting"
-                    ]
-                },
-                boundary: "Engagements and conversions never slip through the cracks.",
-                bottomLine: "It’s automation at scale, with personalization at the personal level."
+                ]
             },
             {
                 title: "Paid Ads (Google & Meta)",
@@ -568,27 +483,7 @@ export const servicesData = [
                     "Ad Creative & Copywriting: We design scroll-stopping creatives and write hooks that speak to real desires before the ask. Every creative element is crafted to earn its place and engage your audience.",
                     "Budget Management & Bid Optimisation: Our daily management shifts budget toward what performs best. We use AI-enhanced algorithms and manual strategies to get the most from every ad pound, keeping your cost-per-action (CPA) low.",
                     "Conversion Tracking & ROI Reporting: We set up attribution infrastructure that connects your ad spend to actual enquiries. You’ll always know exactly what each campaign produced through clear, comprehensive reporting."
-                ],
-                benefits: [
-                    "Immediate traffic and lead generation for high-priority service areas",
-                    "Precise targeting that puts your brand in front of specific high-value decision makers",
-                    "Scalable growth engine increase spend to increase leads predictably",
-                    "Full-funnel visibility showing where prospects are engaging and where they drop off",
-                    "Reduced wasted spend through aggressive negative keyword and audience management",
-                    "Direct commercial accountability with clear Cost Per Lead (CPL) metrics"
-                ],
-                servicesInclude: {
-                    "Paid Acquisition": [
-                        "Google Search & Display Ads",
-                        "Meta Ad Campaigns",
-                        "Audience Research & Targeting",
-                        "Ad Creative & Copywriting",
-                        "Budget & Bid Optimisation",
-                        "ROI Tracking & Reporting"
-                    ]
-                },
-                boundary: "Accountable to real commercial outcomes, not just platform metrics.",
-                bottomLine: "Every campaign results in clear, comprehensive reporting."
+                ]
             },
             {
                 title: "Branding & Design",
@@ -601,46 +496,19 @@ export const servicesData = [
                     "Social Media Graphics & Templates: We create on-brand templates to keep your social presence consistently professional and recognizable, without needing a designer for every post.",
                     "Marketing Collateral (Flyers, Brochures, Banners): We design print and digital materials that effectively communicate your messages. From proposals and brochures to event banners and campaign assets, every piece meets your brand standards.",
                     "Pitch Deck & Presentation Design: We elevate your presentations to match your business conversations. Each deck is compelling, structured, and built to leave decision-makers with confidence in your proposal."
-                ],
-                benefits: [
-                    "Immediate establishment of professionalism and trust at first glance",
-                    "Reduced internal design friction with pre-built, easy-to-use templates",
-                    "Cohesive brand experience across website, social, email, and print",
-                    "Elevated sales conversations with high-confidence presentation assets",
-                    "Market recognition through consistent use of premium brand elements",
-                    "Future-proofed identity that scales with your business growth"
-                ],
-                servicesInclude: {
-                    "Visual Identity": [
-                        "Logo Design & Brand Identity",
-                        "Brand Guidelines & Style Kits",
-                        "Social Media Graphics & Templates",
-                        "Marketing Collateral",
-                        "Pitch Deck & Presentation Design"
-                    ]
-                },
-                boundary: "A compelling first impression backed by assets that perform.",
-                bottomLine: "Make your thirty seconds count."
+                ]
             }
         ],
-        bestFor: "Your marketing is scattered inconsistent posts, emails that go unopened, and ad spend with nothing to show for it. You know you need to be more visible. You just need someone who actually knows how.",
         closing: {
             title: "Why Our Marketing Approach Outperforms the 99%",
-            text: "Marketing should be a profit centre, not a cost centre. We combine high-level strategy with 2026-ready execution to help your brand earn trust even before you speak.",
+            text: "",
             points: [
                 "Strategy before execution: Every channel and campaign starts with a defined commercial objective.",
                 "2026-ready methods: We use up-to-date SEO built for E-E-A-T and AI-powered search, not outdated tactics.",
                 "Brand as a growth asset: We treat your brand as a live commercial asset, doing persuasion work even before your team steps in."
             ],
             cta: "Discuss Your Marketing Strategy"
-        },
-        faqs: [
-            { question: "What marketing services do you provide?", answer: "We handle end-to-end digital marketing: Social Media Management, SEO & Content Marketing, Email Marketing, Paid Advertising (Google & Meta), and Branding & Design." },
-            { question: "How long does it take to see results?", answer: "Paid ads can yield immediate results, while organic growth such as SEO and brand building typically takes 3-6 months to scale significantly." },
-            { question: "Do you handle creative and copywriting?", answer: "Yes. Every service includes graphics, video editing (for social/ads), and professional copywriting tailored to your brand’s voice." },
-            { question: "Can you work with my existing branding?", answer: "Absolutely. We can either follow your established brand guidelines or help you refresh them if your current visual identity needs an upgrade." },
-            { question: "How do you track performance?", answer: "We provide monthly reports connecting marketing activity to real commercial results rankings, traffic, leads, and ROI not just vanity metrics like 'likes'." }
-        ]
+        }
     },
     {
         id: "ai-automation",
@@ -907,34 +775,10 @@ export const servicesData = [
         shortTitle: "Accounting & Finance",
         slug: "accounting-finance",
         icon: Target,
-        title: "Your Numbers Should Work For You, Not Against You.",
-        description: "We give you accurate books, timely reports, and a finance function focused on supporting your growth not just filing obligations.",
-        cta: "Organise Your Finances",
+        title: "Accounting & Finance Services",
+        description: "Your Numbers Should Work For You, Not Against You. We give you accurate books, timely reports, and a finance function focused on supporting your growth not just filing obligations.",
+        cta: "Organize Your Finances",
         head: "Your Numbers Should Work For You, Not Against You.",
-        intro: {
-            title: "Numbers Built for Strategy, Not Just Compliance",
-            overview: "In 2026, a finance function that only looks backward is a liability. Your audience is more sophisticated, and your competitors are more numerous. We don't just 'keep books' we build the financial foundation that allows your business to scale with confidence and clarity.",
-            points: [
-                {
-                    title: "Real-Time Clarity",
-                    text: "Daily transaction recording ensures your financial picture is always current, not weeks behind."
-                },
-                {
-                    title: "Predictive Forecasting",
-                    text: "Live cash flow and budget modeling allow you to see the consequences of decisions before you make them."
-                },
-                {
-                    title: "Scale Without Overhead",
-                    text: "Access high-level financial management and professional bookkeeping without the cost of a full internal team."
-                }
-            ],
-            highlights: [
-                "Clean, audit-ready books updated daily",
-                "Professional payroll and pension compliance",
-                "Custom real-time financial dashboards",
-                "Rolling cash flow forecasts for growth"
-            ]
-        },
         whatYouGet: [
             {
                 title: "Bookkeeping",

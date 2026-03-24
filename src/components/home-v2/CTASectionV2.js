@@ -38,7 +38,7 @@ export function CTASectionV2() {
                             <div className="lg:col-span-7 text-left">
                                 <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
                                     <Sparkles className="h-4 w-4" />
-                                    Growth Conduit
+                                    Connect with us
                                 </div>
 
                                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tighter leading-none">

@@ -51,7 +51,6 @@ export function ServicesGrid() {
                                                 <div className="w-14 h-14 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-secondary group-hover:bg-white transition-all shadow-sm">
                                                     <IconComponent className="h-6 w-6" />
                                                 </div>
-                                                <span className="text-[9px] font-bold text-slate-300 uppercase tracking-[0.2em]">{service.bestFor?.substring(0, 15) || "Service"}</span>
                                             </div>
 
                                     <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-secondary transition-colors">

@@ -40,7 +40,7 @@ export function ContactSection() {
                             <div className="relative z-10">
                                 <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
                                     <Sparkles className="h-4 w-4" />
-                                    The Conduit
+                                    Connect with us
                                 </div>
 
                                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tighter leading-none">

@@ -98,13 +98,8 @@ export function ServiceDetailContent({ service }) {
                                                     href={`/services/${service.slug}/${itemSlug}`}
                                                     className="flex flex-col gap-6 p-8 rounded-[2.5rem] bg-slate-50 border border-slate-200 group hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-300 cursor-pointer text-left h-full"
                                                 >
-                                                    <div className="flex justify-between items-start">
-                                                        <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-secondary shadow-sm group-hover:bg-secondary group-hover:text-white transition-all">
-                                                            <CheckCircle className="h-6 w-6" />
-                                                        </div>
-                                                        <div className="flex items-center gap-1.5 py-1 px-3 rounded-full bg-white border border-slate-100 text-[9px] font-black uppercase tracking-widest text-slate-400 group-hover:text-secondary group-hover:border-secondary transition-all">
-                                                            Phase 0{i+1}
-                                                        </div>
+                                                    <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-secondary shadow-sm group-hover:bg-secondary group-hover:text-white transition-all">
+                                                        <CheckCircle className="h-6 w-6" />
                                                     </div>
                                                     
                                                     <div className="space-y-3">

@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Linkedin, Mail, Sparkles, ArrowRight } from "lucide-react";
+import { Linkedin, Mail, Sparkles, ArrowUpRight, Quote } from "lucide-react";
 import Image from "next/image";
 
 const team = [
     {
         name: "Devangi Goswami",
         role: "CEO & Co-Founder",
-        description: "Noltven was never meant to be just another service company. It was built to become the growth engine behind businesses that refuse to stay small. We don't just support companies—we structure, scale, and transform them.",
+        description: "Noltven was never meant to be just another service company. It was built to become the growth engine behind businesses that refuse to stay small. We don't just support companies we structure, scale, and transform them.",
         image: "/assets/team/devangi.jpeg",
         linkedin: "https://www.linkedin.com/in/devangi-goswami-",
     },
@@ -30,93 +30,106 @@ const team = [
 
 export function AboutTeam() {
     return (
-        <section className="pt-16 md:pt-20 lg:pt-24 pb-20 lg:pb-32 bg-white relative overflow-hidden">
-            {/* Background Accents */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-100 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+        <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+            {/* Background Artificats */}
+            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/[0.03] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
 
             <div className="container-premium relative z-10">
-                {/* Section Header - Centered */}
-                <div className="max-w-4xl mx-auto text-center flex flex-col items-center mb-16 lg:mb-24 px-4">
+                {/* Section Header */}
+                <div className="max-w-4xl mx-auto text-center mb-24">
                     <motion.div
                         initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-8 shadow-sm"
+                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/5 border border-secondary/10 text-secondary text-[10px] font-black uppercase tracking-[0.4em] mb-8"
                     >
                         <Sparkles className="h-4 w-4" />
-                        Our Leadership
+                        Executive Leadership
                     </motion.div>
-                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tighter leading-[1.1] font-display mb-8">
-                        The Visionaries Behind <br className="hidden md:block" />
-                        <span className="text-secondary text-gradient-primary">Noltven's Mission.</span>
+                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter leading-[1] mb-8">
+                        The Visionaries Behind <br />
+                        <span className="text-secondary italic">Noltven's Mission.</span>
                     </h2>
-                    <p className="text-slate-500 text-sm md:text-lg max-w-2xl leading-relaxed font-light">
-                        A leadership team dedicated to building the growth engine behind businesses that refuse to stay small—structuring, scaling, and transforming global enterprises.
+                    <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed font-light">
+                        A leadership team dedicated to building the growth engine behind businesses structuring, scaling, and transforming global enterprises.
                     </p>
                 </div>
 
-                {/* Contemporary Checked Grid - Optimized for Mobile */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-7xl mx-auto items-stretch border border-slate-100 rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200/40">
-                    {team.map((member, index) => {
-                        const isEven = index === 1;
-                        return (
-                            <motion.div
-                                key={member.name}
-                                initial={{ opacity: 0, y: isEven ? -20 : 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.8, delay: index * 0.1 }}
-                                className={`flex flex-col group ${index < 2 ? 'md:border-r border-slate-100' : ''} ${index > 0 ? 'border-t md:border-t-0 border-slate-100' : ''}`}
-                            >
-                                {/* 1. The Block with Image - Always top on mobile, checked on desktop */}
-                                <div className={`relative h-[350px] lg:h-[450px] overflow-hidden ${isEven ? 'md:order-2 order-1' : 'order-1'}`}>
-                                    <Image
-                                        src={member.image}
-                                        alt={member.name}
-                                        fill
-                                        className="object-cover object-top grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
-                                        sizes="(max-width: 768px) 100vw, 33vw"
-                                    />
-                                    <div className={`absolute inset-0 ${isEven ? 'bg-secondary/5' : 'bg-slate-900/5'} opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
+                {/* Redesigned Team Grid - Premium Cards */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {team.map((member, index) => (
+                        <motion.div
+                            key={member.name}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: index * 0.1 }}
+                            className="group relative"
+                        >
+                            {/* Card Wrapper */}
+                            <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-slate-100 shadow-2xl shadow-slate-200/50">
+                                {/* Image with Premium Grayscale to Color Effect */}
+                                <Image
+                                    src={member.image}
+                                    alt={member.name}
+                                    fill
+                                    className="object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                />
+
+                                {/* Social Links - Top Right Corner */}
+                                <div className="absolute top-6 right-6 flex flex-col gap-3 z-30 opacity-100 lg:opacity-0 lg:translate-x-10 lg:group-hover:translate-x-0 lg:group-hover:opacity-100 transition-all duration-500">
+                                    <a
+                                        href={member.linkedin}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 lg:w-12 lg:h-12 rounded-2xl bg-white/90 backdrop-blur-md flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all shadow-xl"
+                                    >
+                                        <Linkedin className="h-4 w-4 lg:h-5 lg:w-5" />
+                                    </a>
+                                    <a
+                                        href={`mailto:office@novotion.com`}
+                                        className="w-12 h-12 rounded-2xl bg-white/90 backdrop-blur-md hidden lg:flex items-center justify-center text-slate-900 hover:bg-slate-900 hover:text-white transition-all shadow-xl"
+                                    >
+                                        <Mail className="h-5 w-5" />
+                                    </a>
                                 </div>
 
-                                {/* 2. The Block with Text Details - Always bottom on mobile, checked on desktop */}
-                                <div className={`flex-1 p-8 lg:p-12 flex flex-col justify-center text-center md:text-left items-center md:items-start ${isEven ? 'md:order-1 order-2' : 'order-2'} bg-white group-hover:bg-slate-50 transition-colors duration-500`}>
-                                    <span className="inline-block text-[10px] font-bold text-secondary uppercase tracking-[0.3em] mb-4">
-                                        {member.role}
-                                    </span>
-                                    <h3 className="text-3xl font-bold text-slate-900 tracking-tighter mb-6 font-display">
-                                        {member.name}
-                                    </h3>
-                                    
-                                    <div className="relative mb-8 text-center md:text-left">
-                                        <div className="absolute -top-6 -left-4 md:block hidden text-slate-100 text-7xl font-serif leading-none select-none pointer-events-none">"</div>
-                                        <p className="relative z-10 text-[15px] lg:text-[16px] text-slate-500 font-light leading-relaxed italic">
-                                            "{member.description}"
-                                        </p>
-                                    </div>
-
-                                    <div className="flex items-center gap-4 pt-6 border-t border-slate-100 w-full justify-center md:justify-start">
-                                        <a 
-                                            href={member.linkedin} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer" 
-                                            className="h-10 w-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:bg-secondary hover:text-white transition-all duration-300 shadow-sm"
-                                        >
-                                            <Linkedin className="h-4 w-4" />
-                                        </a>
-                                        <a 
-                                            href={`mailto:office@novotion.com`} 
-                                            className="h-10 w-10 flex items-center justify-center rounded-full bg-slate-50 text-slate-400 hover:bg-slate-900 hover:text-white transition-all duration-300 shadow-sm"
-                                        >
-                                            <Mail className="h-4 w-4" />
-                                        </a>
+                                {/* Vertical Role Tag */}
+                                <div className="absolute top-6 left-6 z-30">
+                                    <div className="bg-slate-900/80 backdrop-blur-md px-4 py-2 rounded-xl">
+                                        <span className="text-[10px] font-black text-white uppercase tracking-widest leading-none">
+                                            {member.role}
+                                        </span>
                                     </div>
                                 </div>
-                            </motion.div>
-                        );
-                    })}
+
+                                {/* Bottom Overlay - Gradual info reveal */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 lg:opacity-60 lg:group-hover:opacity-90 transition-opacity duration-500" />
+
+                                {/* Info Box */}
+                                <div className="absolute bottom-0 left-0 right-0 px-6 lg:px-10 pb-8 lg:pb-10 z-20 overflow-hidden lg:overflow-visible">
+                                    <div className="flex flex-col transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] translate-y-0 lg:translate-y-[calc(100%-40px)] lg:group-hover:translate-y-0">
+                                        {/* Name - Slides up for hover */}
+                                        <h3 className="text-xl lg:text-2xl font-black text-white tracking-tight pb-4 lg:pb-6">
+                                            {member.name}
+                                        </h3>
+
+                                        {/* Subtitle/Description - Slides up with name from bottom */}
+                                        <div className="opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 delay-100 space-y-4">
+                                            <div className="w-8 h-[2px] bg-secondary" />
+                                            <div className="relative">
+                                                <Quote className="absolute -left-4 -top-2 h-4 w-4 text-secondary/40 opacity-50" />
+                                                <p className="text-white/80 text-[12px] lg:text-[13px] leading-relaxed font-light italic pl-4">
+                                                    {member.description}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>
