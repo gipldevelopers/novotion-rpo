@@ -5,33 +5,33 @@ import { Zap, ShieldCheck, Users, Target, Sparkles } from "lucide-react";
 
 const values = [
     {
-        icon: Users,
-        title: "Unstructured hiring processes",
-        description: "Talent acquisition shouldn't be a gamble. We replace guesswork with predictable, scalable systems.",
+        icon: Zap,
+        title: "Adaptability",
+        description: "Change is not a challenge—it's our advantage. We pivot in real time, realign without friction, and keep execution moving no matter what shifts.",
         color: "from-orange-500/20 to-orange-500/0"
     },
     {
-        icon: Target,
-        title: "Inconsistent lead generation",
-        description: "We build engines that deliver a steady flow of high-quality opportunities, ending the feast-or-famine cycle.",
+        icon: ShieldCheck,
+        title: "Adherence",
+        description: "Every delivery is measured against a defined standard—no shortcuts, no exceptions. Consistency isn't occasional for us; it's the foundation everything is built on.",
         color: "from-secondary/20 to-secondary/0"
     },
     {
-        icon: Zap,
-        title: "Disconnected marketing efforts",
-        description: "Your marketing shouldn't happen in a vacuum. We align it directly with your sales and growth goals.",
+        icon: Users,
+        title: "Accountability",
+        description: "We own every outcome from start to finish—no delays, no excuses, no passing the buck. If it carries our name, it carries our full responsibility.",
         color: "from-slate-500/20 to-slate-500/0"
     },
     {
-        icon: ShieldCheck,
-        title: "Manual operations",
-        description: "Time-consuming manual tasks drain your resources. We automate where it matters, so you can scale faster.",
+        icon: Target,
+        title: "Accuracy",
+        description: "We don't guess—we verify, we validate, and we deliver with precision. Because getting it right the first time isn't a goal, it's a standard.",
         color: "from-secondary/20 to-secondary/0"
     },
     {
         icon: Sparkles,
-        title: "Lack of data-driven decision making",
-        description: "Stop relying on gut feelings. We provide the clarity and data you need to make smarter strategic moves.",
+        title: "Acknowledgement",
+        description: "Great results are built by valued people, and we never let effort go unseen. We celebrate every contribution because recognition is what turns performance into culture.",
         color: "from-orange-500/20 to-orange-500/0"
     },
 ];
@@ -51,13 +51,13 @@ export function AboutValues() {
                         <Sparkles className="h-4 w-4" />
                         Our Foundation
                     </motion.div>
-
+ 
                     <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tighter font-display">
-                        Why We <span className="text-secondary italic underline underline-offset-8 decoration-secondary/30">Exist.</span>
+                        The <span className="text-secondary italic underline underline-offset-8 decoration-secondary/30">5A</span> Core Values.
                     </h2>
-
+  
                     <p className="text-slate-500 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
-                        Most companies struggle with fragmented operations. Noltven was created to solve all of this under one roof.
+                        Our Five A's (5A) aren't just words on a wall; they are the operational standards that drive every decision we make.
                     </p>
                 </div>
 
