@@ -38,7 +38,7 @@ const metrics = [
         suffix: "+",
         label: "Active Client Accounts",
         description: "Global businesses served across UK, EU ,UAE, APAC and USA",
-        color: "from-[#cf603d] to-[#ebd69b]"
+        color: "from-[#1b50a2] to-[#ebd69b]"
     },
     {
         icon: Target,
@@ -46,7 +46,7 @@ const metrics = [
         suffix: "%+",
         label: "Client Retention Rate",
         description: "Businesses that stay, scale, and grow with us",
-        color: "from-[#cf603d] to-[#cf603d]/40"
+        color: "from-[#1b50a2] to-[#1b50a2]/40"
     },
     {
         icon: Zap,
@@ -54,7 +54,7 @@ const metrics = [
         suffix: "%",
         label: "Average Cost Savings",
         description: "Vs. in-house hiring and traditional agency models",
-        color: "from-[#ebd69b] to-[#cf603d]"
+        color: "from-[#ebd69b] to-[#1b50a2]"
     },
     {
         icon: Globe,
@@ -62,7 +62,7 @@ const metrics = [
         suffix: "/7",
         label: "Global Support",
         description: "Continuous operations across every service line",
-        color: "from-[#cf603d] to-[#ffffff]"
+        color: "from-[#1b50a2] to-[#ffffff]"
     },
 ];
 

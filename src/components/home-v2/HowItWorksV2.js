@@ -60,7 +60,7 @@ export function HowItWorksV2() {
                             whileInView={{ scaleX: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 1.5, ease: "easeInOut" }}
-                            className="absolute inset-0 bg-secondary origin-left shadow-[0_0_10px_rgba(207,96,61,0.3)]"
+                            className="absolute inset-0 bg-secondary origin-left shadow-[0_0_10px_rgba(27,80,162,0.3)]"
                         />
                     </div>
 

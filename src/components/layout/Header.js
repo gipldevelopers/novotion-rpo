@@ -57,16 +57,16 @@ export function Header() {
           "relative flex items-center justify-between px-6 transition-all duration-500 rounded-xl",
           isScrolled
             ? "bg-white/98 backdrop-blur-xl shadow-[0_40px_80px_-15px_rgba(0,0,0,0.12)] h-16"
-            : "bg-white/30 backdrop-blur-xl h-20"
+            : "bg-white/30 backdrop-blur-xl h-22"
         )}>
 
           <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-90 relative z-10">
             <Image
-              src="/assets/noltven logo.png"
+              src="/assets/noltven-logo-1.svg"
               alt="Novotion Logo"
               width={240}
-              height={60}
-              className="h-10 md:h-12 w-auto object-contain"
+              height={40}
+              className="h-8 md:h-8 w-auto"
               priority
               unoptimized
             />
@@ -98,7 +98,7 @@ export function Header() {
                       {isActive && (
                         <motion.div
                           layoutId="activeNav"
-                          className="absolute -bottom-1 left-5 right-5 h-0.5 bg-secondary rounded-full shadow-[0_0_10px_#cf603d]"
+                          className="absolute -bottom-1 left-5 right-5 h-0.5 bg-secondary rounded-full shadow-[0_0_10px_#1b50a2]"
                         />
                       )}
                     </Link>
@@ -146,7 +146,7 @@ export function Header() {
                   {isActive && (
                     <motion.div
                       layoutId="activeNav"
-                      className="absolute -bottom-1 left-5 right-5 h-0.5 bg-secondary rounded-full shadow-[0_0_10px_#cf603d]"
+                      className="absolute -bottom-1 left-5 right-5 h-0.5 bg-secondary rounded-full shadow-[0_0_10px_#1b50a2]"
                     />
                   )}
                 </Link>

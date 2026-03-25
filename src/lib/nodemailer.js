@@ -32,7 +32,7 @@ export const sendCaseStudyEmail = async ({ name, email, company, phone, slug }) 
         subject: `New Case Study Request: ${slug}`,
         html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #eee; padding: 20px;">
-                <h2 style="color: #CF603D;">New Case Study Lead</h2>
+                <h2 style="color: #1b50a2;">New Case Study Lead</h2>
                 <p>A user has requested access to a premium case study.</p>
                 <hr style="border: 0; border-top: 1px solid #eee;"/>
                 <p><strong>Name:</strong> ${name}</p>

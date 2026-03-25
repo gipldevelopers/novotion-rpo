@@ -45,11 +45,11 @@ export function Footer() {
           <div className="space-y-8 md:space-y-10">
             <div className="flex items-center group">
               <Image
-                src="/assets/noltven logo.png"
+                src="/assets/noltven-logo-1.svg"
                 alt="Novotion Logo"
-                width={200}
+                width={300}
                 height={50}
-                className="h-8 md:h-12 w-auto object-contain"
+                className="h-8 md:h-8 w-auto"
                 unoptimized
               />
             </div>

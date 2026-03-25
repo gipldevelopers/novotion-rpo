@@ -5,9 +5,9 @@
 :root {
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
-  --primary: 14 60% 53%; /* #cf603d */
+  --primary: 216 73% 37%; /* #1b50a2 */
   --primary-foreground: 210 40% 98%;
-  --secondary: 14 60% 53%; /* Map new brand color to secondary for compatibility */
+  --secondary: 216 73% 37%; /* Map new brand color to secondary for compatibility */
   --secondary-foreground: 0 0% 100%;
   --accent: 44 68% 76%; /* #ebd69b */
   --accent-foreground: 222 47% 4%;
@@ -21,7 +21,7 @@
   --destructive-foreground: 210 40% 98%;
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  --ring: 14 60% 53%;
+  --ring: 216 73% 37%;
   --radius: 32px;
 }
 
@@ -99,7 +99,7 @@ h6 {
   color: transparent;
   background-image: linear-gradient(
     135deg,
-    hsl(14 60% 53%) 0%,
+    hsl(216 73% 37%) 0%,
     hsl(44 68% 76%) 100%
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { use } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import {
@@ -18,8 +19,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 export default function CareerDetailPage({ params }) {
-    const slug = params?.slug || "career-detail";
-    const title = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const { slug } = use(params);
+    const effectiveSlug = slug || "career-detail";
+    const title = effectiveSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
     return (
         <Layout>
@@ -43,7 +45,7 @@ export default function CareerDetailPage({ params }) {
                                     <span className="text-[10px] font-bold text-slate-600 tracking-[0.4em] uppercase">Core Requirement</span>
                                 </div>
                                 <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tighter leading-tight">
-                                    Career Detail
+                                    {title}
                                 </h1>
                                 <div className="flex flex-wrap gap-6 text-slate-500 font-bold text-[10px] uppercase tracking-widest">
                                     <div className="flex items-center gap-2">
