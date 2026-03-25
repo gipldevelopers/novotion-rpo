@@ -110,7 +110,7 @@ export function Footer() {
                 <MapPin className="h-5 w-5 text-secondary shrink-0" />
                 <div>
                   <p className="text-[14px] font-bold text-slate-900 mb-1 tracking-tight">London, UK</p>
-                  <p className="text-slate-500 text-[13px] font-light leading-relaxed">First Floor Office, 3 Hornton Place, W8 4LZ</p>
+                  <p className="text-slate-500 text-[13px] font-light leading-relaxed">First Floor Office, 3 Hornton Place, London, W8 4LZ, United Kingdom</p>
                 </div>
               </div>
               <div className="flex gap-5">
@@ -127,7 +127,7 @@ export function Footer() {
 
         <div className="mt-18 md:mt-18 pt-10 md:pt-10 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
           <p className="text-[11px] text-slate-400 font-bold uppercase tracking-[0.2em]">
-            © {new Date().getFullYear()} NOVOTION RPO. THE ELITE TALENT AGENCY.
+            © {new Date().getFullYear()} Noltven.
           </p>
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-4">
             {legal.map((item) => (

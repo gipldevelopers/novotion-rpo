@@ -54,7 +54,7 @@ export function CTASectionV2() {
 
                             {/* Right: Dynamic CTAs */}
                             <div className="lg:col-span-5 flex flex-col gap-4">
-                                <Button asChild className="w-full h-14 md:h-20 rounded-2xl md:rounded-3xl bg-secondary hover:bg-white hover:text-secondary text-white text-[10px] md:text-[14px] font-extrabold uppercase tracking-[0.3em] transition-all duration-500 shadow-xl shadow-secondary/20 group border-none">
+                                <Button asChild className="w-full h-14 md:h-20 rounded-2xl md:rounded-3xl bg-white hover:bg-secondary text-secondary hover:text-white text-[10px] md:text-[14px] font-extrabold uppercase tracking-[0.3em] transition-all duration-500 shadow-xl shadow-white/5 group border-none">
                                     <Link href="/contact" className="flex items-center justify-center gap-3">
                                         Initiate Consultation
                                         <ArrowRight className="h-4 w-4 md:h-5 md:w-5 transition-transform group-hover:translate-x-2" />

@@ -96,7 +96,7 @@ export function ContactSection() {
                                     <textarea className="w-full bg-white border border-slate-200 rounded-2xl p-5 focus:border-secondary outline-none shadow-none min-h-[120px] text-slate-900 placeholder:text-slate-400 transition-all resize-none font-light text-sm" placeholder="Briefly describe your hiring goals..." />
                                 </div>
 
-                                <Button className="w-full bg-secondary hover:bg-slate-900 text-white font-bold h-14 md:h-16 rounded-2xl text-[11px] md:text-[12px] tracking-[0.4em] shadow-xl shadow-secondary/20 transition-all group/btn border-none uppercase mt-4">
+                                <Button className="w-full bg-gradient-to-r from-secondary to-[#154185] hover:bg-slate-900 text-white font-bold h-14 md:h-16 rounded-2xl text-[11px] md:text-[12px] tracking-[0.4em] shadow-xl shadow-secondary/20 transition-all group/btn border-none uppercase mt-4">
                                     INITIATE STRATEGY SESSION
                                     <ArrowRight className="ml-3 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
                                 </Button>
@@ -110,7 +110,7 @@ export function ContactSection() {
                             {[
                                 { icon: Mail, label: "Email", value: "info@novotionrpo.com" },
                                 { icon: Phone, label: "Phone", value: "+44 20 3996 7029" },
-                                { icon: MapPin, label: "UK Office", value: "3 Hornton Pl, London" },
+                                { icon: MapPin, label: "UK Office", value: "First Floor Office, 3 Hornton Place, London, W8 4LZ, United Kingdom" },
                                 { icon: Clock, label: "Availability", value: "24/7 Deployment" }
                             ].map((item, idx) => (
                                 <div key={idx} className="flex items-center gap-4 group">
