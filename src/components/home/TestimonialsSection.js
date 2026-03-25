@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
 
 const testimonials = [
-  { quote: "Novotion transformed our hiring process completely. We reduced time-to-hire by 45%.", author: "Sarah Mitchell", title: "VP of Human Resources", company: "TechVentures Inc.", rating: 5 },
+  { quote: "Noltven transformed our hiring process completely. We reduced time-to-hire by 45%.", author: "Sarah Mitchell", title: "VP of Human Resources", company: "TechVentures Inc.", rating: 5 },
   { quote: "Their strategic approach to RPO helped us scale from 50 to 200 employees in 18 months.", author: "James Thompson", title: "CEO", company: "HealthFirst Solutions", rating: 5 },
   { quote: "The cost savings alone justified the partnership. Quality exceeded our expectations.", author: "Michael Chen", title: "Director of Talent Acquisition", company: "GlobalFinance Corp", rating: 5 },
 ];
@@ -13,7 +13,7 @@ const testimonials = [
 export function TestimonialsSection() {
   return (
     <Section variant="dark">
-      <SectionHeader badge="Testimonials" title="What Our Clients Say" description="Hear from enterprise leaders who have transformed their talent acquisition with Novotion RPO." />
+      <SectionHeader badge="Testimonials" title="What Our Clients Say" description="Hear from enterprise leaders who have transformed their talent acquisition with Noltven RPO." />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {testimonials.map((testimonial, index) => (
           <motion.div

@@ -38,15 +38,12 @@ export function ContactSection() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-[100px] pointer-events-none" />
 
                             <div className="relative z-10">
-                                <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
-                                    <Sparkles className="h-4 w-4" />
-                                    Connect with us
-                                </div>
-
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tighter leading-none">
-                                    Initiate Your <br />
-                                    <span className="text-secondary">Growth Audit</span>
+                                <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter leading-none">
+                                    Connect <span className="text-secondary">With Us</span>
                                 </h2>
+                                <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
+                                    Initiate Your Growth Audit
+                                </p>
 
                                 <p className="text-slate-400 text-sm md:text-base font-light leading-relaxed max-w-sm italic border-l border-secondary/30 pl-6">
                                     "Ready to cut the overhead, fill your pipeline, and build systems that actually work?

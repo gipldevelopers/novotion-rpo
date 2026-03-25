@@ -17,7 +17,7 @@ export function ServicesHero({
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/assets/services_inner_banner_bg.png"
-                    alt="Novotion Services"
+                    alt="Noltven Services"
                     fill
                     className="object-cover opacity-80 scale-105"
                     priority

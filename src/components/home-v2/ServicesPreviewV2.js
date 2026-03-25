@@ -73,14 +73,12 @@ export function ServicesPreview() {
                 
                 {/* Section Header - Centered */}
                 <div className="mb-8 md:mb-10 lg:mb-12 text-center">
-                    <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
-                        <Sparkles className="h-4 w-4" />
-                        Our Solutions
-                    </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-slate-900 tracking-tighter leading-[1] font-display">
-                        All Five Services. <br />
-                        <span className="text-secondary">One Trusted Partner.</span>
+                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter leading-none">
+                        Our <span className="text-secondary">Solutions</span>
                     </h2>
+                    <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
+                        All Five Services. One Trusted Partner.
+                    </p>
                 </div>
 
                 {/* Console Card */}
@@ -143,12 +141,12 @@ export function ServicesPreview() {
                                                 })()}
                                             </div>
                                             <div className="flex flex-col">
-                                                <span className="text-[8px] md:text-[9px] font-bold text-secondary uppercase tracking-[0.4em] mb-0.5 opacity-70">
-                                                    Technical Strategy
-                                                </span>
-                                                <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-[2.25rem] font-bold text-slate-900 tracking-tight leading-none font-display">
-                                                    {services[activeTab].title}
+                                                <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-[2.25rem] font-bold text-slate-900 tracking-tight leading-none font-display mb-2">
+                                                    {services[activeTab].title.split(' ').slice(0, -1).join(' ')} <span className="text-secondary">{services[activeTab].title.split(' ').slice(-1)}</span>
                                                 </h3>
+                                                <p className="text-secondary text-[10px] md:text-[11px] font-bold uppercase tracking-[0.4em]">
+                                                    Technical Strategy
+                                                </p>
                                             </div>
                                         </div>
 

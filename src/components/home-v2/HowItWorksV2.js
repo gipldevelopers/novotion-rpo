@@ -37,14 +37,12 @@ export function HowItWorksV2() {
 
                 {/* Section Header */}
                 <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
-                    <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
-                        <Sparkles className="h-4 w-4" />
-                        Our Process
-                    </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tighter leading-[1.15]">
-                        The Strategic <br />
-                        <span className="text-secondary">Execution Lifecycle</span>
+                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter leading-none">
+                        Our <span className="text-secondary">Process</span>
                     </h2>
+                    <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
+                        The Strategic Execution Lifecycle
+                    </p>
                     <p className="text-slate-500 text-xs md:text-sm font-normal leading-relaxed max-w-2xl mx-auto">
                         A structured, four-phase delivery model designed to eliminate friction, drive consistency, and ensure every service we provide delivers measurable results.
                     </p>
@@ -92,14 +90,14 @@ export function HowItWorksV2() {
 
                                     {/* Content Card */}
                                     <div className="bg-transparent group-hover:bg-white lg:p-4 rounded-[2rem] transition-all duration-500 lg:group-hover:shadow-xl lg:group-hover:shadow-slate-200/40 relative z-10 lg:group-hover:-translate-y-2 w-full border border-transparent lg:group-hover:border-slate-200">
-                                        <div className="inline-flex items-center gap-2 mb-2">
-                                            <span className="text-[10px] font-bold text-secondary uppercase tracking-[0.2em] opacity-0 lg:group-hover:opacity-100 transition-opacity">
+                                        <div className="flex flex-col mb-4">
+                                            <h3 className="text-base md:text-lg lg:text-xl font-bold text-slate-900 tracking-tight group-hover:text-secondary transition-colors leading-tight mb-2">
+                                                {step.title.split(' ').slice(0, -1).join(' ')} <span className="text-secondary">{step.title.split(' ').slice(-1)}</span>
+                                            </h3>
+                                            <p className="text-secondary text-[9px] font-bold uppercase tracking-[0.3em]">
                                                 Phase 0{index + 1}
-                                            </span>
+                                            </p>
                                         </div>
-                                        <h3 className="text-base md:text-lg lg:text-xl font-bold text-slate-900 mb-2 tracking-tight group-hover:text-secondary transition-colors leading-tight">
-                                            {step.title}
-                                        </h3>
                                         <p className="text-slate-500 text-[11px] md:text-sm font-light leading-relaxed max-w-full lg:max-w-[240px] opacity-100 lg:group-hover:text-slate-600 transition-colors px-2 lg:px-0">
                                             {step.description}
                                         </p>

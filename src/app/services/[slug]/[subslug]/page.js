@@ -51,108 +51,159 @@ export default function ServiceSubDetail() {
         );
     }
 
+    const isMarketing = service.slug === 'digital-marketing';
+
     return (
         <Layout>
-            <main className="bg-white min-h-screen pt-32 pb-16">
-                <div className="container-premium">
-                    {/* Back Link */}
-                    <Link 
-                        href={`/services/${slug}`}
-                        className="inline-flex items-center gap-2 text-slate-400 hover:text-secondary mb-12 transition-colors font-bold uppercase tracking-[0.2em] text-[10px]"
-                    >
-                        <ArrowLeft className="h-4 w-4" />
-                        Back to {service.id === 'recruitment' ? 'Recruitment Services' : 'Service Overview'}
-                    </Link>
-
-                    <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
-                        {/* Left Column: Hero + Content */}
-                        <div className="lg:col-span-8 space-y-16">
-                            {/* Hero Section of Sub-page */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                className="space-y-3"
-                            >
-                                <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-secondary/5 border border-secondary/10 text-[10px] font-black uppercase tracking-widest text-secondary">
-                                    <Sparkles className="h-3 w-3" />
-                                    Strategic Pillar
-                                </div>
-                                <h1 className="text-2xl md:text-4xl font-black text-slate-900 leading-[1.1] tracking-tighter">
-                                    {subService.title}
-                                </h1>
-                                <p className="text-lg md:text-xl text-slate-500 font-light leading-relaxed italic border-l-4 border-secondary/20 pl-8 text-balance">
-                                    {subService.head}
-                                </p>
-                            </motion.div>
-
-                            {/* Mission Description */}
-                            <motion.section
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                viewport={{ once: true }}
-                                className="space-y-8"
-                            >
-                                <div className="prose prose-slate prose-lg max-w-none">
-                                    {subService.description.split('\n\n').map((paragraph, i) => (
-                                        <p key={i} className="text-slate-600 leading-relaxed font-light">
-                                            {paragraph}
-                                        </p>
-                                    ))}
-                                </div>
-                            </motion.section>
-
-                            {/* Execution Engine - How We Work */}
-                            {subService.howWeWork && (
-                                <section className="space-y-10">
-                                    <h2 className="text-lg font-bold text-slate-900 tracking-tight flex items-center gap-3">
-                                        <Zap className="h-4 w-4 text-secondary" />
-                                        How We Work: 
-                                    </h2>
-                                    <div className="grid gap-4">
-                                        {subService.howWeWork.map((step, i) => (
-                                            <div key={i} className="p-6 rounded-2xl bg-slate-50 border border-slate-100 flex gap-6 items-start group hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300">
-                                                <div className="mt-1 w-8 h-8 flex-shrink-0 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-secondary font-black text-xs shadow-sm group-hover:bg-secondary group-hover:text-white transition-all">
-                                                    0{i+1}
-                                                </div>
-                                                <p className="text-slate-700 font-medium leading-relaxed">
-                                                    {step.includes(':') ? (
-                                                        <>
-                                                            <strong className="text-slate-900">{step.split(':')[0]}:</strong>
-                                                            {step.split(':').slice(1).join(':')}
-                                                        </>
-                                                    ) : step}
-                                                </p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </section>
-                            )}
-
+            <main className="bg-white min-h-screen pt-32 pb-0">
+                {/* HERO SECTION */}
+                <section className="relative py-24 overflow-hidden text-center bg-white border-b border-slate-50">
+                    {/* Background Decoration Circles - Atmospheric Glow Group */}
+                    {isMarketing && (
+                        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center">
+                            <motion.div 
+                                animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
+                                transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+                                className="absolute w-[1200px] h-[1000px] bg-blue-50/60 rounded-[100%] blur-[120px] -translate-y-[20%]"
+                            />
+                            <motion.div 
+                                animate={{ scale: [1, 1.2, 1], opacity: [0.05, 0.15, 0.05] }}
+                                transition={{ duration: 20, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                                className="absolute w-[1000px] h-[900px] bg-secondary/10 rounded-[100%] blur-[100px] translate-x-[10%] translate-y-[10%]"
+                            />
                         </div>
+                    )}
 
-                        {/* Right Column: Sticky Sidebar CTA */}
-                        <div className="lg:col-span-4 lg:sticky lg:top-32 h-fit">
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                className="p-8 md:p-10 rounded-[3rem] bg-slate-50 border border-slate-200 text-center space-y-8 shadow-2xl shadow-slate-200/50"
-                            >
-                                <div className="space-y-4">
-                                    <h3 className="text-lg font-bold text-slate-900">Ready to Leverage This Expansion?</h3>
-                                    <p className="text-slate-500 text-sm font-light">
-                                        Let's discuss how we can integrate this specific execution layer into your current workflow.
-                                    </p>
-                                </div>
-                                <Button asChild className="w-full bg-secondary hover:bg-slate-900 text-white h-16 rounded-2xl border-none transition-all shadow-xl shadow-secondary/10">
-                                    <Link href="/contact" className="flex items-center justify-center gap-3 text-[11px] font-black tracking-widest uppercase">
-                                        Schedule Discovery <ArrowRight className="h-5 w-5" />
-                                    </Link>
-                                </Button>
-                                <p className="text-[10px] text-slate-400 font-medium">No retainers. Flexible scaling. Pure execution.</p>
-                            </motion.div>
-                        </div>
+                    <div className="container-premium relative z-10">
+                        <Link 
+                            href={`/services/${slug}`}
+                            className="inline-flex items-center gap-2 text-slate-400 hover:text-secondary mb-12 transition-colors font-black uppercase tracking-[0.3em] text-[10px]"
+                        >
+                            <ArrowLeft className="h-4 w-4" />
+                            Return to {service.shortTitle} Overview
+                        </Link>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="max-w-4xl mx-auto"
+                        >
+                            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-secondary/10 text-secondary text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                                <Sparkles className="h-4 w-4" />
+                                Strategic Pillar
+                            </div>
+                            
+                            <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter leading-tight mb-8">
+                                {subService.title.split(' ').slice(0, -1).join(' ')} <span className="relative inline-block text-secondary">
+                                    {subService.title.split(' ').slice(-1)}
+                                    <svg className="absolute -bottom-2 left-0 w-full h-3 text-secondary/60" viewBox="0 0 200 20" preserveAspectRatio="none">
+                                        <motion.path 
+                                            initial={{ pathLength: 0 }}
+                                            animate={{ pathLength: 1 }}
+                                            transition={{ duration: 1, delay: 0.5 }}
+                                            d="M5,15 Q100,25 195,15" 
+                                            stroke="currentColor" 
+                                            strokeWidth="6" 
+                                            fill="none" 
+                                            strokeLinecap="round" 
+                                        />
+                                    </svg>
+                                </span>
+                            </h1>
+                            
+                            <p className="text-lg md:text-xl text-slate-500 font-light leading-relaxed max-w-3xl mx-auto">
+                                {subService.head || subService.description.split('\n')[0]}
+                            </p>
+                        </motion.div>
                     </div>
-                </div>
+                </section>
+
+                {/* HOW WE WORK - GRID LAYOUT */}
+                {subService.howWeWork && (
+                    <section className="py-24 bg-[#f4faff] relative overflow-hidden">
+                        <div className="container-premium relative z-10">
+                            <div className="text-center max-w-2xl mx-auto mb-20">
+                                <div className="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4">How We Work</div>
+                                <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-slate-900 leading-tight">
+                                    Delivery in {subService.howWeWork.length} <span className="relative inline-block text-secondary">
+                                        Effortless
+                                        <svg className="absolute -bottom-2 left-0 w-full h-2 text-secondary/40" viewBox="0 0 200 20" preserveAspectRatio="none">
+                                            <motion.path 
+                                                initial={{ pathLength: 0 }}
+                                                whileInView={{ pathLength: 1 }}
+                                                viewport={{ once: true }}
+                                                d="M5,15 Q100,25 195,15" 
+                                                stroke="currentColor" 
+                                                strokeWidth="4" 
+                                                fill="none" 
+                                            />
+                                        </svg>
+                                    </span> Steps
+                                </h2>
+                            </div>
+
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {subService.howWeWork.map((step, i) => {
+                                    const hasColon = step.includes(':');
+                                    const title = hasColon ? step.split(':')[0] : `Phase ${i + 1}`;
+                                    const desc = hasColon ? step.split(':').slice(1).join(':').trim() : step;
+                                    
+                                    return (
+                                        <motion.div 
+                                            key={i}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: i * 0.1 }}
+                                            className="p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(59,130,246,0.15)] transition-all duration-500 group relative overflow-hidden"
+                                        >
+                                            <div className="absolute top-8 right-10 text-4xl font-black text-secondary/5 group-hover:text-secondary/10 transition-colors">
+                                                0{i + 1}
+                                            </div>
+                                            <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-8 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white transition-all duration-500">
+                                                <Target className="h-6 w-6" />
+                                            </div>
+                                            <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-4 tracking-tighter">
+                                                {title}
+                                            </h3>
+                                            <p className="text-slate-500 text-sm font-normal leading-relaxed opacity-80">
+                                                {desc}
+                                            </p>
+                                        </motion.div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </section>
+                )}
+
+                {/* FINAL CTA - FULL WIDTH */}
+                <section className="relative py-24 md:py-32 bg-gradient-to-r from-[#2563eb] to-[#3b82f6] overflow-hidden text-center text-white">
+                    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-40">
+                        <div className="absolute top-0 right-0 w-[60%] h-[100%] bg-white/10 skew-x-[45deg] translate-x-1/3" />
+                        <div className="absolute bottom-0 left-0 w-[60%] h-[100%] bg-white/10 -skew-x-[45deg] -translate-x-1/3" />
+                    </div>
+                    
+                    <div className="container-premium relative z-10 max-w-4xl mx-auto px-4">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-8 tracking-tighter leading-tight">
+                                Ready to scale your brand <br className="hidden md:block" /> to its full potential?
+                            </h2>
+                            <p className="text-white/80 text-base md:text-lg mb-12 font-light max-w-2xl mx-auto leading-relaxed">
+                                Join the elite group of brands that leverage Noltven's {subService.title} <br className="hidden md:block" /> to own their market and drive consistent growth.
+                            </p>
+                            <Button asChild className="bg-white text-[#2563eb] hover:bg-slate-900 hover:text-white h-16 px-12 rounded-2xl font-black uppercase tracking-[0.2em] transition-all border-none text-[13px] group/btn shadow-xl shadow-black/10">
+                                <Link href="/contact" className="flex items-center gap-3">
+                                    Claim Your Strategy Session
+                                </Link>
+                            </Button>
+                        </motion.div>
+                    </div>
+                </section>
             </main>
         </Layout>
     );

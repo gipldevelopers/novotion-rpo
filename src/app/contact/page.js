@@ -97,13 +97,12 @@ export default function Contact() {
                 className="lg:col-span-4 space-y-12"
               >
                 <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-6">
-                    <MapPin className="h-4 w-4" />
+                  <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter leading-none">
                     Operational Nodes
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tighter leading-tight mb-8">
-                    Two Locations. <br /> One Unified Team.
                   </h2>
+                  <p className="text-secondary text-lg md:text-xl font-bold uppercase tracking-[0.3em] mb-8">
+                    Two Locations. One Unified Team.
+                  </p>
                 </div>
 
                 <div className="space-y-8">

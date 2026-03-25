@@ -7,6 +7,8 @@ import { ServiceDetailContent } from "@/components/services/ServiceDetailContent
 import { DigitalMarketingSpecialContent } from "@/components/services/DigitalMarketingSpecialContent";
 import { AISpecialContent } from "@/components/services/AISpecialContent";
 import { FinanceSpecialContent } from "@/components/services/FinanceSpecialContent";
+import { RecruitmentSpecialContent } from "@/components/services/RecruitmentSpecialContent";
+import { BusinessDevelopmentSpecialContent } from "@/components/services/BusinessDevelopmentSpecialContent";
 import { ServiceFAQ } from "@/components/services/ServiceFAQ";
 import { servicesData } from "@/data/servicesData";
 
@@ -48,11 +50,13 @@ export default function ServiceDetail() {
     const isDigitalMarketing = service.slug === "digital-marketing";
     const isAIAutomation = service.slug === "ai-automation";
     const isFinance = service.slug === "accounting-finance";
+    const isRecruitment = service.slug === "recruitment-services";
+    const isBizDev = service.slug === "business-development";
 
     return (
         <Layout>
             <main className="bg-white">
-                {!isDigitalMarketing && !isAIAutomation && !isFinance && (
+                {!isDigitalMarketing && !isAIAutomation && !isFinance && !isRecruitment && !isBizDev && (
                     <ServicesHero
                         title={service.title}
                         description={service.description}
@@ -65,10 +69,14 @@ export default function ServiceDetail() {
                     <AISpecialContent service={service} />
                 ) : isFinance ? (
                     <FinanceSpecialContent service={service} />
+                ) : isRecruitment ? (
+                    <RecruitmentSpecialContent service={service} />
+                ) : isBizDev ? (
+                    <BusinessDevelopmentSpecialContent service={service} />
                 ) : (
                     <ServiceDetailContent service={service} />
                 )}
-                {!isDigitalMarketing && !isAIAutomation && !isFinance && <ServiceFAQ faqs={service.faqs} />}
+                {!isDigitalMarketing && !isAIAutomation && !isFinance && !isRecruitment && !isBizDev && <ServiceFAQ faqs={service.faqs} />}
             </main>
         </Layout>
     );

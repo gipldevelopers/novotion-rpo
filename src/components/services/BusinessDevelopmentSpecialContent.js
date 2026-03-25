@@ -5,40 +5,36 @@ import {
     ArrowRight, 
     Sparkles, 
     Zap, 
-    BookOpen, 
-    CreditCard, 
-    Users, 
-    BarChart3,
-    PieChart,
-    Check,
-    Mail,
-    TrendingUp,
+    Briefcase, 
+    Target, 
+    TrendingUp, 
+    PhoneCall, 
     Globe,
-    Target,
-    Calculator
+    Award,
+    Layers,
+    Rocket
 } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-const FinanceIcon = ({ type }) => {
+const BizDevIcon = ({ type }) => {
     switch (type) {
-        case "accounting-outsourcing-reporting": return <Calculator className="w-6 h-6" />;
-        case "fractional-cfo-services": return <BarChart3 className="w-6 h-6" />;
-        case "payroll-tax-management": return <CreditCard className="w-6 h-6" />;
-        case "financial-forecasting-audit": return <TrendingUp className="w-6 h-6" />;
-        case "entity-setup-scaling": return <Globe className="w-6 h-6" />;
-        default: return <PieChart className="w-6 h-6" />;
+        case "b2b-sales-acceleration": return <Rocket className="w-6 h-6" />;
+        case "lead-generation-outreach": return <PhoneCall className="w-6 h-6" />;
+        case "market-entry-expansion": return <Globe className="w-6 h-6" />;
+        case "strategic-partnerships": return <Layers className="w-6 h-6" />;
+        default: return <Briefcase className="w-6 h-6" />;
     }
 };
 
 const pillarIcons = {
-    '01': <Calculator className="w-6 h-6" />,
-    '02': <TrendingUp className="w-6 h-6" />,
-    '03': <Target className="w-6 h-6" />
+    '01': <Target className="w-6 h-6" />,
+    '02': <Globe className="w-6 h-6" />,
+    '03': <TrendingUp className="w-6 h-6" />
 };
 
-export function FinanceSpecialContent({ service }) {
+export function BusinessDevelopmentSpecialContent({ service }) {
     if (!service) return null;
 
     return (
@@ -52,19 +48,20 @@ export function FinanceSpecialContent({ service }) {
                         className="max-w-4xl mx-auto mb-16"
                     >
                         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 tracking-tighter leading-tight mb-8">
-                            Finance That <br className="hidden md:block" />
-                            Accelerates <span className="relative inline-block text-secondary">
-                                Growth
+                            Sales Pipelines <br className="hidden md:block" />
+                            Built for <span className="relative inline-block text-secondary">
+                                Speed
                                 <motion.span 
                                     initial={{ scaleX: 0 }}
                                     animate={{ scaleX: 1 }}
                                     transition={{ delay: 0.5, duration: 0.8 }}
                                     className="absolute -bottom-2 left-0 w-full h-1.5 bg-secondary/30 rounded-full origin-left"
                                 />
-                            </span>, Not Just Costs.
+                            </span> & Scale.
                         </h1>
                         <p className="text-base md:text-lg text-slate-500 font-light leading-relaxed max-w-3xl mx-auto mb-10">
-                            {service.description}
+                            Growth isn't a game of luck; it's a game of volume and conversion. We build high-output sales
+                            engines that deliver predictable, scalable revenue every single month.
                         </p>
                         
                         <Button asChild className="bg-secondary hover:bg-slate-900 text-white h-14 px-10 rounded-xl font-bold uppercase tracking-widest transition-all shadow-xl shadow-secondary/20 border-none text-[13px] group/btn">
@@ -75,7 +72,7 @@ export function FinanceSpecialContent({ service }) {
                         </Button>
                     </motion.div>
 
-                    {/* Dashboard Graphic */}
+                    {/* Graphic/Hero Image */}
                     <motion.div 
                         initial={{ scale: 0.95, opacity: 0, y: 40 }}
                         animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -85,8 +82,8 @@ export function FinanceSpecialContent({ service }) {
                         <div className="absolute inset-0 bg-secondary/10 rounded-[4rem] blur-[120px] scale-90 pointer-events-none" />
                         <div className="relative rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border border-slate-200/50 bg-white aspect-[16/10]">
                             <Image 
-                                src="/assets/finance-main.png"
-                                alt="Financial Dashboard"
+                                src="/assets/hero/bizdev.png"
+                                alt="Business Development Growth Chart"
                                 fill
                                 className="object-cover"
                                 priority
@@ -105,15 +102,15 @@ export function FinanceSpecialContent({ service }) {
                             what we do
                         </div>
                         <h2 className="text-3xl md:text-[2.75rem] font-bold tracking-tighter text-slate-900">
-                            Tailored Finance Pillars
+                            Tailored Growth Pillars
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
                         {service.whatYouGet?.map((item, i) => {
                             const itemSlug = item.slug || item.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || `pillar-${i + 1}`;
                             const colors = [
-                                "bg-emerald-600", "bg-teal-500", "bg-green-500", "bg-blue-600", "bg-indigo-600"
+                                "bg-blue-600", "bg-indigo-500", "bg-sky-500", "bg-slate-900"
                             ];
                             return (
                                 <motion.div 
@@ -125,7 +122,7 @@ export function FinanceSpecialContent({ service }) {
                                     className="p-8 rounded-[2rem] bg-white border border-slate-100 hover:border-secondary/20 transition-all duration-500 hover:shadow-xl hover:shadow-slate-200/50 group"
                                 >
                                     <div className={`w-10 h-10 rounded-xl ${colors[i % colors.length]} flex items-center justify-center text-white mb-6 shadow-lg shadow-black/5`}>
-                                        <FinanceIcon type={itemSlug} />
+                                        <BizDevIcon type={itemSlug} />
                                     </div>
                                     <h4 className="text-lg font-bold text-slate-900 mb-3 tracking-tight">
                                         {item.title}
@@ -156,11 +153,11 @@ export function FinanceSpecialContent({ service }) {
                             viewport={{ once: true }}
                         >
                             <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter leading-tight mb-8">
-                                Why Our Finance <br />
+                                Why Our Growth Approach <br />
                                 <span className="text-secondary italic">Outperforms</span> the 99%
                             </h2>
                             <p className="text-lg text-slate-500 font-light leading-relaxed mb-10 max-w-lg">
-                                We turn your finance function from a static overhead into a decision-driving growth machine. Our reporting isn't about looking back; it's about looking forward and planning your next leap.
+                                Most companies fail because they depend on referrals. We provide you with a systematic, outbound, and inbound engine that makes growth a decision, not an accident.
                             </p>
                             <Button asChild className="bg-secondary hover:bg-slate-900 text-white h-14 px-8 rounded-xl font-bold uppercase tracking-widest transition-all border-none text-[12px] group/btn">
                                 <Link href="/contact" className="flex items-center gap-3">
@@ -176,12 +173,11 @@ export function FinanceSpecialContent({ service }) {
                             viewport={{ once: true }}
                             className="relative"
                         >
-                            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl z-10 bg-slate-100">
+                            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl z-10 bg-slate-100 aspect-[5/4]">
                                 <Image 
-                                    src="/assets/about_mission.png" 
-                                    alt="Global Strategy Team" 
-                                    width={600} 
-                                    height={400} 
+                                    src="/assets/hero/bizdev.png" 
+                                    alt="Revenue Metrics Team" 
+                                    fill
                                     className="object-cover"
                                 />
                             </div>
@@ -198,8 +194,8 @@ export function FinanceSpecialContent({ service }) {
                                         <TrendingUp className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <p className="text-2xl font-black text-slate-900">£100M+</p>
-                                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Managed Capital</p>
+                                        <p className="text-2xl font-black text-slate-900">300%+</p>
+                                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Pipeline Pipeline Growth</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -219,8 +215,8 @@ export function FinanceSpecialContent({ service }) {
                                         ))}
                                     </div>
                                     <div>
-                                        <p className="text-xs font-black text-slate-900">100%</p>
-                                        <p className="text-[9px] font-bold text-slate-400 uppercase">Compliance Score</p>
+                                        <p className="text-xs font-black text-slate-900">50m+</p>
+                                        <p className="text-[9px] font-bold text-slate-400 uppercase">Quarterly Revenue Influence</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -230,9 +226,9 @@ export function FinanceSpecialContent({ service }) {
                     {/* Three-Column Pillars */}
                     <div className="grid md:grid-cols-3 gap-8 mt-32">
                         {[
-                            { id: '01', title: 'Data Synergy', desc: 'Fragmented accounts don\'t grow businesses. We align every metric, vendor and tool into one clear financial story.' },
-                            { id: '02', title: 'Forward-Ready Audit', desc: 'We don\'t just count numbers; we audit your path. Every financial report is a strategy session for what\'s next.' },
-                            { id: '03', title: 'Capital Optimization', desc: 'We turn your branding into a conversion asset and your finance into a fuel source for your next hire.' }
+                            { id: '01', title: 'Target Market Audit', desc: 'We don\'t waste time. We audit where your highest value customers are and build a direct path to them.' },
+                            { id: '02', title: 'Global Lead Flow', desc: 'Own your market internationally. We open doors across Europe, MENA and US with local expertise.' },
+                            { id: '03', title: 'Asset Built conversion', desc: 'Turning your business into a conversion asset. We turn every lead into a calculated revenue session.' }
                         ].map((item, idx) => (
                             <motion.div
                                 key={idx}
@@ -269,10 +265,10 @@ export function FinanceSpecialContent({ service }) {
                         
                         <div className="relative z-10 max-w-3xl mx-auto">
                             <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tighter leading-tight">
-                                Ready to fuel your next growth cycle?
+                                Ready to accelerate your global expansion?
                             </h2>
                             <p className="text-white/80 text-sm md:text-base mb-10 font-light">
-                                Get your finances in order and your strategy in motion. Let's talk about mapping your international capital reach today.
+                                Stop hoping for growth. Plan it. Build your revenue engine with Noltven's strategic expansion network.
                             </p>
                             <Button asChild className="bg-white text-secondary hover:bg-slate-900 hover:text-white h-16 px-12 rounded-2xl font-bold uppercase tracking-widest transition-all border-none text-[13px] group/btn">
                                 <Link href="/contact" className="flex items-center gap-3">

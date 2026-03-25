@@ -38,17 +38,12 @@ export function AboutPresence() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <motion.div
-                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-8"
-                        >
-                            <Sparkles className="h-4 w-4" />
-                            Global Presence
-                        </motion.div>
-
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 tracking-tighter">
-                            Built to Operate Anywhere. <br />
-                            <span className="text-secondary">Built to Deliver Everywhere.</span>
+                        <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter leading-none">
+                            Global <span className="text-secondary">Presence</span>
                         </h2>
+                        <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
+                            Built to Operate Anywhere. Built to Deliver Everywhere.
+                        </p>
 
                         <div className="space-y-8">
                             {locations.map((loc, idx) => (

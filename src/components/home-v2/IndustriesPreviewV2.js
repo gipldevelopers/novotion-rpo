@@ -83,20 +83,12 @@ export function IndustriesPreview() {
 
                 {/* Header Section */}
                 <div className="text-center max-w-4xl mx-auto mb-6 md:mb-8 shrink-0">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                        className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary text-white text-[8px] md:text-[9px] font-bold uppercase tracking-[0.3em] mb-3 shadow-lg shadow-secondary/20"
-                    >
-                        <Sparkles className="h-3 md:h-3.5 w-3 md:w-3.5" />
-                        Global Segments
-                    </motion.div>
-
-                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tighter leading-tight font-display">
-                        Industries We <span className="text-secondary italic">Serve</span>
+                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter leading-none">
+                        Global <span className="text-secondary">Segments</span>
                     </h2>
+                    <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
+                        Industries We Serve
+                    </p>
                 </div>
 
                 {/* Adaptive Layout: 2-Column Grid on Mobile, Cinematic Pillars on Desktop */}

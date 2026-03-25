@@ -40,14 +40,12 @@ export function ProblemSection() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
                             >
-                                <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 md:mb-10 shadow-xl shadow-secondary/20">
-                                    <Sparkles className="h-4 w-4" />
-                                    The Challenge
-                                </div>
-                                <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold text-slate-900 mb-4 md:mb-6 tracking-tighter leading-[1.12] font-display">
-                                    What Broken Operations <br />
-                                    <span className="text-secondary italic">Actually Cost You</span>
+                                <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter leading-none">
+                                    The <span className="text-secondary">Challenge</span>
                                 </h2>
+                                <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
+                                    What Broken Operations Actually Cost You
+                                </p>
                                 <p className="text-slate-600 text-sm md:text-base lg:text-lg font-normal leading-relaxed max-w-lg">
                                     Most businesses don't realise how much they're losing until it's too late. Overpaying for the wrong hires, throwing money at marketing that doesn't land, chasing leads that go cold, doing everything manually, and never really knowing where the money's going. It adds up fast. And it doesn't have to be this way.
                                 </p>

@@ -29,20 +29,18 @@ export function AboutPhilosophy() {
         <section className="py-20 md:py-32 bg-white relative overflow-hidden">
             <div className="container-premium relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-20 md:mb-24">
-                    <motion.div
+                    <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-8"
+                        className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter"
                     >
-                        <Sparkles className="h-4 w-4" />
-                        Our Philosophy
-                    </motion.div>
+                        Our <span className="text-secondary">Philosophy</span>
+                    </motion.h2>
 
-                    <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 tracking-tighter">
-                        Growth should not be accidental.<br />
-                        <span className="text-secondary">It should be engineered.</span>
-                    </h2>
+                    <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
+                        Growth should not be accidental. It should be engineered.
+                    </p>
 
                     <p className="text-slate-500 text-base md:text-lg font-light leading-relaxed">
                         Sustainable growth isn't about more people or harder work it's about better systems.

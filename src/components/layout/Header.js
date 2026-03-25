@@ -63,7 +63,7 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-90 relative z-10">
             <Image
               src="/assets/noltven-logo-1.svg"
-              alt="Novotion Logo"
+              alt="Noltven Logo"
               width={240}
               height={40}
               className="h-8 md:h-8 w-auto"

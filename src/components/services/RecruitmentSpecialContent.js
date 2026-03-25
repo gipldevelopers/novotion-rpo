@@ -5,40 +5,36 @@ import {
     ArrowRight, 
     Sparkles, 
     Zap, 
-    BookOpen, 
-    CreditCard, 
     Users, 
-    BarChart3,
-    PieChart,
-    Check,
-    Mail,
+    Search, 
+    Briefcase, 
+    UserPlus, 
     TrendingUp,
     Globe,
     Target,
-    Calculator
+    Award
 } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-const FinanceIcon = ({ type }) => {
+const RecruitmentIcon = ({ type }) => {
     switch (type) {
-        case "accounting-outsourcing-reporting": return <Calculator className="w-6 h-6" />;
-        case "fractional-cfo-services": return <BarChart3 className="w-6 h-6" />;
-        case "payroll-tax-management": return <CreditCard className="w-6 h-6" />;
-        case "financial-forecasting-audit": return <TrendingUp className="w-6 h-6" />;
-        case "entity-setup-scaling": return <Globe className="w-6 h-6" />;
-        default: return <PieChart className="w-6 h-6" />;
+        case "executive-search": return <Award className="w-6 h-6" />;
+        case "rpo-solutions": return <Globe className="w-6 h-6" />;
+        case "contingent-workforce": return <Users className="w-6 h-6" />;
+        case "talent-strategy": return <Target className="w-6 h-6" />;
+        default: return <UserPlus className="w-6 h-6" />;
     }
 };
 
 const pillarIcons = {
-    '01': <Calculator className="w-6 h-6" />,
-    '02': <TrendingUp className="w-6 h-6" />,
-    '03': <Target className="w-6 h-6" />
+    '01': <Users className="w-6 h-6" />,
+    '02': <Search className="w-6 h-6" />,
+    '03': <Briefcase className="w-6 h-6" />
 };
 
-export function FinanceSpecialContent({ service }) {
+export function RecruitmentSpecialContent({ service }) {
     if (!service) return null;
 
     return (
@@ -52,19 +48,20 @@ export function FinanceSpecialContent({ service }) {
                         className="max-w-4xl mx-auto mb-16"
                     >
                         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 tracking-tighter leading-tight mb-8">
-                            Finance That <br className="hidden md:block" />
-                            Accelerates <span className="relative inline-block text-secondary">
-                                Growth
+                            Talent That <br className="hidden md:block" />
+                            Builds <span className="relative inline-block text-secondary">
+                                Empires
                                 <motion.span 
                                     initial={{ scaleX: 0 }}
                                     animate={{ scaleX: 1 }}
                                     transition={{ delay: 0.5, duration: 0.8 }}
                                     className="absolute -bottom-2 left-0 w-full h-1.5 bg-secondary/30 rounded-full origin-left"
                                 />
-                            </span>, Not Just Costs.
+                            </span>, Not Just Teams.
                         </h1>
                         <p className="text-base md:text-lg text-slate-500 font-light leading-relaxed max-w-3xl mx-auto mb-10">
-                            {service.description}
+                            The best growth strategy is a great team. We don't just fill seats; we find the elite 1% who
+                            drive innovation and own their roles with accountability.
                         </p>
                         
                         <Button asChild className="bg-secondary hover:bg-slate-900 text-white h-14 px-10 rounded-xl font-bold uppercase tracking-widest transition-all shadow-xl shadow-secondary/20 border-none text-[13px] group/btn">
@@ -75,7 +72,7 @@ export function FinanceSpecialContent({ service }) {
                         </Button>
                     </motion.div>
 
-                    {/* Dashboard Graphic */}
+                    {/* Dashboard/Graphic Below Hero */}
                     <motion.div 
                         initial={{ scale: 0.95, opacity: 0, y: 40 }}
                         animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -85,8 +82,8 @@ export function FinanceSpecialContent({ service }) {
                         <div className="absolute inset-0 bg-secondary/10 rounded-[4rem] blur-[120px] scale-90 pointer-events-none" />
                         <div className="relative rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border border-slate-200/50 bg-white aspect-[16/10]">
                             <Image 
-                                src="/assets/finance-main.png"
-                                alt="Financial Dashboard"
+                                src="/assets/hero/recruitment.png"
+                                alt="Elite Recruitment Dashboard"
                                 fill
                                 className="object-cover"
                                 priority
@@ -101,19 +98,19 @@ export function FinanceSpecialContent({ service }) {
                 <div className="container-premium relative z-10">
                     <div className="text-center max-w-2xl mx-auto mb-16">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-[11px] font-bold uppercase tracking-widest mb-6">
-                            <TrendingUp className="h-3.5 w-3.5" />
+                            <Users className="h-3.5 w-3.5" />
                             what we do
                         </div>
                         <h2 className="text-3xl md:text-[2.75rem] font-bold tracking-tighter text-slate-900">
-                            Tailored Finance Pillars
+                            Tailored Recruitment Pillars
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
                         {service.whatYouGet?.map((item, i) => {
                             const itemSlug = item.slug || item.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || `pillar-${i + 1}`;
                             const colors = [
-                                "bg-emerald-600", "bg-teal-500", "bg-green-500", "bg-blue-600", "bg-indigo-600"
+                                "bg-indigo-600", "bg-blue-500", "bg-cyan-500", "bg-violet-500"
                             ];
                             return (
                                 <motion.div 
@@ -125,7 +122,7 @@ export function FinanceSpecialContent({ service }) {
                                     className="p-8 rounded-[2rem] bg-white border border-slate-100 hover:border-secondary/20 transition-all duration-500 hover:shadow-xl hover:shadow-slate-200/50 group"
                                 >
                                     <div className={`w-10 h-10 rounded-xl ${colors[i % colors.length]} flex items-center justify-center text-white mb-6 shadow-lg shadow-black/5`}>
-                                        <FinanceIcon type={itemSlug} />
+                                        <RecruitmentIcon type={itemSlug} />
                                     </div>
                                     <h4 className="text-lg font-bold text-slate-900 mb-3 tracking-tight">
                                         {item.title}
@@ -156,11 +153,11 @@ export function FinanceSpecialContent({ service }) {
                             viewport={{ once: true }}
                         >
                             <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter leading-tight mb-8">
-                                Why Our Finance <br />
-                                <span className="text-secondary italic">Outperforms</span> the 99%
+                                why our recruitment <br />
+                                approach <span className="text-secondary italic">Outperforms</span> the 99%
                             </h2>
                             <p className="text-lg text-slate-500 font-light leading-relaxed mb-10 max-w-lg">
-                                We turn your finance function from a static overhead into a decision-driving growth machine. Our reporting isn't about looking back; it's about looking forward and planning your next leap.
+                                Traditional agencies focus on speed and volume. We focus on impact and cultural alignment. We find people who don't just "do the job" but "own the job".
                             </p>
                             <Button asChild className="bg-secondary hover:bg-slate-900 text-white h-14 px-8 rounded-xl font-bold uppercase tracking-widest transition-all border-none text-[12px] group/btn">
                                 <Link href="/contact" className="flex items-center gap-3">
@@ -176,12 +173,11 @@ export function FinanceSpecialContent({ service }) {
                             viewport={{ once: true }}
                             className="relative"
                         >
-                            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl z-10 bg-slate-100">
+                            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl z-10 bg-slate-100 aspect-[5/4]">
                                 <Image 
-                                    src="/assets/about_mission.png" 
-                                    alt="Global Strategy Team" 
-                                    width={600} 
-                                    height={400} 
+                                    src="/assets/hero/recruitment.png" 
+                                    alt="Creative Growth Team" 
+                                    fill
                                     className="object-cover"
                                 />
                             </div>
@@ -198,8 +194,8 @@ export function FinanceSpecialContent({ service }) {
                                         <TrendingUp className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <p className="text-2xl font-black text-slate-900">£100M+</p>
-                                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Managed Capital</p>
+                                        <p className="text-2xl font-black text-slate-900">10k+</p>
+                                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Global Talent Reach</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -219,8 +215,8 @@ export function FinanceSpecialContent({ service }) {
                                         ))}
                                     </div>
                                     <div>
-                                        <p className="text-xs font-black text-slate-900">100%</p>
-                                        <p className="text-[9px] font-bold text-slate-400 uppercase">Compliance Score</p>
+                                        <p className="text-xs font-black text-slate-900">100k+ Profiles</p>
+                                        <p className="text-[9px] font-bold text-slate-400 uppercase">Analyzed Monthly</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -230,9 +226,9 @@ export function FinanceSpecialContent({ service }) {
                     {/* Three-Column Pillars */}
                     <div className="grid md:grid-cols-3 gap-8 mt-32">
                         {[
-                            { id: '01', title: 'Data Synergy', desc: 'Fragmented accounts don\'t grow businesses. We align every metric, vendor and tool into one clear financial story.' },
-                            { id: '02', title: 'Forward-Ready Audit', desc: 'We don\'t just count numbers; we audit your path. Every financial report is a strategy session for what\'s next.' },
-                            { id: '03', title: 'Capital Optimization', desc: 'We turn your branding into a conversion asset and your finance into a fuel source for your next hire.' }
+                            { id: '01', title: 'Audit Driven Sourcing', desc: 'We don\'t just look for skills; we audit the candidate\'s actual track record of impact and accountability.' },
+                            { id: '02', title: 'Global Delivery Network', desc: 'Our borders are open. We find you the best talent in the world, not just the best talent in your city.' },
+                            { id: '03', title: 'Unified Growth Fit', desc: 'We ensure candidates fit your data-built strategy, turning human capital into a competitive asset.' }
                         ].map((item, idx) => (
                             <motion.div
                                 key={idx}
@@ -269,10 +265,10 @@ export function FinanceSpecialContent({ service }) {
                         
                         <div className="relative z-10 max-w-3xl mx-auto">
                             <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tighter leading-tight">
-                                Ready to fuel your next growth cycle?
+                                Ready to build the future of your company?
                             </h2>
                             <p className="text-white/80 text-sm md:text-base mb-10 font-light">
-                                Get your finances in order and your strategy in motion. Let's talk about mapping your international capital reach today.
+                                Don't settle for "good enough" hires. Build a network of world-class performers with Noltven's headhunting precision.
                             </p>
                             <Button asChild className="bg-white text-secondary hover:bg-slate-900 hover:text-white h-16 px-12 rounded-2xl font-bold uppercase tracking-widest transition-all border-none text-[13px] group/btn">
                                 <Link href="/contact" className="flex items-center gap-3">

@@ -30,14 +30,12 @@ export function AdvantageSection() {
             <div className="container-premium relative z-10 w-full">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
-                    <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
-                        <Sparkles className="h-4 w-4" />
-                        Our Logic
-                    </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tighter leading-[1.12]">
-                        The Way We Solve <br />
-                        <span className="text-secondary">Real Business Problems</span>
+                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter leading-none">
+                        Our <span className="text-secondary">Logic</span>
                     </h2>
+                    <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
+                        The Way We Solve Real Business Problems
+                    </p>
 
                     <p className="text-slate-500 text-sm md:text-base font-light leading-relaxed max-w-3xl mx-auto">
                         Every business faces similar roadblocks slow hiring, marketing that doesn't convert, inconsistent sales, manual operations, and numbers that never feel fully clear. Our approach is built to remove those barriers and create systems that actually support growth.

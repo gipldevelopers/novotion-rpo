@@ -73,13 +73,12 @@ export function MetricsSection() {
 
                 {/* Title & Subtitle */}
                 <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
-                    <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
-                        <Sparkles className="h-4 w-4" />
-                        Proven Success
-                    </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tighter leading-[1.1]">
-                        Global <span className="text-secondary">Talent</span> at Speed
+                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter leading-none">
+                        Proven <span className="text-secondary">Success</span>
                     </h2>
+                    <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
+                        Global Talent at Speed
+                    </p>
                     <p className="text-xs md:text-sm lg:text-base text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed italic border-x-2 border-slate-100 px-6">
                         Quantifiable results across five key service lines from recruitment and marketing to AI automation, business growth, and financial management.
                     </p>

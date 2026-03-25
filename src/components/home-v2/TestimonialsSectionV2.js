@@ -84,14 +84,12 @@ export function TestimonialsSection({ initialData = [] }) {
             <div className="relative z-10 w-full">
                 {/* Section Header */}
                 <div className="container-premium text-center max-w-3xl mx-auto mb-12 px-4">
-                    <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
-                        <Target className="h-4 w-4" />
-                        Executive Case Studies
-                    </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-6 tracking-tighter leading-[1.12]">
-                        Proving Performance <br />
-                        <span className="text-secondary italic">Step by Step</span>
+                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter leading-none">
+                        Executive Case <span className="text-secondary">Studies</span>
                     </h2>
+                    <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
+                        Proving Performance Step by Step
+                    </p>
 
                     <p className="text-slate-500 text-sm md:text-base font-light leading-relaxed max-w-xl mx-auto">
                         Deep-dive into how our strategic framework transforms recruitment operations for market leaders globally.

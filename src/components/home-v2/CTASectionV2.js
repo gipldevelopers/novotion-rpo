@@ -36,15 +36,12 @@ export function CTASectionV2() {
 
                             {/* Left: Strategic Headline */}
                             <div className="lg:col-span-7 text-left">
-                                <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-secondary text-white text-[11px] font-bold uppercase tracking-[0.3em] mb-8 shadow-xl shadow-secondary/20">
-                                    <Sparkles className="h-4 w-4" />
-                                    Connect with us
-                                </div>
-
-                                <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tighter leading-none">
-                                    Build Your Winning  <br />
-                                    <span className="text-secondary underline decoration-secondary/30 underline-offset-8">Strategy Now </span>
+                                <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter leading-none">
+                                    Connect <span className="text-secondary text-shadow-sm shadow-secondary/20">With Us</span>
                                 </h2>
+                                <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
+                                    Build Your Winning Strategy Now
+                                </p>
 
                                 <p className="text-slate-400 text-sm md:text-base font-light max-w-xl leading-relaxed italic border-l-2 border-secondary/30 pl-6">
                                     "Join the businesses already working smarter faster hiring, stronger marketing,
