@@ -17,7 +17,7 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://www.linkedin.com/company/novotion-rpo/",
+    href: "https://www.linkedin.com/company/noltven/",
     color: "hover:bg-[#0077B5]",
   },
   {
@@ -29,7 +29,7 @@ const socialLinks = [
   {
     name: "Instagram",
     icon: Instagram,
-    href: "https://www.instagram.com/novotionrpo/",
+    href: "https://www.instagram.com/noltven/",
     color: "hover:bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]",
   },
 ];

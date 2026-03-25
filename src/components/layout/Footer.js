@@ -60,8 +60,8 @@ export function Footer() {
 
             <div className="flex items-center gap-4">
               {[
-                { icon: Linkedin, href: "https://www.linkedin.com/company/novotion-rpo/" },
-                { icon: Instagram, href: "https://www.instagram.com/novotionrpo/" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/noltven/" },
+                { icon: Instagram, href: "https://www.instagram.com/noltven/" },
                 { icon: XIcon, href: "https://x.com" }
               ].map((item, idx) => (
                 <a
