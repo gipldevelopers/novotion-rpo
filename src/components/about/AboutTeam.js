@@ -30,7 +30,7 @@ const team = [
 
 export function AboutTeam() {
     return (
-        <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+        <section className="py-16 lg:py-20 bg-white relative overflow-hidden">
             {/* Background Artificats */}
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/[0.03] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
 
@@ -88,10 +88,10 @@ export function AboutTeam() {
                                         <Linkedin className="h-4 w-4 lg:h-5 lg:w-5" />
                                     </a>
                                     <a
-                                        href={`mailto:office@novotion.com`}
-                                        className="w-12 h-12 rounded-2xl bg-white/90 backdrop-blur-md hidden lg:flex items-center justify-center text-slate-900 hover:bg-slate-900 hover:text-white transition-all shadow-xl"
+                                        href={`mailto:info@noltven.com`}
+                                        className="w-10 h-10 lg:w-12 lg:h-12 rounded-2xl bg-white/90 backdrop-blur-md flex items-center justify-center text-slate-900 hover:bg-slate-900 hover:text-white transition-all shadow-xl"
                                     >
-                                        <Mail className="h-5 w-5" />
+                                        <Mail className="h-4 w-4 lg:h-5 lg:w-5" />
                                     </a>
                                 </div>
 
@@ -117,9 +117,8 @@ export function AboutTeam() {
 
                                         {/* Subtitle/Description - Slides up with name from bottom */}
                                         <div className="opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 delay-100 space-y-4">
-                                            <div className="w-8 h-[2px] bg-secondary" />
                                             <div className="relative">
-                                                <Quote className="absolute -left-4 -top-2 h-4 w-4 text-secondary/40 opacity-50" />
+                                                <Quote className="absolute -left-6 -top-2 h-6 w-6 text-secondary" />
                                                 <p className="text-white/80 text-[12px] lg:text-[13px] leading-relaxed font-light italic pl-4">
                                                     {member.description}
                                                 </p>

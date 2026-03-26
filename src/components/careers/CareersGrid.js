@@ -82,9 +82,9 @@ const benefits = [
 
 export function CareersGrid() {
     return (
-        <section className="py-24 md:py-40 bg-white relative overflow-hidden">
+        <section className="py-8 md:py-12 bg-white relative overflow-hidden">
             <div className="container-premium relative z-10 px-6 md:px-12">
-                <div className="text-center mb-16 md:mb-24">
+                <div className="text-center mb-12 md:mb-16">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -97,7 +97,7 @@ export function CareersGrid() {
                 </div>
 
                 {/* Benefits Section */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32 md:mb-48">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 md:mb-16">
                     {benefits.map((benefit, index) => (
                         <motion.div
                             key={index}
@@ -118,7 +118,7 @@ export function CareersGrid() {
 
                 {/* Open Positions */}
                 <div>
-                    <div className="text-center mb-16 md:mb-24">
+                    <div className="text-center mb-12 md:mb-16">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -175,7 +175,7 @@ export function CareersGrid() {
                     >
                         <p className="text-slate-400 text-sm italic">
                             Don't see a role that fits your core logic? Send your CV to
-                            <a href="mailto:careers@novotionrpo.com" className="text-secondary font-bold ml-2 underline decoration-secondary/20 underline-offset-4">careers@novotionrpo.com</a>
+                            <a href="mailto:info@noltven.com" className="text-secondary font-bold ml-2 underline decoration-secondary/20 underline-offset-4">info@noltven.com</a>
                         </p>
                     </motion.div>
                 </div>

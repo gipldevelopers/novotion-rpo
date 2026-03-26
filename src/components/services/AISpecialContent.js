@@ -88,13 +88,14 @@ export function AISpecialContent({ service }) {
 
     return (
         <div className="bg-white">
-            {/* 1. Hero Section - Refined for 15.6" screens and corrected overflow */}
-            <section className="pt-[110px] pb-24 relative bg-white">
+            {/* 1. Hero Section - Refined for compact layout */}
+            <section className="pt-[100px] pb-24 relative bg-white">
                 <div className="container-premium px-4">
                     <div className="grid lg:grid-cols-2 gap-10 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.3 }}
                             className="max-w-lg"
                         >
                             {/* Top Badge */}
@@ -121,7 +122,7 @@ export function AISpecialContent({ service }) {
                                 {service.description || "We build intelligent automation and AI systems that free your team to focus on higher value tasks, not data entry or busywork. The result is removing the ceiling on what your people can achieve."}
                             </p>
                             
-                            <Button asChild className="bg-white hover:bg-secondary text-secondary hover:text-white h-12 px-7 rounded-lg font-bold transition-all shadow-lg shadow-secondary/5 border-none group/btn text-[11px] uppercase tracking-wider">
+                            <Button asChild className="bg-white hover:bg-secondary text-secondary hover:text-white h-10 px-7 rounded-lg font-bold transition-all shadow-lg shadow-secondary/5 border-none group/btn text-[11px] uppercase tracking-wider">
                                 <Link href="/contact" className="flex items-center gap-2">
                                     Automate your workflows
                                     <ArrowRight className="h-3.5 w-3.5 group-hover/btn:translate-x-1 transition-transform" />

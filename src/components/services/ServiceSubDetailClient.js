@@ -13,14 +13,19 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
 
     if (isAI) {
         return (
-            <main className="bg-white min-h-screen pt-40 pb-0">
+            <main className="bg-white min-h-screen pt-32 pb-0">
                 {/* Unified Hero & Grid Container with Diagonal Gradient */}
                 <div className="bg-gradient-to-bl from-blue-50/40 via-white/50 to-white relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-50/30 rounded-full blur-[120px] -translate-y-[10%] translate-x-[20%]" />
                     
                     {/* AI SPECIAL HERO SECTION */}
                     <section className="relative pb-20 pt-10">
-                        <div className="container-premium relative z-10">
+                        <motion.div 
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            className="container-premium relative z-10"
+                        >
                             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12">
                                 <div className="lg:w-3/5">
                                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase tracking-[0.2em] mb-6">
@@ -43,7 +48,7 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </section>
 
                     {/* AI HOW WE WORK SECTION - LIGHT GRID WITH REFLECTIONS */}
@@ -123,7 +128,7 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
     }
 
     return (
-        <main className="bg-white min-h-screen pt-32 pb-0">
+        <main className="bg-white min-h-screen pt-24 pb-0">
             {/* HERO SECTION */}
             <section className="relative py-24 overflow-hidden text-center bg-white border-b border-slate-50">
                 {/* Background Decoration Circles - Atmospheric Glow Group */}
@@ -154,6 +159,7 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
                         className="max-w-4xl mx-auto"
                     >
                         <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-secondary/10 text-secondary text-[10px] font-black uppercase tracking-[0.3em] mb-8">

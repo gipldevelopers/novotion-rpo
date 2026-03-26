@@ -37,7 +37,7 @@ export function AdvantageSection() {
                         The Way We Solve Real Business Problems
                     </p>
 
-                    <p className="text-slate-500 text-sm md:text-base font-light leading-relaxed max-w-3xl mx-auto">
+                    <p className="text-slate-600 text-sm md:text-base font-light leading-relaxed max-w-3xl mx-auto">
                         Every business faces similar roadblocks slow hiring, marketing that doesn't convert, inconsistent sales, manual operations, and numbers that never feel fully clear. Our approach is built to remove those barriers and create systems that actually support growth.
                     </p>
                 </div>
@@ -64,7 +64,7 @@ export function AdvantageSection() {
                                     {item.title}
                                 </h3>
 
-                                <p className="text-slate-500 text-[13px] md:text-sm font-light leading-relaxed group-hover:text-slate-600 transition-colors">
+                                <p className="text-slate-600 text-[13px] md:text-sm font-light leading-relaxed group-hover:text-slate-700 transition-colors">
                                     {item.description}
                                 </p>
                             </div>

@@ -26,9 +26,9 @@ const philosophyItems = [
 
 export function AboutPhilosophy() {
     return (
-        <section className="py-20 md:py-32 bg-white relative overflow-hidden">
+        <section className="py-8 md:py-12 bg-white relative overflow-hidden">
             <div className="container-premium relative z-10">
-                <div className="text-center max-w-3xl mx-auto mb-20 md:mb-24">
+                <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -39,15 +39,15 @@ export function AboutPhilosophy() {
                     </motion.h2>
 
                     <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
-                        Growth should not be accidental. It should be engineered.
+                        Growth should not be accidental, It should be engineered
                     </p>
 
-                    <p className="text-slate-500 text-base md:text-lg font-light leading-relaxed">
+                    <p className="text-slate-600 text-base md:text-lg font-normal leading-relaxed">
                         Sustainable growth isn't about more people or harder work it's about better systems.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                     {philosophyItems.map((item, idx) => (
                         <motion.div
                             key={item.title}
@@ -61,7 +61,7 @@ export function AboutPhilosophy() {
                                 <item.icon className="h-6 w-6" />
                             </div>
                             <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-4">{item.title}</h3>
-                            <p className="text-slate-500 text-sm font-light leading-relaxed">
+                            <p className="text-slate-600 text-sm font-normal leading-relaxed group-hover:text-slate-700 transition-colors">
                                 {item.description}
                             </p>
                         </motion.div>
@@ -69,12 +69,12 @@ export function AboutPhilosophy() {
                 </div>
 
                 {/* What Makes Us Different Section */}
-                <div className="py-20 md:py-24 border-t border-slate-100 mb-12">
+                <div className="py-10 md:py-12 border-t border-slate-100 mb-6">
                     <div className="max-w-4xl mx-auto text-center">
                         <span className="text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-8 block">What Makes Us Different</span>
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 md:mb-12 tracking-tighter">
                             One Unified System<br />
-                            <span className="text-secondary text-xl md:text-3xl">for Scalability & Performance.</span>
+                            <span className="text-secondary text-xl md:text-3xl">for Scalability & Performance</span>
                         </h2>
 
                         <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4 mb-12">
@@ -88,7 +88,7 @@ export function AboutPhilosophy() {
                             ))}
                         </div>
 
-                        <p className="text-slate-500 text-base md:text-xl font-light leading-relaxed">
+                        <p className="text-slate-600 text-base md:text-xl font-normal leading-relaxed">
                             Instead of managing multiple vendors, tools, and teams, we give businesses a single growth partner combining core functions into a single, high-output engine.
                         </p>
                     </div>

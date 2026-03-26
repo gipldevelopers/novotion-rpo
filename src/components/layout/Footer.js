@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const services = [
@@ -24,15 +24,7 @@ const legal = [
   { name: "Terms of Service", href: "/terms" },
 ];
 
-const XIcon = ({ className }) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className={className}
-  >
-    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z" />
-  </svg>
-);
+
 
 export function Footer() {
   return (
@@ -62,7 +54,6 @@ export function Footer() {
               {[
                 { icon: Linkedin, href: "https://www.linkedin.com/company/noltven/" },
                 { icon: Instagram, href: "https://www.instagram.com/noltven_?igsh=MXNyOHU5NHN0b2RzeA==" },
-                { icon: XIcon, href: "https://x.com" }
               ].map((item, idx) => (
                 <a
                   key={idx}

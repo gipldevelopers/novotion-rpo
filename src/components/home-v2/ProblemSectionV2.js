@@ -28,7 +28,7 @@ const problems = [
 
 export function ProblemSection() {
     return (
-        <section id="problems" className="py-20 md:py-32 bg-white relative scroll-mt-20">
+        <section id="problems" className="py-12 md:py-16 bg-white relative scroll-mt-20 overflow-x-hidden">
             <div className="container-premium relative z-10 w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
                     {/* Left Column: Sticky Context */}
@@ -79,7 +79,7 @@ export function ProblemSection() {
                                         </h3>
                                         <div className="hidden sm:block h-px bg-slate-200 flex-grow transition-colors group-hover:bg-secondary/30" />
                                     </div>
-                                    <p className="text-slate-500 text-sm md:text-base font-light leading-relaxed">
+                                    <p className="text-slate-600 text-sm md:text-base font-light leading-relaxed">
                                         {problem.description}
                                     </p>
                                 </div>

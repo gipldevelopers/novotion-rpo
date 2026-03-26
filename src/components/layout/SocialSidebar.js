@@ -3,15 +3,7 @@
 import { Linkedin, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 
-const XIcon = ({ className }) => (
-  <svg 
-    viewBox="0 0 24 24" 
-    fill="currentColor" 
-    className={className}
-  >
-    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z"/>
-  </svg>
-);
+
 
 const socialLinks = [
   {
@@ -19,12 +11,6 @@ const socialLinks = [
     icon: Linkedin,
     href: "https://www.linkedin.com/company/noltven/",
     color: "hover:bg-[#0077B5]",
-  },
-  {
-    name: "X",
-    icon: XIcon,
-    href: "https://x.com",
-    color: "hover:bg-[#000000]",
   },
   {
     name: "Instagram",
@@ -36,7 +22,7 @@ const socialLinks = [
 
 export function SocialSidebar() {
   return (
-    <div className="fixed right-0 top-1/2 -translate-y-1/2 z-[9999] flex flex-col gap-1 md:gap-1.5 items-end">
+    <div className="fixed right-0 top-auto bottom-6 md:top-1/2 md:-translate-y-1/2 z-[9999] flex flex-col items-end gap-2 md:gap-1.5">
       {socialLinks.map((link, index) => (
         <motion.a
           key={link.name}

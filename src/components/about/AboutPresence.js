@@ -60,7 +60,7 @@ export function AboutPresence() {
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-bold text-slate-900 mb-2">{loc.title}</h3>
-                                        <p className="text-slate-500 text-sm font-light mb-4 leading-relaxed max-w-md">
+                                        <p className="text-slate-600 text-sm font-normal mb-4 leading-relaxed max-w-md group-hover:text-slate-700 transition-colors">
                                             {loc.description}
                                         </p>
                                         <div className="flex flex-wrap gap-2">
@@ -109,7 +109,6 @@ export function AboutPresence() {
                             {/* Connection Lines */}
                             <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
                                 <path d="M25,25 Q50,20 50,33 T75,66" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" />
-                                <path d="M50,33 Q60,50 75,66" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" />
                             </svg>
                         </div>
                     </motion.div>

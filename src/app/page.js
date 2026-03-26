@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <Layout>
       <SocialSidebar />
-      <div className="bg-[#070A11]">
+      <div className="bg-[#070A11] will-change-transform">
         <HeroSectionV8 />
         <MetricsSection />
         <ProblemSection />

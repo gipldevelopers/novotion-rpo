@@ -79,7 +79,7 @@ export function MetricsSection() {
                     <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
                         Global Talent at Speed
                     </p>
-                    <p className="text-xs md:text-sm lg:text-base text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed italic border-x-2 border-slate-100 px-6">
+                    <p className="text-sm md:text-sm lg:text-base text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed italic border-x-2 border-slate-100 px-6">
                         Quantifiable results across five key service lines from recruitment and marketing to AI automation, business growth, and financial management.
                     </p>
 
@@ -109,8 +109,8 @@ export function MetricsSection() {
                             </div>
 
                             {/* Labels */}
-                            <div className="text-[9px] md:text-[10px] font-bold text-secondary uppercase tracking-[0.3em] mb-1.5">{metric.label}</div>
-                            <div className="text-slate-400 text-[10px] md:text-xs font-light max-w-[120px] md:max-w-[160px] leading-relaxed group-hover:text-slate-500 transition-colors">{metric.description}</div>
+                            <div className="text-[10px] md:text-xs font-bold text-secondary uppercase tracking-[0.3em] mb-1.5">{metric.label}</div>
+                            <div className="text-slate-600 text-xs md:text-sm font-normal max-w-[120px] md:max-w-[160px] leading-relaxed group-hover:text-slate-800 transition-colors">{metric.description}</div>
                         </motion.div>
                     ))}
                 </div>

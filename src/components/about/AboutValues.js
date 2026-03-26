@@ -38,10 +38,10 @@ const values = [
 
 export function AboutValues() {
     return (
-        <section className="py-20 md:py-32 bg-slate-50 relative overflow-hidden">
+        <section className="py-8 md:py-12 bg-slate-50 relative overflow-hidden">
             <div className="container-premium relative z-10">
                 {/* Section Header */}
-                <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+                <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export function AboutValues() {
                         The <span className="text-secondary italic underline underline-offset-8 decoration-secondary/30">5A</span> Core Values.
                     </h2>
   
-                    <p className="text-slate-500 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
+                    <p className="text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto">
                         Our Five A's (5A) aren't just words on a wall; they are the operational standards that drive every decision we make.
                     </p>
                 </div>
@@ -83,7 +83,7 @@ export function AboutValues() {
                                     {value.title}
                                 </h3>
 
-                                <p className="text-slate-500 text-[14px] font-light leading-relaxed">
+                                <p className="text-slate-600 text-[14px] font-normal leading-relaxed group-hover:text-slate-700 transition-colors">
                                     {value.description}
                                 </p>
                             </div>

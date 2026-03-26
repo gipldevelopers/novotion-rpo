@@ -65,7 +65,7 @@ export function HeroSectionV8() {
     }, [nextSlide]);
 
     return (
-        <section id="hero" className="relative min-h-[100dvh] bg-white flex flex-col justify-center pt-32 md:pt-36 lg:pt-44 pb-16 overflow-hidden scroll-mt-32">
+        <section id="hero" className="relative min-h-[100dvh] bg-white flex flex-col justify-center pt-24 md:pt-28 lg:pt-36 pb-16 overflow-hidden scroll-mt-32">
             {/* Background with Increased Visibility */}
             <div className="absolute inset-0 z-0">
                 <AnimatePresence>
@@ -99,7 +99,7 @@ export function HeroSectionV8() {
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -30 }}
-                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                        transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
                         className="max-w-4xl mx-auto"
                     >
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold text-slate-900 leading-[1.1] mb-6 md:mb-8 tracking-tighter drop-shadow-sm">
@@ -112,7 +112,7 @@ export function HeroSectionV8() {
                         </p>
 
                         <div className="flex flex-col items-center justify-center gap-8">
-                            <Button asChild size="lg" className="rounded-xl bg-secondary hover:bg-secondary/90 text-white font-bold h-14 px-8 shadow-xl shadow-secondary/20 transition-all border-none">
+                            <Button asChild size="lg" className="rounded-xl bg-secondary hover:bg-secondary/90 text-white font-bold h-11 px-8 shadow-xl shadow-secondary/20 transition-all border-none">
                                 <Link href="/contact" className="flex items-center gap-2 text-[15px] tracking-wide">
                                     GET STARTED NOW
                                     <ArrowRight className="h-5 w-5" />

@@ -21,7 +21,7 @@ const services = [
         title: "Recruitment Support",
         subHeadline: "Recruitment Support",
         description: "Complete offshore recruitment sourcing, screening, onboarding, and compliance that cuts time-to-hire by 60% and reduces hiring costs by up to 50%.",
-        features: ["END-TO-END RECRUITMENT", "TALENT SOURCING", "ADMIN SUPPORT", "MARKET MAPPING", "ONBOARDING & COMPLIANCE"],
+        features: ["End-to-End Recruitment", "Talent Sourcing", "Admin Support", "Market Mapping", "Onboarding & Compliance"],
         icon: Users,
         image: "/assets/hero/recruitment.png",
         slug: "recruitment-services",
@@ -30,7 +30,7 @@ const services = [
         title: "Business Development",
         subHeadline: "Business Development",
         description: "Structured outbound prospecting, CRM management, and partnership development that fills your pipeline and converts opportunities into consistent revenue.",
-        features: ["MARKET RESEARCH & ACCOUNT MAPPING", "LEAD LIST BUILDING & DATA MANAGEMENT", "OUTREACH EXECUTION SUPPORT", "CRM & PIPELINE COORDINATION"],
+        features: ["Market Research & Account Mapping", "Lead List Building & Data Management", "Outreach Execution Support", "CRM & Pipeline Coordination"],
         icon: Briefcase,
         image: "/assets/hero/bizdev.png",
         slug: "business-development",
@@ -39,7 +39,7 @@ const services = [
         title: "Digital Marketing",
         subHeadline: "Digital Marketing",
         description: "Full-service marketing covering social media, SEO, email campaigns, and paid ads built to grow your brand and turn the right audience into paying customers.",
-        features: ["SOCIAL MEDIA MANAGEMENT", "SEO & CONTENT MARKETING", "EMAIL MARKETING", "PAID ADS (GOOGLE & META)", "BRANDING & DESIGN"],
+        features: ["Social Media Management", "SEO & Content Marketing", "Email Marketing", "Paid Ads (Google & Meta)", "Branding & Design"],
         icon: Layout,
         image: "/assets/hero/marketing.png",
         slug: "digital-marketing",
@@ -47,8 +47,8 @@ const services = [
     {
         title: "AI & Automation",
         subHeadline: "AI & Automation",
-        description: "BUSINESS PROCESS AUTOMATION, AI chatbots, and system integrations that cut manual tasks, reduce errors by up to 90%, and scale your operations without extra headcount.",
-        features: ["BUSINESS PROCESS AUTOMATION", "AI CHATBOTS & VIRTUAL ASSISTANTS", "AI REPORTING & ANALYTICS", "MARKETING & SALES AUTOMATION", "SYSTEMS INTEGRATION", "AI CONTENT ASSISTANCE"],
+        description: "Business Process Automation, AI chatbots, and system integrations that cut manual tasks, reduce errors by up to 90%, and scale your operations without extra headcount.",
+        features: ["Business Process Automation", "AI Chatbots & Virtual Assistants", "AI Reporting & Analytics", "Marketing & Sales Automation", "Systems Integration", "AI Content Assistance"],
         icon: Cog,
         image: "/assets/hero/global_clients.png",
         slug: "ai-automation",
@@ -57,7 +57,7 @@ const services = [
         title: "Accounting & Finance",
         subHeadline: "Accounting & Finance",
         description: "Professional bookkeeping, payroll processing, tax compliance, and financial reporting without the overhead of a full-time in-house finance function.",
-        features: ["BOOKKEEPING", "ACCOUNTS PAYABLE & RECEIVABLE", "PAYROLL", "FINANCIAL REPORTING", "BUDGETING & PLANNING"],
+        features: ["Bookkeeping", "Accounts Payable & Receivable", "Payroll", "Financial Reporting", "Budgeting & Planning"],
         icon: Target,
         image: "/assets/hero/finance.png",
         slug: "accounting-finance",
@@ -77,7 +77,7 @@ export function ServicesPreview() {
                         Our <span className="text-secondary">Solutions</span>
                     </h2>
                     <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
-                        All Five Services. One Trusted Partner.
+                        All Five Services One Trusted Partner
                     </p>
                 </div>
 
@@ -151,7 +151,7 @@ export function ServicesPreview() {
                                         </div>
 
                                         {/* Description */}
-                                        <p className="text-slate-500 text-sm md:text-base font-normal leading-relaxed mb-6 md:mb-8 lg:mb-10 max-w-2xl border-l-[3px] border-secondary/10 pl-5 md:pl-6 lg:pl-8 text-left">
+                                        <p className="text-slate-600 text-sm md:text-base font-normal leading-relaxed mb-6 md:mb-8 lg:mb-10 max-w-2xl border-l-[3px] border-secondary/10 pl-5 md:pl-6 lg:pl-8 text-left">
                                             {services[activeTab].description}
                                         </p>
 
@@ -168,7 +168,7 @@ export function ServicesPreview() {
                                                     <div className="w-5 h-5 flex-shrink-0 rounded-full bg-secondary/10 flex items-center justify-center text-secondary transition-all group-hover/feat:bg-secondary group-hover/feat:text-white">
                                                         <Check className="h-3 w-3" />
                                                     </div>
-                                                    <span className="text-[12px] md:text-[13px] font-medium text-slate-600 transition-colors group-hover/feat:text-slate-900">
+                                                    <span className="text-[12px] md:text-[13px] font-medium text-slate-700 transition-colors group-hover/feat:text-slate-900">
                                                         {feature}
                                                     </span>
                                                 </motion.div>

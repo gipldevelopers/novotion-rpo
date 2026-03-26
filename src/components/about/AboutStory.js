@@ -5,7 +5,7 @@ import { Sparkles, ArrowUpRight } from "lucide-react";
 
 export function AboutStory() {
     return (
-        <section className="py-20 md:py-32 bg-white relative overflow-hidden">
+        <section className="py-12 md:py-16 bg-white relative overflow-hidden">
             <div className="container-premium relative z-10">
                 <div className="grid lg:grid-cols-2 gap-16 md:gap-24 items-center">
                     <motion.div
@@ -21,7 +21,7 @@ export function AboutStory() {
                             A Growth Engine for Modern Businesses
                         </p>
 
-                        <div className="space-y-6 text-slate-500 text-base md:text-lg font-light leading-relaxed">
+                        <div className="space-y-6 text-slate-600 text-base md:text-lg font-normal leading-relaxed">
                             <p>
                                 What companies truly need is a growth engine one that combines talent, processes, technology, and strategy into a single, aligned system. That’s where Noltven comes in.
                             </p>

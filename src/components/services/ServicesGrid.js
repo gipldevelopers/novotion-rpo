@@ -31,7 +31,7 @@ export function ServicesGrid() {
         );
     }
     return (
-        <section className="py-20 md:py-32 bg-slate-50 relative overflow-hidden">
+        <section className="py-12 md:py-16 bg-slate-50 relative overflow-hidden">
             <div className="container-premium relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service, index) => {
@@ -57,7 +57,7 @@ export function ServicesGrid() {
                                         {service.shortTitle || service.title}
                                     </h3>
 
-                                    <p className="text-slate-500 text-[14px] font-light leading-relaxed mb-8">
+                                    <p className="text-slate-600 text-[14px] font-normal leading-relaxed mb-8 group-hover:text-slate-700 transition-colors">
                                         {service.description}
                                     </p>
 
@@ -81,7 +81,7 @@ export function ServicesGrid() {
                     >
                         <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/20 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2 group-hover:bg-secondary/40 transition-colors" />
                         <h3 className="text-2xl font-bold mb-4 tracking-tighter">Not Sure Where to Start?</h3>
-                        <p className="text-slate-400 text-sm font-light mb-8 leading-relaxed">
+                        <p className="text-slate-300 text-sm font-normal mb-8 leading-relaxed">
                             Tell us what's holding your business back. We'll figure out which services move the needle and build something that fits.
                         </p>
                         <Button asChild className="bg-secondary hover:bg-secondary/90 text-white rounded-xl h-12 px-8 border-none shadow-lg shadow-secondary/20">

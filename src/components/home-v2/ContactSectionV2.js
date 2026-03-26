@@ -13,10 +13,8 @@ const XIcon = ({ className }) => (
 );
 
 const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: XIcon, href: "#", label: "X" },
-    { icon: Github, href: "#", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/noltven/", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/noltven_?igsh=MXNyOHU5NHN0b2RzeA==", label: "Instagram" },
 ];
 
 export function ContactSection() {

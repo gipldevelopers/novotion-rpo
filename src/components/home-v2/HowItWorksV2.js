@@ -43,7 +43,7 @@ export function HowItWorksV2() {
                     <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
                         The Strategic Execution Lifecycle
                     </p>
-                    <p className="text-slate-500 text-xs md:text-sm font-normal leading-relaxed max-w-2xl mx-auto">
+                    <p className="text-slate-600 text-xs md:text-sm font-normal leading-relaxed max-w-2xl mx-auto">
                         A structured, four-phase delivery model designed to eliminate friction, drive consistency, and ensure every service we provide delivers measurable results.
                     </p>
                 </div>
@@ -98,7 +98,7 @@ export function HowItWorksV2() {
                                                 Phase 0{index + 1}
                                             </p>
                                         </div>
-                                        <p className="text-slate-500 text-[11px] md:text-sm font-light leading-relaxed max-w-full lg:max-w-[240px] opacity-100 lg:group-hover:text-slate-600 transition-colors px-2 lg:px-0">
+                                        <p className="text-slate-600 text-[11px] md:text-sm font-light leading-relaxed max-w-full lg:max-w-[240px] opacity-100 lg:group-hover:text-slate-700 transition-colors px-2 lg:px-0">
                                             {step.description}
                                         </p>
 

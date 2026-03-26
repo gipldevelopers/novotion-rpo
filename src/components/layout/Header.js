@@ -46,18 +46,18 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 will-change-transform",
         isScrolled
-          ? "py-3"
-          : "py-6"
+          ? "py-2"
+          : "py-3"
       )}
     >
       <nav className="container-premium">
         <div className={cn(
-          "relative flex items-center justify-between px-6 transition-all duration-500 rounded-xl",
+          "relative flex items-center justify-between px-6 transition-all duration-300 rounded-xl",
           isScrolled
-            ? "bg-white/98 backdrop-blur-xl shadow-[0_40px_80px_-15px_rgba(0,0,0,0.12)] h-16"
-            : "bg-white/30 backdrop-blur-xl h-22"
+            ? "bg-white/98 backdrop-blur-xl shadow-[0_40px_80px_-15px_rgba(0,0,0,0.12)] h-12 md:h-14"
+            : "bg-white/30 backdrop-blur-xl h-14 md:h-18"
         )}>
 
           <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-90 relative z-10">
@@ -66,7 +66,7 @@ export function Header() {
               alt="Noltven Logo"
               width={240}
               height={40}
-              className="h-8 md:h-8 w-auto"
+              className="h-6 md:h-8 w-auto"
               priority
               unoptimized
             />
@@ -155,7 +155,7 @@ export function Header() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4 relative z-10">
-            <Button asChild className="bg-secondary hover:bg-secondary/90 text-white text-[13px] font-bold px-6 h-10 rounded-xl transition-all shadow-lg shadow-secondary/20 border-none">
+            <Button asChild className="bg-secondary hover:bg-secondary/90 text-white text-[13px] font-bold px-6 h-9 rounded-xl transition-all shadow-lg shadow-secondary/20 border-none">
               <Link href="/contact">CONTACT US <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
