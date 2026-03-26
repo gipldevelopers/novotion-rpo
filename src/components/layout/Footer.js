@@ -115,7 +115,7 @@ export function Footer() {
               </div>
               <div className="flex gap-5">
                 <Mail className="h-5 w-5 text-secondary shrink-0" />
-                <a href="mailto:info@novotionrpo.com" className="text-[14px] font-bold text-slate-900 hover:text-secondary transition-colors tracking-tight">info@novotionrpo.com</a>
+                <a href="mailto: info@noltven.com" className="text-[14px] font-bold text-slate-900 hover:text-secondary transition-colors tracking-tight"> info@noltven.com</a>
               </div>
               <div className="flex gap-5">
                 <Phone className="h-5 w-5 text-secondary shrink-0" />

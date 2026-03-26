@@ -7,9 +7,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 const XIcon = ({ className }) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
-    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z"/>
-  </svg>
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+        <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z" />
+    </svg>
 );
 
 const socialLinks = [
@@ -105,7 +105,7 @@ export function ContactSection() {
                     <div className="bg-slate-50 border-t border-slate-200 p-8 hidden md:block">
                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                             {[
-                                { icon: Mail, label: "Email", value: "info@novotionrpo.com" },
+                                { icon: Mail, label: "Email", value: " info@noltven.com" },
                                 { icon: Phone, label: "Phone", value: "+44 20 3996 7029" },
                                 { icon: MapPin, label: "UK Office", value: "First Floor Office, 3 Hornton Place, London, W8 4LZ, United Kingdom" },
                                 { icon: Clock, label: "Availability", value: "24/7 Deployment" }
