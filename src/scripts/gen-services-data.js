@@ -112,8 +112,8 @@ export const servicesData = [
                 bottomLine: "You don't wait for candidates. You reach them first."
             },
             {
-                title: "Admin Support",
-                slug: "admin-support",
+                title: "Recruitment Admin Support",
+                slug: "recruitment-admin-support",
                 head: "Streamline Recruitment Operations",
                 description: "Ask any experienced recruiter what slows them down, and the honest answer is rarely a shortage of candidates. It's the constant friction of the work surrounding the hire scheduling, formatting, chasing, documenting. Each task is small, but together they quietly erode the time your team should be spending on billable activity.\n\nWe take that weight off. Noltven's admin support team handles the full operational layer of your recruitment process aligning with your ATS, VMS, and internal workflows so that nothing falls through the cracks and your recruiters can focus entirely on converting.",
                 howWeWork: [
@@ -148,7 +148,7 @@ export const servicesData = [
                 bottomLine: "Less admin. More placements."
             },
             {
-                title: "Market Mapping & Intelligence",
+                title: "Market Mapping & Talent Intelligence",
                 slug: "market-mapping",
                 head: "Win More Roles with Better Market Intelligence",
                 description: "Submitting candidates without understanding the market you are operating in is a costly gamble. Misaligned salary expectations, overlooked talent hotspots, or a brief that doesn't reflect competitive reality any of these can cost you a placement that should have been yours.\n\nNoltven's market mapping service gives you the intelligence to act with confidence. We analyse talent availability, competitor hiring activity, compensation benchmarks, and demand trends so your submissions are sharper, your client conversations are more credible, and your close rates improve.",
@@ -245,51 +245,50 @@ export const servicesData = [
         slug: "business-development",
         icon: Briefcase,
         title: "Build a Consistent Pipeline for the Right Opportunities.",
-        description: "Business development isn't a single conversation or a well-timed cold call. It's a series of well-executed activities carried out consistently enough to create momentum. At Noltven, we manage the groundwork that makes that momentum possible, so your team can stay focused on the conversations that convert.",
+        description: "Business development isn't a single conversation or a well-timed cold call. It's a series of well-executed activities research, data, outreach, follow-up carried out consistently enough to create momentum. At Noltven, we manage the groundwork that makes that momentum possible, so your team can stay focused on the conversations that convert.\n\nFrom building your prospect intelligence to running structured outreach campaigns, we help you establish a reliable, scalable BD engine across UK, EU, UAE, US, and APAC.",
         cta: "Strengthen Your Outreach Engine",
         head: "Build a Consistent Pipeline for the Right Opportunities.",
         intro: {
             title: "The Work Behind Every Successful Deal",
-            overview: "Every closed deal is the visible result of a long chain of consistent, less glamorous activity. Research. List building. Outreach. Follow-up. Most businesses don't struggle with strategy they struggle with execution at scale.",
+            overview: "Every closed deal is the visible result of a long chain of consistent, less glamorous activity. Research. List building. Outreach. Follow-up. Most businesses don't struggle with strategy they struggle with execution at scale.\n\nTime gets divided across competing priorities. Outreach becomes inconsistent. Promising leads go cold because no one followed up. We step in to handle the operational side of BD, so your pipeline stays active, targeted, and aligned with your ideal client profile, every single week.",
             points: [
                 {
-                    title: "The Capacity Gap",
-                    text: "Time gets divided across competing priorities. When your local team is busy delivering or closing, the prospecting engine stops. Consistency is the first thing that breaks."
+                    title: "The Capacity Problem",
+                    text: "Your team knows how to close. But building the pipeline that feeds those conversations takes time and consistency that's hard to maintain alongside everything else."
                 },
                 {
                     title: "The Consistency Problem",
-                    text: "Occasional outbound activity produces occasional results. We manage the daily volume needed to ensure your pipeline never goes cold, regardless of how busy your internal team gets."
+                    text: "Sporadic outreach produces sporadic results. Without a structured system behind it, even good outreach strategies fail to compound into real pipeline."
                 },
                 {
                     title: "What We Do Instead",
-                    text: "We provide the consistent execution layer. From building prospect intelligence to running structured outreach campaigns, we help you establish a reliable, scalable BD engine across UK, EU, UAE, US, and APAC."
+                    text: "We run the engine that keeps your BD moving research, data, outreach, CRM so your team spends its time on qualified conversations, not cold prospecting."
                 }
             ],
             highlights: [
-                "Market-specific intelligence for UK, EU, UAE, US, and APAC",
-                "Higher conversion through data-backed account prioritization",
-                "Reduced administrative burden for your senior sales team",
-                "Consistent lead flow that survives peak delivery periods"
+                "Targeted market and account intelligence",
+                "Clean, verified prospect data",
+                "Consistent multi-channel outreach",
+                "Structured CRM and pipeline oversight"
             ]
         },
         whatYouGet: [
             {
                 title: "Market Research & Account Mapping",
                 slug: "market-research-account-mapping",
-                head: "Intelligence Before Outreach.",
-                description: "Strategy without data is just guessing. Before we reach out, we build a deep understanding of your target market, mapping out high-value accounts and the decision-makers within them. Every downstream activity is more effective because it starts with high-quality intelligence.",
+                head: "Start With Clarity, Not Just More Outreach",
+                description: "Effective business development starts long before the first message is sent. Without a clear picture of where the genuine opportunities are, outreach becomes a volume game unfocused, inefficient, and easy to ignore. The fix isn't more activity. It's better intelligence.\n\nAt Noltven, we begin by mapping your market with precision. We analyse your Ideal Customer Profile against the real landscape of your target sectors and regions identifying the accounts worth pursuing, the decision-makers worth reaching, and the timing worth acting on.",
                 howWeWork: [
-                    "We identify where your highest opportunity exists based on real market signals",
-                    "We map out organisational structures to identify the true decision-makers and influencers",
-                    "We gather intelligence on competitor presence and potential project timelines",
-                    "We align account lists with your specific commercial objectives for the quarter"
+                    "We analyse your ICP, industry landscape, and target regions to map high-potential accounts",
+                    "We combine research, data insights, and strategic filtering to surface relevant, well-timed opportunities",
+                    "Every account identified is assessed for opportunity value and fit before it reaches your team"
                 ],
                 benefits: [
-                    "Higher outreach response rates by targeting people who actually need your service",
-                    "Shorter sales cycles by bypassing 'low-fit' leads early in the process",
-                    "Better informed sales conversations based on account-specific intelligence",
-                    "Direct entry strategy for new markets (UK, EU, UAE, US, APAC) based on local data",
-                    "Predictable account prioritization based on opportunity value and conversion likelihood"
+                    "Clear direction on where to concentrate your outreach effort",
+                    "Better alignment between your BD activity and your highest-value prospects",
+                    "Reduced time spent chasing low-quality or low-fit leads",
+                    "A stronger, more credible foundation for every downstream BD activity",
+                    "Market-specific intelligence for UK, EU, UAE, US, and APAC"
                 ],
                 servicesInclude: {
                     "Market Intelligence": [
@@ -301,114 +300,111 @@ export const servicesData = [
                         "Market entry analysis for new regions"
                     ]
                 },
-                boundary: "Intelligence turns cold outreach into informed conversations.",
-                bottomLine: "Every downstream activity is more effective because it starts with high-quality intelligence."
+                boundary: "Right market. Right accounts. Better outcomes.",
+                bottomLine: "With clear market visibility, your outreach becomes more focused, efficient, and effective from the very first touchpoint."
             },
             {
                 title: "Lead List Building & Data Management",
                 slug: "lead-list-building-data-management",
-                head: "Fuel Your Sales Engine with High-Accuracy Data.",
-                description: "The biggest bottleneck in any sales process is the manual work of finding, verifying, and managing data. We take that burden off your team, providing verified, high-accuracy prospect lists that are ready for immediate action. No more bouncing emails or outdated contact info.",
+                head: "Accurate Data That Drives Meaningful Outreach",
+                description: "Your outreach is only ever as effective as the data behind it. Bounced emails, outdated contacts, and job titles that changed six months ago don't just waste time they damage your brand's credibility with every failed touchpoint. Clean, current, well-structured prospect data is the foundation that everything else is built on.\n\nWe build and maintain your prospect database using targeted criteria, verified sources, and ongoing data validation ensuring that every contact in your list has genuine potential and current relevance.",
                 howWeWork: [
-                    "We use the most reliable data platforms combined with manual verification for 98%+ accuracy",
-                    "We enrich lists with specific data points (Tech stack, company size, recent news) for personalization",
-                    "We ensure all data is formatted and ready for direct import into your CRM or outreach tools",
-                    "We manage the ongoing data hygiene needed to keep your CRM an asset rather than a liability"
+                    "We build and refine prospect lists using targeted ICP criteria and verified sources",
+                    "We continuously validate and update data to maintain accuracy and relevance",
+                    "Every contact added is assessed for genuine potential before being included"
                 ],
                 benefits: [
-                    "Increase sales team productivity by 30%+ by removing the need for manual data hunting",
-                    "Higher email deliverability and domain reputation through verified contact data",
-                    "More effective personalization enabled by enriched data points (e.g. recent funding or hires)",
-                    "Scalable lead sourcing that keeps up with your outreach volume targets",
-                    "Consistent data quality that ensures your CRM remains accurate and useful"
+                    "Higher response rates from outreach that actually reaches the right person",
+                    "A reliable, up-to-date prospect database you can trust",
+                    "Less time wasted on irrelevant contacts and dead-end leads",
+                    "Improved efficiency and conversion across all BD channels",
+                    "A foundation that supports consistent outreach at scale"
                 ],
                 servicesInclude: {
-                    "Data Delivery": [
-                        "B2B prospect list building",
-                        "Verified email and direct-dial data points",
-                        "Data enrichment for personalized outreach",
-                        "CRM data cleaning and management",
-                        "Intent-based lead sourcing",
-                        "Regular list health and accuracy audits"
+                    "Data Management": [
+                        "Custom lead lists built to your ICP",
+                        "Decision-maker contact identification",
+                        "Data verification and enrichment",
+                        "List segmentation by industry, geography, and company size",
+                        "Ongoing database cleaning and updates",
+                        "Duplicate removal and data hygiene"
                     ]
                 },
-                boundary: "Fuel your sales engine with data that actually converts.",
-                bottomLine: "No more bouncing emails or outdated contact info just high-accuracy pipeline fuel."
+                boundary: "Clean data. Targeted outreach. Better results.",
+                bottomLine: "With the right data in place, every outreach effort becomes more precise improving both engagement and conversion at every stage."
             },
             {
                 title: "Outreach Execution Support",
                 slug: "outreach-execution-support",
-                head: "Consistent Outreach. Zero Internal Friction.",
-                description: "Most sales teams struggle to balance closing with prospecting. When one goes up, the other falls. Our team provides the consistent support layer needed to run multi-channel outreach (Email, LinkedIn, Calling) every single day, regardless of how busy your senior team gets.",
+                head: "Consistency That Turns Outreach Into Opportunity",
+                description: "Inconsistent outreach is one of the most common and costly BD failures. You start strong, send a flurry of messages, get busy, fall quiet and any momentum you would built evaporates. The contacts who were warming up go cold. The conversations that were starting don't progress. And you are back to square one.\n\nWe keep your outreach moving. Through personalised, multi-channel campaigns built around your brand and value proposition, we maintain consistent market presence on your behalf building genuine engagement rather than just filling inboxes.",
                 howWeWork: [
-                    "We design multi-channel sequences built on proven persuasion frameworks",
-                    "We manage the first-level outreach, identifying interest and handling initial objections",
-                    "We facilitate the 'warm handover' of interested leads directly to your sales team",
-                    "We continuously A/B test messaging to improve response and meeting booking rates"
+                    "We create and manage outreach campaigns tailored to your audience and positioning",
+                    "Every interaction is aligned to your brand tone and value proposition",
+                    "Our process is focused on building genuine engagement not volume for its own sake"
                 ],
                 benefits: [
-                    "A pipeline that grows while you are delivering projects or closing deals",
-                    "Higher meeting volume with prospects who have already expressed clear interest",
-                    "Improved brand authority through professional, high-value outbound communication",
-                    "Lower cost-per-lead compared to traditional high-overhead sales hires",
-                    "Predictable monthly lead flow that allows you to plan recruitment and delivery with confidence"
+                    "Consistent market presence without placing strain on your internal team",
+                    "Increased engagement and response rates from well-timed, relevant outreach",
+                    "Stronger brand positioning across your target markets",
+                    "More qualified conversations landing in your team's calendar",
+                    "A pipeline that grows steadily rather than in unpredictable bursts"
                 ],
                 servicesInclude: {
-                    "Campaign Management": [
-                        "Multi-channel outreach strategy (LinkedIn, Email)",
-                        "Personalized copywriting and sequence building",
-                        "Interest identification and first-level objection handling",
-                        "Meeting booking and sales handover coordination",
-                        "Pipeline nurturing for 'long-term' opportunities",
-                        "Detailed campaign performance reporting"
+                    "Outreach Support": [
+                        "Personalised email outreach campaigns",
+                        "LinkedIn connection and messaging support",
+                        "Cold calling assistance",
+                        "Multi-touch follow-up sequences",
+                        "Campaign tracking and performance monitoring",
+                        "Meeting booking with qualified prospects"
                     ]
                 },
-                boundary: "Consistent outreach creates consistent results.",
-                bottomLine: "We manage the first-level activity so your senior team only speaks to people who want to talk."
+                boundary: "Consistent outreach. Meaningful conversations. Real opportunities.",
+                bottomLine: "When outreach is structured and sustained, your pipeline grows predictably creating a steady flow of opportunities for your team to convert."
             },
             {
                 title: "CRM & Pipeline Coordination",
                 slug: "crm-pipeline-coordination",
-                head: "Keep Every Opportunity Moving Toward a Close.",
-                description: "Revenue isn't lost to competitors as often as it is lost to the cracks between follow-ups. We manage the operational side of your sales process, ensuring every lead is tracked, every follow-up is scheduled, and your pipeline is always an accurate reflection of your commercial reality.",
+                head: "Bring Structure and Visibility to Your Pipeline",
+                description: "A poorly maintained CRM is often worse than no CRM at all. Stale data erodes trust in the system. Missed follow-ups create gaps in what should be a seamless buyer journey. And without reliable visibility across your pipeline, it becomes nearly impossible to forecast accurately or prioritise intelligently.\n\nWe manage and maintain your CRM as a live, accurate reflection of your BD activity tracking every interaction, updating lead statuses, flagging follow-up windows, and keeping your pipeline structured from first touch through to conversion.",
                 howWeWork: [
-                    "We manage the day-to-day coordination within your CRM (HubSpot, Zoho, Salesforce etc.)",
-                    "We set up and monitor automated follow-up sequences for leads that haven't responded yet",
-                    "We provide regular pipeline health reports so you know exactly where your revenue is coming from",
-                    "We ensure no lead goes 'stale' by maintaining a disciplined follow-up cadence"
+                    "We manage and maintain your CRM by tracking interactions and updating lead statuses in real time",
+                    "We align outreach activity with your sales pipeline for a seamless prospecting-to-conversion flow",
+                    "We ensure follow-ups are never missed and every lead is handled at the right moment"
                 ],
                 benefits: [
-                    "Never lose a deal due to missed follow-ups or administrative oversight",
-                    "Real-time visibility into your sales performance and revenue forecast",
-                    "Faster sales cycles through tighter process coordination and follow-up discipline",
-                    "Reduced 'admin time' for your sales team, allowing more time for actual selling",
-                    "A more professional candidate/client experience through consistent and timely communication"
+                    "Complete, real-time visibility of your pipeline at every stage",
+                    "Better tracking of leads and opportunities nothing slips through",
+                    "Timely follow-ups that keep warm prospects engaged",
+                    "A more organised, efficient, and confident sales process",
+                    "Business development that becomes measurable, predictable, and scalable"
                 ],
                 servicesInclude: {
-                    "Pipeline Management": [
-                        "CRM administrative management (HubSpot, Zoho, etc.)",
-                        "Lead tracking and move-along coordination",
-                        "Automated follow-up sequence setup",
-                        "Sales pipeline reporting and forecasting",
-                        "Data entry and activity logging support",
-                        "Pipeline health audits and gap identification"
+                    "Pipeline Coordination": [
+                        "CRM updates and activity tracking",
+                        "Lead and deal status management",
+                        "Follow-up coordination and reminders",
+                        "Pipeline structuring and maintenance",
+                        "Performance reporting and pipeline metrics",
+                        "Activity summaries and forecasting support"
                     ]
                 },
-                boundary: "Revenue is won or lost in the follow-up.",
-                bottomLine: "Every lead tracked, every follow-up scheduled total control over your pipeline."
+                boundary: "Organised pipeline. Better visibility. More conversions.",
+                bottomLine: "With a structured CRM in place, your business development becomes more predictable, measurable, and built for scale."
             }
         ],
         bestFor: "Your pipeline is built on referrals and luck. You don't have an outbound system, a proper CRM, or the bandwidth to chase new clients consistently. Revenue is reactive. Growth is unpredictable.",
         closing: {
-            title: "Let's Build Your Growth Engine.",
-            text: "Business development is a series of well-executed activities research, data, outreach, follow-up carried out consistently enough to create momentum.",
+            title: "Business Development",
+            text: "Build a BD Engine That Works Consistently\n\nGrowth isn't the result of a single great effort it's the outcome of a system that operates reliably, day after day. At Noltven, we combine research, data, outreach, and pipeline structure to help you build that system across every market you're targeting.\n\nIf you are ready to stop treating BD as a reactive activity and start building a reliable, scalable growth engine —let's talk.",
             points: [
-                "Market-specific intelligence for 5 key regions",
-                "Data-backed account prioritization",
-                "Reduced burden for your senior team",
-                "Consistent lead flow year-round"
+                "Targeted market and account intelligence",
+                "Clean, verified prospect data",
+                "Consistent multi-channel outreach",
+                "Structured CRM and pipeline oversight"
             ],
-            cta: "Strengthen Your Outreach Engine"
+            cta: "Let's Build Your Growth Engine"
         }
     },
     {

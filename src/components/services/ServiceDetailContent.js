@@ -21,13 +21,13 @@ export function ServiceDetailContent({ service }) {
                         className="mb-16 md:mb-24"
                     >
                         <div className="w-full">
-                            <h2 className="text-2xl md:text-4xl font-black text-slate-900 mb-8 tracking-tighter leading-tight text-balance">
+                            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
                                 {service.intro.title}
                             </h2>
-                            <p className="text-lg md:text-xl text-slate-600 font-light leading-relaxed mb-12 border-l-4 border-secondary/20 pl-8">
+                            <p className="text-lg text-slate-600 leading-relaxed mb-10 border-l-2 border-secondary/20 pl-6">
                                 {service.intro.overview}
                             </p>
-                            
+
                             <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-16">
                                 {service.intro.points && service.intro.points.map((p, i) => (
                                     <div key={i} className="space-y-4">
@@ -37,11 +37,9 @@ export function ServiceDetailContent({ service }) {
                                 ))}
                             </div>
 
-                            <div className="p-8 md:p-12 rounded-[2.5rem] bg-slate-50 border border-slate-200 relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full blur-[40px] translate-x-10 -translate-y-10" />
-                                <p className="text-[10px] font-black text-secondary uppercase tracking-[0.4em] mb-8 flex items-center gap-2">
-                                    <Zap className="h-3 w-3 shadow-none" />
-                                    What this gives you:
+                            <div className="p-8 md:p-10 rounded-2xl bg-slate-50 border border-slate-100 relative">
+                                <p className="text-[11px] font-bold text-secondary uppercase tracking-widest mb-6">
+                                    Benefits of this approach:
                                 </p>
                                 <div className="grid md:grid-cols-2 gap-y-6 gap-x-10">
                                     {(service.highlights || service.intro?.highlights || []).map((h, i) => (
@@ -80,39 +78,39 @@ export function ServiceDetailContent({ service }) {
 
                             {/* What You Get / Detailed Sections */}
                             <div>
-                                <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-10 tracking-tight flex items-center gap-4">
-                                    <Sparkles className="h-7 w-7 text-secondary" />
-                                    Strategic Delivery Pillars
+                                <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-8 tracking-tight flex items-center gap-3">
+                                    <Target className="h-6 w-6 text-secondary" />
+                                    Key Service Pillars
                                 </h3>
                                 <div className="grid md:grid-cols-2 gap-6">
                                     {service.whatYouGet?.map((item, i) => {
-                                        const itemSlug = item.slug || item.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || `pillar-${i+1}`;
-                                        
+                                        const itemSlug = item.slug || item.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || `pillar-${i + 1}`;
+
                                         return (
-                                            <motion.div 
-                                                key={i} 
+                                            <motion.div
+                                                key={i}
                                                 whileHover={{ y: -5 }}
                                                 className="h-full"
                                             >
-                                                <Link 
+                                                <Link
                                                     href={`/services/${service.slug}/${itemSlug}`}
                                                     className="flex flex-col gap-6 p-8 rounded-[2.5rem] bg-slate-50 border border-slate-200 group hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-300 cursor-pointer text-left h-full"
                                                 >
-                                                    <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-secondary shadow-sm group-hover:bg-secondary group-hover:text-white transition-all">
-                                                        <CheckCircle className="h-6 w-6" />
+                                                    <div className="w-10 h-10 rounded-lg bg-white border border-slate-100 flex items-center justify-center text-secondary shadow-sm group-hover:bg-secondary group-hover:text-white transition-all">
+                                                        <CheckCircle className="h-5 w-5" />
                                                     </div>
-                                                    
-                                                    <div className="space-y-3">
+
+                                                    <div className="space-y-2">
                                                         <h4 className="text-lg font-bold text-slate-900 leading-tight group-hover:text-secondary transition-colors">
                                                             {item.title}
                                                         </h4>
-                                                        <p className="text-slate-500 text-sm font-light leading-relaxed line-clamp-2">
+                                                        <p className="text-slate-500 text-sm leading-relaxed line-clamp-2">
                                                             {item.head}
                                                         </p>
                                                     </div>
 
-                                                    <div className="mt-auto pt-4 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-secondary">
-                                                        Explore Detail <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
+                                                    <div className="mt-auto pt-4 flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-secondary">
+                                                        Read More <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
                                                     </div>
                                                 </Link>
                                             </motion.div>
@@ -123,14 +121,10 @@ export function ServiceDetailContent({ service }) {
 
                             {/* Who This Is For Section (Fallback or specific) */}
                             {service.bestFor && (
-                                <div className="p-8 md:p-14 rounded-[3.5rem] bg-slate-900 text-white relative overflow-hidden group shadow-2xl">
-                                    <div className="absolute top-0 right-0 w-80 h-80 bg-secondary/10 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
+                                <div className="p-8 md:p-10 rounded-2xl bg-slate-900 text-white relative group border border-slate-800">
                                     <div className="relative z-10">
-                                        <h3 className="text-xl font-bold mb-6 tracking-tight flex items-center gap-4">
-                                            <Target className="h-7 w-7 text-secondary" />
-                                            Strategic Alignment: Who This Is For
-                                        </h3>
-                                        <p className="text-slate-300 text-lg md:text-xl font-light leading-relaxed italic border-l-2 border-secondary/40 pl-8">
+                                        <h3 className="text-xl font-bold mb-4 tracking-tight">Who This Is For</h3>
+                                        <p className="text-slate-300 text-lg leading-relaxed italic border-l-2 border-secondary/40 pl-6">
                                             "{service.bestFor}"
                                         </p>
                                     </div>
@@ -174,32 +168,32 @@ export function ServiceDetailContent({ service }) {
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="mt-16 md:mt-20 p-10 md:p-16 rounded-[3rem] bg-slate-900 text-white relative overflow-hidden text-center group shadow-2xl"
+                        className="mt-16 md:mt-20 p-6 md:p-20 rounded-3xl md:rounded-extra bg-slate-900 text-white relative overflow-hidden text-center group shadow-2xl"
                     >
                         <div className="absolute top-0 right-0 w-80 h-80 bg-secondary/10 blur-[130px] rounded-full translate-x-1/2 -translate-y-1/2 group-hover:bg-secondary/20 transition-all duration-700" />
                         <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/5 blur-[130px] rounded-full -translate-x-1/2 translate-y-1/2" />
-                        
+
                         <div className="relative z-10 max-w-4xl mx-auto">
-                            <h2 className="text-xl md:text-4xl font-black mb-8 tracking-tighter leading-tight italic uppercase">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6">
                                 {service.closing?.title}
                             </h2>
-                            <p className="text-base md:text-lg text-slate-400 font-light leading-relaxed mb-10 max-w-2xl mx-auto">
+                            <p className="text-slate-400 mb-10 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
                                 {service.closing?.text}
                             </p>
-                            
-                            <div className="flex flex-wrap justify-center gap-3 mb-12">
+
+                            <div className="flex flex-wrap justify-center gap-3 mb-10">
                                 {service.closing?.points?.map((p, i) => (
-                                    <div key={i} className="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[9px] font-black uppercase tracking-[0.2em] flex items-center gap-2">
-                                        <Check className="h-2.5 w-2.5 text-secondary" />
+                                    <div key={i} className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[10px] font-bold uppercase tracking-wider flex items-center gap-2">
+                                        <Check className="h-3 w-3 text-secondary" />
                                         {p}
                                     </div>
                                 ))}
                             </div>
 
-                            <Button asChild className="bg-secondary hover:bg-white hover:text-slate-900 text-white h-16 px-10 rounded-2xl font-black uppercase tracking-[0.2em] transition-all shadow-2xl shadow-secondary/20 border-none text-[12px] group/btn">
-                                <Link href="/contact" className="flex items-center gap-3">
-                                    {service.closing?.cta || "Get Started"}
-                                    <ArrowRight className="h-5 w-5 group-hover/btn:translate-x-2 transition-transform" />
+                            <Button asChild className="w-full md:w-auto bg-secondary hover:bg-white hover:text-slate-900 text-white h-14 px-6 md:px-10 rounded-xl font-bold uppercase tracking-wider transition-all border-none">
+                                <Link href="/contact" className="flex items-center justify-center gap-2">
+                                    <span className="truncate">{service.closing?.cta || "Get Started"}</span>
+                                    <ArrowRight className="h-5 w-5 flex-shrink-0" />
                                 </Link>
                             </Button>
                         </div>

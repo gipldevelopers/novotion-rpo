@@ -3,9 +3,6 @@ import { ServicesHero } from "@/components/services/ServicesHero";
 import { ServiceDetailContent } from "@/components/services/ServiceDetailContent";
 import { DigitalMarketingSpecialContent } from "@/components/services/DigitalMarketingSpecialContent";
 import { AISpecialContent } from "@/components/services/AISpecialContent";
-import { FinanceSpecialContent } from "@/components/services/FinanceSpecialContent";
-import { RecruitmentSpecialContent } from "@/components/services/RecruitmentSpecialContent";
-import { BusinessDevelopmentSpecialContent } from "@/components/services/BusinessDevelopmentSpecialContent";
 import { ServiceFAQ } from "@/components/services/ServiceFAQ";
 import { servicesData } from "@/data/servicesData";
 
@@ -54,14 +51,11 @@ export default async function ServiceDetail({ params }) {
 
     const isDigitalMarketing = service.slug === "digital-marketing";
     const isAIAutomation = service.slug === "ai-automation";
-    const isFinance = service.slug === "accounting-finance";
-    const isRecruitment = service.slug === "recruitment-services";
-    const isBizDev = service.slug === "business-development";
 
     return (
         <Layout>
             <main className="bg-white">
-                {!isDigitalMarketing && !isAIAutomation && !isFinance && !isRecruitment && !isBizDev && (
+                {!isDigitalMarketing && !isAIAutomation && (
                     <ServicesHero
                         title={service.title}
                         description={service.description}
@@ -72,16 +66,10 @@ export default async function ServiceDetail({ params }) {
                     <DigitalMarketingSpecialContent service={serializableService} />
                 ) : isAIAutomation ? (
                     <AISpecialContent service={serializableService} />
-                ) : isFinance ? (
-                    <FinanceSpecialContent service={serializableService} />
-                ) : isRecruitment ? (
-                    <RecruitmentSpecialContent service={serializableService} />
-                ) : isBizDev ? (
-                    <BusinessDevelopmentSpecialContent service={serializableService} />
                 ) : (
                     <ServiceDetailContent service={serializableService} />
                 )}
-                {!isDigitalMarketing && !isAIAutomation && !isFinance && !isRecruitment && !isBizDev && <ServiceFAQ faqs={service.faqs} />}
+                {!isDigitalMarketing && !isAIAutomation && <ServiceFAQ faqs={service.faqs} />}
             </main>
         </Layout>
     );
