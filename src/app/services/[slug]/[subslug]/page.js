@@ -178,7 +178,7 @@ export default function ServiceSubDetail() {
                 )}
 
                 {/* FINAL CTA - FULL WIDTH */}
-                <section className="relative py-24 md:py-32 bg-gradient-to-r from-[#2563eb] to-[#3b82f6] overflow-hidden text-center text-white">
+                <section className="relative py-16 md:py-20 bg-gradient-to-r from-[#2563eb] to-[#3b82f6] overflow-hidden text-center text-white">
                     <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-40">
                         <div className="absolute top-0 right-0 w-[60%] h-[100%] bg-white/10 skew-x-[45deg] translate-x-1/3" />
                         <div className="absolute bottom-0 left-0 w-[60%] h-[100%] bg-white/10 -skew-x-[45deg] -translate-x-1/3" />
@@ -190,13 +190,13 @@ export default function ServiceSubDetail() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-8 tracking-tighter leading-tight">
+                            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4 tracking-tighter leading-tight">
                                 Ready to scale your brand <br className="hidden md:block" /> to its full potential?
                             </h2>
-                            <p className="text-white/80 text-base md:text-lg mb-12 font-light max-w-2xl mx-auto leading-relaxed">
+                            <p className="text-white/80 text-sm md:text-base mb-8 font-light max-w-2xl mx-auto leading-relaxed">
                                 Join the elite group of brands that leverage Noltven's {subService.title} <br className="hidden md:block" /> to own their market and drive consistent growth.
                             </p>
-                            <Button asChild className="bg-white text-[#2563eb] hover:bg-slate-900 hover:text-white h-16 px-12 rounded-2xl font-black uppercase tracking-[0.2em] transition-all border-none text-[13px] group/btn shadow-xl shadow-black/10">
+                            <Button asChild className="bg-white text-[#2563eb] hover:bg-slate-900 hover:text-white h-14 px-10 rounded-2xl font-black uppercase tracking-[0.2em] transition-all border-none text-[12px] group/btn shadow-xl shadow-black/10">
                                 <Link href="/contact" className="flex items-center gap-3">
                                     Claim Your Strategy Session
                                 </Link>

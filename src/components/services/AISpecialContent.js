@@ -12,7 +12,8 @@ import {
     BarChart3,
     Globe,
     Target,
-    Settings
+    Settings,
+    TrendingUp
 } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";

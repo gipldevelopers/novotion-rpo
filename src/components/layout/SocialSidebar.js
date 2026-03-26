@@ -29,7 +29,7 @@ const socialLinks = [
   {
     name: "Instagram",
     icon: Instagram,
-    href: "https://www.instagram.com/noltven/",
+    href: "https://www.instagram.com/noltven_?igsh=MXNyOHU5NHN0b2RzeA==",
     color: "hover:bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]",
   },
 ];
