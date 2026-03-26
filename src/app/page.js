@@ -12,6 +12,11 @@ import { CTASectionV2 } from "@/components/home-v2/CTASectionV2";
 import { SocialSidebar } from "@/components/layout/SocialSidebar";
 import { caseStudies } from "@/data/caseStudiesData";
 
+export const metadata = {
+  title: "Building High-Impact Teams Through Strategic RPO & Digital Growth",
+  description: "Noltven is a premium partner for Recruitment Process Outsourcing, AI-driven automation, and high-performance digital marketing. Scale your operations with speed and precision.",
+};
+
 export default function Home() {
   return (
     <Layout>

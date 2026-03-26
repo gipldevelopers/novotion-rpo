@@ -1,6 +1,3 @@
-"use client";
-
-import { useParams } from "next/navigation";
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import { ArrowLeft, Check, Zap, Target, Shield, Sparkles, ArrowRight, Settings2 } from "lucide-react";
@@ -8,21 +5,46 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { servicesData } from "@/data/servicesData";
 
-export default function ServiceSubDetail() {
-    const params = useParams();
-    const slug = params?.slug ? decodeURIComponent(params.slug) : "";
-    const subslug = params?.subslug ? decodeURIComponent(params.subslug) : "";
+export async function generateMetadata({ params }) {
+    const { slug, subslug } = await params;
+    const decodedSlug = decodeURIComponent(slug);
+    const decodedSubslug = decodeURIComponent(subslug);
     
     const service = servicesData.find(s => 
-        s.slug === slug || 
-        s.slug === slug.replace(/\s+/g, '-') ||
-        s.id === slug
+        s.slug === decodedSlug || 
+        s.slug === decodedSlug.replace(/\s+/g, '-') ||
+        s.id === decodedSlug
     );
     
     const subService = service?.whatYouGet?.find((ss) => 
-        ss.slug === subslug || 
-        ss.slug === subslug.replace(/\s+/g, '-') ||
-        ss.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === subslug.replace(/\s+/g, '-')
+        ss.slug === decodedSubslug || 
+        ss.slug === decodedSubslug.replace(/\s+/g, '-') ||
+        ss.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === decodedSubslug.replace(/\s+/g, '-')
+    );
+
+    if (!subService) return { title: "Section Not Found" };
+
+    return {
+        title: `${subService.title} | ${service?.shortTitle || 'Service'} Specialist`,
+        description: subService.description || `Deep dive into ${subService.title} by Noltven.`,
+    };
+}
+
+export default async function ServiceSubDetail({ params }) {
+    const { slug, subslug } = await params;
+    const decodedSlug = decodeURIComponent(slug);
+    const decodedSubslug = decodeURIComponent(subslug);
+    
+    const service = servicesData.find(s => 
+        s.slug === decodedSlug || 
+        s.slug === decodedSlug.replace(/\s+/g, '-') ||
+        s.id === decodedSlug
+    );
+    
+    const subService = service?.whatYouGet?.find((ss) => 
+        ss.slug === decodedSubslug || 
+        ss.slug === decodedSubslug.replace(/\s+/g, '-') ||
+        ss.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === decodedSubslug.replace(/\s+/g, '-')
     );
     const loading = false;
 

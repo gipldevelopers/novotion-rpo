@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState, use } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 import { ArrowLeft, Clock, Calendar, User, Share2 } from "lucide-react";
@@ -12,27 +9,23 @@ import { CTASectionV2 } from "@/components/home-v2/CTASectionV2";
 // Importing the data from the grid to maintain sync
 import { blogsData } from "@/components/blogs/BlogGrid";
 
-export default function BlogDetailPage({ params }) {
-    const resolvedParams = use(params);
-    const [blog, setBlog] = useState(null);
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const blog = blogsData.find((b) => b.slug === slug);
+    if (!blog) return { title: "Blog Not Found" };
 
-    useEffect(() => {
-        const foundBlog = blogsData.find((b) => b.slug === resolvedParams.slug);
-        if (foundBlog) {
-            setBlog(foundBlog);
-        } else {
-            notFound();
-        }
-    }, [resolvedParams.slug]);
+    return {
+        title: `${blog.title} | Noltven Intelligence`,
+        description: blog.excerpt || blog.title,
+    };
+}
+
+export default async function BlogDetailPage({ params }) {
+    const { slug } = await params;
+    const blog = blogsData.find((b) => b.slug === slug);
 
     if (!blog) {
-        return (
-            <Layout>
-                <div className="min-h-screen flex items-center justify-center bg-white">
-                    <div className="w-10 h-10 border-4 border-secondary border-t-transparent rounded-full animate-spin" />
-                </div>
-            </Layout>
-        );
+        notFound();
     }
 
     return (

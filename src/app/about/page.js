@@ -1,5 +1,3 @@
-"use client";
-
 import { Layout } from "@/components/layout/Layout";
 import { AboutHero } from "@/components/about/AboutHero";
 import { AboutStory } from "@/components/about/AboutStory";
@@ -9,6 +7,11 @@ import { AboutRecognitions } from "@/components/about/AboutRecognitions";
 import { AboutValues } from "@/components/about/AboutValues";
 import { AboutPresence } from "@/components/about/AboutPresence";
 import { CTASectionV2 } from "@/components/home-v2/CTASectionV2";
+
+export const metadata = {
+  title: "Our Mission & Story | Global Strategic RPO Partner",
+  description: "Learn about the mission, values, and story behind Noltven. We are a global team dedicated to operational excellence, RPO, and business transformation.",
+};
 
 export default function About() {
   return (

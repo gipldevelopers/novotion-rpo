@@ -13,7 +13,7 @@ const testimonials = [
 export function TestimonialsSection() {
   return (
     <Section variant="dark">
-      <SectionHeader badge="Testimonials" title="What Our Clients Say" description="Hear from enterprise leaders who have transformed their talent acquisition with Noltven RPO." />
+      <SectionHeader badge="Testimonials" title="What Our Clients Say" description="Hear from enterprise leaders who have transformed their talent acquisition with Noltven." />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {testimonials.map((testimonial, index) => (
           <motion.div

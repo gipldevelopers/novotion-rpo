@@ -18,7 +18,7 @@ export function AdvantageSection() {
     <Section variant="muted">
       <SectionHeader
         badge="Why Noltven"
-        title="The Noltven RPO Advantage"
+        title="The Noltven Advantage"
         description="We combine strategic expertise, cutting-edge technology, and a partnership-first approach to transform your talent acquisition."
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

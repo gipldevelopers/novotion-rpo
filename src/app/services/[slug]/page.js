@@ -1,6 +1,3 @@
-"use client";
-
-import { useParams } from "next/navigation";
 import { Layout } from "@/components/layout/Layout";
 import { ServicesHero } from "@/components/services/ServicesHero";
 import { ServiceDetailContent } from "@/components/services/ServiceDetailContent";
@@ -12,26 +9,31 @@ import { BusinessDevelopmentSpecialContent } from "@/components/services/Busines
 import { ServiceFAQ } from "@/components/services/ServiceFAQ";
 import { servicesData } from "@/data/servicesData";
 
-export default function ServiceDetail() {
-    const params = useParams();
-    const slug = params?.slug ? decodeURIComponent(params.slug) : "";
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const decodedSlug = decodeURIComponent(slug);
     const service = servicesData.find(s =>
-        s.slug === slug ||
-        s.slug === slug.replace(/\s+/g, '-') ||
-        s.id === slug
+        s.slug === decodedSlug ||
+        s.slug === decodedSlug.replace(/\s+/g, '-') ||
+        s.id === decodedSlug
     );
-    const loading = false; // Static data is available immediately
 
-    if (loading) {
-        return (
-            <Layout>
-                <div className="min-h-[80vh] flex flex-col items-center justify-center p-20">
-                    <div className="w-16 h-16 border-4 border-slate-100 border-t-secondary rounded-full animate-spin mb-6"></div>
-                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Assembling Strategy Layer...</p>
-                </div>
-            </Layout>
-        );
-    }
+    if (!service) return { title: "Service Not Found" };
+
+    return {
+        title: `${service.title} | Strategic Business Solutions`,
+        description: service.description || `Expert ${service.title} services by Noltven. Scale your business with our global expertise.`,
+    };
+}
+
+export default async function ServiceDetail({ params }) {
+    const { slug } = await params;
+    const decodedSlug = decodeURIComponent(slug);
+    const service = servicesData.find(s =>
+        s.slug === decodedSlug ||
+        s.slug === decodedSlug.replace(/\s+/g, '-') ||
+        s.id === decodedSlug
+    );
 
     if (!service) {
         return (
@@ -46,6 +48,9 @@ export default function ServiceDetail() {
             </Layout>
         );
     }
+
+    // Sanitize service object: remove non-serializable icon component
+    const { icon, ...serializableService } = service;
 
     const isDigitalMarketing = service.slug === "digital-marketing";
     const isAIAutomation = service.slug === "ai-automation";
@@ -64,17 +69,17 @@ export default function ServiceDetail() {
                     />
                 )}
                 {isDigitalMarketing ? (
-                    <DigitalMarketingSpecialContent service={service} />
+                    <DigitalMarketingSpecialContent service={serializableService} />
                 ) : isAIAutomation ? (
-                    <AISpecialContent service={service} />
+                    <AISpecialContent service={serializableService} />
                 ) : isFinance ? (
-                    <FinanceSpecialContent service={service} />
+                    <FinanceSpecialContent service={serializableService} />
                 ) : isRecruitment ? (
-                    <RecruitmentSpecialContent service={service} />
+                    <RecruitmentSpecialContent service={serializableService} />
                 ) : isBizDev ? (
-                    <BusinessDevelopmentSpecialContent service={service} />
+                    <BusinessDevelopmentSpecialContent service={serializableService} />
                 ) : (
-                    <ServiceDetailContent service={service} />
+                    <ServiceDetailContent service={serializableService} />
                 )}
                 {!isDigitalMarketing && !isAIAutomation && !isFinance && !isRecruitment && !isBizDev && <ServiceFAQ faqs={service.faqs} />}
             </main>
