@@ -220,10 +220,7 @@ export function DigitalMarketingSpecialContent({ service }) {
                                     </svg>
                                 </span> the 99%
                             </h2>
-                            <p className="text-lg text-slate-500 font-light leading-relaxed mb-10 max-w-md">
-                                Hiring should be easy, cost-effective, and flexible. Noltven is synonymous with it all.
-                            </p>
-                            <Button asChild className="bg-secondary hover:bg-slate-900 text-white h-14 px-8 rounded-xl font-bold uppercase tracking-widest transition-all border-none text-[12px] group/btn">
+                                                        <Button asChild className="bg-secondary hover:bg-slate-900 text-white h-14 px-8 rounded-xl font-bold uppercase tracking-widest transition-all border-none text-[12px] group/btn">
                                 <Link href="/contact" className="flex items-center gap-3">
                                     Discuss Your Strategy
                                     <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
