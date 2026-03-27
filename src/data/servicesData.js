@@ -70,7 +70,7 @@ export const servicesData = [
                         "Drop-off prevention through candidate alignment"
                     ]
                 },
-                boundary: "We never interact directly with your clients, and we never override your process. Your brand, your relationships, and your control remain entirely intact always.",
+                boundary: "Boundary We Maintain: We never interact directly with your clients, and we never override your process. Your brand, your relationships, and your control remain entirely intact   always.",
                 bottomLine: "You bring the requirement. We make sure you don't miss the placement."
             },
             {
@@ -220,10 +220,9 @@ export const servicesData = [
                 bottomLine: "Placements that don't just close they join, and they stay."
             }
         ],
-        bestFor: "Your recruitment team is the authority, but they are drowning in the execution. You need to scale across regions, handle high-volume VMS requirements, or simply give your recruiters the space to focus on relationships rather than admin and sourcing. You need a partner who scales with you, not a separate agency that competes with you.",
         closing: {
             title: "Rethink Outsourcing. Build a Hiring Advantage That Lasts.",
-            text: "Noltven is not here to replace your recruitment team. We are here to make it more capable, more scalable, and more effective across every market you operate in.",
+            text: "Noltven is not here to replace your recruitment team. We are here to make it more capable, more scalable, and more effective across every market you operate in.\n\nThen you are not looking for a vendor. You are looking for a recruitment partner.",
             points: [
                 "Consistently higher candidate quality",
                 "Global talent access across 5 regions",
@@ -265,12 +264,6 @@ export const servicesData = [
                     title: "What We Do Instead",
                     text: "We run the engine that keeps your BD moving research, data, outreach, CRM so your team spends its time on qualified conversations, not cold prospecting."
                 }
-            ],
-            highlights: [
-                "Targeted market and account intelligence",
-                "Clean, verified prospect data",
-                "Consistent multi-channel outreach",
-                "Structured CRM and pipeline oversight"
             ]
         },
         whatYouGet: [
@@ -322,7 +315,7 @@ export const servicesData = [
                     "A foundation that supports consistent outreach at scale"
                 ],
                 servicesInclude: {
-                    "Data Management": [
+                    "Data Delivery": [
                         "Custom lead lists built to your ICP",
                         "Decision-maker contact identification",
                         "Data verification and enrichment",
@@ -352,7 +345,7 @@ export const servicesData = [
                     "A pipeline that grows steadily rather than in unpredictable bursts"
                 ],
                 servicesInclude: {
-                    "Outreach Support": [
+                    "Campaign Management": [
                         "Personalised email outreach campaigns",
                         "LinkedIn connection and messaging support",
                         "Cold calling assistance",
@@ -395,10 +388,9 @@ export const servicesData = [
                 bottomLine: "With a structured CRM in place, your business development becomes more predictable, measurable, and built for scale."
             }
         ],
-        bestFor: "Your pipeline is built on referrals and luck. You don't have an outbound system, a proper CRM, or the bandwidth to chase new clients consistently. Revenue is reactive. Growth is unpredictable.",
         closing: {
-            title: "Business Development",
-            text: "Build a BD Engine That Works Consistently\n\nGrowth isn't the result of a single great effort it's the outcome of a system that operates reliably, day after day. At Noltven, we combine research, data, outreach, and pipeline structure to help you build that system across every market you're targeting.\n\nIf you are ready to stop treating BD as a reactive activity and start building a reliable, scalable growth engine —let's talk.",
+            title: "Build a BD Engine That Works Consistently",
+            text: "Growth isn't the result of a single great effort it's the outcome of a system that operates reliably, day after day. At Noltven, we combine research, data, outreach, and pipeline structure to help you build that system across every market you're targeting.\n\nIf you are ready to stop treating BD as a reactive activity and start building a reliable, scalable growth engine  let's talk.",
             points: [
                 "Targeted market and account intelligence",
                 "Clean, verified prospect data",
@@ -512,7 +504,7 @@ export const servicesData = [
         slug: "ai-automation",
         icon: Cog,
         title: "Work Smarter. Scale Faster. Automate What Does Not Need You.",
-        description: "We build intelligent automation and AI systems that free your team to focus on higher value tasks, not data entry or busywork. The result is removing the ceiling on what your people can achieve.",
+        description: "We transform operational bottlenecks into intelligent, self-sustaining systems. By integrating advanced AI and bespoke automation across your entire workflow, we remove the ceiling on your growth and enable your team to focus on the strategic work that matters.",
         cta: "Automate Your Workflows",
         head: "Work Smarter. Scale Faster. Automate What Does Not Need You.",
         intro: {
@@ -541,9 +533,9 @@ export const servicesData = [
         },
         whatYouGet: [
             {
-                title: "Business Process Automation",
+                title: "AI & Automation Services",
                 slug: "business-process-automation",
-                head: "Automate What Does Not Need You.",
+                head: "Work Smarter. Scale Faster. Automate What Does Not Need You.",
                 description: "We build intelligent automation and AI systems that free your team to focus on higher value tasks, not data entry or busywork. The result is removing the ceiling on what your people can achieve.",
                 howWeWork: [
                     "Business Process Mapping & Audit: We conduct a structured analysis of how your operations actually function, mapping every workflow, handoff, and manual step before designing any automation.",
@@ -772,7 +764,7 @@ export const servicesData = [
         slug: "accounting-finance",
         icon: Target,
         title: "Accounting & Finance Services",
-        description: "Your Numbers Should Work For You, Not Against You. We give you accurate books, timely reports, and a finance function focused on supporting your growth not just filing obligations.",
+        description: "**Your Numbers Should Work For You, Not Against You.**\nWe give you accurate books, timely reports, and a finance function focused on supporting your growth not just filing obligations.",
         cta: "Organize Your Finances",
         head: "Your Numbers Should Work For You, Not Against You.",
         whatYouGet: [

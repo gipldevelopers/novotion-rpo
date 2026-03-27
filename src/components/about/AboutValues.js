@@ -7,25 +7,25 @@ const values = [
     {
         icon: Zap,
         title: "Adaptability",
-        description: "Change is not a challenge—it's our advantage. We pivot in real time, realign without friction, and keep execution moving no matter what shifts.",
+        description: "Change is not a challenge it's our advantage. We pivot in real time, realign without friction, and keep execution moving no matter what shifts.",
         color: "from-orange-500/20 to-orange-500/0"
     },
     {
         icon: ShieldCheck,
         title: "Adherence",
-        description: "Every delivery is measured against a defined standard—no shortcuts, no exceptions. Consistency isn't occasional for us; it's the foundation everything is built on.",
+        description: "Every delivery is measured against a defined standard no shortcuts, no exceptions. Consistency isn't occasional for us; it's the foundation everything is built on.",
         color: "from-secondary/20 to-secondary/0"
     },
     {
         icon: Users,
         title: "Accountability",
-        description: "We own every outcome from start to finish—no delays, no excuses, no passing the buck. If it carries our name, it carries our full responsibility.",
+        description: "We own every outcome from start to finish no delays, no excuses, no passing the buck. If it carries our name, it carries our full responsibility.",
         color: "from-slate-500/20 to-slate-500/0"
     },
     {
         icon: Target,
         title: "Accuracy",
-        description: "We don't guess—we verify, we validate, and we deliver with precision. Because getting it right the first time isn't a goal, it's a standard.",
+        description: "We don't guess we verify, we validate, and we deliver with precision. Because getting it right the first time isn't a goal, it's a standard.",
         color: "from-secondary/20 to-secondary/0"
     },
     {
@@ -51,11 +51,11 @@ export function AboutValues() {
                         <Sparkles className="h-4 w-4" />
                         Our Foundation
                     </motion.div>
- 
+
                     <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tighter font-display">
                         The <span className="text-secondary italic underline underline-offset-8 decoration-secondary/30">5A</span> Core Values.
                     </h2>
-  
+
                     <p className="text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto">
                         Our Five A's (5A) aren't just words on a wall; they are the operational standards that drive every decision we make.
                     </p>

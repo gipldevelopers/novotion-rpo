@@ -70,7 +70,7 @@ export const servicesData = [
                         "Drop-off prevention through candidate alignment"
                     ]
                 },
-                boundary: "We never interact directly with your clients, and we never override your process. Your brand, your relationships, and your control remain entirely intact always.",
+                boundary: "Boundary We Maintain: We never interact directly with your clients, and we never override your process. Your brand, your relationships, and your control remain entirely intact   always.",
                 bottomLine: "You bring the requirement. We make sure you don't miss the placement."
             },
             {
@@ -220,10 +220,9 @@ export const servicesData = [
                 bottomLine: "Placements that don't just close they join, and they stay."
             }
         ],
-        bestFor: "Your recruitment team is the authority, but they are drowning in the execution. You need to scale across regions, handle high-volume VMS requirements, or simply give your recruiters the space to focus on relationships rather than admin and sourcing. You need a partner who scales with you, not a separate agency that competes with you.",
         closing: {
             title: "Rethink Outsourcing. Build a Hiring Advantage That Lasts.",
-            text: "Noltven is not here to replace your recruitment team. We are here to make it more capable, more scalable, and more effective across every market you operate in.",
+            text: "Noltven is not here to replace your recruitment team. We are here to make it more capable, more scalable, and more effective across every market you operate in.\n\nThen you are not looking for a vendor. You are looking for a recruitment partner.",
             points: [
                 "Consistently higher candidate quality",
                 "Global talent access across 5 regions",
@@ -264,12 +263,6 @@ export const servicesData = [
                     title: "What We Do Instead",
                     text: "We run the engine that keeps your BD moving research, data, outreach, CRM so your team spends its time on qualified conversations, not cold prospecting."
                 }
-            ],
-            highlights: [
-                "Targeted market and account intelligence",
-                "Clean, verified prospect data",
-                "Consistent multi-channel outreach",
-                "Structured CRM and pipeline oversight"
             ]
         },
         whatYouGet: [
@@ -321,7 +314,7 @@ export const servicesData = [
                     "A foundation that supports consistent outreach at scale"
                 ],
                 servicesInclude: {
-                    "Data Management": [
+                    "Data Delivery": [
                         "Custom lead lists built to your ICP",
                         "Decision-maker contact identification",
                         "Data verification and enrichment",
@@ -351,7 +344,7 @@ export const servicesData = [
                     "A pipeline that grows steadily rather than in unpredictable bursts"
                 ],
                 servicesInclude: {
-                    "Outreach Support": [
+                    "Campaign Management": [
                         "Personalised email outreach campaigns",
                         "LinkedIn connection and messaging support",
                         "Cold calling assistance",
@@ -394,10 +387,9 @@ export const servicesData = [
                 bottomLine: "With a structured CRM in place, your business development becomes more predictable, measurable, and built for scale."
             }
         ],
-        bestFor: "Your pipeline is built on referrals and luck. You don't have an outbound system, a proper CRM, or the bandwidth to chase new clients consistently. Revenue is reactive. Growth is unpredictable.",
         closing: {
-            title: "Business Development",
-            text: "Build a BD Engine That Works Consistently\n\nGrowth isn't the result of a single great effort it's the outcome of a system that operates reliably, day after day. At Noltven, we combine research, data, outreach, and pipeline structure to help you build that system across every market you're targeting.\n\nIf you are ready to stop treating BD as a reactive activity and start building a reliable, scalable growth engine —let's talk.",
+            title: "Build a BD Engine That Works Consistently",
+            text: "Growth isn't the result of a single great effort it's the outcome of a system that operates reliably, day after day. At Noltven, we combine research, data, outreach, and pipeline structure to help you build that system across every market you're targeting.\n\nIf you are ready to stop treating BD as a reactive activity and start building a reliable, scalable growth engine  let's talk.",
             points: [
                 "Targeted market and account intelligence",
                 "Clean, verified prospect data",
@@ -445,14 +437,14 @@ export const servicesData = [
                 title: "Social Media Management",
                 slug: "social-media-management",
                 head: "Show Up. Stand Out. Every Single Day.",
-                description: "We handle your social presence from end to end, keeping your brand visible, credible, and actively engaging customers every day. Consistency is what separates brands that grow from those that stall.",
+                description: "We handle your social presence from end to end, keeping your brand visible, credible, and actively engaging customers every day.",
                 howWeWork: [
-                    "We identify where your audience is most active and build a strategy around owning that space",
-                    "We craft platform-native content (Graphics, Captions & Reels) designed to earn attention",
-                    "Our disciplined publishing cadence keeps your brand visible and algorithmically relevant",
-                    "We manage comments, conversations, and sector discussions on your behalf to turn followers into advocates",
-                    "Monthly performance reporting focused on growth and conversion, not just raw metrics",
-                    "Continuous tracking of competitor activity and emerging trends to keep you ahead of the curve"
+                    "Platform Strategy & Profile Optimisation: We identify where your audience is most active and build a strategy around owning that space. We make sure your profile is positioned to communicate authority at first glance.",
+                    "Content Creation (Graphics, Captions & Reels): We craft platform-native content designed to earn attention, not just fill a calendar. Every post serves a clear brand or commercial purpose.",
+                    "Consistent Posting & Scheduling: Our disciplined publishing cadence keeps your brand visible and algorithmically relevant. Consistency is what separates brands that grow from those that stall.",
+                    "Community Management & Engagement: We manage comments, conversations, and sector discussions on your behalf. Active community management turns passive followers into genuine advocates over time.",
+                    "Monthly Performance Reporting: We provide clear reporting on what is growing, what is converting, and what needs to change. Decisions are based on evidence rather than instinct.",
+                    "Competitor Monitoring & Trend Analysis: We continuously track competitor activity and emerging trends so your content strategy leads the market rather than simply reacting to it."
                 ],
                 benefits: [
                     "Establish daily authority and brand recognition across key platforms",
@@ -632,14 +624,14 @@ export const servicesData = [
         shortTitle: "AI & Automation",
         slug: "ai-automation",
         icon: Cog,
-        title: "Build Systems That Work Even When You’re Not",
-        description: "Your team shouldn't do manually what a workflow handles in seconds. We build the automations that give your time back.",
+        title: "Work Smarter. Scale Faster. Automate What Does Not Need You.",
+        description: "We transform operational bottlenecks into intelligent, self-sustaining systems. By integrating advanced AI and bespoke automation across your entire workflow, we remove the ceiling on your growth and enable your team to focus on the strategic work that matters.",
         cta: "Automate Your Workflows",
         overview: "Every business has processes that consume hours of valuable time data entry, manual follow-ups, repetitive admin tasks, and disconnected tools. We help you transform those processes into intelligent systems that run automatically, allowing your business to operate more efficiently every day.",
         whatYouGet: [
             {
-                title: "Workflow Automation",
-                head: "Simplify Your Processes and Eliminate Bottlenecks",
+                title: "AI & Automation Services",
+                head: "Work Smarter. Scale Faster. Automate What Does Not Need You.",
                 description: "We analyse how your business currently operates and redesign those workflows with automation at the core. The result is smoother operations, fewer delays, and systems that work reliably without constant manual input.",
                 items: [
                     "Process Analysis & Workflow Mapping",
@@ -670,7 +662,7 @@ export const servicesData = [
         slug: "accounting-finance",
         icon: Target,
         title: "Strong Businesses Are Built on Financial Clarity",
-        description: "Clean books, accurate payroll, zero missed deadlines and a clear view of your finances without the cost of a full-time hire.",
+        description: "**Your Numbers Should Work For You, Not Against You.**\nClean books, accurate payroll, zero missed deadlines and a clear view of your finances without the cost of a full-time hire.",
         cta: "Organise Your Finances",
         overview: "Managing finances can quickly become overwhelming when you’re also responsible for running a business. Our accounting support provides professional financial management without the overhead."
     }

@@ -24,7 +24,7 @@ export function ServiceDetailContent({ service }) {
                             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
                                 {service.intro.title}
                             </h2>
-                            <p className="text-lg text-slate-600 leading-relaxed mb-10 border-l-2 border-secondary/20 pl-6">
+                            <p className="text-lg text-slate-600 leading-relaxed mb-10 border-l-2 border-secondary/20 pl-6 whitespace-pre-line">
                                 {service.intro.overview}
                             </p>
 
@@ -37,21 +37,23 @@ export function ServiceDetailContent({ service }) {
                                 ))}
                             </div>
 
-                            <div className="p-8 md:p-10 rounded-2xl bg-slate-50 border border-slate-100 relative">
-                                <p className="text-[11px] font-bold text-secondary uppercase tracking-widest mb-6">
-                                    Benefits of this approach:
-                                </p>
-                                <div className="grid md:grid-cols-2 gap-y-6 gap-x-10">
-                                    {(service.highlights || service.intro?.highlights || []).map((h, i) => (
-                                        <div key={i} className="flex gap-4 items-start">
-                                            <div className="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-white border border-slate-200 flex items-center justify-center text-secondary shadow-sm">
-                                                <Check className="h-3 w-3" />
+                            {((service.highlights && service.highlights.length > 0) || (service.intro?.highlights && service.intro.highlights.length > 0)) && (
+                                <div className="p-8 md:p-10 rounded-2xl bg-slate-50 border border-slate-100 relative">
+                                    <p className="text-[11px] font-bold text-secondary uppercase tracking-widest mb-6">
+                                        Benefits of this approach:
+                                    </p>
+                                    <div className="grid md:grid-cols-2 gap-y-6 gap-x-10">
+                                        {(service.highlights || service.intro?.highlights || []).map((h, i) => (
+                                            <div key={i} className="flex gap-4 items-start">
+                                                <div className="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-white border border-slate-200 flex items-center justify-center text-secondary shadow-sm">
+                                                    <Check className="h-3 w-3" />
+                                                </div>
+                                                <span className="text-sm text-slate-700 font-medium leading-tight">{h}</span>
                                             </div>
-                                            <span className="text-sm text-slate-700 font-medium leading-tight">{h}</span>
-                                        </div>
-                                    ))}
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
+                            )}
                         </div>
                     </motion.div>
                 )}
@@ -105,7 +107,7 @@ export function ServiceDetailContent({ service }) {
                                                             {item.title}
                                                         </h4>
                                                         <p className="text-slate-500 text-sm leading-relaxed line-clamp-2">
-                                                            {item.head}
+                                                            {service.slug === 'accounting-finance' ? item.description : item.head}
                                                         </p>
                                                     </div>
 
@@ -174,10 +176,10 @@ export function ServiceDetailContent({ service }) {
                         <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/5 blur-[130px] rounded-full -translate-x-1/2 translate-y-1/2" />
 
                         <div className="relative z-10 max-w-4xl mx-auto">
-                            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6 whitespace-pre-line">
                                 {service.closing?.title}
                             </h2>
-                            <p className="text-slate-400 mb-10 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+                            <p className="text-slate-400 mb-10 max-w-2xl mx-auto text-sm md:text-base leading-relaxed whitespace-pre-line">
                                 {service.closing?.text}
                             </p>
 

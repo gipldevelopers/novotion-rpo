@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-    ArrowRight, 
-    Zap, 
-    Bot, 
-    Cpu, 
-    Network, 
-    Repeat, 
+import {
+    ArrowRight,
+    Zap,
+    Bot,
+    Cpu,
+    Network,
+    Repeat,
     BarChart3,
     Settings,
     TrendingUp,
@@ -43,10 +43,10 @@ export function AISpecialContent({ service }) {
 
     const pillars = [
         {
-            title: "Business Process Automation",
+            title: "AI & Automation Services",
             slug: "business-process-automation",
-            tagline: "AUTOMATE WHAT DOES NOT NEED YOU.",
-            desc: "We build intelligent automation and AI systems that free your team to focus on higher value tasks, not data entry or busywork. The result is removing the ceiling on what your people can achieve.",
+            tagline: "WORK SMARTER. SCALE FASTER. AUTOMATE WHAT DOES NOT NEED YOU.",
+            desc: "We identify and digitise manual internal tasks from simple data entry to complex cross-platform workflows ensuring your operation runs at peak efficiency around the clock.",
             icon: pillarIcons[0]
         },
         {
@@ -109,7 +109,7 @@ export function AISpecialContent({ service }) {
                             </div>
 
                             <h1 className="text-4xl md:text-5xl lg:text-[50px] font-bold text-[#0a0a0a] tracking-tight leading-[1.1] mb-6">
-                                Work & <span className="relative inline-block text-secondary">
+                                AI & <span className="relative inline-block text-secondary">
                                     Automation
                                     {/* Refined Underline Swoosh - Matched to 3rd reference image */}
                                     <svg className="absolute -bottom-1.5 left-0 w-full h-2.5 text-secondary/50" viewBox="0 0 300 12" fill="none" preserveAspectRatio="none">
@@ -121,17 +121,17 @@ export function AISpecialContent({ service }) {
                             <p className="text-[15px] text-slate-500 font-light leading-relaxed max-w-lg mb-8">
                                 {service.description || "We build intelligent automation and AI systems that free your team to focus on higher value tasks, not data entry or busywork. The result is removing the ceiling on what your people can achieve."}
                             </p>
-                            
-                            <Button asChild className="bg-white hover:bg-secondary text-secondary hover:text-white h-10 px-7 rounded-lg font-bold transition-all shadow-lg shadow-secondary/5 border-none group/btn text-[11px] uppercase tracking-wider">
+
+                            <Button asChild className="bg-secondary hover:bg-slate-900 text-white h-12 px-8 rounded-xl font-bold transition-all shadow-xl shadow-secondary/20 border-none group/btn text-[11px] uppercase tracking-widest mt-4">
                                 <Link href="/contact" className="flex items-center gap-2">
                                     Automate your workflows
-                                    <ArrowRight className="h-3.5 w-3.5 group-hover/btn:translate-x-1 transition-transform" />
+                                    <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                                 </Link>
                             </Button>
                         </motion.div>
 
                         {/* Right Side: Image + Floating Elements - Spacing adjusted to prevent clipping */}
-                        <motion.div 
+                        <motion.div
                             initial={{ scale: 0.95, opacity: 0, x: 20 }}
                             animate={{ scale: 1, opacity: 1, x: 0 }}
                             transition={{ delay: 0.2 }}
@@ -139,7 +139,7 @@ export function AISpecialContent({ service }) {
                         >
                             {/* Ghost Background Layers for matched depth */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] bg-secondary/10 blur-[60px] rounded-[3rem] -z-10" />
-                            
+
                             {/* Tilted background accents */}
                             <div className="absolute top-16 left-8 w-[80%] h-[80%] bg-secondary/5 rounded-[3.5rem] rotate-[-3deg] -z-[5]" />
                             <div className="absolute top-8 right-8 w-[80%] h-[80%] bg-slate-500/5 rounded-[3.5rem] rotate-[4deg] -z-[5]" />
@@ -147,7 +147,7 @@ export function AISpecialContent({ service }) {
                             {/* Main Hero Container - Framed with Extreme Rounding */}
                             <div className="relative rounded-[3.5rem] bg-black aspect-square w-full max-w-[440px] p-0.5 shadow-[0_50px_100px_-20px_rgba(30,58,138,0.2)]">
                                 <div className="relative w-full h-full rounded-[3.3rem] overflow-hidden">
-                                    <Image 
+                                    <Image
                                         src="/assets/AI Visualization.png"
                                         alt="AI Visualization"
                                         fill
@@ -155,17 +155,17 @@ export function AISpecialContent({ service }) {
                                         priority
                                     />
                                 </div>
-                                
+
                                 {/* Signature Card: Neural Load - Corrected Positioning with Tilt & Floating Animation */}
-                                <motion.div 
+                                <motion.div
                                     initial={{ opacity: 0, x: -20, rotate: -3 }}
-                                    animate={{ 
-                                        opacity: 1, 
+                                    animate={{
+                                        opacity: 1,
                                         x: 0,
                                         y: [0, -8, 0], // Continuous bobbing
                                         rotate: -3
                                     }}
-                                    transition={{ 
+                                    transition={{
                                         opacity: { delay: 0.8 },
                                         x: { delay: 0.8 },
                                         y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
@@ -178,7 +178,7 @@ export function AISpecialContent({ service }) {
                                         <TrendingUp className="h-3.5 w-3.5 text-secondary" />
                                     </div>
                                     <div className="h-2 w-full bg-secondary/20 rounded-full overflow-hidden mb-2.5">
-                                        <motion.div 
+                                        <motion.div
                                             initial={{ width: 0 }}
                                             animate={{ width: '98.2%' }}
                                             transition={{ duration: 1.5, ease: "easeOut", delay: 1 }}
@@ -189,15 +189,15 @@ export function AISpecialContent({ service }) {
                                 </motion.div>
 
                                 {/* Signature Card: Active Agents - Corrected Positioning with Tilt & Floating Animation */}
-                                <motion.div 
+                                <motion.div
                                     initial={{ opacity: 0, x: 20, rotate: 2 }}
-                                    animate={{ 
-                                        opacity: 1, 
+                                    animate={{
+                                        opacity: 1,
                                         x: 0,
                                         y: [0, 8, 0], // Continuous bobbing (offset from other card)
                                         rotate: 2
                                     }}
-                                    transition={{ 
+                                    transition={{
                                         opacity: { delay: 1.2 },
                                         x: { delay: 1.2 },
                                         y: { duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
@@ -255,8 +255,8 @@ export function AISpecialContent({ service }) {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {pillars.map((item, i) => (
-                            <motion.div 
-                                key={i} 
+                            <motion.div
+                                key={i}
                                 initial={{ opacity: 0, y: 15 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -284,7 +284,7 @@ export function AISpecialContent({ service }) {
                                         {item.desc}
                                     </p>
                                     <div className="mt-auto">
-                                        <Link 
+                                        <Link
                                             href={`/services/ai-automation/${item.slug}`}
                                             className="text-[9px] font-bold text-white flex items-center gap-1.5 uppercase tracking-[0.15em] transition-opacity hover:opacity-80"
                                         >

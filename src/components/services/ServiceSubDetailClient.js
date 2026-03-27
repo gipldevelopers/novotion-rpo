@@ -10,6 +10,7 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
     
     const isMarketing = service.slug === 'digital-marketing';
     const isAI = service.slug === 'ai-automation';
+    const isFinance = service.slug === 'accounting-finance';
 
     if (isAI) {
         return (
@@ -55,12 +56,32 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
                         </div>
                     </section>
                 </div>
-                <section className="relative py-16 md:py-20 bg-gradient-to-r from-[#2563eb] to-[#3b82f6] text-center text-white">
+                {/* FINAL CTA - HIGH FIDELITY VERSION */}
+                <section className="relative py-16 md:py-24 bg-gradient-to-r from-[#2563eb] to-[#3b82f6] overflow-hidden text-center text-white">
+                    {/* Background Polygons for depth */}
+                    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-40">
+                        <div className="absolute top-0 right-0 w-[60%] h-[100%] bg-white/10 skew-x-[45deg] translate-x-1/3" />
+                        <div className="absolute bottom-0 left-0 w-[60%] h-[100%] bg-white/10 -skew-x-[45deg] -translate-x-1/3" />
+                    </div>
+                    
                     <div className="container-premium relative z-10 max-w-4xl mx-auto px-4">
-                        <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4 tracking-tighter">Ready to scale your brand?</h2>
-                        <Button asChild className="bg-white text-[#2563eb] hover:bg-slate-900 hover:text-white h-14 px-10 rounded-2xl font-black uppercase tracking-[0.2em] transition-all border-none text-[12px]">
-                            <Link href="/contact" className="flex items-center gap-3">Claim Your Strategy Session</Link>
-                        </Button>
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4 tracking-tighter leading-tight">
+                                Ready to scale your brand <br className="hidden md:block" /> to its full potential?
+                            </h2>
+                            <p className="text-white/80 text-sm md:text-base mb-10 font-light max-w-2xl mx-auto leading-relaxed">
+                                Stop settling for average results. Join the elite group of brands <br className="hidden md:block" /> that leverage Noltven to own their market.
+                            </p>
+                            <Button asChild className="bg-white text-[#2563eb] hover:bg-slate-900 hover:text-white h-16 px-12 rounded-2xl font-black uppercase tracking-[0.2em] transition-all border-none text-[12px] group/btn shadow-[0_20px_40px_rgba(0,0,0,0.1)] translate-y-0 hover:-translate-y-1 transition-transform duration-300">
+                                <Link href="/contact" className="flex items-center gap-3">
+                                    Claim Your Strategy Session
+                                </Link>
+                            </Button>
+                        </motion.div>
                     </div>
                 </section>
             </main>
@@ -119,7 +140,7 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
                                 )}
 
                                 {/* Benefits */}
-                                {subService.benefits && (
+                                {subService.benefits && !isFinance && (
                                     <div className="p-10 rounded-[2.5rem] bg-slate-900 text-white relative overflow-hidden">
                                         <h2 className="text-2xl font-bold mb-8 tracking-tight flex items-center gap-3">
                                             <Sparkles className="h-6 w-6 text-secondary" />
@@ -139,10 +160,14 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
                                 )}
 
                                 {/* Services Include (Grid of Categories) */}
-                                {subService.servicesInclude && (
+                                {subService.servicesInclude && !isFinance && (
                                     <div>
                                         <h2 className="text-2xl font-bold text-slate-900 mb-10 tracking-tight">Service Specifications</h2>
-                                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        <div className={`grid gap-6 ${
+                                            Object.keys(subService.servicesInclude).length === 1 
+                                            ? 'grid-cols-1' 
+                                            : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+                                        }`}>
                                             {Object.entries(subService.servicesInclude).map(([category, items], i) => (
                                                 <div key={i} className="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                                                     <h3 className="text-base font-bold text-secondary mb-6 tracking-wide uppercase">{category}</h3>
@@ -161,11 +186,23 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
                                 )}
 
                                 {/* Boundary / Bottom Line */}
-                                {(subService.boundary || subService.bottomLine) && (
-                                    <div className="bg-slate-50 border border-slate-200 p-8 md:p-12 rounded-[2.5rem] text-center italic">
-                                        <p className="text-slate-600 text-lg md:text-xl font-light leading-relaxed">
-                                            "{subService.bottomLine || subService.boundary}"
-                                        </p>
+                                {(subService.boundary || subService.bottomLine) && !isFinance && (
+                                    <div className="bg-slate-50 border border-slate-200 p-8 md:p-12 rounded-[2.5rem] text-center italic space-y-6">
+                                        {subService.boundary && (
+                                            <p className="text-slate-500 text-sm md:text-base font-medium leading-relaxed">
+                                                {subService.boundary.includes(':') && subService.boundary.indexOf(':') < 30 ? (
+                                                    <>
+                                                        <span className="font-black text-slate-900">{subService.boundary.substring(0, subService.boundary.indexOf(':') + 1)}</span>
+                                                        {subService.boundary.substring(subService.boundary.indexOf(':') + 1)}
+                                                    </>
+                                                ) : subService.boundary}
+                                            </p>
+                                        )}
+                                        {subService.bottomLine && (
+                                            <p className="text-slate-600 text-lg md:text-xl font-light leading-relaxed">
+                                                "{subService.bottomLine}"
+                                            </p>
+                                        )}
                                     </div>
                                 )}
                             </div>
@@ -223,8 +260,13 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
                                 </svg>
                             </span>
                         </h1>
-                        <p className="text-lg md:text-xl text-slate-500 font-light leading-relaxed max-w-3xl mx-auto">
-                            {subService.head || subService.description.split('\n')[0]}
+                        {subService.head && (
+                            <p className="text-xl md:text-2xl text-slate-900 font-bold leading-tight mb-4 mx-auto max-w-2xl uppercase tracking-tighter">
+                                {subService.head}
+                            </p>
+                        )}
+                        <p className="text-lg md:text-xl text-slate-500 font-light leading-relaxed max-w-3xl mx-auto whitespace-pre-line opacity-90">
+                            {subService.description}
                         </p>
                     </motion.div>
                 </div>
@@ -259,13 +301,32 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
                 </section>
             )}
 
-            {/* FINAL CTA - FULL WIDTH */}
-            <section className="relative py-16 md:py-20 bg-gradient-to-r from-[#2563eb] to-[#3b82f6] overflow-hidden text-center text-white">
+            {/* FINAL CTA - HIGH FIDELITY VERSION */}
+            <section className="relative py-16 md:py-24 bg-gradient-to-r from-[#2563eb] to-[#3b82f6] overflow-hidden text-center text-white">
+                {/* Background Polygons for depth */}
+                <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-40">
+                    <div className="absolute top-0 right-0 w-[60%] h-[100%] bg-white/10 skew-x-[45deg] translate-x-1/3" />
+                    <div className="absolute bottom-0 left-0 w-[60%] h-[100%] bg-white/10 -skew-x-[45deg] -translate-x-1/3" />
+                </div>
+                
                 <div className="container-premium relative z-10 max-w-4xl mx-auto px-4">
-                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4 tracking-tighter leading-tight">Ready to scale your brand?</h2>
-                    <Button asChild className="bg-white text-[#2563eb] hover:bg-slate-900 hover:text-white h-14 px-10 rounded-2xl font-black uppercase tracking-[0.2em] transition-all border-none text-[12px] shadow-xl shadow-black/10">
-                        <Link href="/contact" className="flex items-center gap-3">Claim Your Strategy Session</Link>
-                    </Button>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4 tracking-tighter leading-tight">
+                            Ready to scale your brand <br className="hidden md:block" /> to its full potential?
+                        </h2>
+                        <p className="text-white/80 text-sm md:text-base mb-10 font-light max-w-2xl mx-auto leading-relaxed">
+                            Stop settling for average results. Join the elite group of brands <br className="hidden md:block" /> that leverage Noltven to own their market.
+                        </p>
+                        <Button asChild className="bg-white text-[#2563eb] hover:bg-slate-900 hover:text-white h-16 px-12 rounded-2xl font-black uppercase tracking-[0.2em] transition-all border-none text-[12px] group/btn shadow-[0_20px_40px_rgba(0,0,0,0.1)] translate-y-0 hover:-translate-y-1 transition-transform duration-300">
+                            <Link href="/contact" className="flex items-center gap-3">
+                                Claim Your Strategy Session
+                            </Link>
+                        </Button>
+                    </motion.div>
                 </div>
             </section>
         </main>

@@ -44,7 +44,16 @@ export function ServicesHero({
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-base md:text-lg text-slate-600 font-light leading-relaxed max-w-2xl whitespace-pre-line"
                     >
-                        {description}
+                        {description.split('\n').map((line, i) => {
+                            const isBold = line.startsWith('**') && line.endsWith('**');
+                            const content = isBold ? line.slice(2, -2) : line;
+                            return (
+                                <span key={i}>
+                                    {isBold ? <strong className="font-bold text-slate-900">{content}</strong> : content}
+                                    {i < description.split('\n').length - 1 && <br />}
+                                </span>
+                            );
+                        })}
                     </motion.p>
 
                     {ctaText && (
