@@ -7,7 +7,7 @@ import Image from "next/image";
 const team = [
     {
         name: "Devangi Goswami",
-        role: "CEO & Co-Founder",
+        role: "Co-Founder & CEO",
         description: "Noltven was never meant to be just another service company. It was built to become the growth engine behind businesses that refuse to stay small. We don't just support companies we structure, scale, and transform them.",
         image: "/assets/team/devangi.jpeg",
         linkedin: "https://www.linkedin.com/in/devangi-goswami-",

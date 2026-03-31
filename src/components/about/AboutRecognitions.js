@@ -1,7 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Award, Trophy, ShieldCheck, Star, Medal, Sparkles } from "lucide-react";
+import { useState } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { Award, Trophy, ShieldCheck, Star, Medal, Sparkles, X, Maximize2 } from "lucide-react";
 
 // Using premium icons as placeholders for your actual award/certificate images.
 // You can later swap the <Icon /> component with Next.js <Image /> when you have real award images.
@@ -34,8 +36,20 @@ const recognitions = [
 ];
 
 export function AboutRecognitions() {
-    // Duplicate the array to create a seamless infinite loop
-    const doubledRecognitions = [...recognitions, ...recognitions];
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const certificationImages = [
+        {
+            src: "/assets/WhatsApp Image 2026-03-31 at 17.58.59.jpeg",
+            title: "ISO/IEC 27001:2022",
+            issuer: "Information Security Management System"
+        },
+        {
+            src: "/assets/WhatsApp Image 2026-03-31 at 18.01.59.jpeg",
+            title: "ISO 9001:2015",
+            issuer: "Quality Management System"
+        }
+    ];
 
     return (
         <section className="py-20 lg:py-24 bg-slate-50 border-y border-slate-100 overflow-hidden relative">
@@ -52,26 +66,63 @@ export function AboutRecognitions() {
                         <Sparkles className="h-3 w-3" />
                         Recognized Excellence
                     </motion.div>
-                    <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tighter font-display">
-                        Awards & Certifications
+                    <h2 className="text-3xl lg:text-5xl font-black text-slate-900 tracking-tighter font-display">
+                        Certifications
                     </h2>
                 </div>
             </div>
 
-            {/* Infinite Marquee Container */}
+            {/* Grid UI for Certifications */}
+            <div className="container-premium relative z-10 w-full px-4 md:px-[20rem] mx-auto">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20">
+                    {certificationImages.map((cert, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="group relative flex flex-col items-center"
+                        >
+                            <div 
+                                onClick={() => setSelectedImage(cert.src)}
+                                className="relative h-[400px] aspect-[1/1.414] bg-white rounded-2xl border border-slate-200 shadow-md overflow-hidden cursor-pointer group-hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 mx-auto"
+                            >
+                                <Image
+                                    src={cert.src}
+                                    alt={cert.title}
+                                    fill
+                                    className="object-contain p-4 md:p-6"
+                                />
+                                
+                                {/* Hover Overlay */}
+                                <div className="absolute inset-0 bg-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <div className="w-12 h-12 rounded-full bg-white/90 shadow-xl flex items-center justify-center text-secondary scale-90 group-hover:scale-100 transition-transform duration-300">
+                                        <Maximize2 className="w-6 h-6" />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="mt-6 text-center">
+                                <h3 className="text-lg font-bold text-slate-900 mb-1">{cert.title}</h3>
+                                <p className="text-sm font-bold text-slate-400 uppercase tracking-widest">{cert.issuer}</p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Carousel Removed / Commented Out as per request
             <div className="relative w-full max-w-[100vw] overflow-hidden">
-                {/* Gradient Masks for smooth fade out on the edges */}
                 <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none hidden md:block" />
                 <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none hidden md:block" />
-
-                {/* Animated Track */}
                 <motion.div
                     className="flex w-max items-center gap-8 md:gap-12 pl-8 md:pl-12"
                     animate={{ x: ["0%", "-50%"] }}
                     transition={{
                         repeat: Infinity,
                         ease: "linear",
-                        duration: 30, // Adjust this value to make the scroll faster or slower
+                        duration: 30,
                     }}
                 >
                     {doubledRecognitions.map((item, index) => (
@@ -79,25 +130,48 @@ export function AboutRecognitions() {
                             key={`${item.title}-${index}`}
                             className="flex flex-col items-center w-[200px] md:w-[240px] group"
                         >
-                            {/* Award Image/Icon Container (Round) */}
-                            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center text-slate-400 group-hover:text-secondary group-hover:shadow-md group-hover:scale-105 transition-all duration-300 mb-6">
-                                {/* If you have actual images, replace the Icon below with:
-                                     <Image src={item.image} alt={item.title} fill className="object-cover rounded-full p-2" />
-                                */}
-                                <item.icon className="w-10 h-10 md:w-12 md:h-12" strokeWidth={1.5} />
-                            </div>
-                            
-                            {/* Text Details */}
-                            <h3 className="text-sm md:text-base font-bold text-slate-900 text-center mb-1 leading-tight px-4">
-                                {item.title}
-                            </h3>
-                            <p className="text-[11px] md:text-xs font-bold text-slate-400 uppercase tracking-widest text-center">
-                                {item.issuer}
-                            </p>
+                            ... (carousel original item code)
                         </div>
                     ))}
                 </motion.div>
             </div>
+            */}
+
+            {/* Lightbox / Full-screen View */}
+            <AnimatePresence>
+                {selectedImage && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedImage(null)}
+                        className="fixed inset-0 z-[100] bg-slate-900/95 backdrop-blur-sm flex items-center justify-center p-4 md:p-10 cursor-pointer"
+                    >
+                        <motion.button
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors z-[110]"
+                        >
+                            <X className="w-8 h-8" />
+                        </motion.button>
+                        
+                        <motion.div
+                            initial={{ scale: 0.9, y: 20 }}
+                            animate={{ scale: 1, y: 0 }}
+                            exit={{ scale: 0.9, y: 20 }}
+                            className="relative w-full h-full max-w-4xl max-h-[90vh]"
+                        >
+                            <Image
+                                src={selectedImage}
+                                alt="Full screen preview"
+                                fill
+                                className="object-contain"
+                                priority
+                            />
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 }
