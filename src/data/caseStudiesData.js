@@ -21,7 +21,7 @@ export const caseStudies = [
         id: "it-testimonial",
         slug: "it-strategic-intelligence",
         title: "Transforming from CV Supplier to Strategic Intelligence Partner",
-        industry: "IT",
+        industry: "Information Technology",
         location: "London, UK",
         excerpt: "Every agency now uses AI to source candidates. The CVs reaching clients looked almost identical. Clients began questioning our value. They repositioned our value earlier in the hiring cycle through competitor intelligence and market mapping. Client retention among our top accounts increased from 50% to 80% year on year.",
         image: "/assets/case-studies/it.jpg"

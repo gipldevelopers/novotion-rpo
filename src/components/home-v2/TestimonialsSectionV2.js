@@ -130,7 +130,7 @@ export function TestimonialsSection({ initialData = [] }) {
                                                 <Briefcase className="w-5 h-5" />
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-black uppercase tracking-widest text-secondary leading-none mb-1">{study.industry}</p>
+                                                <p className="text-[13px] md:text-[14px] font-black uppercase tracking-widest text-secondary leading-none mb-1">{study.industry}</p>
                                             </div>
                                         </div>
                                     </div>

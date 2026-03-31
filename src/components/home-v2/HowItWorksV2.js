@@ -6,27 +6,21 @@ import { Search, UserCheck, ShieldCheck, Rocket, Sparkles } from "lucide-react";
 const steps = [
     {
         title: "Strategic Discovery",
-        description: "We audit your current operations recruitment, marketing, automation, finances, and growth to map exactly where the biggest gaps and opportunities exist.",
+        description: "We audit your current Recruitment, Business Development, Marketing, Automation, Finance, and growth to map exactly where the biggest gaps and opportunities exist.",
         icon: Search,
         tag: "Phase 01"
     },
     {
         title: "Solution Architecture",
-        description: "We design a tailored action plan across every relevant service line, aligned to your exact goals, your market, and the results you need to hit.",
+        description: "We design a tailored action plan across every relevant service line, aligned to your goals, your market, and the results you need to hit.",
         icon: UserCheck,
         tag: "Phase 02"
     },
     {
         title: "Precision Execution",
-        description: "Specialist teams across recruitment, marketing, AI, business development, and finance execute with speed, accuracy, and full accountability - no delays.",
+        description: "Specialist teams across Recruitment, Business Development Marketing, Automation, and Finance execute with speed, accuracy, and full accountability - no delays.",
         icon: ShieldCheck,
         tag: "Phase 03"
-    },
-    {
-        title: "Performance & Growth",
-        description: "We track every result, refine what isn't working, and scale what is so your business keeps moving forward month after month.",
-        icon: Rocket,
-        tag: "Phase 04"
     },
 ];
 
@@ -44,7 +38,7 @@ export function HowItWorksV2() {
                         The Strategic Execution Lifecycle
                     </p>
                     <p className="text-slate-600 text-xs md:text-sm font-normal leading-relaxed max-w-2xl mx-auto">
-                        A structured, four-phase delivery model designed to eliminate friction, drive consistency, and ensure every service we provide delivers measurable results.
+                        A structured, three-phase delivery model designed to eliminate friction, drive consistency, and ensure every service we provide delivers measurable results.
                     </p>
                 </div>
 
@@ -62,7 +56,7 @@ export function HowItWorksV2() {
                         />
                     </div>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-4 relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-12 lg:gap-8 relative z-10">
                         {steps.map((step, index) => (
                             <motion.div
                                 key={step.title}
@@ -94,9 +88,6 @@ export function HowItWorksV2() {
                                             <h3 className="text-base md:text-lg lg:text-xl font-bold text-slate-900 tracking-tight group-hover:text-secondary transition-colors leading-tight mb-2">
                                                 {step.title.split(' ').slice(0, -1).join(' ')} <span className="text-secondary">{step.title.split(' ').slice(-1)}</span>
                                             </h3>
-                                            <p className="text-secondary text-[9px] font-bold uppercase tracking-[0.3em]">
-                                                Phase 0{index + 1}
-                                            </p>
                                         </div>
                                         <p className="text-slate-600 text-[11px] md:text-sm font-light leading-relaxed max-w-full lg:max-w-[240px] opacity-100 lg:group-hover:text-slate-700 transition-colors px-2 lg:px-0">
                                             {step.description}

@@ -12,10 +12,10 @@ const services = [
 ];
 
 const company = [
-  { name: "About Us", href: "/about" },
-  { name: "Our Process", href: "/process" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
   { name: "Careers", href: "/careers" },
-  { name: "Blogs", href: "/blogs" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -47,7 +47,7 @@ export function Footer() {
             </div>
 
             <p className="text-slate-500 text-[15px] font-normal leading-relaxed max-w-sm">
-              Leading the next generation of recruitment with strategic AI automation and global talent delivery. Built for speed, quality, and your competitive edge.
+              Driving the next generation of business growth with smart automation and scalable global solutions. Built for speed, quality, and a stronger competitive edge.
             </p>
 
             <div className="flex items-center gap-4">

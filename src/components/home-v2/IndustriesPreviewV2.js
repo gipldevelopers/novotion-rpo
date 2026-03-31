@@ -12,7 +12,7 @@ const industries = [
         name: "IT",
         subtitle: "Software, SaaS & Digital Transformation",
         icon: Monitor,
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200",
+        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200",
         label: "Innovation Hub"
     },
     {
@@ -20,7 +20,7 @@ const industries = [
         name: "Healthcare",
         subtitle: "MedTech & Clinical Solutions",
         icon: Stethoscope,
-        image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=1200",
+        image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200",
         label: "Care Precision"
     },
     {
@@ -28,7 +28,7 @@ const industries = [
         name: "Construction",
         subtitle: "Infrastructure & Urban Development",
         icon: Building2,
-        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200", // High-fidelity construction site
+        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
         label: "Legacy Build"
     },
     {
@@ -36,7 +36,7 @@ const industries = [
         name: "Engineering",
         subtitle: "Precision Systems & R&D Excellence",
         icon: DraftingCompass,
-        image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1200",
+        image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=1200",
         label: "Design Core"
     },
     {
@@ -44,7 +44,7 @@ const industries = [
         name: "Manufacturing",
         subtitle: "Industrial Automation & Smart Production",
         icon: Factory,
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200",
+        image: "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=1200",
         label: "Industry 4.0"
     },
     {
@@ -52,7 +52,7 @@ const industries = [
         name: "Energy",
         subtitle: "Renewables & Power Grid Management",
         icon: Zap,
-        image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1200",
+        image: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&q=80&w=1200",
         label: "Global Power"
     },
     {
@@ -60,7 +60,7 @@ const industries = [
         name: "Accounting & Finance",
         subtitle: "Banking, FinTech & Wealth Management",
         icon: Landmark,
-        image: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?auto=format&fit=crop&q=80&w=1200",
+        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200",
         label: "Capital Flow"
     },
     {
@@ -68,7 +68,7 @@ const industries = [
         name: "E-commerce",
         subtitle: "Digital Retail & Global Marketplaces",
         icon: ShoppingCart,
-        image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1200",
+        image: "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&q=80&w=1200",
         label: "Digital Trade"
     }
 ];

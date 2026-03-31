@@ -37,7 +37,7 @@ export function ContactSection() {
 
                             <div className="relative z-10">
                                 <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter leading-none">
-                                    Connect <span className="text-secondary">With Us</span>
+                                    Reach <span className="text-secondary">Out to Us</span>
                                 </h2>
                                 <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
                                     Initiate Your Growth Audit
@@ -72,22 +72,22 @@ export function ContactSection() {
                             <form className="space-y-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
                                 <div className="grid md:grid-cols-2 gap-5">
                                     <div className="space-y-2">
-                                        <label className="text-secondary/80 text-[9px] uppercase font-bold tracking-[0.3em] ml-1">First Name</label>
+                                        <label className="text-secondary/80 text-[10px] uppercase font-bold tracking-[0.3em] ml-1">First Name</label>
                                         <input suppressHydrationWarning className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="John" />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-secondary/80 text-[9px] uppercase font-bold tracking-[0.3em] ml-1">Last Name</label>
+                                        <label className="text-secondary/80 text-[10px] uppercase font-bold tracking-[0.3em] ml-1">Last Name</label>
                                         <input suppressHydrationWarning className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="Doe" />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-secondary/80 text-[9px] uppercase font-bold tracking-[0.3em] ml-1">Work Email Address</label>
+                                    <label className="text-secondary/80 text-[10px] uppercase font-bold tracking-[0.3em] ml-1">Work Email Address</label>
                                     <input suppressHydrationWarning type="email" className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="john@company.com" />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-secondary/80 text-[9px] uppercase font-bold tracking-[0.3em] ml-1">Strategic Objective</label>
+                                    <label className="text-secondary/80 text-[10px] uppercase font-bold tracking-[0.3em] ml-1">Strategic Objective</label>
                                     <textarea className="w-full bg-white border border-slate-200 rounded-2xl p-5 focus:border-secondary outline-none shadow-none min-h-[120px] text-slate-900 placeholder:text-slate-400 transition-all resize-none font-light text-sm" placeholder="Briefly describe your hiring goals..." />
                                 </div>
 
@@ -113,7 +113,7 @@ export function ContactSection() {
                                         <item.icon className="h-5 w-5" strokeWidth={1.5} />
                                     </div>
                                     <div>
-                                        <p className="text-slate-400 text-[8px] uppercase font-bold tracking-[0.2em] mb-0.5">{item.label}</p>
+                                        <p className="text-slate-500 text-[10px] uppercase font-black tracking-[0.4em] mb-0.5">{item.label}</p>
                                         <p className="text-slate-800 font-bold tracking-tight text-xs group-hover:text-secondary transition-colors">{item.value}</p>
                                     </div>
                                 </div>
