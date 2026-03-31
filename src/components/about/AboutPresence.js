@@ -5,7 +5,7 @@ import { Sparkles, MapPin, Globe, Clock, ShieldCheck } from "lucide-react";
 
 const locations = [
     {
-        title: "USA & UK",
+        title: "UK",
         subtitle: "Strategic HQ & Market Leadership",
         description: "Strategic HQ client relationships, account leadership, and local market intelligence.",
         icon: ShieldCheck,

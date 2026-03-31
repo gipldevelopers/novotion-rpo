@@ -103,10 +103,12 @@ export function AboutPhilosophy() {
                 >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--color-secondary)_0%,_transparent_50%)] opacity-20" />
                     <div className="relative z-10 max-w-4xl mx-auto">
-                        <span className="text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-8 block">Our Vision</span>
-                        <h2 className="text-xl md:text-4xl font-light leading-tight">
-                            To become the global operational growth partner for companies that want to scale <span className="text-secondary font-bold">faster, smarter, and more sustainably</span> across international markets.
+                        <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter leading-none">
+                            Our <span className="text-secondary">Vision</span>
                         </h2>
+                        <p className="text-xl md:text-4xl font-light leading-tight text-white/90">
+                            To become the global operational growth partner for companies that want to scale <span className="text-secondary font-bold">faster, smarter, and more sustainably</span> across international markets.
+                        </p>
                     </div>
                 </motion.div>
             </div>

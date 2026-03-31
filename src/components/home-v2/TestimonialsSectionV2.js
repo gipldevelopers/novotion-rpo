@@ -12,12 +12,12 @@ export function TestimonialsSection({ initialData = [] }) {
     const scrollRef = useRef(null);
     const [isHovered, setIsHovered] = useState(false);
     const [isDragging, setIsDragging] = useState(false);
- 
+
     // Dynamic Data State
     const [caseStudies, setCaseStudies] = useState(initialData);
     const [selectedStudy, setSelectedStudy] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
- 
+
     useEffect(() => {
         if (initialData.length > 0) return;
         const fetchStudies = async () => {
@@ -41,7 +41,7 @@ export function TestimonialsSection({ initialData = [] }) {
         setIsModalOpen(true);
     };
 
-    const infiniteItems = caseStudies.length > 0 
+    const infiniteItems = caseStudies.length > 0
         ? [...caseStudies, ...caseStudies, ...caseStudies]
         : [];
 
@@ -85,10 +85,10 @@ export function TestimonialsSection({ initialData = [] }) {
                 {/* Section Header */}
                 <div className="container-premium text-center max-w-3xl mx-auto mb-12 px-4">
                     <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter leading-none">
-                        Executive Case <span className="text-secondary">Studies</span>
+                        Client <span className="text-secondary">Testimonials</span>
                     </h2>
                     <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
-                        Proving Performance Step by Step
+                        Stories Behind Every Success
                     </p>
 
                     <p className="text-slate-500 text-sm md:text-base font-light leading-relaxed max-w-xl mx-auto">
