@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const services = [
     {
@@ -65,7 +65,20 @@ const services = [
 ];
 
 export function ServicesPreview() {
+    const [mounted, setMounted] = useState(false);
     const [activeTab, setActiveTab] = useState(0);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return (
+        <section id="services" className="relative py-16 md:py-20 lg:py-24 bg-white overflow-hidden scroll-mt-32">
+             <div className="container-premium w-full min-h-[600px] flex items-center justify-center">
+                 <div className="animate-pulse bg-slate-50 w-full h-[600px] rounded-[2.5rem]" />
+             </div>
+        </section>
+    );
 
     return (
         <section id="services" className="relative py-16 md:py-20 lg:py-24 bg-white overflow-hidden scroll-mt-32">
@@ -90,6 +103,7 @@ export function ServicesPreview() {
                             <button
                                 key={item.title}
                                 onClick={() => setActiveTab(index)}
+                                suppressHydrationWarning
                                 className="flex-1 flex items-center justify-center gap-2 py-3 md:py-4 px-2 md:px-3 rounded-lg md:rounded-xl relative group"
                             >
                                 {/* Animated Sliding Background */}
