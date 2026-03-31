@@ -16,6 +16,7 @@ const company = [
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Careers", href: "/careers" },
+  { name: "Case Studies", href: "/case-studies" },
   { name: "Contact", href: "/contact" },
 ];
 

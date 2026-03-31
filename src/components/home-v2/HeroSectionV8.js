@@ -20,7 +20,7 @@ const services = [
         title: "Recruitment Services",
         subtitle: "Elite Partnerships",
         description: "Offshore recruitment specialists who cut time-to-hire by 60%, reduce costs by half, and place right-fit talent across UK, EU, UAE, APAC and USA.",
-        image: "/assets/hero/recruitment.png",
+        image: "/assets/hero_recruitment_bg_1774975434156.png",
     },
     {
         id: "bizdev",

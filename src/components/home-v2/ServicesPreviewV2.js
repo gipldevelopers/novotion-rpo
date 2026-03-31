@@ -23,7 +23,7 @@ const services = [
         description: "Complete offshore recruitment sourcing, screening, onboarding, and compliance that cuts time-to-hire by 60% and reduces hiring costs by up to 50%.",
         features: ["End-to-End Recruitment", "Talent Sourcing", "Admin Support", "Market Mapping", "Onboarding & Compliance"],
         icon: Users,
-        image: "/assets/hero/recruitment.png",
+        image: "/assets/service_recruitment_ai_1774976353236.png",
         slug: "recruitment-services",
     },
     {
@@ -32,7 +32,7 @@ const services = [
         description: "Structured outbound prospecting, CRM management, and partnership development that fills your pipeline and converts opportunities into consistent revenue.",
         features: ["Market Research & Account Mapping", "Lead List Building & Data Management", "Outreach Execution Support", "CRM & Pipeline Coordination"],
         icon: Briefcase,
-        image: "/assets/hero/bizdev.png",
+        image: "/assets/service_bizdev_ai_1774976373696.png",
         slug: "business-development",
     },
     {
@@ -41,7 +41,7 @@ const services = [
         description: "Full-service marketing covering social media, SEO, email campaigns, and paid ads built to grow your brand and turn the right audience into paying customers.",
         features: ["Social Media Management", "SEO & Content Marketing", "Email Marketing", "Paid Ads (Google & Meta)", "Branding & Design"],
         icon: Layout,
-        image: "/assets/hero/marketing.png",
+        image: "/assets/service_marketing_ai_1774976393884.png",
         slug: "digital-marketing",
     },
     {
@@ -50,7 +50,7 @@ const services = [
         description: "Business Process Automation, AI chatbots, and system integrations that cut manual tasks, reduce errors by up to 90%, and scale your operations without extra headcount.",
         features: ["Business Process Automation", "AI Chatbots & Virtual Assistants", "AI Reporting & Analytics", "Marketing & Sales Automation", "Systems Integration", "AI Content Assistance"],
         icon: Cog,
-        image: "/assets/hero/global_clients.png",
+        image: "/assets/service_automation_ai_1774976416462.png",
         slug: "ai-automation",
     },
     {
@@ -59,7 +59,7 @@ const services = [
         description: "Professional bookkeeping, payroll processing, tax compliance, and financial reporting without the overhead of a full-time in-house finance function.",
         features: ["Bookkeeping", "Accounts Payable & Receivable", "Payroll", "Financial Reporting", "Budgeting & Planning"],
         icon: Target,
-        image: "/assets/hero/finance.png",
+        image: "/assets/service_finance_ai_1774976436681.png",
         slug: "accounting-finance",
     },
 ];
