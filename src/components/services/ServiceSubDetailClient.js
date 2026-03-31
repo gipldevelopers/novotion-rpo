@@ -13,42 +13,58 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
     const isFinance = service.slug === 'accounting-finance';
 
     if (isAI) {
+        const titleColors = ['text-amber-500', 'text-sky-500', 'text-purple-500'];
+        
         return (
             <main className="bg-white min-h-screen pt-32 pb-0">
-                {/* AI SPECIAL CONTENT (remains same) */}
-                <div className="bg-gradient-to-bl from-blue-50/40 via-white/50 to-white relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-50/30 rounded-full blur-[120px] -translate-y-[10%] translate-x-[20%]" />
-                    <section className="relative pb-20 pt-10">
-                        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="container-premium relative z-10">
+                {/* 1. Hero Section - Light & Sophisticated */}
+                <div className="bg-[#f4f7fa] relative overflow-hidden">
+                    <section className="relative pt-16 pb-12">
+                        <div className="container-premium relative z-10 px-4">
                             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12">
                                 <div className="lg:w-3/5">
-                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-secondary/10 text-secondary text-[10px] font-black uppercase tracking-[0.2em] mb-6"><Bot className="h-4 w-4" />Strategic Pillar</div>
-                                    <h1 className="text-4xl md:text-5xl lg:text-[56px] font-black text-slate-900 tracking-tighter leading-[1.05]">
-                                        {subService.title.split(' ').slice(0, -1).join(' ')} <span className="text-secondary">{subService.title.split(' ').slice(-1)}</span>
+                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-[#e0ebf7] text-[#2563eb] text-[11px] font-bold uppercase tracking-widest mb-6">
+                                        <Bot className="h-4 w-4" /> Strategic Pillar
+                                    </div>
+                                    <div className="text-slate-400 text-[13px] font-bold uppercase tracking-widest mb-3">How We Work</div>
+                                    <h1 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-slate-900 tracking-tight leading-tight">
+                                        AI & Automation Services
                                     </h1>
                                 </div>
-                                <div className="lg:w-1/3 xl:w-1/4">
-                                    <div className="text-slate-500 text-[13px] leading-relaxed font-normal">
-                                        {subService.head && <div className="text-slate-900 font-bold mb-2">{subService.head}</div>}
-                                        <p className="whitespace-pre-line opacity-90">{subService.description}</p>
-                                    </div>
+                                <div className="lg:w-1/3 xl:w-2/5">
+                                    <p className="text-slate-500 text-[15px] leading-relaxed font-normal max-w-lg">
+                                        We build intelligent automation and AI systems that free your team to focus on higher value tasks, not data entry or busywork. The result is removing the ceiling on what your people can achieve.
+                                    </p>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     </section>
-                    <section className="pb-32 pt-16">
-                        <div className="container-premium relative z-10">
-                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    {/* 2. Service Cards Grid */}
+                    <section className="pb-24 pt-8">
+                        <div className="container-premium relative z-10 px-4">
+                            <div className="grid md:grid-cols-2 gap-8">
                                 {subService.howWeWork.map((step, i) => {
                                     const hasColon = step.includes(':');
                                     const title = hasColon ? step.split(':')[0] : `Phase ${i + 1}`;
                                     const desc = hasColon ? step.split(':').slice(1).join(':').trim() : step;
+                                    const colorClass = titleColors[i % titleColors.length];
+                                    
                                     return (
-                                        <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-10 rounded-[2.5rem] bg-gradient-to-br from-white/95 via-white/80 to-[#f0f7ff]/40 border border-slate-100 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(59,130,246,0.15)] transition-all duration-500 group relative overflow-hidden">
-                                            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-secondary/10 via-transparent to-transparent pointer-events-none z-10" />
-                                            <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-secondary mb-8 border border-blue-50 shadow-sm transition-transform group-hover:scale-110 relative z-20"><Target className="h-5 w-5" /></div>
-                                            <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-4 tracking-tight relative z-20">{title}</h3>
-                                            <p className="text-slate-500 text-[13px] leading-relaxed font-normal relative z-20">{desc}</p>
+                                        <motion.div 
+                                            key={i} 
+                                            initial={{ opacity: 0, y: 20 }} 
+                                            whileInView={{ opacity: 1, y: 0 }} 
+                                            viewport={{ once: true }} 
+                                            transition={{ delay: i * 0.1 }} 
+                                            className="p-10 rounded-2xl bg-white border border-slate-50 shadow-sm hover:shadow-md transition-all duration-500 group"
+                                        >
+                                            <h3 className={`text-[20px] font-bold mb-4 tracking-tight ${colorClass}`}>
+                                                {title}
+                                            </h3>
+                                            <p className="text-slate-500 text-[15px] leading-relaxed font-normal">
+                                                {desc}
+                                            </p>
                                         </motion.div>
                                     );
                                 })}
@@ -56,33 +72,33 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
                         </div>
                     </section>
                 </div>
-                {/* FINAL CTA - HIGH FIDELITY VERSION */}
-                <section className="relative py-16 md:py-24 bg-gradient-to-r from-[#2563eb] to-[#3b82f6] overflow-hidden text-center text-white">
-                    {/* Background Polygons for depth */}
-                    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-40">
-                        <div className="absolute top-0 right-0 w-[60%] h-[100%] bg-white/10 skew-x-[45deg] translate-x-1/3" />
-                        <div className="absolute bottom-0 left-0 w-[60%] h-[100%] bg-white/10 -skew-x-[45deg] -translate-x-1/3" />
-                    </div>
-                    
+
+                {/* 3. Final CTA section - Brand Potential */}
+                <section className="relative py-24 bg-white overflow-hidden text-center">
                     <div className="container-premium relative z-10 max-w-4xl mx-auto px-4">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4 tracking-tighter leading-tight">
-                                Ready to scale your brand <br className="hidden md:block" /> to its full potential?
+                            <h2 className="text-4xl md:text-[52px] font-bold text-slate-900 mb-6 tracking-tight leading-tight">
+                                Ready to scale your brand to its full potential?
                             </h2>
-                            <p className="text-white/80 text-sm md:text-base mb-10 font-light max-w-2xl mx-auto leading-relaxed">
-                                Stop settling for average results. Join the elite group of brands <br className="hidden md:block" /> that leverage Noltven to own their market.
+                            <p className="text-slate-400 text-sm md:text-base mb-12 font-normal max-w-2xl mx-auto leading-relaxed">
+                                Stop settling for average results. Join the elite group of brands that leverage Noltven to own their market.
                             </p>
-                            <Button asChild className="bg-white text-[#2563eb] hover:bg-slate-900 hover:text-white h-16 px-12 rounded-2xl font-black uppercase tracking-[0.2em] transition-all border-none text-[12px] group/btn shadow-[0_20px_40px_rgba(0,0,0,0.1)] translate-y-0 hover:-translate-y-1 transition-transform duration-300">
+                            <Button asChild className="bg-[#1e4ba0] hover:bg-slate-900 text-white h-16 px-12 rounded-xl font-bold transition-all border-none shadow-xl shadow-blue-900/10">
                                 <Link href="/contact" className="flex items-center gap-3">
                                     Claim Your Strategy Session
                                 </Link>
                             </Button>
                         </motion.div>
                     </div>
+
+                    {/* Decorative minimalist dots */}
+                    <div className="absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-blue-400 rounded-full opacity-60" />
+                    <div className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-red-400 rounded-full opacity-60" />
+                    <div className="absolute bottom-12 left-1/2 w-2 h-2 bg-green-400 rounded-full opacity-60" />
                 </section>
             </main>
         );
