@@ -41,7 +41,7 @@ export function ProblemSection() {
                                 transition={{ duration: 0.6 }}
                             >
                                 <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter leading-none">
-                                    The <span className="text-secondary">Challenge</span>
+                                    The <span className="text-secondary">Challenges</span>
                                 </h2>
                                 <p className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8">
                                     What Broken Operations Actually Cost You

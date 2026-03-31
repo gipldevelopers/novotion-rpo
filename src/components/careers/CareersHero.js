@@ -10,7 +10,7 @@ export function CareersHero() {
             {/* Background Image with Overlay - Matching Process/Services */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/assets/careers_hero_bg.png"
+                    src="/assets/careers_hero_bg_ai_1774969469962.png"
                     alt="Noltven Careers"
                     fill
                     className="object-cover opacity-80 scale-105"

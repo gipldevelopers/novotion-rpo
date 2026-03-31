@@ -764,7 +764,7 @@ export const servicesData = [
         slug: "accounting-finance",
         icon: Target,
         title: "Accounting & Finance Services",
-        description: "**Your Numbers Should Work For You, Not Against You.**\nWe give you accurate books, timely reports, and a finance function focused on supporting your growth not just filing obligations.",
+        description: "Your Numbers Should Work For You, Not Against You.\nWe give you accurate books, timely reports, and a finance function focused on supporting your growth not just filing obligations.",
         cta: "Organize Your Finances",
         head: "Your Numbers Should Work For You, Not Against You.",
         whatYouGet: [

@@ -119,7 +119,7 @@ export function CareersGrid() {
                 {/* Open Positions */}
                 <div>
                     <div className="text-center mb-12 md:mb-16">
-                        <motion.div
+                        {/* <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
@@ -127,7 +127,7 @@ export function CareersGrid() {
                         >
                             <Sparkles className="h-4 w-4 text-secondary" />
                             <span className="text-[10px] font-bold text-slate-600 tracking-[0.4em] uppercase">Execution Logic</span>
-                        </motion.div>
+                        </motion.div> */}
                         <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tighter leading-tight">
                             Available <span className="text-secondary italic">Deployments.</span>
                         </h2>
@@ -157,7 +157,7 @@ export function CareersGrid() {
                                 <div className="mt-8">
                                     <Button asChild className="w-full bg-slate-900 hover:bg-secondary text-white rounded-2xl h-14 border-none font-bold text-[10px] tracking-widest transition-all duration-500 shadow-xl shadow-slate-200/50">
                                         <Link href={`/careers/${role.title.toLowerCase().replace(/ /g, "-")}`}>
-                                            EXECUTE INTENT
+                                            APPLY
                                             <ArrowRight className="ml-2 h-4 w-4" />
                                         </Link>
                                     </Button>

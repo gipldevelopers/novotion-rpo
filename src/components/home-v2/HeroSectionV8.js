@@ -13,7 +13,7 @@ const services = [
         title: "Global Clients",
         subtitle: "Elite Partnerships",
         description: "We partner with ambitious businesses across the UK, EU ,UAE, APAC and USA to build high-performing offshore teams that deliver measurable results across recruitment, marketing, sales, automation, and finance.",
-        image: "/assets/hero/recruitment.png",
+        image: "/assets/hero_global_clients_bg_1774969917918.png",
     },
     {
         id: "recruitment",

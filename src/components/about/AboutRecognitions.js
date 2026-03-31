@@ -47,7 +47,7 @@ export function AboutRecognitions() {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-4 shadow-sm"
+                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-4 shadow-sm"
                     >
                         <Sparkles className="h-3 w-3" />
                         Recognized Excellence

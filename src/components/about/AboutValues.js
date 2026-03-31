@@ -42,7 +42,7 @@ export function AboutValues() {
             <div className="container-premium relative z-10">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
-                    <motion.div
+                    {/* <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -50,7 +50,7 @@ export function AboutValues() {
                     >
                         <Sparkles className="h-4 w-4" />
                         Our Foundation
-                    </motion.div>
+                    </motion.div> */}
 
                     <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 tracking-tighter font-display">
                         The <span className="text-secondary italic underline underline-offset-8 decoration-secondary/30">5A</span> Core Values.

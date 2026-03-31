@@ -71,7 +71,7 @@ export function AboutPhilosophy() {
                 {/* What Makes Us Different Section */}
                 <div className="py-10 md:py-12 border-t border-slate-100 mb-6">
                     <div className="max-w-4xl mx-auto text-center">
-                        <span className="text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-8 block">What Makes Us Different</span>
+                        <span className="text-secondary text-sm md:text-base font-bold uppercase tracking-[0.4em] mb-8 block">What Makes Us Different</span>
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 md:mb-12 tracking-tighter">
                             One Unified System<br />
                             <span className="text-secondary text-xl md:text-3xl">for Scalability & Performance</span>
