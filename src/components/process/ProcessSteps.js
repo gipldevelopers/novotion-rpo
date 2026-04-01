@@ -124,15 +124,7 @@ export function ProcessSteps() {
     <section className="py-24 md:py-40 bg-white relative overflow-hidden border-t border-slate-100">
       <div className="container-premium px-6 md:px-12 relative">
         <div className="text-center max-w-3xl mx-auto mb-20 md:mb-32">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-bold uppercase tracking-[0.4em] mb-6"
-          >
-            <Sparkles className="h-4 w-4" />
-            Our Methodology
-          </motion.div>
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tighter leading-tight font-display">
             How We Make It <span className="text-secondary italic">Happen</span>
           </h2>
@@ -170,9 +162,7 @@ export function ProcessSteps() {
                       <phase.icon className="h-6 w-6" />
                     </div>
                     <div className={`flex flex-col ${index % 2 === 0 ? "md:items-end" : "md:items-start"}`}>
-                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/5 border border-slate-900/10 mb-4 backdrop-blur-md">
-                        <span className="text-[10px] font-bold text-slate-600 tracking-[0.4em] uppercase">{phase.duration}</span>
-                      </div>
+
                       <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-4 tracking-tighter leading-tight font-display">
                         {phase.title}
                       </h2>

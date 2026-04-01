@@ -13,7 +13,9 @@ import {
     Bell,
     ExternalLink,
     FileText,
-    Mail
+    Mail,
+    Briefcase,
+    Shield
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -21,6 +23,7 @@ const sidebarItems = [
     { name: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
     { name: "Messages", href: "/admin/messages", icon: Mail },
     { name: "Study Leads", href: "/admin/case-studies", icon: FileText },
+    { name: "Job Postings", href: "/admin/jobs", icon: Briefcase },
 ];
 
 export default function AdminLayout({ children }) {

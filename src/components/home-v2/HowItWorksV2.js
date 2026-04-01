@@ -22,6 +22,12 @@ const steps = [
         icon: ShieldCheck,
         tag: "Phase 03"
     },
+    {
+        title: "Performance & Growth",
+        description: "We track every result, refine what isn't working, and scale what is so your business keeps moving forward month after month.",
+        icon: Rocket,
+        tag: "Phase 04"
+    },
 ];
 
 export function HowItWorksV2() {
@@ -38,7 +44,7 @@ export function HowItWorksV2() {
                         The Strategic Execution Lifecycle
                     </p>
                     <p className="text-slate-600 text-xs md:text-sm font-normal leading-relaxed max-w-2xl mx-auto">
-                        A structured, three-phase delivery model designed to eliminate friction, drive consistency, and ensure every service we provide delivers measurable results.
+                        A structured, four-phase delivery model designed to eliminate friction, drive consistency, and ensure every service we provide delivers measurable results.
                     </p>
                 </div>
 
@@ -56,7 +62,7 @@ export function HowItWorksV2() {
                         />
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-12 lg:gap-8 relative z-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-8 relative z-10">
                         {steps.map((step, index) => (
                             <motion.div
                                 key={step.title}

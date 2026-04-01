@@ -62,6 +62,43 @@ export async function GET() {
         `;
         await db.execute(createContactQuery);
 
+        // 6. Create jobs table
+        console.log('Creating jobs table...');
+        const createJobsQuery = `
+            CREATE TABLE IF NOT EXISTS jobs (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                slug VARCHAR(255) UNIQUE NOT NULL,
+                title VARCHAR(255) NOT NULL,
+                department VARCHAR(255) NOT NULL,
+                location VARCHAR(255) NOT NULL,
+                type VARCHAR(255) DEFAULT 'Full-Time',
+                description TEXT,
+                summary TEXT,
+                directives JSON,
+                is_active BOOLEAN DEFAULT TRUE,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+        `;
+        await db.execute(createJobsQuery);
+
+        // 7. Create job_applications table
+        console.log('Creating job_applications table...');
+        const createAppsQuery = `
+            CREATE TABLE IF NOT EXISTS job_applications (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                job_id INT NOT NULL,
+                name VARCHAR(255) NOT NULL,
+                email VARCHAR(255) NOT NULL,
+                linkedin VARCHAR(255),
+                intent TEXT,
+                resume_path VARCHAR(255),
+                status VARCHAR(50) DEFAULT 'Pending',
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (job_id) REFERENCES jobs(id) ON DELETE CASCADE
+            );
+        `;
+        await db.execute(createAppsQuery);
+
         // 6. Seed initial Manchester Case Study
         console.log('Seeding initial Manchester Case Study...');
         const manchesterData = {
@@ -119,7 +156,66 @@ export async function GET() {
             manchesterData.image
         ]);
         
-        // 6. Verify
+        // 7. Seed initial Jobs
+        console.log('Seeding initial Job Positions...');
+        const initialJobs = [
+            {
+                title: "Client Delivery Lead",
+                slug: "client-delivery-lead",
+                department: "Operations",
+                location: "UK / Remote",
+                description: "Leading multi-discipline teams to deliver consistent, high-impact results across our recruitment and marketing service lines.",
+                summary: "We're looking for someone who takes ownership, thinks strategically, and delivers not someone who waits to be told what to do.",
+                directives: JSON.stringify([
+                    "Deliver consistent, measurable output across your service line.",
+                    "Own client communication with clarity, speed, and professionalism.",
+                    "Use systems, automation, and data to work smarter not harder.",
+                    "Flag problems early. Bring solutions, not just issues."
+                ])
+            },
+            {
+                title: "Growth Strategy Senior",
+                slug: "growth-strategy-senior",
+                department: "Business Development",
+                location: "USA / Global",
+                description: "Architecting outbound pipelines and building predictable revenue models for our enterprise client base.",
+                summary: "This role sits at the heart of Noltven's delivery engine, contributing directly to client results across one or more of our five service lines.",
+                directives: JSON.stringify([
+                    "Architect outbound pipelines and building predictable revenue models.",
+                    "Own client communication with clarity, speed, and professionalism.",
+                    "Use systems, automation, and data to work smarter not harder.",
+                    "Flag problems early. Bring solutions, not just issues."
+                ])
+            },
+            {
+                title: "AI Automation Engineer",
+                slug: "ai-automation-engineer",
+                department: "Tech & Systems",
+                location: "Ahmedabad, India",
+                description: "Mapping business processes and building the intelligent systems that eliminate manual bottlenecks for our global partners.",
+                summary: "This role needs a technical mind that understands business logic as much as code.",
+                directives: JSON.stringify([
+                    "Mapping business processes and building intelligent systems.",
+                    "Own technical deliverables with clarity, speed, and professionalism.",
+                    "Use systems, automation, and data to work smarter not harder.",
+                    "Flag problems early. Bring solutions, not just issues."
+                ])
+            }
+        ];
+
+        const jobSeedQuery = `
+            INSERT INTO jobs (title, slug, department, location, description, summary, directives)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+            ON DUPLICATE KEY UPDATE title = VALUES(title)
+        `;
+
+        for (const job of initialJobs) {
+            await db.execute(jobSeedQuery, [
+                job.title, job.slug, job.department, job.location, job.description, job.summary, job.directives
+            ]);
+        }
+
+        // 8. Verify
         const [tables] = await db.execute('SHOW TABLES');
         const tableList = tables.map(t => Object.values(t)[0]);
         
@@ -127,7 +223,7 @@ export async function GET() {
 
         return NextResponse.json({ 
             success: true, 
-            message: 'Database schema synchronized and case studies seeded.', 
+            message: 'Database schema synchronized and content seeded.', 
             tables: tableList 
         });
     } catch (error) {

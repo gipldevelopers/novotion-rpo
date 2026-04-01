@@ -29,8 +29,8 @@ export default function Home() {
         <ServicesPreview />
         <HowItWorksV2 />
         <IndustriesPreview />
-        <TestimonialsSection initialData={caseStudies} />
         <ContactSection />
+        <TestimonialsSection initialData={caseStudies} />
         <CTASectionV2 />
       </div>
     </Layout>

@@ -24,9 +24,7 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
                         <div className="container-premium relative z-10 px-4">
                             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12">
                                 <div className="lg:w-3/5">
-                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-[#e0ebf7] text-[#2563eb] text-[11px] font-bold uppercase tracking-widest mb-6">
-                                        <Bot className="h-4 w-4" /> Strategic Pillar
-                                    </div>
+
                                     <div className="text-slate-400 text-[13px] font-bold uppercase tracking-widest mb-3">How We Work</div>
                                     <h1 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-slate-900 tracking-tight leading-tight">
                                         AI & Automation Services
@@ -347,9 +345,7 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
                     </Link>
 
                     <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-4xl mx-auto flex flex-col items-center">
-                        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-50 text-[#1a4fba] text-[10px] font-black uppercase tracking-[0.3em] mb-8 border border-blue-100 shadow-sm">
-                            <Sparkles className="h-4 w-4" /> Strategic Pillar
-                        </div>
+
                         
                         <h1 className="text-[38px] md:text-[52px] lg:text-[64px] font-black text-[#0f172a] tracking-tight leading-tight mb-8">
                              {subService.title.split(' ').slice(0, -1).join(' ')} <span className="relative inline-block text-[#1a4fba]">

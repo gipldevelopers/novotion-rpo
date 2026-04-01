@@ -59,15 +59,7 @@ export function BlogGrid() {
                 {/* Section Header */}
                 <div className="mb-12 md:mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
                     <div className="max-w-3xl">
-                        <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-bold tracking-[0.4em] uppercase mb-6"
-                        >
-                            <Sparkles className="h-4 w-4" />
-                            Latest Intelligence
-                        </motion.div>
+
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tighter leading-tight">
                             Fresh Thinking on <br />
                             <span className="text-secondary">What's Actually Working Right Now </span>

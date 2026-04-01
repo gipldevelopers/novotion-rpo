@@ -44,9 +44,9 @@ export function AboutStory() {
                         <div className="relative aspect-square md:aspect-video lg:aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-200/50">
                             <div className="absolute inset-0 bg-slate-900/10 z-10" />
                             <img
-                                src="/assets/about_mission.png"
+                                src="/assets/about_mission_new.png"
                                 alt="Global Strategic Partnership"
-                                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                                className="w-full h-full object-cover transition-all duration-1000"
                             />
 
                             {/* Floating Card */}

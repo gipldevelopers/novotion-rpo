@@ -9,21 +9,18 @@ const locations = [
         subtitle: "Strategic HQ & Market Leadership",
         description: "Strategic HQ client relationships, account leadership, and local market intelligence.",
         icon: ShieldCheck,
-        tags: ["Strategy", "Leadership", "Global Flow"]
     },
     {
         title: "India (Ahmedabad)",
         subtitle: "High-Output Delivery",
         description: "High-output delivery engine running recruitment, marketing, automation, finance, and admin daily.",
         icon: Globe,
-        tags: ["Scalability", "Execution", "Efficiency"]
     },
     {
         title: "24/7 Connectivity",
         subtitle: "Round-the-Clock Momentum",
         description: "Synchronized operations across all five service lines always active, always delivering.",
         icon: Clock,
-        tags: ["Speed", "Agility", "Always-On"]
     }
 ];
 
@@ -63,13 +60,7 @@ export function AboutPresence() {
                                         <p className="text-slate-600 text-sm font-normal mb-4 leading-relaxed max-w-md group-hover:text-slate-700 transition-colors">
                                             {loc.description}
                                         </p>
-                                        <div className="flex flex-wrap gap-2">
-                                            {loc.tags.map(tag => (
-                                                <span key={tag} className="text-[9px] font-bold text-slate-300 uppercase tracking-widest px-2 py-1 rounded-md border border-slate-100">
-                                                    {tag}
-                                                </span>
-                                            ))}
-                                        </div>
+
                                     </div>
                                 </motion.div>
                             ))}
@@ -84,32 +75,63 @@ export function AboutPresence() {
                         className="relative hidden lg:block"
                     >
                         {/* Abstract Map or Network Graphic */}
-                        <div className="relative h-[600px] w-full bg-slate-50 rounded-[2.5rem] border border-slate-200 overflow-hidden shadow-inner">
-                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-secondary)_0%,_transparent_1px)] bg-[size:40px_40px] opacity-[0.05]" />
-
-                            {/* Animated Pulse Dots */}
-                            <div className="absolute top-1/4 left-1/4">
-                                <span className="absolute inset-0 rounded-full bg-secondary animate-ping opacity-20" />
-                                <div className="relative w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-xl shadow-secondary/20" />
-                                <span className="absolute top-6 left-0 whitespace-nowrap text-[10px] font-bold text-slate-900 tracking-widest uppercase bg-white px-2 py-1 rounded-md shadow-sm border border-slate-100">USA HQ</span>
-                            </div>
-
-                            <div className="absolute top-1/3 left-1/2">
-                                <span className="absolute inset-0 rounded-full bg-secondary animate-ping opacity-20" />
-                                <div className="relative w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-xl shadow-secondary/20" />
-                                <span className="absolute top-6 left-0 whitespace-nowrap text-[10px] font-bold text-slate-900 tracking-widest uppercase bg-white px-2 py-1 rounded-md shadow-sm border border-slate-100">UK HQ (LONDON)</span>
-                            </div>
-
-                            <div className="absolute bottom-1/3 right-1/4">
-                                <span className="absolute inset-0 rounded-full bg-secondary animate-ping opacity-20" />
-                                <div className="relative w-4 h-4 rounded-full bg-secondary border-4 border-white shadow-xl shadow-secondary/20" />
-                                <span className="absolute top-6 left-0 whitespace-nowrap text-[10px] font-bold text-secondary tracking-widest uppercase bg-white px-2 py-1 rounded-md shadow-sm border border-secondary/20">Ahmedabad, IN (DELIVERY)</span>
-                            </div>
-
-                            {/* Connection Lines */}
-                            <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
-                                <path d="M25,25 Q50,20 50,33 T75,66" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2,2" />
+                        <div className="relative h-[480px] md:h-[600px] w-full rounded-[3.5rem] overflow-hidden shadow-2xl bg-slate-50 border border-slate-200 group">
+                            {/* Dot Matrix Background Map */}
+                            <img 
+                                src="/assets/global_presence_vector.png"
+                                alt="Global Reach Map"
+                                className="w-full h-full object-cover opacity-60 group-hover:opacity-75 transition-all duration-1000 scale-[1.05] group-hover:scale-100"
+                            />
+                            
+                            {/* Connection Curve */}
+                            <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <motion.path 
+                                    d="M48,25 Q58,20 70,50" 
+                                    fill="none" 
+                                    stroke="var(--color-secondary)" 
+                                    strokeWidth="0.15" 
+                                    strokeDasharray="1,1" 
+                                    initial={{ pathLength: 0, opacity: 0 }}
+                                    whileInView={{ pathLength: 1, opacity: 0.3 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 2, delay: 0.5 }}
+                                />
                             </svg>
+
+                            {/* LONDON HQ */}
+                            <div className="absolute top-[25%] left-[48%] group/london">
+                                <motion.div 
+                                    animate={{ scale: [1, 2, 1], opacity: [0.3, 0.1, 0.3] }} 
+                                    transition={{ duration: 2.5, repeat: Infinity }} 
+                                    className="absolute -inset-6 rounded-full bg-secondary/20 blur-md" 
+                                />
+                                <div className="relative w-3.5 h-3.5 rounded-full bg-secondary border-4 border-white shadow-xl shadow-secondary/30" />
+                                
+                                <div className="absolute top-6 left-1/2 -translate-x-1/2 flex flex-col items-center">
+                                    <span className="whitespace-nowrap text-[10px] font-black text-slate-900 tracking-[0.2em] uppercase bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-xl shadow-slate-200/50 border border-slate-100 flex items-center gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+                                        LONDON, UK (HQ)
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* AHMEDABAD HUB */}
+                            <div className="absolute top-[50%] left-[70%] group/india">
+                                <motion.div 
+                                    animate={{ scale: [1, 2, 1], opacity: [0.3, 0.1, 0.3] }} 
+                                    transition={{ duration: 2.5, repeat: Infinity, delay: 1.25 }} 
+                                    className="absolute -inset-6 rounded-full bg-blue-600/20 blur-md" 
+                                />
+                                <div className="relative w-3.5 h-3.5 rounded-full bg-blue-600 border-4 border-white shadow-xl shadow-blue-600/30" />
+                                
+                                <div className="absolute top-6 left-1/2 -translate-x-1/2 flex flex-col items-center">
+                                    <span className="whitespace-nowrap text-[10px] font-black text-slate-900 tracking-[0.2em] uppercase bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl shadow-xl shadow-slate-200/50 border border-slate-100 flex items-center gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+                                        AHMEDABAD, INDIA (DELIVERY)
+                                    </span>
+                                </div>
+                            </div>
+
                         </div>
                     </motion.div>
                 </div>

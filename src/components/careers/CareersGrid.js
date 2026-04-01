@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import {
     Search,
     Code,
@@ -16,51 +17,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
-const openRoles = [
-    {
-        title: "Client Delivery Lead",
-        department: "Operations",
-        location: "UK / Remote",
-        type: "Full-Time",
-        description: "Leading multi-discipline teams to deliver consistent, high-impact results across our recruitment and marketing service lines."
-    },
-    {
-        title: "Growth Strategy Senior",
-        department: "Business Development",
-        location: "USA / Global",
-        type: "Full-Time",
-        description: "Architecting outbound pipelines and building predictable revenue models for our enterprise client base."
-    },
-    {
-        title: "AI Automation Engineer",
-        department: "Tech & Systems",
-        location: "Ahmedabad, India",
-        type: "Full-Time",
-        description: "Mapping business processes and building the intelligent systems that eliminate manual bottlenecks for our global partners."
-    },
-    {
-        title: "Senior Finance Analyst",
-        department: "Finance",
-        location: "Ahmedabad, India",
-        type: "Full-Time",
-        description: "Managing accounts and financial reporting for high-scale retail and technology partners in the UK and US."
-    },
-    {
-        title: "Content Marketing Architect",
-        department: "Marketing",
-        location: "Remote / Global",
-        type: "Full-Time",
-        description: "Designing end-to-end content strategies that drive conversions and build brand authority across global markets."
-    },
-    {
-        title: "Technical Recruitment Specialist",
-        department: "Recruitment",
-        location: "UK / Hybrid",
-        type: "Full-Time",
-        description: "Sourcing and placing elite talent for some of the world's fastest-growing technology and SaaS companies."
-    }
-];
 
 const benefits = [
     {
@@ -81,19 +37,33 @@ const benefits = [
 ];
 
 export function CareersGrid() {
+    const [openRoles, setOpenRoles] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchRoles = async () => {
+            try {
+                const res = await fetch('/api/jobs');
+                const data = await res.json();
+                if (Array.isArray(data)) {
+                    setOpenRoles(data);
+                }
+            } catch (error) {
+                console.error("Failed to fetch roles:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchRoles();
+    }, []);
+
     return (
         <section className="py-8 md:py-12 bg-white relative overflow-hidden">
             <div className="container-premium relative z-10 px-6 md:px-12">
                 <div className="text-center mb-12 md:mb-16">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 mb-6"
-                    >
-                        <Sparkles className="h-4 w-4 text-secondary" />
-                        <span className="text-[10px] font-bold text-secondary tracking-[0.4em] uppercase">Why Noltven</span>
-                    </motion.div>
+                    <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tighter leading-tight">
+                        Why <span className="text-secondary italic">Noltven?</span>
+                    </h2>
                 </div>
 
                 {/* Benefits Section */}
@@ -119,22 +89,22 @@ export function CareersGrid() {
                 {/* Open Positions */}
                 <div>
                     <div className="text-center mb-12 md:mb-16">
-                        {/* <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/5 border border-slate-900/10 mb-6"
-                        >
-                            <Sparkles className="h-4 w-4 text-secondary" />
-                            <span className="text-[10px] font-bold text-slate-600 tracking-[0.4em] uppercase">Execution Logic</span>
-                        </motion.div> */}
+
                         <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 tracking-tighter leading-tight">
-                            Available <span className="text-secondary italic">Deployments.</span>
+                            Open <span className="text-secondary italic">Positions.</span>
                         </h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {openRoles.map((role, index) => (
+                        {loading ? (
+                            Array.from({ length: 3 }).map((_, i) => (
+                                <div key={i} className="h-[300px] rounded-[2.5rem] bg-slate-50 animate-pulse" />
+                            ))
+                        ) : openRoles.length === 0 ? (
+                            <div className="col-span-full py-20 text-center bg-slate-50 rounded-[3rem] border border-slate-100 border-dashed">
+                                <p className="text-slate-400 font-medium italic">No open positions at this moment. Check back soon.</p>
+                            </div>
+                        ) : openRoles.map((role, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
@@ -156,7 +126,7 @@ export function CareersGrid() {
                                 </div>
                                 <div className="mt-8">
                                     <Button asChild className="w-full bg-slate-900 hover:bg-secondary text-white rounded-2xl h-14 border-none font-bold text-[10px] tracking-widest transition-all duration-500 shadow-xl shadow-slate-200/50">
-                                        <Link href={`/careers/${role.title.toLowerCase().replace(/ /g, "-")}`}>
+                                        <Link href={`/careers/${role.slug}`}>
                                             APPLY
                                             <ArrowRight className="ml-2 h-4 w-4" />
                                         </Link>

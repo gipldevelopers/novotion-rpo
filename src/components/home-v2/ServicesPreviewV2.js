@@ -41,7 +41,7 @@ const services = [
         description: "Full-service marketing covering social media, SEO, email campaigns, and paid ads built to grow your brand and turn the right audience into paying customers.",
         features: ["Social Media Management", "SEO & Content Marketing", "Email Marketing", "Paid Ads (Google & Meta)", "Branding & Design"],
         icon: Layout,
-        image: "/assets/service_marketing_ai_1774976393884.png",
+        image: "/assets/2150208243.jpg",
         slug: "digital-marketing",
     },
     {

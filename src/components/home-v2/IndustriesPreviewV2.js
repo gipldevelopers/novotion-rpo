@@ -20,7 +20,7 @@ const industries = [
         name: "Healthcare",
         subtitle: "MedTech & Clinical Solutions",
         icon: Stethoscope,
-        image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200",
+        image: "/assets/industry_healthcare.png",
         label: "Care Precision"
     },
     {
@@ -28,7 +28,7 @@ const industries = [
         name: "Construction",
         subtitle: "Infrastructure & Urban Development",
         icon: Building2,
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
+        image: "/assets/industry_construction.png",
         label: "Legacy Build"
     },
     {

@@ -48,10 +48,7 @@ export default function InboxDashboard() {
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-slate-100">
                 <div className="space-y-4">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-secondary text-[10px] font-black uppercase tracking-widest">
-                        <MessageSquare className="w-3.5 h-3.5" />
-                        Inbound Transmission
-                    </div>
+
                     <h1 className="text-4xl font-black text-slate-900 tracking-tighter">Unified Inbox</h1>
                 </div>
                 <div className="flex items-center gap-4 text-xs font-bold text-slate-400 font-mono uppercase tracking-[0.2em]">

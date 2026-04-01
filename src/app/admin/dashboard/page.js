@@ -10,14 +10,15 @@ import {
     ArrowDownRight,
     Zap,
     Target,
-    Shield
+    Shield,
+    Briefcase
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const stats = [
-    { name: "Active Modules", value: "5", icon: Zap, change: "Stable", trending: "neutral", color: "text-secondary bg-secondary/10" },
     { name: "Active Inquiries", value: "128", icon: Users, change: "+24.2%", trending: "up", color: "text-blue-600 bg-blue-50" },
-    { name: "Global Partners", value: "15", icon: Globe, change: "0%", trending: "neutral", color: "text-slate-600 bg-slate-50" },
+    { name: "Job Postings", value: "3", icon: Briefcase, change: "Live", trending: "neutral", color: "text-indigo-600 bg-indigo-50" },
+    { name: "Global Reach", value: "15", icon: Globe, change: "Stable", trending: "neutral", color: "text-slate-600 bg-slate-50" },
     { name: "Avg Completion", value: "98.5%", icon: Activity, change: "+3.1%", trending: "up", color: "text-emerald-600 bg-emerald-50" },
 ];
 

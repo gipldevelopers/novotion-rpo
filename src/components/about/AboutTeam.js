@@ -37,15 +37,7 @@ export function AboutTeam() {
             <div className="container-premium relative z-10">
                 {/* Section Header */}
                 <div className="max-w-4xl mx-auto text-center mb-24">
-                    {/* <motion.div
-                        initial={{ opacity: 0, y: 15 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/5 border border-secondary/10 text-secondary text-sm md:text-base font-black uppercase tracking-[0.4em] mb-8"
-                    >
-                        <Sparkles className="h-4 w-4" />
-                        Executive Leadership
-                    </motion.div> */}
+
                     <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter leading-[1] mb-8">
                         The Visionaries Behind <br />
                         <span className="text-secondary italic">Noltven's Mission.</span>

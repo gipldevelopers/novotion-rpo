@@ -169,9 +169,7 @@ export default function Process() {
                           <phase.icon className="h-6 w-6" />
                         </div>
                         <div className={`flex flex-col ${index % 2 === 0 ? "md:items-end" : "md:items-start"}`}>
-                          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/5 border border-slate-900/10 mb-4 backdrop-blur-md">
-                            <span className="text-[10px] font-bold text-slate-600 tracking-[0.4em] uppercase">{phase.duration}</span>
-                          </div>
+
                           <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-4 tracking-tighter leading-tight">
                             {phase.title}
                           </h2>
