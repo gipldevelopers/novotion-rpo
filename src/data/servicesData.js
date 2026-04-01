@@ -428,6 +428,14 @@ export const servicesData = [
                     "Community Management & Engagement: We manage comments, conversations, and sector discussions on your behalf. Active community management turns passive followers into genuine advocates over time.",
                     "Monthly Performance Reporting: We provide clear reporting on what is growing, what is converting, and what needs to change. Decisions are based on evidence rather than instinct.",
                     "Competitor Monitoring & Trend Analysis: We continuously track competitor activity and emerging trends so your content strategy leads the market rather than simply reacting to it."
+                ],
+                images: [
+                    "/assets/services/dm/social_1.png",
+                    "/assets/services/dm/social_2.png",
+                    "/assets/services/dm/social_3.png",
+                    "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop"
                 ]
             },
             {
@@ -443,6 +451,14 @@ export const servicesData = [
                     "Local SEO for Businesses: We optimise your Google Business Profile, manage local citations, and use geo-targeted keyword strategy to capture local leads, whether you compete in the UK, UAE, US, EU, or APAC.",
                     "Backlink Building & Domain Authority Growth: We ethically build authority through original research, digital PR, and guest publications. This increases your share of search visibility and earns search engine trust because it reflects real credibility.",
                     "Monthly SEO Reporting & Insights: We deliver results-connected reports on rankings, organic traffic trends, and content performance. This data-driven view keeps strategy refinement clear and focused on your next priorities."
+                ],
+                images: [
+                    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1558403194-611308249627?q=80&w=2000&auto=format&fit=crop"
                 ]
             },
             {
@@ -457,6 +473,14 @@ export const servicesData = [
                     "Automated Email Sequences & Drip Campaigns: These behaviour-triggered sequences deliver the right follow-up based on what a subscriber does (or doesn't do). We ensure engagement and conversions never slip through the cracks.",
                     "A/B Testing & Performance Optimisation: We run structured tests on subject lines, timing, and calls-to-action to improve conversion, open, and click-through rates over time.",
                     "Deliverability Monitoring & Reporting: We manage sender reputation, bounce handling, and inbox placement so your emails consistently reach the inbox instead of getting stuck in spam."
+                ],
+                images: [
+                    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1554672408-730436b60dde?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop"
                 ]
             },
             {
@@ -471,6 +495,14 @@ export const servicesData = [
                     "Ad Creative & Copywriting: We design scroll-stopping creatives and write hooks that speak to real desires before the ask. Every creative element is crafted to earn its place and engage your audience.",
                     "Budget Management & Bid Optimisation: Our daily management shifts budget toward what performs best. We use AI-enhanced algorithms and manual strategies to get the most from every ad pound, keeping your cost-per-action (CPA) low.",
                     "Conversion Tracking & ROI Reporting: We set up attribution infrastructure that connects your ad spend to actual enquiries. You’ll always know exactly what each campaign produced through clear, comprehensive reporting."
+                ],
+                images: [
+                    "/assets/services/dm/paid_ads_1.png",
+                    "/assets/services/dm/paid_ads_2.png",
+                    "/assets/services/dm/paid_ads_3.png",
+                    "/assets/services/dm/paid_ads_4.png",
+                    "/assets/services/dm/paid_ads_5.png",
+                    "/assets/services/dm/paid_ads_6.png"
                 ]
             },
             {
@@ -484,6 +516,13 @@ export const servicesData = [
                     "Social Media Graphics & Templates: We create on-brand templates to keep your social presence consistently professional and recognizable, without needing a designer for every post.",
                     "Marketing Collateral (Flyers, Brochures, Banners): We design print and digital materials that effectively communicate your messages. From proposals and brochures to event banners and campaign assets, every piece meets your brand standards.",
                     "Pitch Deck & Presentation Design: We elevate your presentations to match your business conversations. Each deck is compelling, structured, and built to leave decision-makers with confidence in your proposal."
+                ],
+                images: [
+                    "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1554672408-730436b60dde?q=80&w=2000&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2000&auto=format&fit=crop"
                 ]
             }
         ],

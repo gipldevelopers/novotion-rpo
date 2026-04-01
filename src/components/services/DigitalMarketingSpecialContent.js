@@ -68,7 +68,7 @@ export function DigitalMarketingSpecialContent({ service }) {
                                 Seen.
                             </h1>
                             <p className="text-[15px] md:text-[16px] text-slate-500 font-normal leading-[1.65] mb-10 max-w-[480px]">
-                                We build and manage your full marketing presence so your brand earns trust before the first conversation even starts. Our strategy-led, 2026-ready marketing approach covers every channel to drive real commercial results and ensure your business is prepared for growth.
+                                We build and manage your full marketing presence so your brand earns trust before the first conversation even starts. Our strategy-led, marketing approach covers every channel to drive real commercial results and ensure your business is prepared for growth.
                             </p>
 
                             <Button asChild className="bg-[#1a4fba] hover:bg-[#153e96] text-white h-[52px] px-8 rounded-[8px] font-bold text-[13px] uppercase tracking-wider transition-all shadow-lg shadow-blue-900/10 border-none group/btn">
@@ -324,6 +324,11 @@ export function DigitalMarketingSpecialContent({ service }) {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 xl:gap-8 items-stretch relative z-10 px-4 xl:px-0">
                             {[
                                 { 
+                                    title: "Social Media Management",
+                                    slug: "social-media-management",
+                                    desc: "We handle your social presence end to end, keeping your brand visible, credible, and actively engaging customers."
+                                },
+                                { 
                                     title: "SEO & Content Marketing", 
                                     slug: "seo-content-marketing",
                                     desc: "We build the technical foundation and content authority that earns sustainable search rankings and qualified organic traffic."
@@ -332,11 +337,6 @@ export function DigitalMarketingSpecialContent({ service }) {
                                     title: "Email Marketing",
                                     slug: "email-marketing",
                                     desc: "Built on segmentation and behavioural triggers, email consistently delivers the highest ROI of any digital channel."
-                                },
-                                { 
-                                    title: "Social Media Management",
-                                    slug: "social-media-management",
-                                    desc: "We handle your social presence end to end, keeping your brand visible, credible, and actively engaging customers."
                                 },
                                 { 
                                     title: "Paid Ads (Google & Meta)",

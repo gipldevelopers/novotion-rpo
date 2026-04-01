@@ -5,6 +5,7 @@ import { Mail, Phone, MapPin, Clock, ArrowRight, Sparkles, Instagram, Linkedin, 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
 
 const XIcon = ({ className }) => (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -18,6 +19,48 @@ const socialLinks = [
 ];
 
 export function ContactSection() {
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        objective: "",
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [error, setError] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setError("");
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: `${formData.firstName} ${formData.lastName}`,
+                    email: formData.email,
+                    phone: "Not Provided", // Not included in this compact form
+                    subject: "Strategy Session Inquiry",
+                    message: `Strategic Objective: ${formData.objective}`
+                }),
+            });
+
+            if (res.ok) {
+                setIsSuccess(true);
+                setFormData({ firstName: "", lastName: "", email: "", objective: "" });
+            } else {
+                const errorData = await res.json();
+                setError(errorData.error || "Submission failure. Please verify your data.");
+            }
+        } catch (err) {
+            setError("Network infrastructure unavailable. Please try again later.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <section id="contact" className="py-12 md:py-16 bg-white relative overflow-hidden scroll-mt-20">
             <div className="container-premium relative z-10 w-full px-4">
@@ -69,33 +112,56 @@ export function ContactSection() {
 
                         {/* Right Panel: High-Density Form */}
                         <div className="lg:col-span-3 p-8 md:p-12 lg:p-14 bg-white/40 flex flex-col justify-center">
-                            <form className="space-y-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
-                                <div className="grid md:grid-cols-2 gap-5">
-                                    <div className="space-y-2">
-                                        <label className="text-secondary/80 text-[10px] uppercase font-bold tracking-[0.3em] ml-1">First Name</label>
-                                        <input suppressHydrationWarning className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="John" />
+                            {isSuccess ? (
+                                <motion.div 
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    className="h-full flex flex-col items-center justify-center p-8 text-center"
+                                >
+                                    <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
+                                        <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                                     </div>
-                                    <div className="space-y-2">
-                                        <label className="text-secondary/80 text-[10px] uppercase font-bold tracking-[0.3em] ml-1">Last Name</label>
-                                        <input suppressHydrationWarning className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="Doe" />
+                                    <h3 className="text-2xl font-bold text-slate-900 mb-2">Request Received</h3>
+                                    <p className="text-slate-500 mb-6 text-sm">We'll be in touch shortly to schedule your strategy session.</p>
+                                    <Button onClick={() => setIsSuccess(false)} variant="outline" className="rounded-xl border-slate-200 text-slate-600 hover:bg-slate-50">
+                                        Send Another Request
+                                    </Button>
+                                </motion.div>
+                            ) : (
+                                <form className="space-y-6 relative z-10" onSubmit={handleSubmit}>
+                                    <div className="grid md:grid-cols-2 gap-5">
+                                        <div className="space-y-2">
+                                            <label className="text-secondary/80 text-[10px] uppercase font-bold tracking-[0.3em] ml-1">First Name *</label>
+                                            <input required value={formData.firstName} onChange={(e) => setFormData({...formData, firstName: e.target.value})} suppressHydrationWarning className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="John" />
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label className="text-secondary/80 text-[10px] uppercase font-bold tracking-[0.3em] ml-1">Last Name *</label>
+                                            <input required value={formData.lastName} onChange={(e) => setFormData({...formData, lastName: e.target.value})} suppressHydrationWarning className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="Doe" />
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div className="space-y-2">
-                                    <label className="text-secondary/80 text-[10px] uppercase font-bold tracking-[0.3em] ml-1">Work Email Address</label>
-                                    <input suppressHydrationWarning type="email" className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="john@company.com" />
-                                </div>
+                                    <div className="space-y-2">
+                                        <label className="text-secondary/80 text-[10px] uppercase font-bold tracking-[0.3em] ml-1">Work Email Address *</label>
+                                        <input required value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} suppressHydrationWarning type="email" className="w-full bg-white border border-slate-200 rounded-2xl py-4 px-5 focus:border-secondary outline-none shadow-none text-slate-900 placeholder:text-slate-400 transition-all font-light text-sm" placeholder="john@company.com" />
+                                    </div>
 
-                                <div className="space-y-2">
-                                    <label className="text-secondary/80 text-[10px] uppercase font-bold tracking-[0.3em] ml-1">Strategic Objective</label>
-                                    <textarea className="w-full bg-white border border-slate-200 rounded-2xl p-5 focus:border-secondary outline-none shadow-none min-h-[120px] text-slate-900 placeholder:text-slate-400 transition-all resize-none font-light text-sm" placeholder="Briefly describe your hiring goals..." />
-                                </div>
+                                    <div className="space-y-2">
+                                        <label className="text-secondary/80 text-[10px] uppercase font-bold tracking-[0.3em] ml-1">Strategic Objective *</label>
+                                        <textarea required value={formData.objective} onChange={(e) => setFormData({...formData, objective: e.target.value})} className="w-full bg-white border border-slate-200 rounded-2xl p-5 focus:border-secondary outline-none shadow-none min-h-[120px] text-slate-900 placeholder:text-slate-400 transition-all resize-none font-light text-sm" placeholder="Briefly describe your hiring goals..." />
+                                    </div>
 
-                                <Button className="w-full bg-gradient-to-r from-secondary to-[#154185] hover:bg-slate-900 text-white font-bold h-14 md:h-16 rounded-2xl text-[11px] md:text-[12px] tracking-[0.4em] shadow-xl shadow-secondary/20 transition-all group/btn border-none uppercase mt-4">
-                                    INITIATE STRATEGY SESSION
-                                    <ArrowRight className="ml-3 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
-                                </Button>
-                            </form>
+                                    {error && (
+                                        <div className="p-3 bg-red-50 border border-red-100 rounded-xl text-red-500 text-[11px] font-bold uppercase tracking-widest text-center mt-2">
+                                            {error}
+                                        </div>
+                                    )}
+
+                                    <Button disabled={isSubmitting} type="submit" className="w-full bg-gradient-to-r from-secondary to-[#154185] hover:bg-slate-900 text-white font-bold h-14 md:h-16 rounded-2xl text-[11px] md:text-[12px] tracking-[0.4em] shadow-xl shadow-secondary/20 transition-all group/btn border-none uppercase mt-4 disabled:opacity-70">
+                                        {isSubmitting ? "INITIATING..." : "INITIATE STRATEGY SESSION"}
+                                        {!isSubmitting && <ArrowRight className="ml-3 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />}
+                                    </Button>
+                                </form>
+                            )}
                         </div>
                     </div>
 

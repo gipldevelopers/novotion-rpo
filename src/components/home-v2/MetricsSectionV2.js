@@ -37,7 +37,7 @@ const metrics = [
         targetValue: 14,
         suffix: "+",
         label: "Active Client Accounts",
-        description: "Global businesses served across UK, EU ,UAE, APAC and USA",
+        description: "Global businesses served across UK, EU, UAE, APAC and USA",
         color: "from-[#1b50a2] to-[#ebd69b]"
     },
     {

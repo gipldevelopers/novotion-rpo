@@ -280,7 +280,7 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
             const title = hasColon ? step.split(':')[0] : `Phase ${i + 1}`;
             const desc = hasColon ? step.split(':').slice(1).join(':').trim() : step;
             
-            const imageStr = FALLBACK_IMAGES[i % FALLBACK_IMAGES.length];
+            const imageStr = (subService.images && subService.images[i]) ? subService.images[i] : FALLBACK_IMAGES[i % FALLBACK_IMAGES.length];
             const iconBg = ICON_COLORS[i % ICON_COLORS.length];
 
             const itemData = { title, desc, imageStr, iconBg, originalIndex: i };
@@ -357,7 +357,7 @@ export function ServiceSubDetailClient({ service, subService, slug }) {
                         </h1>
                         
                         {subService.head && (
-                            <p className="text-[16px] md:text-[18px] lg:text-[22px] text-slate-900 font-extrabold leading-tight mb-6 mx-auto uppercase tracking-tighter">
+                            <p className="text-[16px] md:text-[18px] lg:text-[22px] text-slate-900 font-extrabold leading-tight mb-6 mx-auto uppercase tracking-widest">
                                 {subService.head}
                             </p>
                         )}
