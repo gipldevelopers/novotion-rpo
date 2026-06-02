@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import Image from "next/image";
 
+// my name is anjali
+
 export function AboutHero() {
     return (
         <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-white">
