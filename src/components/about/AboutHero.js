@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import Image from "next/image";
 
-// my name is anjali
+// my name is anjali choudhary
 
 export function AboutHero() {
     return (
