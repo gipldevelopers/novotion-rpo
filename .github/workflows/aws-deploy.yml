@@ -1,0 +1,69 @@
+name: Frontend CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  NODE_VERSION: "22"
+  DEPLOY_PATH: "/home/ubuntu/frontend"
+  PM2_APP_NAME: "production"
+
+jobs:
+  build:
+    name: Build app
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js app
+        run: npm run build
+
+  deploy:
+    name: Deploy to EC2
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy frontend to EC2
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.AWS_PORT || 22 }}
+          script_stop: true
+          script: |
+            echo "Go to frontend folder"
+            cd ${{ env.DEPLOY_PATH }}
+
+            echo "Discard local changes on server"
+            git reset --hard
+            git clean -fd
+
+            echo "Pull latest code"
+            git pull origin main
+
+            echo "Install dependencies"
+            npm install
+
+            echo "Build frontend"
+            npm run build
+
+            echo "Restart frontend"
+            pm2 restart ${{ env.PM2_APP_NAME }}
+
+            pm2 save
+            echo "Frontend deployed successfully"
