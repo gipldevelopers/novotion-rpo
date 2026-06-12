@@ -48,7 +48,7 @@ export function Footer() {
             </div>
 
             <p className="text-slate-500 text-[15px] font-normal leading-relaxed max-w-sm">
-              Driving xxxx the next generation of business growth with smart automation and scalable global solutions. Built for speed, quality, and a stronger competitive edge.
+              Driving  the next generation of business growth with smart automation and scalable global solutions. Built for speed, quality, and a stronger competitive edge.
             </p>
 
             <div className="flex items-center gap-4">
